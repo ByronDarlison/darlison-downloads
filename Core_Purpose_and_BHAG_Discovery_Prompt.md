@@ -2,21 +2,33 @@
 
 **From Byron Darlison — [www.darlison.com](https://www.darlison.com)**
 
-This file contains an AI prompt that will guide you through discovering your company's Core Purpose and BHAG. The process takes 30 to 60 minutes. Core Purpose answers why your organization exists. BHAG is your 10-to-30-year goal. Both are foundational to everything else you build: values, strategy, priorities, accountability.
+**This prompt is a work in progress.** I am actively refining it based on feedback from founders and coaches who use it. If you run into problems, find something that could be better, or improve upon any part of this, please email me at byron@darlison.com. Every piece of feedback makes this tool more useful for the next person.
 
-**How to use it:**
+---
 
-1. Copy everything below the line that says "COPY FROM HERE" and paste it into any AI assistant (Claude, ChatGPT, Gemini, or similar).
+This prompt interviews you to discover your company's Core Purpose and BHAG (Big Hairy Audacious Goal). Core Purpose answers why your organization exists. BHAG is your 10-to-30-year goal. Both are foundational to everything else you build: values, strategy, priorities, accountability. The exercise takes 30 to 60 minutes and produces a downloadable Word document you can share with your coach.
+
+**What to expect**
+
+The prompt moves through 2 phases:
+
+1. **Core Purpose.** Origin, financial answer, evolution, pattern, separation, drafting, and testing against 6 tests. (20 to 40 minutes)
+2. **BHAG.** Core Business, Economic Engine, drafting the BHAG at the intersection of all three, and testing against 3 tests. (10 to 20 minutes)
+
+Then a summary, leadership team validation instructions, and a downloadable Word document.
+
+**How to use it**
+
+1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. The AI will interview you one question at a time. Core Purpose first. Once locked in, it moves to BHAG.
-3. At the end, the AI will produce a summary with your Core Purpose, BHAG, Core Business, and Economic Engine.
+3. At the end, the AI will produce a summary with your Core Purpose, BHAG, Core Business, and Economic Engine, both inline in the conversation and as a downloadable Word document.
+4. Download the Word document and review it with your coach in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the tools, add them to Metronome Software.
 
-**If there is more than one founder in this business**, each founder should complete this process independently on their own device using their own AI conversation. The output section includes instructions for bringing all outputs together.
+**If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. The output section includes instructions for bringing all outputs together.
 
-**If you have a coach, advisor, or mentor:** review the output with them. The AI produces a first draft. A person who knows your business can challenge it.
+**If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
-**If you find problems or improve on this:** I would like to hear about it. Reach me at [byron@darlison.com](mailto:byron@darlison.com).
-
-Core Purpose originates with Jim Collins and Jerry Porras in *Built to Last*. BHAG and the Hedgehog Concept come from Collins's *Good to Great*. Shannon Susko integrates both into the Metronomics operating system as the foundation of the Cultural System. Simon Sinek's Golden Circle (*Start with Why*) is used as a validation tool.
+**Intellectual attribution.** Core Purpose originates with Jim Collins and Jerry Porras in *Built to Last*. BHAG and the Hedgehog Concept come from Collins's *Good to Great*. Shannon Susko integrates both into the Metronomics operating system as the foundation of the Cultural System. Simon Sinek's Golden Circle (*Start with Why*) is used as a validation tool. What follows is my interpretation and application of these frameworks. All credit for the underlying ideas goes to the original authors. Any mistakes or distortions are mine.
 
 ---
 
@@ -202,6 +214,12 @@ When all tests pass, confirm it explicitly.
 
 ## Output
 
+Produce all outputs both inline in the conversation and as a single downloadable Word document (.docx) containing everything. The inline presentation shows each section in the conversation so the participant can review immediately. The Word document is the deliverable they share with their coach.
+
+Word document formatting. Font: Arial, 11pt body text, bold header row on tables. Table borders: thin (0.5pt), dark gray (#666666). No colored shading on table body rows. Heading colors: primary headings blue (#326AB5), secondary headings green (#54B570), tertiary headings gray (#666666). Body text black (#000000). 10pt paragraph spacing before each paragraph. 1.15 line spacing. No footer. No table of contents.
+
+Title: "Core Purpose and BHAG – [Company Name] – [Date]"
+
 When both Core Purpose and BHAG are locked in, present the summary:
 
 **Core Purpose:** [statement]
@@ -212,9 +230,23 @@ When both Core Purpose and BHAG are locked in, present the summary:
 
 **Economic Engine:** [statement]
 
+### Implementation
+
+Core Purpose and BHAG are not documents to file away. They are the foundation for every strategic decision the company makes. Here is how to put them to work:
+
+- **Review cadence.** Revisit Core Purpose annually during the annual planning session. It should not change often, but it should be tested. BHAG should be reviewed quarterly to confirm the company's strategy is still driving toward it.
+- **Decision filter.** When evaluating new opportunities, partnerships, or strategic shifts, test them against Core Purpose. If a decision does not serve the purpose, it requires an explicit reason to proceed.
+- **Team alignment.** Use Core Purpose as the opening frame for quarterly and annual planning sessions. Every team member should be able to state it from memory.
+- **Hiring.** Include Core Purpose in the hiring process. Candidates who are not drawn to the purpose will not stay through the hard parts.
+- **What to do when it feels wrong.** If Core Purpose stops resonating, do not change it immediately. First ask whether the business has drifted from the purpose, or whether the purpose was never quite right. The answer determines whether the fix is operational or foundational.
+
+For the detailed operating rhythm, see the relevant articles at darlison.com.
+
 Then add:
 
-"This is a draft. Core Purpose and BHAG are foundational to everything the company builds on top of them: values, strategy, priorities, accountability. Before treating these as final, bring them to your leadership team."
+"This is a draft. Core Purpose and BHAG are foundational to everything the company builds on top of them: values, strategy, priorities, accountability. Before treating these as final, bring them to your leadership team. Download the Word document and review it with your coach in the format they prefer, such as Mural or a similar visual workspace. Once you and your coach have finalized the tools, add them to Metronome Software."
+
+If the AI system cannot generate visuals or produce a Word document: "Use the text output to build the tools in the format your coach prefers. Once you have reviewed with your coach, add the finalized tools to Metronome Software."
 
 ### Multi-founder synthesis
 

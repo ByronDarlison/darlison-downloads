@@ -2,19 +2,35 @@
 
 **From Byron Darlison — [www.darlison.com](https://www.darlison.com)**
 
-This file contains an AI prompt that will guide you through making a binary decision using Robert Fritz's digital decision making process. The process takes 10 to 20 minutes. It strips away the story, the pros/cons lists, and the circular deliberation, and forces you to see the structural answer that is already present in your own values. A surprising number of "agonizing" decisions resolve in the first three minutes.
+**This prompt is a work in progress.** I am actively refining it based on feedback from founders and coaches who use it. If you run into problems, find something that could be better, or improve upon any part of this, please email me at byron@darlison.com. Every piece of feedback makes this tool more useful for the next person.
 
-**How to use it:**
+---
 
-1. Copy everything below the line that says "COPY FROM HERE" and paste it into any AI assistant (Claude, ChatGPT, Gemini, or similar).
+This prompt guides you through making a binary decision using Robert Fritz's digital decision making process. It strips away the story, the pros/cons lists, and the circular deliberation, and forces you to see the structural answer that is already present in your own values. The process takes 10 to 20 minutes. A surprising number of "agonizing" decisions resolve in the first three minutes. The output is a one-page summary you can keep and reference if the decision tries to reopen itself.
+
+**What to expect**
+
+The prompt moves through 6 phases:
+
+1. **Frame the decision.** State it as a yes/no question with a timeframe. (2 minutes)
+2. **Identify the factors.** The 3 to 5 things that actually move the needle. (3 minutes)
+3. **Test whether a real decision exists.** The extremes test. If the answer is the same regardless of factors, the decision is already made. (1 minute)
+4. **Reveal the value structure.** Binary combinations that surface which factor is structurally dominant. (3 minutes)
+5. **Reality check.** Assess each factor against current reality and match the pattern. (2 minutes)
+6. **Announce the decision.** State it out loud. Address any friction. (2 minutes)
+
+Then a summary with the decision, factors, dominant factor, structural pattern, and friction notes.
+
+**How to use it**
+
+1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. The AI will interview you one question at a time. It will move fast. Answer with yes or no when asked for yes or no. Do not explain.
-3. At the end, you will have a decision and a one-page summary of the structure that produced it.
+3. At the end, you will have a decision and a one-page summary of the structure that produced it, both inline in the conversation and as a downloadable Word document.
+4. Download the Word document and keep it. If the decision comes back, reread the summary before deliberating again. If you have a coach, advisor, or mentor, review it with them. The AI maps your structure. A person who knows you can challenge whether the structure is honest.
 
-**If you have a coach, advisor, or mentor:** review the output with them. The AI maps your structure. A person who knows you can challenge whether the structure is honest.
+**If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
-**If you find problems or improve on this:** I would like to hear about it. Reach me at [byron@darlison.com](mailto:byron@darlison.com).
-
-Digital decision making originates with Robert Fritz, developed from his work on structural dynamics and the creative process. The underlying theory is described in *The Path of Least Resistance* and *The Path of Least Resistance for Artists*. The concept of digital thinking — treating structural elements as binary states rather than continuous gradients — comes from Fritz's training as a composer, where structural moves in music and theater are discrete: a motif is inverted or it is not, characters are together or apart. Fritz teaches the full technique in his Fundamentals of Structural Thinking (FST) course. This prompt is my interpretation of the process for individual use. All credit for the underlying ideas goes to Robert Fritz. Any mistakes or distortions here are mine.
+**Intellectual attribution.** Digital decision making originates with Robert Fritz, developed from his work on structural dynamics and the creative process. The underlying theory is described in *The Path of Least Resistance* and *The Path of Least Resistance for Artists*. The concept of digital thinking — treating structural elements as binary states rather than continuous gradients — comes from Fritz's training as a composer, where structural moves in music and theater are discrete: a motif is inverted or it is not, characters are together or apart. Fritz teaches the full technique in his Fundamentals of Structural Thinking (FST) course. What follows is my interpretation of the process for individual use. All credit for the underlying ideas goes to Robert Fritz. Any mistakes or distortions are mine.
 
 ---
 
@@ -201,7 +217,13 @@ If neither applies and the person simply does not want to accept the structural 
 
 ## Output
 
-When the decision is stated and any friction is resolved, produce a summary.
+Produce the summary both inline in the conversation and as a single downloadable Word document (.docx). The inline presentation shows the summary in the conversation so the person can review immediately. The Word document is the reference they keep.
+
+Word document formatting. Font: Arial, 11pt body text, bold header row on tables. Table borders: thin (0.5pt), dark gray (#666666). No colored shading on table body rows. Heading colors: primary headings blue (#326AB5), secondary headings green (#54B570), tertiary headings gray (#666666). Body text black (#000000). 10pt paragraph spacing before each paragraph. 1.15 line spacing. No footer. No table of contents.
+
+Title: "Digital Decision – [Brief Decision Description] – [Date]"
+
+When the decision is stated and any friction is resolved, produce the summary:
 
 **Decision:** The binary question as stated, with the timeframe.
 
@@ -218,6 +240,8 @@ When the decision is stated and any friction is resolved, produce a summary.
 **Friction notes:** If a factor was missing and added, or if a reality assessment changed during the process, note it here. If the person's stated answer contradicted their structural answer, note that too.
 
 Present the summary and say: "This is the structure of your decision. Keep it. If the decision comes back — if you find yourself reopening it in a week — reread this before you start deliberating again. The structure does not change just because the anxiety returns."
+
+If the AI system cannot produce a Word document: "Use the text summary above as your reference. Copy it somewhere you will find it again."
 
 ---
 

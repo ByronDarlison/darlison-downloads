@@ -2,19 +2,33 @@
 
 **From Byron Darlison — [www.darlison.com](https://www.darlison.com)**
 
-This file contains an AI prompt that will guide you through defining your Owner's Outcome and producing a document you will use every quarter. The prompt includes a quarterly review process embedded in the output, so you never need to come back to this file after the first use.
+**This prompt is a work in progress.** I am actively refining it based on feedback from founders and coaches who use it. If you run into problems, find something that could be better, or improve upon any part of this, please email me at byron@darlison.com. Every piece of feedback makes this tool more useful for the next person.
 
-**How to use it:**
+---
 
-1. Copy everything below the line that says "COPY FROM HERE" and paste it into any AI assistant (Claude, ChatGPT, Gemini, or similar).
-2. The AI will ask a few setup questions first (about two minutes), then guide you through the full assessment (about 45 minutes).
+This prompt interviews you to define your Owner's Outcome — what you want the business to deliver to you personally, by when, measured by what — and maps the gap between where you are now and where you want to be. The exercise takes about 45 minutes plus a 2-minute setup. The output is a document you will use every quarter. The prompt includes a quarterly review process embedded in the output, so you never need to come back to this file after the first use.
+
+**What to expect**
+
+The prompt moves through 4 parts:
+
+1. **Setup.** Configure your tools and preferences: document format, style guide, file storage, task management, fiscal year, coach status. (2 minutes)
+2. **Define the Owner's Outcome.** 13 questions covering life design, anti-outcome, non-negotiables, people, home alignment, primary orientation, risk tolerance, money, time, role, measurement, drafting, and integrity testing. (30 minutes)
+3. **Map the gap.** 6 dimensions: time, money, role, team, risk, value/exit readiness. (10 minutes)
+4. **One action.** Pick the single structural problem with the largest effect. Define it, commit to it, defer the rest. (5 minutes)
+
+Then a deliverable document with an embedded quarterly review prompt.
+
+**How to use it**
+
+1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
+2. The AI will ask a few setup questions first (about two minutes), then guide you through the full assessment.
 3. At the end, the AI will produce a document with your Owner's Outcome statement, design constraints, gap scorecard, one committed action, and a review date. That document includes the quarterly review prompt, so each quarter you open it and start the review.
+4. Review the output with your coach in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can improve it. Once finalized, add to Metronome Software.
 
-**If you have a coach, advisor, or mentor:** review the output with them. The AI produces a first draft. A person who knows your business can improve it.
+**If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
-**If you find problems or improve on this:** I would like to hear about it. Reach me at [byron@darlison.com](mailto:byron@darlison.com).
-
-The review framework is based on Robert Fritz's concept of structural tension, described in *The Path of Least Resistance* and *The Managerial Moment of Truth*. The core idea is his. I have applied it to the Owner's Outcome review cycle.
+**Intellectual attribution.** The review framework is based on Robert Fritz's concept of structural tension, described in *The Path of Least Resistance* and *The Managerial Moment of Truth*. The core idea is his. I have applied it to the Owner's Outcome review cycle. What follows is my interpretation and application of that framework. All credit for the underlying ideas goes to Robert Fritz. Any mistakes or distortions are mine.
 
 ---
 
