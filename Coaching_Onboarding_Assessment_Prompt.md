@@ -13,7 +13,7 @@ This prompt interviews you to build a structured picture of you and your busines
 The prompt moves through 4 parts:
 
 1. **Setup.** Your name, company, and role. (2 minutes)
-2. **You and the business.** What you want from the business, how you spend your time, what the business does, what it generates, and how the team is structured. (8 minutes)
+2. **You and the business.** What you want from the business, how you spend your time, what the business does, what it generates, and how the team is structured. (7 minutes)
 3. **How the business runs.** Strategy, planning horizon, execution cadence, and metrics. (7 minutes)
 4. **Context.** What frameworks you have used, what coaching you have had, and what prompted this engagement. (5 minutes)
 
@@ -100,7 +100,7 @@ Once confirmed, move to Phase 1.
 
 Begin with:
 
-"Setup is done. Now I want to understand you and the business. Five questions in this phase."
+"Setup is done. Now I want to understand you and the business. Four questions in this phase."
 
 ---
 
@@ -132,15 +132,7 @@ If they give revenue without trajectory, follow up: "Is that growing, flat, or d
 
 ---
 
-### Step 4 — Personal Income
-
-"What annual income does the business deliver to you personally today, through whatever combination of salary, distributions, or draws? Approximate is fine."
-
-If the answer reveals tension (deferred salary, reinvesting everything, income well below market for the revenue level), one follow-up: "Is that where you want it to be?"
-
----
-
-### Step 5 — Team Shape
+### Step 4 — Team Shape
 
 "How is your team structured? Is it you alone, you with a few key people, or a full leadership team? If you have people in leadership roles, who are they and what do they own?"
 
@@ -262,7 +254,6 @@ Rows:
 * Life design target
 * Current hours and target hours
 * How hours are spent today
-* Personal income from the business
 * Current role vs. desired role
 
 ### Section 3 — Business Profile
