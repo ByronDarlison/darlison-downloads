@@ -6,7 +6,7 @@
 
 ---
 
-This prompt interviews you to identify your Core Customer. The one customer type your company should be built around. It walks you through four evidence-based questions to find them, builds a detailed profile, names a persona, tests whether you can reach them and whether the market is large enough to support your goals, and produces a Core Customer statement you can use as a decision filter for everything that follows. The exercise takes about 30 minutes and produces a markdown document with all five sections.
+This prompt interviews you to identify your Core Customer. The one customer type your company should be built around. It walks you through four evidence-based questions to find them, builds a detailed profile, names a persona, tests whether you can reach them and whether the market is large enough to support your goals, and produces a Core Customer statement you can use as a decision filter for everything that follows. The exercise takes about 30 minutes and produces a markdown document with 12 sections.
 
 **What to expect**
 
@@ -14,7 +14,7 @@ The prompt moves through 6 phases:
 
 1. **Find your Core Customer.** Four questions that surface who you should be building for, based on evidence from your business. (8 minutes)
 2. **Build the profile.** Six dimensions that describe who this customer is, what drives them, what they struggle with, how they buy, how they work, and where your advantage is. Plus top 3 needs with benefits and gaps. (8 minutes)
-3. **Name the persona.** Give your Core Customer a first name, a title, and a description of their daily reality. (3 minutes)
+3. **Name the persona and define the identity transformation.** Give your Core Customer a first name, a title, and a description of their daily reality. Then describe who they are before and after working with you. (5 minutes)
 4. **Test reachability and market size.** Can you walk into a room full of this person? Where is that room? And is the market large enough to support your growth targets? (5 minutes)
 5. **Write the statement.** One sentence that proves you understand your Core Customer, tested against six questions. (3 minutes)
 6. **What comes next.** How to use what you built. (1 minute)
@@ -161,6 +161,12 @@ The test: when the founder can describe their Core Customer's Tuesday morning, t
 
 Explain that this persona should come to every meeting. When the team is debating a decision, they ask the persona what they would think. Would this person choose this? Would they understand why it matters? Would they tell someone else about it? The persona is not a reference document. It is a voice at the table that represents the person who pays for everything.
 
+Then ask two more questions to define the identity transformation:
+
+**Before:** "Describe this person before they work with you. Not their business metrics -- their state. How do they feel? How do they spend their time? What is their relationship with the business?" Push for emotional and behavioral detail, not demographics.
+
+**After:** "Now describe who they become after working with you. Same lens -- state, not metrics. How do they feel? How do they spend their time? What has changed about their relationship with the business?" Push for concrete contrast with the "before" picture.
+
 ---
 
 ## Phase 4: Test reachability and market size
@@ -213,18 +219,28 @@ If any test fails, explain what that means for the profile and suggest where to 
 
 ## Phase 6: Compile the output
 
-Produce the full Core Customer profile as a single markdown document inline in the conversation. Use this structure:
+Produce the full Core Customer profile as a single markdown document inline in the conversation. Use this structure with exactly 12 numbered sections:
 
 **Title:** Core Customer Discovery. [Company Name]
 
 **Sections:**
 
-1. **Core Customer Identification.** The four questions with the founder's answers, and the intersection statement.
-2. **Core Customer Profile.** The six dimensions, followed by the top 3 needs with benefits and gaps.
-3. **The Persona.** Name, title, and the daily reality paragraph.
-4. **Reachability and Market Size.** Where they congregate, whether they refer each other, the named room of 50+, the most efficient path to reach them, and the market size estimate with the math showing whether the population supports the revenue targets.
-5. **Core Customer Statement.** The one sentence, plus the six test results.
-6. **What comes next.** Include all of the following:
+1. **Who They Are.** Industry, company size, revenue range, geography, role, operating history. Compiled from the intersection of the four questions.
+2. **What Drives Them.** External problem, internal problem, philosophical problem, and observable symptoms. Compiled from the profile dimensions.
+3. **How They Buy.** Emotion vs logic, sales cycle, who decides. From the profile dimensions.
+4. **How They Work.** Business model, day-to-day, whether the buyer is also the implementer. From the profile dimensions.
+5. **Who Pays.** The person who writes the check. From the profile dimensions.
+6. **My Advantage.** What the company does for this customer that competitors cannot easily replicate. From the profile dimensions and Question 4.
+7. **Top 3 Needs.** The three things this customer evaluates when choosing a provider, with benefit and gap for each. From the profile dimensions.
+8. **The Persona.** First name, title, and the daily reality paragraph. From Phase 3.
+9. **Identity Transformation.** Before (who they are before working with you) and After (who they become). From Phase 3.
+10. **Core Customer Statement.** The one sentence, plus the six test results (pass/fail for each). From Phase 5.
+11. **Reachability and Market Size.** Where they congregate, whether they refer each other, the named room of 50+, and the market size estimate with the math showing whether the population supports the revenue targets. From Phase 4.
+12. **Behavioral Criteria.** Map the founder's answers from Questions 1-4 against four behavioral tests: (a) Prepared to pay the premium -- do they accept the fee on its merits or negotiate it down? (b) Pays on time -- do they honor engagement rules and commitments? (c) Buys again -- are they thinking in years, not quarters? (d) Refers others -- are they connected in communities and talking about what works? Flag any criteria that are hypotheses rather than evidence.
+
+After the 12 sections, include:
+
+13. **What comes next.** Include all of the following:
    - This is a hypothesis. The Market Map and the Attribution Map will test it. If the three pictures do not align, come back and revise.
    - Review this with your coach or advisor if you have one. If you do not, review it against your actual data.
    - Read *Building a StoryBrand* by Donald Miller and create a BrandScript with your Core Customer as the character. A BrandScript positions your customer as the hero and your company as the guide. The Core Customer profile tells you who. The BrandScript tells you how to communicate with them.
