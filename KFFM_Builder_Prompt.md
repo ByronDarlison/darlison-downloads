@@ -350,7 +350,7 @@ The Org Chart diagram is the deliverable. It contains everything: hierarchy, own
 
 Generate the diagram using the following specifications:
 
-- Top level: Head of Company box showing the founder(s) name and title. Use teal color scheme: light teal fill (#E1F5EE), teal border (#0F6E56), dark teal text (#085041).
+- Top level: Head of Company box showing the founder(s) name and title. Use the same green/amber/red color scheme as the function boxes. Ask the participant: "How would you rate the overall health of the Head of Company function? Green, yellow, or red?"
 - Second level: If the participant identified functional groupings in Step 8 (e.g., Revenue owning Marketing and Sales), show the grouping functions at Level 2 and the subfunctions at Level 3. If the participant said functions go directly under the Head of Company with no intermediate groupings, show all key functions at Level 2 — do not force groupings that do not exist.
 - Supporting functions: Include all supporting functions in the diagram, connected to the function they report to (as identified in Step 10a). Supporting functions use dashed borders.
 - Color coding: All function boxes (key and supporting) use the same green/amber/red color scheme as the KFFM, based on the status assigned during the exercise. Green functions: light green fill (#EAF3DE), dark green border (#3B6D11), dark green text (#27500A). Amber functions: light amber fill (#FAEEDA), dark amber border (#854F0B), dark amber text (#633806). Red functions: light red fill (#FCEBEB), dark red border (#A32D2D), dark red text (#791F1F).
