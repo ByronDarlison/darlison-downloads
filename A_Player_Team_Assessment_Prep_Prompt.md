@@ -136,7 +136,7 @@ Produce an SVG scatter chart. If the AI system cannot generate SVG, describe eac
 - Bottom-right: "C-Player"
 Zone labels should be subtle — they provide orientation, not emphasis.
 
-**Data points.** Each person is a circle with radius 16px, white initials inside (font-size 10px, bold, centered). Color code by zone: A-Players green (#3B6D11), B-Players amber (#854F0B), C-Players and Toxic-As red (#A32D2D). If two people would overlap, offset them slightly so both are visible and readable.
+**Data points.** Each person is a circle with radius 16px, white initials inside (font-size 10px, bold, centered). Color code by zone: A-Players green (#3B6D11), B-Players yellow (#D4A017), C-Players and Toxic-As red (#A32D2D). If two people would overlap, offset them slightly so both are visible and readable.
 
 **Grid.** Light dashed lines (#E8E8E8) at each axis division. Subtle — they should not compete with the data points.
 
