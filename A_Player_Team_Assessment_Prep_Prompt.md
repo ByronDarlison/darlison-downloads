@@ -123,7 +123,30 @@ Include every person. Sort by zone: A-Players first, then Values Fit Underperfor
 
 ### Output 2: Scatter Chart
 
-Produce a scatter chart with Values on the Y-axis (All Of The Time at top, None Of The Time at bottom) and Performance on the X-axis (Ahead at left, Carried at right). Plot each person using their initials. If a visual chart can be produced, do so. Otherwise, describe each person's approximate position on the graph.
+Produce an SVG scatter chart. If the AI system cannot generate SVG, describe each person's approximate position on the graph instead.
+
+**Chart specifications:**
+
+**Axes.** Y-axis: Values (All Of The Time at top, Some Of The Time at middle, None Of The Time at bottom). X-axis: Performance (Ahead at left, Behind at middle, Carried at right). Axis labels in blue (#326AB5), bold. Tick labels in dark gray (#555). Scorecard tier labels below x-axis ticks in lighter gray (#888).
+
+**Zone labels.** Label each quadrant in large, light gray text (#E0E0E0) behind the data points:
+- Top-left: "A-Player"
+- Top-right: "Values Fit, Underperforming"
+- Bottom-left: "Toxic-A"
+- Bottom-right: "C-Player"
+Zone labels should be subtle — they provide orientation, not emphasis.
+
+**Data points.** Each person is a circle with radius 16px, white initials inside (font-size 10px, bold, centered). Color code by zone: A-Players green (#3B6D11), B-Players amber (#854F0B), C-Players and Toxic-As red (#A32D2D). If two people would overlap, offset them slightly so both are visible and readable.
+
+**Grid.** Light dashed lines (#E8E8E8) at each axis division. Subtle — they should not compete with the data points.
+
+**Spread.** People rarely land at exactly the same position. Use the detail from the assessment conversation to place people on a continuous field, not snapped to grid intersections. For example, someone who is "All Of The Time on 3 of 4 values but slips on one" sits slightly below the All Of The Time line. Someone who is "Ahead but only just" sits slightly right of the Ahead line. The spread makes the chart readable and avoids dot collisions.
+
+**Summary line.** Below the chart: "A-Players: [X] of [Y] ([percentage]%)" in bold, centered.
+
+**Font.** Arial or sans-serif throughout. Clean, generous whitespace. Match the visual style of the empty A-Player graph at darlison.com/a-player-team-assessment/.
+
+**Self-check before rendering.** (1) No two dots overlap — if initials would collide, offset vertically or horizontally. (2) All initials are fully readable inside their dots. (3) Zone labels do not overlap with data points. (4) Grid lines are lighter than everything else on the chart.
 
 ### Output 3: Action Plans
 
