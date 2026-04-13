@@ -18,10 +18,9 @@ This prompt interviews you about your business and produces a complete planning 
 
 ## How to use it
 
-1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience, especially for the Word document output.
+1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. Answer each question as honestly as you can. There are no right answers. There are only documented answers that your team can react to.
-3. When you are done, download the Word document.
-4. Add the Word document to Mural for review with your coach. Once you and your coach have finalized the tools, add them to Metronome Software.
+3. Review the output with your coach in the format they prefer, such as Mural or a similar visual workspace. Once you and your coach have finalized the tools, add them to Metronome Software.
 
 If your business has more than one founder or decision-maker: Each person should complete this exercise independently. Do not compare notes until both are finished. The disagreements between your outputs are the most valuable part. A synthesis section at the end of this prompt provides instructions for combining multiple outputs.
 
@@ -69,7 +68,7 @@ Step 1. "First quarter: revenue, cash, and widgets month over month?" Step 2. "Q
 
 ## Output
 
-Produce all outputs both inline in the conversation and as a single downloadable Word document (.docx). Word document formatting: Font Arial, 11pt body text, bold header row on tables. Table borders thin (0.5pt), dark gray (#666666). No colored shading on table body rows. Heading colors: primary blue (#326AB5), secondary green (#54B570), tertiary gray (#666666). Body text black (#000000). 10pt paragraph spacing before. 1.15 line spacing. No footer. No table of contents.
+Produce all outputs inline in the conversation as Markdown.
 
 Document title: Planning Cascade — [Company Name] — [Date]
 
@@ -79,13 +78,11 @@ Section 2: 1HAG. Table: fiscal year-end, revenue, cash, widgets. Priorities tabl
 
 Section 3: QHAG. Quarter dates. Month-over-month table: Month | Revenue | Cash | Widgets. Priorities table: Priority | Owner.
 
-Section 4: 13-Week Sprint Lanes. One table per priority. 13 columns (W1-W13), every cell filled with the deliverable for that week.
+Section 4: 13-Week Sprint Lanes. One table with weeks as rows and priorities as columns. Row headers show the week number and dates. Column headers show each priority. Every cell contains the deliverable for that week and priority. Empty cells show "—". This format keeps the table readable at 13 rows regardless of screen width.
 
 Section 5: Alignment Notes. Disconnects from Phase 5. Open items from Phase 1 with article links. Placeholders flagged for validation.
 
-Section 6: Implementation. Weekly: review sprint lanes in leadership meeting. Quarterly: rebuild QHAG and sprint lanes, review 1HAG, confirm 3HAG. Annually: rebuild everything from scratch. When something goes red: owner posts corrective action. How to introduce: start with sprint lanes, work up. Reference: darlison.com/where-are-you-going. Closing: "Download the Word document and add it to Mural for review with your coach. Once you and your coach have finalized the tools, add them to Metronome Software."
-
-If the AI system cannot generate a Word document: Use the text output to build the tools in Mural. Once you have reviewed with your coach, add the finalized tools to Metronome Software.
+Section 6: Implementation. Weekly: review sprint lanes in leadership meeting. Quarterly: rebuild QHAG and sprint lanes, review 1HAG, confirm 3HAG. Annually: rebuild everything from scratch. When something goes red: owner posts corrective action. How to introduce: start with sprint lanes, work up. Reference: darlison.com/where-are-you-going. Closing: "Review the output with your coach in the format they prefer, such as Mural or a similar visual workspace. Once you and your coach have finalized the tools, add them to Metronome Software."
 
 ## Multi-stakeholder synthesis
 
