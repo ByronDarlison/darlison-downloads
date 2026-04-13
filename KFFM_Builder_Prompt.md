@@ -316,25 +316,15 @@ Produce three deliverables inline in the conversation:
 2. **Functional Accountability Chart** — Markdown table
 3. **Functional Organization Chart** — SVG diagram (see Visual output section for specifications)
 
-### Document 1: Key Function Flow Map
+### Deliverable 1: Key Function Flow Map (SVG diagram)
 
-Title: "Key Function Flow Map – [Company Name] – [Date]"
+The KFFM diagram is the deliverable. It contains everything: function boxes with owners and status colors, widget labels on arrows, supporting functions below the dashed line, Profit/X prominently displayed, and the legend. See the Visual output section for full specifications.
 
-**Company.** Name, what it does, revenue model, headcount.
+Before presenting the final diagram, state the lead-to-cash time. For each path, show the estimated days per function and the total. If the participant could not estimate, note it as an open question. Example format: "Inbound: Marketing (14 days) + Sales (21 days) + Finance (24 days) = 59 days."
 
-**Key Function Flow Map.** A numbered list showing the flow in order. For each function: the function name, the owner, the color (green/yellow/red), and the widget that flows out of it to the next function. Include the input widget for the first function and the output from the last function.
+If there are open questions flagged during the exercise, list them after the diagram.
 
-**Branching paths.** If the business has more than one path, list each path as a separate flow.
-
-**Lead to cash.** For each path, show the estimated days per function and the total. If the participant could not estimate, note it as an open question. Example format: "Inbound: Marketing (14 days) + Sales (21 days) + Finance (24 days) = 59 days."
-
-**Supporting functions.** A list of functions not in the transaction flow. Include any notes on their health.
-
-**Profit/X candidate.** The candidate X and the reasoning. If unresolved, state the options.
-
-**Open questions.** Anything flagged during the exercise.
-
-### Document 2: Functional Accountability Chart
+### Deliverable 2: Functional Accountability Chart (Markdown table)
 
 Title: "Functional Accountability Chart – [Company Name] – [Date]"
 
@@ -352,21 +342,13 @@ For supporting functions: the critical number should reflect the function's enab
 
 **Formatting.** Present as Markdown tables.
 
-### Document 3: Functional Organization Chart
+### Deliverable 3: Functional Organization Chart (SVG diagram)
 
 Title: "Functional Organization Chart – [Company Name] – [Date]"
 
-Produce both a text description and a visual diagram.
+The Org Chart diagram is the deliverable. It contains everything: hierarchy, owners, status colors, reporting lines for supporting functions, and notes. No separate text description is needed — the diagram speaks for itself.
 
-**Text description:**
-
-**Functions and hierarchy.** List the functions in a hierarchy based on functional accountability. If Revenue owns Marketing and Sales, show that relationship.
-
-**Owners.** For each function, list the owner and title. If one person appears in multiple functions, note it explicitly: "[Name] appears in [Function A] and [Function B]."
-
-**Open functions.** If any function has no owner, mark it as "Open" and note whether it is a key function or a supporting function. Open key functions are high priority hires.
-
-**Visual diagram.** Generate a Functional Organization Chart diagram using the following specifications:
+Generate the diagram using the following specifications:
 
 - Top level: Head of Company box showing the founder(s) name and title. Use teal color scheme: light teal fill (#E1F5EE), teal border (#0F6E56), dark teal text (#085041).
 - Second level: If the participant identified functional groupings in Step 8 (e.g., Revenue owning Marketing and Sales), show the grouping functions at Level 2 and the subfunctions at Level 3. If the participant said functions go directly under the Head of Company with no intermediate groupings, show all key functions at Level 2 — do not force groupings that do not exist.
