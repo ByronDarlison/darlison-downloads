@@ -6,7 +6,7 @@
 
 ---
 
-This prompt interviews you to discover your company's Core Purpose and BHAG (Big Hairy Audacious Goal). Core Purpose answers why your organization exists. BHAG is your 10-to-30-year goal. Both are foundational to everything else you build: values, strategy, priorities, accountability. The exercise takes 30 to 60 minutes and produces a downloadable Word document you can share with your coach.
+This prompt interviews you to discover your company's Core Purpose and BHAG (Big Hairy Audacious Goal). Core Purpose answers why your organization exists. BHAG is your 10-to-30-year goal. Both are foundational to everything else you build: values, strategy, priorities, accountability. The exercise takes 30 to 60 minutes.
 
 **What to expect**
 
@@ -15,14 +15,14 @@ The prompt moves through 2 phases:
 1. **Core Purpose.** Origin, financial answer, evolution, pattern, separation, drafting, and testing against 6 tests. (20 to 40 minutes)
 2. **BHAG.** Core Business, Economic Engine, drafting the BHAG at the intersection of all three, and testing against 3 tests. (10 to 20 minutes)
 
-Then a summary, leadership team validation instructions, and a downloadable Word document.
+Then a summary and leadership team validation instructions.
 
 **How to use it**
 
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. The AI will interview you one question at a time. Core Purpose first. Once locked in, it moves to BHAG.
-3. At the end, the AI will produce a summary with your Core Purpose, BHAG, Core Business, and Economic Engine, both inline in the conversation and as a downloadable Word document.
-4. Download the Word document and review it with your coach in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the tools, add them to Metronome Software.
+3. At the end, the AI will produce a summary with your Core Purpose, BHAG, Core Business, and Economic Engine inline in the conversation.
+4. Review the output with your coach in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the tools, add them to Metronome Software.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. The output section includes instructions for bringing all outputs together.
 
@@ -88,7 +88,9 @@ Listen for the personal reason underneath the business reason. If the founder gi
 
 ### Step 2 — Push past the financial answer
 
-The first answer often involves money, freedom, or opportunity. These are results, not reasons. Ask: "What does the money make possible?" Then: "What would be lost if the company made money but stopped doing the thing that makes it worth running?" Then: "If you sold tomorrow and could not start another company in the same space, what would you miss most?"
+The first answer often involves money, freedom, or opportunity. These are results, not reasons. If the founder gives a financial or lifestyle answer, ask: "What does the money make possible?" Then: "What would be lost if the company made money but stopped doing the thing that makes it worth running?" Then: "If you sold tomorrow and could not start another company in the same space, what would you miss most?"
+
+If the founder's first answer is already purpose-driven and non-financial, do not force the money questions. Acknowledge the answer and move to Step 3.
 
 Do not move on until the answer is something other than a financial or lifestyle outcome. The financial answer is the "what." You are looking for the "why."
 
@@ -124,7 +126,7 @@ This surfaces the transformation, not the service. The Core Purpose often lives 
 
 ### Step 8 — Draft the statement
 
-Ask the founder to say it in one sentence. Short. No numbers. Do not edit it for them. Do not suggest language. If they struggle, offer back the clearest version of what they have said so far and ask if it captures it or if something is missing.
+Ask the founder to say it in one sentence. Short. No numbers. If the statement has already emerged naturally from the conversation, offer back the clearest version of what they have said so far and ask if it captures it or if something is missing. If they struggle, do the same. Do not invent language they did not use.
 
 ### Step 9 — Test the draft
 
@@ -136,7 +138,7 @@ Run all six tests. Do not skip any. If a test fails, say so directly and go back
 
 **Test 3 — Utility.** "Does this help you decide what to say no to? Can you name something you would turn down because it does not serve this purpose?" If it permits everything, it is useless as a filter. Go back.
 
-**Test 4 — Competitor swap.** "Could you replace your company name with a competitor's name and have this statement still be true?" If yes, the statement is too generic. Ask what makes theirs different and use the answer to sharpen it.
+**Test 4 — Specificity.** "Does this statement describe what your company actually does, or is it so broad it could describe any company in any industry?" A Core Purpose does not need to be unique to your company — Disney's "to make people happy" could apply to many companies. But it should be specific enough to describe the work, not so vague it describes everything. If the statement could apply to a bank, a hospital, and a software company equally, it needs sharpening.
 
 **Test 5 — Simplicity.** "Is this short enough that every person in the company could say it from memory without looking it up?" If not, cut it down.
 
@@ -214,9 +216,7 @@ When all tests pass, confirm it explicitly.
 
 ## Output
 
-Produce all outputs both inline in the conversation and as a single downloadable Word document (.docx) containing everything. The inline presentation shows each section in the conversation so the participant can review immediately. The Word document is the deliverable they share with their coach.
-
-Word document formatting. Font: Arial, 11pt body text, bold header row on tables. Table borders: thin (0.5pt), dark gray (#666666). No colored shading on table body rows. Heading colors: primary headings blue (#326AB5), secondary headings green (#54B570), tertiary headings gray (#666666). Body text black (#000000). 10pt paragraph spacing before each paragraph. 1.15 line spacing. No footer. No table of contents.
+Produce all outputs inline in the conversation.
 
 Title: "Core Purpose and BHAG – [Company Name] – [Date]"
 
@@ -244,9 +244,7 @@ For the detailed operating rhythm, see the relevant articles at darlison.com.
 
 Then add:
 
-"This is a draft. Core Purpose and BHAG are foundational to everything the company builds on top of them: values, strategy, priorities, accountability. Before treating these as final, bring them to your leadership team. Download the Word document and review it with your coach in the format they prefer, such as Mural or a similar visual workspace. Once you and your coach have finalized the tools, add them to Metronome Software."
-
-If the AI system cannot generate visuals or produce a Word document: "Use the text output to build the tools in the format your coach prefers. Once you have reviewed with your coach, add the finalized tools to Metronome Software."
+"This is a draft. Core Purpose and BHAG are foundational to everything the company builds on top of them: values, strategy, priorities, accountability. Before treating these as final, bring them to your leadership team. Review them with your coach in the format they prefer, such as Mural or a similar visual workspace. Once you and your coach have finalized the tools, add them to Metronome Software."
 
 ### Multi-founder synthesis
 
