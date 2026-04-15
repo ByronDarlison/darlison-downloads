@@ -295,6 +295,22 @@ If the owner answers no to any of these, ask: "Which part needs to change?" and 
 
 ---
 
+### Question 13b — Date Consistency Check
+
+After the integrity test, walk the measures against the target date.
+
+"Read your measures back one more time. Does any measure name a date that is **later** than the target date in your statement? Or does any measure name a number that can only be hit after the target date?"
+
+If yes, the owner has written an impossible outcome: the statement says they'll be done by one date, but a measure of that outcome cannot be satisfied until a later date. Three options, name them explicitly:
+
+1. **Move the target date out** to the date of the latest measure. The outcome isn't achieved until every measure is hit.
+2. **Move the measure in** — bring the measure's date forward to match the target, or replace the measure with a version that can be hit by the target date.
+3. **Drop the measure** if it isn't actually a measure of *this* outcome — maybe it belongs to a later goal.
+
+Do not let the owner leave the statement with inconsistent dates. This is the single most common self-inflicted error in Owner's Outcome drafting. When the statement and the measures disagree on when "done" happens, the owner has not made a commitment yet; they have written two different commitments and picked whichever one is convenient in the moment.
+
+---
+
 ## Part 2: Map the Gap
 
 Introduce this section by saying: "Your Owner's Outcome is defined. Now we map the gap. The distance between where you are today and what you just said you want. Six areas. Be honest. Optimism here costs you clarity."
@@ -373,6 +389,39 @@ After the owner chooses, work with them to define:
 4. **Success measure.** How will the owner know the action worked? The measure of success is that the discrepancy between goal and reality closes or measurably narrows.
 
 Present the action to the owner and ask: "Is this within your risk tolerance? Can you commit to this date?"
+
+---
+
+#### Cash Floor Check (mandatory)
+
+Before accepting the action, run the cash floor check:
+
+"Look at the cost of this action. Hiring costs salary and benefits. Systems cost subscription or capital. Implementation costs your time and possibly consultant fees. Will executing this action — at the timeline you just committed to — push your cash below the floor you named in Part 1?"
+
+If yes, the action is not within the owner's stated risk tolerance. Do not let the owner paper this over with "I'll be comfortable going below the floor temporarily" — that is exactly the thing the floor was meant to prevent. Name three options and force a choice:
+
+1. **The floor moves.** If the owner wants to lower the floor for real, restate the floor in Part 1 and note why. This is allowed, but it must be a deliberate decision, not an exception.
+2. **The action changes.** Pick a different action that closes the same discrepancy without pushing past the floor. If no such action exists, you may be working on the wrong discrepancy.
+3. **The timeline stretches.** Keep the action but move the date out until the owner can fund it from above the floor.
+
+You cannot violate your own non-negotiable in the same document that defines it. A cash floor that you commit to breaking is not a floor.
+
+---
+
+#### Success Measure Exception Check (mandatory)
+
+Read the success measure back. Does it contain an exception — phrases like "except for X", "other than X", "not including X", "aside from X", or "as long as X isn't involved"?
+
+If yes, X is the real gap. The exception is the discrepancy telling you where it actually lives. The owner has unconsciously written around it.
+
+Two options:
+
+1. **Rewrite the action to close X.** If the real gap is X, then the one thing should be the action that closes X, not the action that avoids it.
+2. **Demote this action to a step.** Acknowledge that the action is a *step toward* closing the full discrepancy, not the one thing itself. Then ask the owner what the one thing would actually be if X was in scope — and whether that is a better choice for this quarter.
+
+Do not accept a success measure with an exception clause without calling it out. An exception in a success measure is almost always the owner negotiating with themselves in the same sentence where they are making a commitment.
+
+---
 
 Then name all remaining discrepancies as deferred. Write them down in the document. They are real. They are not being ignored. They will be addressed in future review cycles once the one thing is done.
 
