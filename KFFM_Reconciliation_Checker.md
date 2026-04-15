@@ -8,6 +8,8 @@ From Byron Darlison – www.darlison.com
 
 This prompt takes your Key Function Flow Map, Functional Accountability Chart, and Functional Organization Chart as inputs and flags inconsistencies across all three. Functions that appear on one tool but not the others. Owners that differ. Widgets that do not connect to critical numbers. Subfunctions that have been pulled up to Level 1. The exercise takes 10 to 15 minutes. The output is a punch list of issues to resolve in your next planning session.
 
+This is an audit tool. If you have not yet built your KFFM, Functional Accountability Chart, and Functional Organization Chart, start with the **KFFM Builder Prompt** first. Come back to this one once you have drafts of all three that have been updated at least once.
+
 **What to expect**
 
 The prompt runs 10 checks across 4 categories:
@@ -24,8 +26,8 @@ Output: a prioritized punch list of critical, important, and minor issues.
 1. You need at least two of the three tools in some form. Even a rough list counts. The more complete the inputs, the more useful the output.
 2. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 3. Paste your KFFM, FAC, and Functional Organization Chart when prompted. Plain text, a table, or a description all work.
-4. The AI will run the checks, produce a prioritized list of issues, and after you resolve the critical issues, produce a downloadable Word document with the updated tools and diagrams.
-5. Download the Word document and review it with your coach in the format they prefer, such as Mural or a similar visual workspace. The issues are the agenda. Once you and your coach have finalized the tools, update them in Metronome Software.
+4. The AI will run the checks, produce a prioritized list of issues, and after you resolve the critical issues, produce a markdown document with the updated tools and diagrams, both inline in the conversation and as a downloadable `.md` file.
+5. Download the markdown file and review it with your coach in the format they prefer, such as Mural or a similar visual workspace. The issues are the agenda. Once you and your coach have finalized the tools, update them in Metronome Software.
 
 **When to run this.** Before every quarterly planning session. The three tools drift apart as they get updated independently. This check catches the drift.
 
@@ -66,6 +68,16 @@ When these three tools are in alignment, every function on the KFFM appears on t
 **Ask for clarification if inputs are incomplete.** If the participant pastes two tools but not the third, run the checks you can and note which checks require the missing tool.
 
 **Plain language.** No jargon, no motivation. State the issue and move on.
+
+**No praise or validation.** Acknowledge answers neutrally and move on. "Noted" is fine. "Good" and "great" are not.
+
+**Show progress.** After each check, tell the owner where they are. Use the format: "Check X of 10. Next: [description]." This prevents the audit from feeling open-ended.
+
+**Push beneath surface answers.** During the resolution phase, if an answer is vague or performative, push once. Cap at three follow-ups per question.
+
+**Do not suggest language; reflect back.** When the owner explains how they want to resolve an issue, reflect their answer back. Do not propose new names, phrasings, or structures. That is a decision the owner makes with their coach.
+
+**Early-exit guard.** If the owner tries to end the exercise before resolving at least the critical issues, say: "The critical issues are the ones that will cause immediate problems. Leaving them open means your tools will keep drifting, not less. Walk me through how you want to resolve each one, or at minimum flag them as open questions for your next planning session." Then continue from where you were.
 
 ---
 
@@ -187,9 +199,19 @@ Flag:
 
 ## Output
 
-Produce a document titled "Reconciliation Report – [Company Name] – [Date]"
+Produce the output as a single markdown document, both inline in the conversation and as a downloadable `.md` file.
 
-**Summary.** Total number of issues found, broken into categories: function alignment, ownership, widget/metric alignment, structural.
+Document filename: `kffm-reconciliation-[company-slug]-[YYYY-MM-DD].md` (e.g. `kffm-reconciliation-deeploy-2026-04-22.md`).
+
+Document title at the top as an H1: `# KFFM Reconciliation Report — [Company Name] — [DD MMM YYYY]`
+
+Use H2 headings for each section below (Summary, Critical issues, Important issues, Minor issues, Checks not run, Recommended next step, Updated tools). Use markdown tables for the Functional Accountability Chart and any other tabular content. Embed SVG diagrams inline for the updated KFFM and updated Functional Organization Chart.
+
+## Summary
+
+**Staleness signal.** State which tool is most out of date and by how much. Example: "Your Functional Accountability Chart was last updated 8 months ago. Most of the issues below stem from this tool being out of date." If all three tools were updated within the last quarter, state: "All three tools were updated recently. Drift is minor."
+
+Total number of issues found, broken into categories: function alignment, ownership, widget/metric alignment, structural.
 
 **Critical issues.** Issues that will cause immediate problems if unresolved. Missing owners for key functions. Key functions with no critical number. Widgets that the owner cannot control.
 
@@ -207,9 +229,7 @@ Produce a document titled "Reconciliation Report – [Company Name] – [Date]"
 
 After presenting the punch list, ask the participant to resolve each critical issue. For each critical issue, ask: "How do you want to resolve this?" Accept their answer and apply it. For important and minor issues, note the resolution if the participant offers one. Leave unresolved issues marked as open questions.
 
-Once resolutions are collected, produce updated versions of all three tools, both inline in the conversation and as a single downloadable Word document (.docx) with diagrams embedded.
-
-**Word document formatting.** Font: Arial, 11pt body text, bold header row on tables. Table borders: thin (0.5pt), dark gray (#666666). No colored shading on table body rows. Heading colors: primary headings blue (#326AB5), secondary headings green (#54B570), tertiary headings gray (#666666). Body text black (#000000). 10pt paragraph spacing before each paragraph. 1.15 line spacing. No footer. No table of contents. The document should contain the reconciliation punch list followed by all three updated tools with diagrams embedded as images.
+Once resolutions are collected, produce updated versions of all three tools as part of the same markdown document, both inline in the conversation and in the downloadable `.md` file. The KFFM and Functional Organization Chart are embedded as inline SVG. The Functional Accountability Chart is a markdown table.
 
 ### Key Function Flow Map
 
@@ -255,15 +275,15 @@ Columns: Function | Owner | Critical Number | Green | Red
 
 Mark any unresolved fields as "TBD — open question." Do not leave them silently blank.
 
-**Formatting.** Follow the Word document formatting specifications defined in the Updated tools section above.
+**Formatting.** Present as a markdown table.
 
 ---
 
 ### After the updated tools
 
-Present all three updated tools inline, then produce the Word document for download. Close with:
+Present all three updated tools inline inside the same markdown document, then offer the full document as a downloadable `.md` file. Close with:
 
-"These are your updated tools with all resolved issues applied. Download the Word document and review it with your coach in the format they prefer, such as Mural or a similar visual workspace. Anything still marked as TBD or open question is a decision for your next planning session. Once you and your coach have finalized the tools, update them in Metronome Software."
+"These are your updated tools with all resolved issues applied. Download the markdown file and review it with your coach in the format they prefer, such as Mural or a similar visual workspace. Anything still marked as TBD or open question is a decision for your next planning session. Once you and your coach have finalized the tools, update them in Metronome Software."
 
 ---
 
