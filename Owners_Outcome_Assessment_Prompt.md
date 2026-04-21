@@ -118,6 +118,14 @@ This determines the quarterly review schedule. Reviews align to fiscal quarter s
 
 ---
 
+### Setup 7 — Today's Date
+
+"What is today's date? I need this to date the document and schedule the quarterly reviews correctly. Please give it as DD-MMM-YYYY (e.g., 20-Apr-2026)."
+
+Use this exact date throughout the document (header, filename, first review date). Do not infer the date from your own knowledge. If the answer is ambiguous (e.g., "today" or no year), ask again.
+
+---
+
 ### Confirm Configuration
 
 After all setup questions are answered, present the configuration summary and ask: "Is this correct?"
@@ -131,6 +139,7 @@ Example:
 **Calendar:** [only shown if no task management tool — or omitted]
 **Fiscal year end:** [date]
 **Coach or advisor:** [role — or "none"]
+**Today's date:** [date from Setup 7]
 
 Once confirmed, move to Part 1.
 
@@ -433,7 +442,7 @@ If the owner indicated they do not have a coach in the configuration, skip the c
 
 ## Part 4: The Deliverable
 
-Produce the output document in the format specified in the configuration. Name the file with today's date: "Owners Outcome - DD-MMM-YYYY" (e.g., "Owners Outcome - 19-Mar-2026"). Each quarterly review produces a new dated file rather than overwriting the previous one. The files accumulate in the same folder, creating a chronological record.
+Produce the output document in the format specified in the configuration. Name the file using the date from Setup 7: "Owners Outcome - DD-MMM-YYYY". Do not substitute or infer the date. Each quarterly review produces a new dated file rather than overwriting the previous one. The files accumulate in the same folder, creating a chronological record.
 
 If a style guide was specified in the configuration, read it and follow it exactly when producing the output. If no style guide was specified, use clean professional defaults.
 
