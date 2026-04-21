@@ -25,7 +25,7 @@ Then a deliverable markdown document to email to Byron.
 
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. If this is your first time, just answer the questions. If you have run this before, paste your previous EOA Prep document when the AI asks for it.
-3. At the end, the AI will produce a markdown document both inline in the conversation and as a downloadable `.md` file. Email the markdown file to byron@darlison.com **two business days before the meeting**.
+3. At the end, the AI will produce your preparation document inline in the conversation, inside a single fenced markdown code block. Copy the contents of that code block into a file and save it with the filename shown at the top of the block (ending in `.md`). Email the saved file to byron@darlison.com **two business days before the meeting**.
 
 **After each meeting:** During the personal review at the end of the meeting, update your document with your conclusions, your new OBT, and any commitments you made. Save the updated document. You will paste it into the prompt before the next meeting.
 
@@ -108,9 +108,17 @@ Wait for the document. Read it carefully. Identify: the prior OBT, any framework
 
 ---
 
+### Setup 5 -- Today's Date
+
+"What is today's date? I need this to date the document and name the file correctly. Please give it as DD-MMM-YYYY (e.g., 20-Apr-2026)."
+
+Use this exact date in the document header and in the filename. Do not infer the date from your own knowledge. If the answer is ambiguous (e.g., "today" or no year), ask again.
+
+---
+
 After setup is complete, confirm:
 
-"Got it. [Name], [Company], preparing for Meeting [N]. [Owner's Outcome summary or 'Owner's Outcome not yet completed']. Correct?"
+"Got it. [Name], [Company], preparing for Meeting [N] on [date from Setup 5]. [Owner's Outcome summary or 'Owner's Outcome not yet completed']. Correct?"
 
 Once confirmed, move to Part 2 (or Part 3 if first run).
 
@@ -330,9 +338,13 @@ If there have been fewer than 3 runs, skip this part entirely and omit Section 6
 
 ## Output
 
-Produce the output as a single markdown document, both inline in the conversation and as a downloadable `.md` file.
+Output the full document inline in the chat, inside a single fenced markdown code block. The code block is the source of truth and must always be produced. If your platform also supports native document rendering (Claude Artifact, ChatGPT Canvas, Gemini Canvas) you may additionally render the document there for easier reading, but the fenced code block must always be produced regardless.
 
-Document filename: `eoa-prep-[company-slug]-m[N]-[YYYY-MM-DD].md` (e.g. `eoa-prep-buildx-design-m3-2026-07-15.md`).
+On the first line inside the code block, place a comment with the filename so the user can copy it directly:
+
+`<!-- filename: eoa-prep-[company-slug]-m[N]-[YYYY-MM-DD].md -->` (e.g. `<!-- filename: eoa-prep-buildx-design-m3-2026-07-15.md -->`).
+
+Use the date from Setup 5 for the filename and the header. Do not substitute or infer the date.
 
 Document title at the top as an H1: `# EOA Prep — [Company Name] — Meeting [N] — [DD MMM YYYY]`
 
@@ -393,7 +405,7 @@ Only include this section after 3+ runs.
 
 After presenting the output, close with:
 
-"Email the markdown document to byron@darlison.com **two business days before the meeting**. After the meeting, update this document with your conclusions, your new OBT, and any commitments you made during the personal review. Save the updated document. You will paste it into this prompt before the next meeting."
+"Copy the full contents of the code block above into a file, naming it with the filename shown in the first-line comment. Save it as a `.md` file. Email the saved file to byron@darlison.com **two business days before the meeting**. After the meeting, update this document with your conclusions, your new OBT, and any commitments you made during the personal review. Save the updated document. You will paste it into this prompt before the next meeting."
 
 ---
 
