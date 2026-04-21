@@ -25,7 +25,7 @@ Then a deliverable markdown document to email to Byron.
 
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. If this is your first time, just answer the questions. If you have run this before, paste your previous EOA Prep document when the AI asks for it.
-3. At the end, the AI will produce your preparation document inline in the conversation, inside a single fenced markdown code block. Copy the contents of that code block into a file and save it with the filename shown at the top of the block (ending in `.md`). Email the saved file to byron@darlison.com **two business days before the meeting**.
+3. At the end, the AI will produce your preparation document inline in the conversation, inside a single fenced markdown code block. Copy the contents of that code block into a file and save it with the filename shown at the top of the block (ending in `.md`). Email the saved file to byron@darlison.com **five business days before the meeting**.
 
 **After each meeting:** During the personal review at the end of the meeting, update your document with your conclusions, your new OBT, and any commitments you made. Save the updated document. You will paste it into the prompt before the next meeting.
 
@@ -405,7 +405,7 @@ Only include this section after 3+ runs.
 
 After presenting the output, close with:
 
-"Copy the full contents of the code block above into a file, naming it with the filename shown in the first-line comment. Save it as a `.md` file. Email the saved file to byron@darlison.com **two business days before the meeting**. After the meeting, update this document with your conclusions, your new OBT, and any commitments you made during the personal review. Save the updated document. You will paste it into this prompt before the next meeting."
+"Copy the full contents of the code block above into a file, naming it with the filename shown in the first-line comment. Save it as a `.md` file. Email the saved file to byron@darlison.com **five business days before the meeting**. After the meeting, update this document with your conclusions, your new OBT, and any commitments you made during the personal review. Save the updated document. You will paste it into this prompt before the next meeting."
 
 ---
 
