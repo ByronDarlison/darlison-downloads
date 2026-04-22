@@ -106,9 +106,9 @@ If no, ask the calendar fallback: "Do you want quarterly review dates added to a
 
 ### Setup 5 — Fiscal Year End
 
-"What is your fiscal year end date?"
+"What is your company's fiscal year end? Give me the month and day (e.g., `August 31` or `December 31`). This is used to compute your fiscal quarter start dates for scheduling quarterly reviews. If you don't know, most Canadian companies use December 31."
 
-This determines the quarterly review schedule. Reviews align to fiscal quarter start dates.
+Accept only a month and day. If the owner includes a year, strip it and confirm the recurring month/day. If the answer is ambiguous, ask again.
 
 ---
 
@@ -137,7 +137,7 @@ Example:
 **File storage:** [link or path]
 **Task management:** [tool, board, list — or "none"]
 **Calendar:** [only shown if no task management tool — or omitted]
-**Fiscal year end:** [date]
+**Fiscal year end:** [Month Day] (quarters start: [Q1], [Q2], [Q3], [Q4])
 **Coach or advisor:** [role — or "none"]
 **Today's date:** [date from Setup 7]
 
