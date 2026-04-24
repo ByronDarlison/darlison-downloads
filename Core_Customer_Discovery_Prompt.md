@@ -204,14 +204,14 @@ Generate the statement from the founder's answers using this template:
 
 Present the draft statement and ask the founder to read it aloud. Does it sound right? Adjust until it does.
 
-Then run six tests. Present each one and ask for a yes or no:
+Then run six tests. Present each one and ask the founder for a Pass or Fail. Pass means the statement meets the test. Fail means it needs sharpening.
 
-1. **Can everyone in your company repeat it?** If not, it is too complex.
-2. **Would your best customer read it and recognize themselves?** If not, the language is off.
-3. **Does it help you say no to opportunities that do not fit?** If not, the problem or the customer type is not specific enough.
-4. **Can you name a room where 50 or more of them gather?** Already tested, but confirm it holds against the statement.
-5. **Is the problem specific enough that a competitor cannot copy-paste it into their own statement?** If a competitor could use the same sentence by swapping in their company name, the statement is not differentiated. The test is whether a competitor would have to fundamentally change what they do. Say no to everything else they are focused on. That is the test.
-6. **Is the addressable market large enough to support your growth targets?** Already tested in Phase 4, but confirm it holds against the final statement. If the statement has narrowed the customer further from what was tested, re-check the math.
+1. **Can everyone in your company repeat it?** **Pass:** yes. **Fail:** no, it is too complex. Simplify.
+2. **Would your best customer read it and recognize themselves?** **Pass:** yes. **Fail:** no, the language is off. Rework it.
+3. **Does it help you say no to opportunities that do not fit?** **Pass:** yes, you can name a specific no. **Fail:** no, the problem or the customer type is not specific enough.
+4. **Can you name a room where 50 or more of them gather?** **Pass:** yes, a specific room. **Fail:** no, which means the market is diffuse or the customer type is not concrete enough. Already tested in Phase 4, so confirm it still holds against the statement.
+5. **Is the problem specific enough that a competitor cannot copy-paste it into their own statement?** The test is whether a competitor would have to fundamentally change what they do to use this sentence. **Pass:** yes, a competitor could not use this statement without fundamentally changing their business. **Fail:** a competitor could swap in their company name and it would still read. The statement is not differentiated.
+6. **Is the addressable market large enough to support your growth targets?** Already tested in Phase 4, so confirm it still holds against the final statement. If the statement has narrowed the customer further from what was tested, re-check the math. **Pass:** yes, the market supports the targets. **Fail:** no, the market is too small for the growth plan.
 
 If any test fails, explain what that means for the profile and suggest where to sharpen.
 
