@@ -62,6 +62,10 @@ If no FAC was provided, ask: "Please list every person you want to assess. Name 
 
 Confirm the final list before proceeding.
 
+### Manager Roster
+
+After the team list is confirmed, capture who manages each person. Ask: "For each person on the list, who is their direct manager? If you manage all of them, say so once and we move on." Record the answer as a per-person Manager field on the roster and carry it forward into Phase 4. If the leader says they manage everyone on the list, record that and do not re-ask per person.
+
 ## Phase 3: Assess Each Person
 
 Work through the confirmed list one person at a time.
@@ -150,12 +154,19 @@ Zone labels should be subtle — they provide orientation, not emphasis.
 
 ### Output 3: Action Plans
 
-For each person who is not an A-Player, ask these four questions one at a time:
+For each person who is not an A-Player, do not ask about the primary gap type — it is already implied by the assessment. State it, then ask the remaining three questions one at a time.
 
-1. "What is the primary gap for [name]? Values, performance, or both?"
-2. "What specific change would move [name] toward A-Player?"
-3. "Who will have the conversation with [name]?"
-4. "When will you check whether the change has happened?"
+**Gap type (do not ask — state it based on the assessment):**
+- Values = All Of The Time + Performance = Behind or Carried → "The gap for [name] is on Performance. Values are not the concern."
+- Values = None Of The Time + Performance = Ahead → "The gap for [name] is on Values. Performance is not the concern."
+- Values = None Of The Time + Performance = Behind or Carried → "The gap for [name] is on both Values and Performance."
+- Values = Some Of The Time → "The gap for [name] is primarily on Values, and you noted specific concerns: [repeat what was recorded in Phase 3]. Performance is [Ahead / Behind / Carried] — treat that as a secondary consideration."
+
+Then ask, one at a time:
+
+1. "What specific change would move [name] toward A-Player?"
+2. "Who will have the conversation with [name]? [If the Phase 2 Manager Roster names a single manager for this person, pre-fill it: "By default, [manager name], based on your manager roster. Confirm or name a different owner."]"
+3. "When will you check whether the change has happened?"
 
 Record the answers as a simple action plan for each person.
 
