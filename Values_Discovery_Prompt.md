@@ -127,18 +127,18 @@ Is there a value the founder lives by every day that didn't surface in any of th
 
 ## Phase 3 – Test the fit
 
-Pressure test each candidate against all ten tests. This phase runs long with more than 3 values. Budget 20 to 30 minutes if working with 4 or 5 candidates.
+Pressure test each candidate against all ten tests. This phase runs long with more than 3 values. Budget 20 to 30 minutes if working with 4 or 5 candidates. For each test, present the question and ask the founder for a Pass or Fail. Pass means the value meets the standard. Fail means it does not.
 
-1. **Destination test** – If the whole team lived this value fully, would it accelerate or slow down what the founder is trying to build?
-2. **Attraction test** – Does this value attract the kind of people who will build what the founder is trying to build?
-3. **Cost test** – Can the founder give a real example where living this value cost the business something?
-4. **Hire/fire test** – Would the founder turn down a high performer who violated this? Let go of someone they liked who couldn't live it?
-5. **Recognition test** – Would the team name this without being prompted? Would they say the founder actually lives it?
-6. **Tension test** – Does this value ever conflict with another value on the list?
-7. **Decision test** – Did this value visibly influence the founder's last three significant decisions?
-8. **Opposite test** – Does this value have a visible opposite? If a team member acted against it, would the founder and the team recognize the violation immediately? A value with no recognizable opposite is too vague to evaluate against.
-9. **Discomfort test** – Does committing to this out loud make the founder slightly uncomfortable?
-10. **Crisis test** – Design a crisis scenario specifically tailored to this value. Present a realistic situation where living this value costs something significant: money, a client, a relationship, or an opportunity. The scenario must create genuine tension, not just discomfort. A value that holds under real cost is confirmed. A value that gets rationalized away under pressure needs to be rewritten or cut.
+1. **Destination test** – Does living this value fully accelerate what the founder is trying to build? **Pass:** yes, it accelerates. **Fail:** no, it slows the work down or pulls in the wrong direction.
+2. **Attraction test** – Does this value attract the kind of people who will build what the founder is trying to build? **Pass:** yes. **Fail:** no, it would attract the wrong people.
+3. **Cost test** – Can the founder give a real example where living this value cost the business something? **Pass:** yes, a specific example. **Fail:** no, which means the value has never actually been tested.
+4. **Hire/fire test** – Would the founder turn down a high performer who violated this, and let go of someone they liked who could not live it? **Pass:** yes to both. **Fail:** no on either, which means the value is not real under pressure.
+5. **Recognition test** – Would the team name this value without being prompted and say the founder actually lives it? **Pass:** yes to both. **Fail:** no, the team would not recognize this as a value of this company.
+6. **Tension test** – Can the founder place this value clearly next to the others: either distinct from them, or conflicting with one in a way that can be resolved through priority order? **Pass:** yes, its position is clear. **Fail:** the value is so close to another that they are effectively duplicates and should be folded together.
+7. **Decision test** – Did this value visibly influence the founder's last three significant decisions? **Pass:** yes. **Fail:** no, which means the value is not yet operational.
+8. **Opposite test** – Does this value have a visible opposite that the founder and the team would recognize immediately if someone acted against it? **Pass:** yes, the opposite is obvious. **Fail:** no recognizable opposite, which means the value is too vague to evaluate against.
+9. **Discomfort test** – Does committing to this out loud make the founder slightly uncomfortable? **Pass:** yes. Slight discomfort means the value has real cost. **Fail:** no, which often means the value is too comfortable to be real.
+10. **Crisis test** – Design a crisis scenario specifically tailored to this value: a realistic situation where living this value costs something significant (money, a client, a relationship, or an opportunity). The scenario must create genuine tension, not just discomfort. **Pass:** the value holds under real cost. **Fail:** the value gets rationalized away under pressure. Rewrite or cut.
 
 A value that passes all ten is real and right. A value that fails more than two tests needs to be rewritten or cut.
 
@@ -152,13 +152,11 @@ Once the values are confirmed, present a conflict scenario for each pair of valu
 
 Before locking the language, test each confirmed value for actionability. A value is only operational if a frontline employee knows exactly what to do when they encounter it.
 
-For each value ask:
+For each value, ask the founder for a Pass or Fail on each of the three questions below. Keep rewriting until all three pass. Only then finalize the language.
 
-1. **Does it direct behavior or describe a state?** "Be honest" describes a state. "Tell the truth before you're asked" directs behavior. Push until every value is a directive, not a description.
-2. **Does it tell someone what to stop, not just what to start?** The most actionable values have a visible opposite. "Do what creates value. Stop what doesn't" is stronger than "do what creates value" alone.
-3. **Could a new employee use this on day one without explanation?** If they would need context to understand what it means in practice, the language isn't done yet.
-
-Keep rewriting until all three pass. Only then finalize the language.
+1. **Does it direct behavior or describe a state?** "Be honest" describes a state. "Tell the truth before you're asked" directs behavior. **Pass:** it directs a specific behavior. **Fail:** it describes a state. Rewrite as a directive.
+2. **Does it tell someone what to stop, not just what to start?** The most actionable values have a visible opposite. "Do what creates value. Stop what doesn't" is stronger than "do what creates value" alone. **Pass:** it names both what to do and what to stop. **Fail:** it only names what to do. Add the stop.
+3. **Could a new employee use this on day one without explanation?** **Pass:** yes, the language is self-explanatory. **Fail:** no, it needs context to understand in practice. Sharpen the language.
 
 ### Step 2 – Always, sometimes, never scenarios and guiding questions
 

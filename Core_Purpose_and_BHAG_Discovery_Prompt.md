@@ -132,17 +132,19 @@ Ask the founder to say it in one sentence. Short. No numbers. If the statement h
 
 Run all six tests. Do not skip any. If a test fails, say so directly and go back to refine before continuing.
 
-**Test 1 — Durability.** "If the company's products, markets, and strategy all changed, would this reason for existing still hold?" If no, the statement describes a strategy, not a purpose. Go back.
+For each test, present the question and ask the founder for a Pass or Fail. Pass means the statement meets the test. Fail means it needs rework before moving on.
 
-**Test 2 — Authenticity.** "Is this what the company actually is, or what you want it to be? If you said this to your team tomorrow, would they nod or roll their eyes?" If the team would not recognize it, it is aspirational, not real. Go back.
+**Test 1 — Durability.** "If the company's products, markets, and strategy all changed, would this reason for existing still hold?" **Pass:** yes, it still holds. **Fail:** no, this describes a strategy, not a purpose. Go back.
 
-**Test 3 — Utility.** "Does this help you decide what to say no to? Can you name something you would turn down because it does not serve this purpose?" If it permits everything, it is useless as a filter. Go back.
+**Test 2 — Authenticity.** "If you said this to your team tomorrow, would they nod in recognition?" **Pass:** yes, this is what the company actually is today. **Fail:** they would roll their eyes, this is aspirational. Go back.
 
-**Test 4 — Specificity.** "Does this statement describe what your company actually does, or is it so broad it could describe any company in any industry?" A Core Purpose does not need to be unique to your company — Disney's "to make people happy" could apply to many companies. But it should be specific enough to describe the work, not so vague it describes everything. If the statement could apply to a bank, a hospital, and a software company equally, it needs sharpening.
+**Test 3 — Utility.** "Does this help you decide what to say no to? Can you name something you would turn down because it does not serve this purpose?" **Pass:** yes, you can name a specific no. **Fail:** it permits everything and is useless as a filter. Go back.
 
-**Test 5 — Simplicity.** "Is this short enough that every person in the company could say it from memory without looking it up?" If not, cut it down.
+**Test 4 — Specificity.** "Does this statement describe what your company actually does, or is it so broad it could describe any company in any industry?" A Core Purpose does not need to be unique to your company. Disney's "to make people happy" could apply to many companies. But it should be specific enough to describe the work, not so vague it describes everything. **Pass:** specific enough to describe the work. **Fail:** so broad it could apply to a bank, a hospital, and a software company equally. Sharpen it.
 
-**Test 6 — Integrity.** "Is this what you genuinely believe, or what you think sounds right?" If there is hesitation, do not let it pass. Ask what is causing the hesitation.
+**Test 5 — Simplicity.** "Is this short enough that every person in the company could say it from memory without looking it up?" **Pass:** yes. **Fail:** no, cut it down.
+
+**Test 6 — Integrity.** "Is this what you genuinely believe?" **Pass:** yes, no hesitation. **Fail:** it sounds right but there is hesitation about whether you actually believe it. Ask what is causing the hesitation before moving on.
 
 ### Step 10 — Lock in
 
@@ -200,13 +202,13 @@ If you see tension, name it. Ask the founder to resolve it. Do not resolve it fo
 
 ### Step 15 — Test the BHAG
 
-Run all three tests. Do not skip any.
+Run all three tests. Do not skip any. For each, present the question and ask the founder for a Pass or Fail. Pass means the statement meets the test. Fail means it needs rework before moving on.
 
-**Test 1 — Belief.** "Would your team hear this and feel excited, or would they think it is unrealistic?" The BHAG should feel slightly audacious but genuinely achievable if the company does the right things over a long enough period.
+**Test 1 — Belief.** "Would your team hear this and feel excited about it being genuinely achievable over a long enough period?" **Pass:** yes, slightly audacious but believable. **Fail:** they would dismiss it as unrealistic, or they would find it too safe to be a BHAG. Rework it.
 
-**Test 2 — Alignment.** "Does this BHAG require you to fulfill your Core Purpose every day to achieve it?" If the BHAG can be achieved without living the Core Purpose, they are disconnected. Go back.
+**Test 2 — Alignment.** "Does this BHAG require you to fulfill your Core Purpose every day to achieve it?" **Pass:** yes, the BHAG and the Core Purpose are locked together. **Fail:** the BHAG could be achieved without living the Core Purpose. They are disconnected. Go back.
 
-**Test 3 — Duration.** "Would you still be working toward this in 20 years?" If not, it is a strategy or a milestone, not a BHAG. Go back.
+**Test 3 — Duration.** "Would you still be working toward this in 20 years?" **Pass:** yes. **Fail:** no, this is a strategy or a milestone, not a BHAG. Go back.
 
 ### Step 16 — Lock in
 
