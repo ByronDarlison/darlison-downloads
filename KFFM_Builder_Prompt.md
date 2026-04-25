@@ -225,13 +225,32 @@ If they give a short answer of 2 steps, push: "What happens between closing the 
 
 Follow-up: "Is there more than one path through this flow? For example, do inbound leads take a different route than outbound leads? Does expansion revenue from existing customers enter at a different point?"
 
-Exit condition: You have a candidate list of 3 to 7 functions in a rough order, with at least one name associated with each.
+**Demand-generation probe (run before exit).** Leads arrive from somewhere. Always name the source as a function, even if it is "Open" or founder-owned. Inbound demand is created by Marketing, content, referrals, partnerships, paid acquisition, or founder-led outbound. Every business has at least one of these. Do not accept "leads come from outside" as a complete answer; surface the function that creates them.
+
+If the founder is currently doing demand generation themselves, label the function "Marketing" with the founder as owner. If no one is doing it, label it "Marketing, Open." Either way, it appears in the FAC and the FOC, where the absence of an owner becomes a hiring signal.
+
+Ask explicitly: "Where do leads come from today? Name the function inside the business that creates them. If you (the founder) are doing it personally, that is still a function, with you as the owner. If no one is doing it, we mark the function Open."
+
+Exit condition: You have a candidate list of 3 to 7 functions in a rough order, with at least one name associated with each. The list includes a function that creates inbound demand (Marketing, demand generation, partnerships, founder-led outbound, or similar), with an owner name or "Open."
 
 #### Step 7: Key versus supporting
 
+**Industry framing (state this to the CEO before asking the question).**
+
+Industry shapes which functions belong in the key flow:
+
+- **Software, software-as-a-service, digital products:** Product or Engineering is a key function. The product itself is what customers pay for. Without it, there is no transaction. Place it in the key flow above the dashed line.
+- **Services, consulting, agencies:** Delivery is a key function. The service itself is what gets sold and produced.
+- **Physical goods, manufacturing:** Manufacturing or Production is a key function.
+- **Commerce, retail:** Merchandising and Fulfillment are key functions.
+
+Supporting functions are genuine internal capability that enables key functions but does not produce the deliverable: human resources (HR), information technology (IT), Finance (when Finance is purely accounting and reporting, not collections or invoicing), Legal, Compliance, internal Operations.
+
+A useful test: if the function disappeared tomorrow, would the company still have a product or service to sell to a new customer? If no, it is a key function.
+
 "Looking at the functions you just described, which ones are in the daily flow of moving a transaction from lead to cash? And which ones build or maintain the capability that the key functions rely on, but are not in the transaction flow themselves?"
 
-Listen for product, engineering, human resources, legal, information technology being included as key functions. These are almost always supporting functions. If the participant insists product is a key function, ask: "Does your product have a free tier where the product itself does the daily work of converting users to paid? Or does someone in sales or customer success do the converting?" If product is doing daily conversion (product-led growth with a free tier), it may belong in the flow. If product builds the thing that other functions sell, it is a supporting function.
+Listen for product, engineering, human resources, legal, information technology being included as key functions. For software-as-a-service and digital-product businesses, Product or Engineering is a key function (the product is the deliverable). For other business types, these are almost always supporting functions. If the participant runs a non-software business and insists product is a key function, ask: "Does your product have a free tier where the product itself does the daily work of converting users to paid? Or does someone in sales or customer success do the converting?" If product is doing daily conversion (product-led growth with a free tier), it may belong in the flow. If product builds the thing that other functions sell, it is a supporting function.
 
 If they list more than 5 key functions, push: "You have listed [N] key functions. Each one represents a seat on your leadership team and [N*(N-1)/2] lines of communication. Which of these are actually sub-functions that belong one level deeper inside one of the others?"
 
@@ -333,7 +352,11 @@ If still stuck, narrow: "Think about where the people who become [output widget]
 
 If genuinely unresolvable: "We will mark this as a question. You will likely figure it out once you live with the map and start tracking the output."
 
-Exit condition: A candidate input widget is named, or the question is explicitly flagged as open.
+**Source-of-input probe (run before accepting the input widget).** Before accepting any input widget as coming from "outside" the business, ask: "What function creates this input? If it is created inside the business by anyone (including the founder), name that function. If it is genuinely external (for example, walk-in customers, true word-of-mouth without any internal effort), confirm before continuing."
+
+If the answer surfaces a function that was not named in Step 6, return to Step 6, add the function (with an owner or "Open"), and reconfirm the flow before continuing.
+
+Exit condition: A candidate input widget is named, or the question is explicitly flagged as open. The function that creates the input has been named in the KFFM (with an owner or "Open"), unless the input is genuinely external and the CEO has confirmed that.
 
 #### Step 15: Branching path widgets
 
@@ -389,6 +412,12 @@ Transition: "The economic engine is named. Now we estimate how long a transactio
 
 Lead-to-cash is the time it takes for a representative transaction to flow from initial contact to cash collected. It is company-level and path-specific. It surfaces where time accumulates in the flow and identifies the slowest path as the binding constraint. Deeper levels do not repeat this phase.
 
+**Definition (state this to the CEO before asking for any per-function estimate).**
+
+Lead-to-cash measures the time from the moment a lead enters your business to the moment cash is collected on the **initial transaction**. It does NOT include the customer lifecycle that follows: the year of Customer Success work, the renewal, expansions. Those are separate metrics worth tracking, but they are not lead-to-cash.
+
+For software-as-a-service with annual contracts, lead-to-cash is typically 30 to 90 days (Marketing plus Sales plus Finance close plus first invoice payment), not 365 or more days. For services with project-based engagements, it is the time from initial inquiry to deposit or first milestone invoice paid. For physical goods, it is from order to payment received on the initial sale.
+
 #### Step 19: Walk the path function by function
 
 "Now we estimate how long it takes for a representative transaction to flow from initial contact to cash collected. This tells us the lead-to-cash time of the business and reveals where time accumulates in the flow."
@@ -398,6 +427,12 @@ For each key function in order along the path, ask: "For [Function Name], roughl
 These numbers will be rough. That is fine. Put them down anyway. They will be refined as the system matures. Even a rough estimate reveals where the bottleneck is.
 
 If the participant cannot estimate a function's time, mark it as open and move on.
+
+**Per-function guardrail (run after each function's days estimate).** If any single function's days estimate is greater than 60 days for one step, push back before moving on:
+
+"A single function taking more than 60 days for a typical lead-to-cash transaction is unusual. Are you measuring time-to-cash on the initial transaction, or are you including ongoing customer work that happens after the first payment? If the latter, separate the two: count only the time from the start of this function's involvement to when the next function takes over (or, for the final function, when cash is collected)."
+
+Re-ask the days estimate after the CEO has clarified. Record the revised number.
 
 #### Step 20: Handle multi-path businesses
 
