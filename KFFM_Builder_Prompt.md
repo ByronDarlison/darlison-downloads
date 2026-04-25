@@ -6,9 +6,9 @@ From Byron Darlison, www.darlison.com
 
 ---
 
-This prompt interviews you about your business and produces three unified outputs: a Key Function Flow Map (KFFM) as a visual diagram, an enriched Functional Accountability Chart (FAC) as a hierarchical table, and a Functional Organization Chart (FOC) as a visual diagram. The prompt handles Level 1 (company functions) and then decomposes any function to Level 2, Level 3, and beyond, to whatever depth you choose. Level 1 takes 45 to 60 minutes. Each additional level of decomposition on a function adds 20 to 30 minutes.
+This prompt interviews you about your business and produces four unified outputs: a Key Function Flow Map (KFFM) as a visual diagram, a Functional Accountability Chart (FAC) as an HTML table plus a CSV-equivalent, a paired Glossary explaining every metric, and a Functional Organization Chart (FOC) as a visual diagram. The prompt handles Level 1 (company functions) and then decomposes any function to Level 2, Level 3, and beyond, to whatever depth you choose. Level 1 takes 45 to 60 minutes. Each additional level of decomposition on a function adds 20 to 30 minutes.
 
-The enriched FAC schema has fourteen columns per function: Function, Owner, Mission, Critical Number, Critical Number Green, Critical Number Red, Leading Indicator, Leading Green, Leading Red, Lagging Indicator, Lagging Green, Lagging Red, Status (overall health), and Path (the hierarchical breadcrumb such as `Marketing > Demand Generation > Paid Search`). Yellow is implicit between green and red and is not a separate field. There is no Type column; the distinction between key and supporting functions lives on the KFFM diagram, not in the FAC.
+The FAC is a static document. It has seven columns per function: Function, Owner, Mission, Critical # (metric name plus inline thresholds in one cell), Leading Indicator (same format), Lagging Indicator (same format), and Reports To (the single immediate parent function). The first row is always Head of Company. There is no Status column and no row coloring; live measurement belongs on a separate scorecard artifact. Yellow is implicit between the green and red threshold values and is not rendered. There is no Type column; the distinction between key and supporting functions lives on the KFFM diagram, not in the FAC. Hierarchy is shown by the Reports To column with no indentation. A paired Glossary artifact ships alongside the FAC, with three entries per function (Critical, Leading, Lagging), each carrying "Why this metric", "How it's calculated", and "Example".
 
 **What to expect**
 
@@ -30,14 +30,14 @@ Once the mode is set, the prompt moves through these phases:
 7. **Enrich every function, key and supporting.** Mission statement, critical number, leading indicator, lagging indicator, and thresholds for each metric. Research-backed candidates offered for each. (15 to 20 minutes)
 8. **Run the four tests.** Simplicity, transaction, control, alignment.
 9. **Offer decomposition.** For every function at the current level (key and supporting), ask whether to decompose into sub-functions now, not yet, or no sub-functions yet. For each "yes," run the Level N+1 exercise. Repeat at every subsequent level to whatever depth you choose.
-10. **Produce unified outputs.** Unified FAC as a hierarchical table, unified FOC as an SVG, resume-state block, next steps.
+10. **Produce unified outputs.** Final KFFM (SVG), unified FAC (HTML + CSV), paired Glossary, unified FOC (SVG), resume-state block, next steps. The session ends with a single terminator line; no closing chatter after that.
 
 **How to use it**
 
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience, especially for the visual diagrams and the research-backed candidates.
 2. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
 3. As you move through each phase, the AI will build the KFFM diagram step by step. You will see your map evolve as functions, owners, colors, widgets, missions, and critical numbers are added.
-4. When the exercise is complete, the AI will produce a unified FAC (hierarchical markdown table), a unified FOC (SVG diagram), a resume-state block, and a brief next-steps paragraph, all inline in the conversation.
+4. When the exercise is complete, the AI will produce a final KFFM (SVG), a unified FAC (HTML + CSV-equivalent), a paired Glossary, a unified FOC (SVG), a resume-state block, and a brief next-steps paragraph, all inline in the conversation.
 5. Review the outputs with your coach in the format they prefer, such as Mural or a similar visual workspace. The AI produces first drafts. A person who knows your business can challenge them. Once you and your coach have finalized the tools, add them to Metronome Software.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. At the end of the payload there is a synthesis section you can paste into a new AI conversation with all founders' outputs to reconcile into one agreed set. The synthesis reconciles every level any founder reached, not just the top tier. The differences between maps are often the most valuable part of the exercise.
@@ -62,28 +62,55 @@ You are interviewing a chief executive officer (CEO) to help them build a Key Fu
 
 **Widgets.** A widget is a nonfiscal thing that flows through a function and is controlled and owned by a team member. Three rules define a good widget. First, the function owner must be able to control the count through their daily work. Second, more of the widget should correlate to more revenue. Third, the function owner should be able to tell at the end of the day whether they had a good day by looking at their widget count. Widgets must be things the function owner can control. Seats, not monthly recurring revenue (MRR). Delivered projects, not revenue. Collected invoices, not cash. Every function has widgets, key and supporting alike. Supporting functions have inputs and outputs too; what flows in, what flows out.
 
-**The enriched FAC schema.** Every FAC row, at every level, key or supporting, has fourteen columns:
+**The FAC schema.** The FAC is a static document. It defines who owns what, mission, what to measure, what thresholds, and where they report. It does NOT track current performance values or status colors. Live measurement belongs on a separate Scorecard artifact built by a different prompt.
 
-1. Function (the name)
-2. Owner (one name, multiple co-owner names, or "Open")
-3. Mission (a one-sentence outcome statement for what the function exists to produce)
-4. Critical Number (the single number the owner uses to judge function health)
-5. Critical Number Green (the number that means healthy)
-6. Critical Number Red (the number that means unhealthy)
-7. Leading Indicator (the input that predicts the critical number; often the KFFM input widget)
-8. Leading Green
-9. Leading Red
-10. Lagging Indicator (the downstream business effect of the critical number; often the KFFM output widget or a downstream derivative)
-11. Lagging Green
-12. Lagging Red
-13. Status (overall health: green, amber, or red)
-14. Path (the hierarchical breadcrumb, for example `Marketing > Demand Generation > Paid Search`)
+**Header block.** Top of the document. Five fields only:
 
-There is no Type column. The distinction between key and supporting functions lives on the KFFM diagram only. Yellow or amber is implicit between green and red on every numeric metric and is not a separate threshold field.
+- **Company** (the company name)
+- **Business Type** (e.g., B2B Software-as-a-Service)
+- **Stage** (matches Phase 1 Step 5 wording, with the dollar figure alongside, e.g., `Established 10–50M ($10M ARR)`)
+- **Industry / Niche**
+- **Geography**
+
+Profit/X and lead-to-cash are NOT in the header; they live on the KFFM diagram. Head of Company is NOT in the header; it is row 1 of the table. The HTML emit places a Download CSV button in the top right of the header block.
+
+**Columns (7).** Every FAC row, at every level, key or supporting, has seven columns:
+
+1. **Function** (the name; first row is always Head of Company)
+2. **Owner** (single name; OR count + role abbreviation for multi-holder seats, e.g., "4 AEs", "3 SDRs", "4 CSRs"; OR "Open")
+3. **Mission** (one sentence, third-person infinitive: "To [verb] [object] [outcome]…"; max two clauses; no em-dashes)
+4. **Critical #** (one cell containing metric name plus inline thresholds: `MetricName (≥100%, <90%)`)
+5. **Leading Indicator** (same format; predicts the Critical #)
+6. **Lagging Indicator** (same format; confirms the Critical # was achieved over time)
+7. **Reports To** (single immediate parent function name; "Board" for Head of Company, or empty if founder-owned with no board; "Head of Company" for Level 1 functions; parent function name for Level 2+ functions)
+
+NO Status column. NO row coloring. NO section headers (COMPANY / FINANCE / etc.). NO indentation. Reports To does the structural work. Yellow is implicit between the green and red threshold values and is not rendered.
+
+**Owner column styling.** Red highlight when (a) owner is "Open" OR (b) the same person owns more than one row. These are structural diagnostics, not measurement signals.
+
+**Threshold rendering.** Each metric cell is one cell with the metric name followed by inline thresholds in parentheses. Green target renders as bold green text (color `#16a34a`). Red target renders as bold red text (color `#a32d2d`). The words "Green" and "Red" are dropped; the colored highlight does the work. In markdown, render as `MetricName (**≥100%**, **<90%**)`. In HTML, wrap each value in `<strong class="g-text">` or `<strong class="r-text">` per the Pillar HR mockup.
+
+**Naming.** The top company leader is "Head of Company", not "CEO". Other C-suite roles (CFO, CRO, CTO) keep their standard titles. Head of Company reports to "Board" if the company has outside investment, or to no one (empty Reports To) if founder-owned with no board.
+
+**Glossary (paired artifact).** The FAC ships with a Glossary, one entry per function row, with three sub-entries (Critical, Leading, Lagging). Each sub-entry has:
+
+- **Why this metric:** rationale for choosing it
+- **How it's calculated:** the formula or method
+- **Example:** a concrete example
+
+**Outputs.** The FAC emits as both an HTML file (with header block, Download CSV button, the seven-column table per the Pillar HR mockup, and the Glossary below the table) and a CSV-equivalent. The CSV has 13 columns (each metric cell splits into name + green target + red target):
+
+```
+Function, Owner, Mission, Critical #, Critical Green, Critical Red,
+Leading Indicator, Leading Green, Leading Red,
+Lagging Indicator, Lagging Green, Lagging Red, Reports To
+```
+
+The Glossary is not in the CSV; prose does not fit well in structured export.
 
 **The FOC** is an org chart organized by function rather than by title or reporting line. It grows level by level as the CEO decomposes functions. Each seat has a seat name, an owner name, a function health color, and reporting lines. Every seat on the FOC uses solid borders. Key and supporting functions are not visually distinguished on the FOC; ownership is ownership. At this stage the FOC is pure business mapping. No competency tier labels, no tier numbers, no reconciliation to any competency library. Competency tier mapping happens later, in a separate Scorecard exercise.
 
-**What the CEO gets at session end.** A unified FAC that stacks Level 1 key rows first, then Level 1 supporting rows, with deeper rows nested under their parent regardless of type, every row carrying the full fourteen-column schema. A unified FOC showing the whole org tree with every seat surfaced through the levels completed. A resume-state block the CEO can paste into a future session to continue. And a brief next-steps paragraph.
+**What the CEO gets at session end.** A unified FAC (HTML + CSV-equivalent) with Head of Company as row 1, then Level 1 functions in KFFM flow order, with deeper rows ordered by reading order under their parent (Reports To column does the structural work; no indentation, no section headers). A paired Glossary artifact carrying Why / How / Example for every metric on every row. A unified FOC showing the whole org tree with every seat surfaced through the levels completed. A resume-state block the CEO can paste into a future session to continue. And a brief next-steps paragraph.
 
 This exercise produces first drafts. They will be rough. They will have question marks and gaps. That is the system working. The CEO will refine them over multiple iterations.
 
@@ -197,13 +224,19 @@ Record the answer. If the answer is one person, one name. If the answer is two c
 
 Exit condition: You know who heads the company.
 
-#### Step 5: Business type, stage, industry, and geography
+#### Step 5: Company name, business type, stage, industry, and geography
 
-"For the research phase later, I need four data points. One: what type of business is this? For example, business-to-business software-as-a-service, business-to-consumer ecommerce, professional services firm, manufacturer, marketplace. Two: what stage is the business in? For example, pre-revenue, early revenue under one million dollars, scaling one to ten million, established ten to fifty million, established over fifty million. Three: what industry or niche? For example, health technology, financial services, construction services, education technology. Four: what geography? For example, North America, United Kingdom, Australia, global."
+Ask the company name first, on its own, before the other four data points.
 
-Record all four. They feed the research-backed candidates in Phase 7.
+"What is the company name?"
 
-Exit condition: You have all four data points.
+Record it. Then ask the remaining four data points in one prompt:
+
+"For the research phase later, I need four more data points. One: what type of business is this? For example, business-to-business software-as-a-service, business-to-consumer ecommerce, professional services firm, manufacturer, marketplace. Two: what stage is the business in? Use one of these labels: pre-revenue, early revenue under one million dollars, scaling one to ten million, established ten to fifty million, established over fifty million. If you can, add the dollar figure alongside the label (for example, `Established 10–50M ($10M ARR)`). Three: what industry or niche? For example, health technology, financial services, construction services, education technology. Four: what geography? For example, North America, United Kingdom, Australia, global."
+
+Record all five (company name plus the four data points). They feed the FAC header block and the research-backed candidates in Phase 7. The stage field must use the exact wording from this step, with the dollar figure alongside when available.
+
+Exit condition: You have all five data points (company name, business type, stage, industry, geography).
 
 ---
 
@@ -225,7 +258,7 @@ If they give a short answer of 2 steps, push: "What happens between closing the 
 
 Follow-up: "Is there more than one path through this flow? For example, do inbound leads take a different route than outbound leads? Does expansion revenue from existing customers enter at a different point?"
 
-**Demand-generation probe (run before exit).** Leads arrive from somewhere. Always name the source as a function, even if it is "Open" or founder-owned. Inbound demand is created by Marketing, content, referrals, partnerships, paid acquisition, or founder-led outbound. Every business has at least one of these. Do not accept "leads come from outside" as a complete answer; surface the function that creates them.
+**Demand-generation probe (run before exit).** Leads arrive from somewhere, and that somewhere is a function inside the business, even if the function is "Open" or founder-owned. Inbound demand is typically created by Marketing, content, referrals, partnerships, paid acquisition, or founder-led outbound. If the CEO answers that "leads come from outside" or that demand "just shows up", treat it as an incomplete answer and probe further with: "What inside the business causes that to happen? Even word-of-mouth has a source. Who or what generates the conversation that leads to a referral?" Surface the function that creates demand before exiting the step.
 
 If the founder is currently doing demand generation themselves, label the function "Marketing" with the founder as owner. If no one is doing it, label it "Marketing, Open." Either way, it appears in the FAC and the FOC, where the absence of an owner becomes a hiring signal.
 
@@ -235,26 +268,34 @@ Exit condition: You have a candidate list of 3 to 7 functions in a rough order, 
 
 #### Step 7: Key versus supporting
 
-**Industry framing (state this to the CEO before asking the question).**
+**Industry patterns (share these with the CEO as starting data, not as the answer).**
 
-Industry shapes which functions belong in the key flow:
+Patterns to surface, framed as observations rather than rules:
 
-- **Software, software-as-a-service, digital products:** Product or Engineering is a key function. The product itself is what customers pay for. Without it, there is no transaction. Place it in the key flow above the dashed line.
-- **Services, consulting, agencies:** Delivery is a key function. The service itself is what gets sold and produced.
-- **Physical goods, manufacturing:** Manufacturing or Production is a key function.
-- **Commerce, retail:** Merchandising and Fulfillment are key functions.
+- In sales-led software businesses, Product and Engineering often sit as supporting functions because Sales and Customer Success do the daily work of moving transactions through the flow.
+- In product-led growth businesses with a free tier, the product itself often does the daily work of converting users to paid; Product can sit in the daily flow.
+- In services, consulting, and agencies, Delivery is often in the daily flow because the service is what gets sold and produced.
+- In physical goods or manufacturing, Manufacturing or Production is often in the daily flow.
+- In commerce or retail, Merchandising and Fulfillment are often in the daily flow.
+- Internal capability functions (HR, IT, Legal, Compliance, internal Operations, Finance when purely accounting and reporting) usually sit as supporting because they enable the daily flow rather than carry a transaction through it.
 
-Supporting functions are genuine internal capability that enables key functions but does not produce the deliverable: human resources (HR), information technology (IT), Finance (when Finance is purely accounting and reporting, not collections or invoicing), Legal, Compliance, internal Operations.
+Use these as starting data. The deciding mechanism is the disappearance test below, not the pattern.
 
-A useful test: if the function disappeared tomorrow, would the company still have a product or service to sell to a new customer? If no, it is a key function.
+**The disappearance test (the deciding mechanism).**
 
-"Looking at the functions you just described, which ones are in the daily flow of moving a transaction from lead to cash? And which ones build or maintain the capability that the key functions rely on, but are not in the transaction flow themselves?"
+"If [function name] disappeared tomorrow, would the company still have a product or service to sell to a new customer this month? If yes, the function is supporting. If no, it is in the daily flow."
 
-Listen for product, engineering, human resources, legal, information technology being included as key functions. For software-as-a-service and digital-product businesses, Product or Engineering is a key function (the product is the deliverable). For other business types, these are almost always supporting functions. If the participant runs a non-software business and insists product is a key function, ask: "Does your product have a free tier where the product itself does the daily work of converting users to paid? Or does someone in sales or customer success do the converting?" If product is doing daily conversion (product-led growth with a free tier), it may belong in the flow. If product builds the thing that other functions sell, it is a supporting function.
+Ask the disappearance test for any function whose placement is unclear. Capture the owner's reasoning in one sentence so the placement decision is documented and reviewable.
 
-If they list more than 5 key functions, push: "You have listed [N] key functions. Each one represents a seat on your leadership team and [N*(N-1)/2] lines of communication. Which of these are actually sub-functions that belong one level deeper inside one of the others?"
+**Ask the CEO.**
 
-Exit condition: You have 3 to 5 key functions clearly separated from supporting functions.
+"Looking at the functions you just described, which ones are in the daily flow of moving a transaction from lead to cash? And which ones build or maintain the capability that the daily flow relies on but are not in the transaction flow themselves?"
+
+For each function whose placement is unclear, run the disappearance test and capture the owner's one-sentence reasoning.
+
+If they list more than 5 key functions, ask: "You have listed [N] key functions. Each one represents a seat on the leadership team and [N*(N-1)/2] lines of communication. Are any of these actually sub-functions that belong one level deeper inside one of the others?"
+
+Exit condition: You have 3 to 5 key functions clearly separated from supporting functions, with the owner's reasoning recorded for any placement that was not obvious.
 
 **Visual checkpoint 1.** Generate a KFFM diagram showing the key function names in boxes arranged in the two-row wrapping layout, connected by arrows in flow order. Supporting functions appear below a dashed separator line in gray boxes with solid borders. This dashed separator line is the ONLY visual distinction between key and supporting in any deliverable. No owners, no colors, no widget labels yet. All boxes the same gray. Show it to the participant and ask: "Does this flow look right? Are these the right functions in the right order?"
 
@@ -470,19 +511,32 @@ Transition: "Lead-to-cash is estimated. Now we enrich each function, key and sup
 
 ### Phase 7: Enrich each function
 
-Run the enrichment phase for every function, key and supporting. This phase produces the full fourteen-column FAC row for every function at this level. Work through each function one at a time: first every key function in KFFM flow order, then every supporting function. For each function, complete all five enrichment sub-steps (mission, critical number, leading indicator, lagging indicator, thresholds) before moving to the next function.
+Run the enrichment phase for every function, key and supporting. This phase produces the full seven-column FAC row for every function at this level (Function, Owner, Mission, Critical #, Leading Indicator, Lagging Indicator, Reports To). Work through each function one at a time: first every key function in KFFM flow order, then every supporting function. For each function, complete all five enrichment sub-steps (mission, critical number, leading indicator, lagging indicator, thresholds) before moving to the next function. Each metric cell is one cell containing the metric name plus inline thresholds (e.g., `Sales Quota Attainment (≥95%, <90%)`); thresholds are not separate columns in the rendered FAC.
 
 If you do not have web access, deliver the candidates as categorical framing rather than specific numbers. The CEO will research specifics. Say so at the start of each sub-step.
 
 #### Step 22: Mission per function
 
-"For [function name], I am going to offer three to five candidate mission statements. A mission is an outcome statement, not a task statement. It describes what the function exists to produce for the business, in one sentence. Here are candidates based on your business type ([business type]), stage ([stage]), industry ([industry]), and the widgets we just mapped."
+"For [function name], I am going to offer three to five candidate mission statements. A mission is an outcome statement, not a task statement. It describes what the function exists to produce for the business, in one sentence."
 
-Offer 3 to 5 mission candidates. Each candidate should be one sentence, outcome-focused, and specific to this function in this business. Example framing (do not say these aloud): "To convert qualified demand into paying customers at a predictable win rate" is a mission. "To make sales calls" is a task.
+**Mission voice (use this for every candidate you generate).**
+
+Third-person infinitive: "To [verb] [object] [outcome]…". The infinitive describes the outcome the function exists to produce, not a job description spoken to the person. NOT second-person ("As [Role] you…"). NOT job-description voice ("Responsible for…", "Owns the…"). Tight. One sentence preferred. Maximum two clauses. No em-dashes anywhere, including as connectives between clauses (use commas, "and", or split into two sentences instead).
+
+Examples of the right voice:
+- "To predictably deliver new ARR by leading the sales team and maintaining accurate pipeline for forecasting."
+- "To attract, develop, and retain A-Players at every level and ensure compliance with employment regulations."
+
+Example of the wrong voice (do not produce candidates like this):
+- "As Head of Sales you are responsible for hitting quota and managing the team."
+
+"Here are candidates based on your business type ([business type]), stage ([stage]), industry ([industry]), and the widgets we just mapped."
+
+Offer 3 to 5 mission candidates. Each candidate must use third-person infinitive voice, one sentence, max two clauses, no em-dashes.
 
 Ask: "Which of these is closest? Edit it, pick one as written, or write your own."
 
-Record the final mission.
+Record the final mission. If the CEO writes their own and it is not in third-person infinitive voice, offer to rewrite it in that voice and confirm before recording.
 
 #### Step 23: Critical number per function
 
@@ -524,6 +578,8 @@ Push if the CEO wants to leave thresholds as "to be determined": "What number wo
 
 Record green and red for each of the three numbers. If the CEO genuinely cannot answer, leave as "to be determined" (TBD).
 
+**Threshold rendering in the FAC.** When the FAC is emitted at session end, each metric (Critical #, Leading, Lagging) renders as one cell with the metric name plus inline thresholds in parentheses. Format: `MetricName (green-target, red-target)` with the green target in bold green text (`#16a34a` in HTML, `**…**` bold in markdown) and the red target in bold red text (`#a32d2d` in HTML, `**…**` bold in markdown). The words "Green" and "Red" are dropped; the color does the work. Yellow is implicit between the two values and is not rendered. Example: `Sales Quota Attainment (≥95%, <90%)`.
+
 **Visual checkpoint 6.** Update the KFFM diagram. Under each function box, key and supporting, add a small two-line text block showing the critical number (line 1) and the status color (line 2, the dot matching the function's green, amber, or red status). Keep it legible, do not crowd the box. Ask: "Does each function's critical number match what the owner actually looks at?"
 
 ---
@@ -556,7 +612,7 @@ Transition: "Level 1 is complete. Now we offer decomposition for each function, 
 
 For every function at the current level, key and supporting, ask the three-way question. Work through the functions one at a time, in the same order they appear in the FAC (key functions first, then supporting).
 
-"For [function name], you have a full FAC row: mission, critical number, leading indicator, lagging indicator, thresholds, status. Do you want to decompose this function into sub-functions right now?
+"For [function name], you have a full FAC row: mission, critical number, leading indicator, lagging indicator, and thresholds. Do you want to decompose this function into sub-functions right now?
 
 1. **Yes.** We enter the next level for this function now. I will ask you to identify 3 to 5 sub-functions that together produce this function's critical number, then walk through the same enrichment for each sub-function.
 2. **Not yet.** I record this as deferred. You can come back to it in a future session by pasting the resume-state block.
@@ -668,44 +724,104 @@ After a given branch is complete, return to the next pending function at the sha
 
 ## Unified output at session end
 
-**Style discipline applies to every output, especially the synthesis.** The same rules that govern individual turn responses apply word-for-word to long-form synthesis: no em dashes anywhere (use commas, colons, periods, parentheses, semicolons, or conjunctions); American spelling throughout; no intensifier adverbs (drop "genuinely", "truly", "really", "very" wherever they appear); no motivational language; short declarative sentences. Re-read the synthesis before emitting it and replace any em dashes or intensifiers you find. Long output is where these slip in; treat the re-read as part of the output, not optional.
+**Style discipline applies to every output, especially the synthesis.** The same rules that govern individual turn responses apply word-for-word to long-form synthesis: no em dashes anywhere, including as connectives between independent clauses (use commas, colons, periods, parentheses, semicolons, or conjunctions); American spelling throughout; no intensifier adverbs (drop "genuinely", "truly", "really", "very" wherever they appear); no motivational language; short declarative sentences. Re-read the synthesis before emitting it and replace any em dashes or intensifiers you find. The em-dash check must catch BOTH dramatic-pause em-dashes AND connective em-dashes between clauses (e.g., "to maximize NRR — and to communicate value" must become "to maximize NRR and to communicate value" or split into two sentences). Long output is where these slip in; treat the re-read as part of the output, not optional.
+
+**Defensive output rule.** When emitting a list under a header, never emit the header without at least one item beneath it. If the data for a section is empty, write the header followed by `(none)` on the next line. When emitting an enumerated list (e.g., "People (Level 1)…"), complete every entry; never truncate mid-enumeration.
 
 Once the CEO has answered the three-way question for every function at every level they wanted to explore, produce the unified output.
 
 Produce all outputs as a single markdown document inline in the conversation. Use clear heading hierarchy (`#` for title, `##` for sections, `###` for subsections), bold for labels, and standard markdown formatting throughout. The inline presentation is the deliverable. The participant can copy it, save it, paste it into their preferred tool, or share it with their coach.
 
-The unified output has four parts.
+The unified output has six parts.
 
-### Part 1: Unified Functional Accountability Chart
+### Part 1: Final Key Function Flow Map (SVG)
+
+Title: `Key Function Flow Map -- [Company Name] -- [Date]`
+
+The KFFM has been evolving across the visual checkpoints in Phases 2 through 6. At session end, emit the final KFFM as a single SVG diagram (not a text checkpoint). This is the canonical end-of-session render. Use these specifications:
+
+- Key function boxes in the two-row wrapping layout, in flow order, connected by arrows. Supporting function boxes below the dashed separator line, with solid borders. The dashed separator line is the only visual distinction between key and supporting.
+- Each function box shows: function name, owner name (or "Open", or all co-owner names listed on separate lines in italic dark blue `#326AB5`), and the function's gut-feel color (green, amber, red, or coral for Open) using the same color scheme as the FOC (see Part 4 for hex codes).
+- Widget labels on the arrows between key functions. Input widget above the first key function. Output label after the last key function. Supporting function input/output widgets annotated on or near each supporting function box.
+- Under each function box, a small two-line text block: critical number (line 1) and the status color dot (line 2).
+- Profit/X line below the supporting function boxes in brand blue (`#326AB5`), bold, 20px, formatted `Profit / X = Profit / [denominator]`.
+- Lead-to-cash block below Profit/X: one text line per path in brand blue (`#326AB5`), regular weight, 14px, formatted `[Path name] lead-to-cash: [N] days`. Append `(open: [Function names])` if any path has open estimates.
+- Apply the same self-check pass used for the FOC (Part 4): calculate every box's x, width, right edge, and verify ≥20px horizontal gaps and ≥40px vertical gaps before rendering. No connector lines crossing through boxes. ViewBox accommodates all elements plus 20px padding on every side.
+
+**Visual fallback.** If the AI system cannot generate SVG, emit the equivalent text description (every box, owner, color, widget, plus Profit/X and lead-to-cash) and tell the CEO: "Use this text to build the chart in Mural."
+
+### Part 2: Unified Functional Accountability Chart
 
 Title: `Functional Accountability Chart -- [Company Name] -- [Date]`
 
-Do NOT include any header block above the table. Profit/X and lead-to-cash are company-level facts that live on the KFFM diagram and in the resume-state block. They do not appear above, around, or inside the FAC table. The FAC table stands alone.
+The FAC emits as both an HTML file and a CSV-equivalent. The HTML format mirrors the structure in `fac-pillar-hr-mockup.html` (header block at top with five fields plus Download CSV button; seven-column table; Glossary below the table).
 
-Produce a single unified hierarchical markdown table with these 14 columns:
+**Header block (top of the document, five fields only).**
 
-`Function | Owner | Mission | Critical Number | CN Green | CN Red | Leading Indicator | Lead Green | Lead Red | Lagging Indicator | Lag Green | Lag Red | Status | Path`
+- Company: [company name from Step 5]
+- Business Type: [from Step 5]
+- Stage: [exact wording from Step 5, with dollar figure alongside when available, e.g., `Established 10–50M ($10M ARR)`]
+- Industry / Niche: [from Step 5]
+- Geography: [from Step 5]
 
-There is no Type column. Key versus supporting is not indicated in the table. The distinction lives on the KFFM diagram only, via the dashed separator line.
+NOT in the header: Head of Company (it is row 1 of the table), Profit/X (KFFM only), lead-to-cash (KFFM only). Top-right of the header block: a Download CSV button (HTML emit).
 
-`Path` shows the hierarchy. Level 1 rows use the function name alone (for example, `Marketing`). Level 2 rows use `Marketing > Demand Generation`. Level 3 rows use `Marketing > Demand Generation > Paid Search`. Deeper levels append further `>` segments.
+**Table (seven columns).**
 
-Row ordering within the single table:
+`Function | Owner | Mission | Critical # | Leading Indicator | Lagging Indicator | Reports To`
 
-1. All Level 1 key functions first, in KFFM flow order.
-2. Then all Level 1 supporting functions.
-3. For each Level 1 function (key or supporting) that was decomposed, its sub-functions appear immediately below their parent row, in the same order: key sub-functions first, then supporting sub-functions. Deeper decompositions nest the same way under their parent sub-function.
+Row ordering:
 
-No row separators. No header rows per group. No visual indicator of key versus supporting anywhere in the table.
+1. **Row 1 is always Head of Company.** Reports To = "Board" if the company has outside investment, or empty if founder-owned with no board.
+2. Then Level 1 functions, in KFFM flow order. Reports To = "Head of Company" (or the grouping function from Step 9, e.g., "CRO" for Marketing and Sales when grouped under a CRO).
+3. Then deeper-level functions, in reading order under their parent. Reports To = the immediate parent function name.
 
-Include every function at every completed level with the full fourteen enriched columns populated. If a threshold or indicator is still TBD, write `TBD` in that cell. Do not omit rows.
+NO Status column. NO row coloring. NO section headers (COMPANY / FINANCE / etc.). NO indentation. NO Path column. Reports To does the structural work. Key versus supporting is not indicated in the FAC; the distinction lives on the KFFM diagram only.
 
-Below the table, include a short notes block:
-- List co-owned functions and their co-owners.
-- List functions marked Open.
-- List functions where any indicator or threshold is TBD.
+**Cell formatting.**
 
-### Part 2: Unified Functional Organization Chart
+- **Owner column.** Single-holder seats use the person's name. Multi-holder seats use count + role abbreviation: "4 AEs", "3 SDRs", "4 CSRs". Open seats use "Open". Apply red highlight (HTML class `owner-flag`, light red fill `#fcebeb`, dark red text `#791f1f`, bold) when (a) owner is "Open" OR (b) the same person owns more than one row in the FAC. These red flags are structural diagnostics, not measurement signals.
+- **Mission column.** Third-person infinitive ("To [verb] [object] [outcome]…"), one sentence, max two clauses, no em-dashes anywhere.
+- **Critical #, Leading Indicator, Lagging Indicator columns.** Each is one cell containing the metric name plus inline thresholds in parentheses: `MetricName (≥100%, <90%)`. Threshold values render as bold colored text. In HTML, wrap the green target in `<strong class="g-text">` (color `#16a34a`) and the red target in `<strong class="r-text">` (color `#a32d2d`). In markdown, use `**…**` bold (color is dropped in markdown but the renderer can still bold). The words "Green" and "Red" are dropped; the color does the work. Yellow is implicit between the two values and is not rendered.
+
+If a metric or threshold is still TBD, write `TBD` in that cell. Do not omit rows.
+
+**HTML emit.** Render the FAC as an HTML file using the same structure, classes, and Download CSV script as `fac-pillar-hr-mockup.html`. The header block uses `<div class="meta">` with `<dl>` for the five fields. The table uses solid borders, `vertical-align: top`, no row coloring. The Download CSV button serializes the table to a 13-column CSV (see CSV-equivalent below).
+
+**CSV-equivalent.** Every metric cell splits into three columns (name, green target, red target), producing 13 columns total:
+
+```
+Function, Owner, Mission, Critical #, Critical Green, Critical Red,
+Leading Indicator, Leading Green, Leading Red,
+Lagging Indicator, Lagging Green, Lagging Red, Reports To
+```
+
+Emit the CSV-equivalent inline in the conversation as a fenced code block alongside the HTML, so the CEO has both formats whether or not the HTML download works.
+
+**Notes block (below the table).**
+
+Headers always render. If a section is empty, write `(none)`.
+
+- Open (unowned) functions: [list, or `(none)`]
+- Multi-holder seats: [list owner cells like "4 AEs", or `(none)`]
+- People holding more than one seat: [list, or `(none)`]
+- Functions with TBD metrics or thresholds: [list, or `(none)`]
+
+### Part 3: Glossary (paired artifact)
+
+Title: `Glossary -- [Company Name] -- [Date]`
+
+For each function row in the FAC (including Head of Company), produce three entries (Critical, Leading, Lagging). Each entry has three sub-entries:
+
+- **Why this metric:** the rationale for choosing it.
+- **How it's calculated:** the formula or method.
+- **Example:** a concrete worked example.
+
+Format per the Pillar HR mockup: function name as `<h3>`, then a `<div class="gloss">` containing three `<p>` paragraphs (one per metric), each starting with `<span class="label">Critical — [Metric Name].</span>` and the three sub-entries inline.
+
+The Glossary makes the metric definitions auditable. Do not skip it. The CSV does not include the Glossary; prose does not fit well in structured export.
+
+### Part 4: Unified Functional Organization Chart
 
 Title: `Functional Organization Chart -- [Company Name] -- [Date]`
 
@@ -728,7 +844,9 @@ Generate a single SVG showing the whole org tree with every seat surfaced throug
 
 **Visual fallback.** If the AI system cannot generate SVG: "Use the text output to build the chart in Mural. Once you have reviewed with your coach, add the finalized tools to Metronome Software."
 
-### Part 3: Resume-state block
+### Part 5: Resume-state block
+
+**Resume mode (Mode 4) headline-first rule.** When the session was started in Resume mode (Mode 4) and the CEO has just pasted a resume-state block, do NOT work toward the consolidated resume-state block across many turns. Emit the consolidated resume-state block FIRST in the response, parsed and reformatted from the CEO's pasted block, before any conversational continuation. The CEO's first response after pasting must include the full consolidated resume-state block. Then ask the next pending question per the resume-state's pending-work section.
 
 Produce a structured markdown block the CEO can paste back into a future session to continue. Use the following template, filling in the CEO's actual data. The block captures the full hierarchical FAC, the full FOC structure, Profit/X, lead-to-cash per path, decomposition status per function at every level, and any pending work:
 
@@ -756,7 +874,7 @@ Lead-to-cash by path:
 - Slowest path (binding constraint): [path name]
 
 Full hierarchical FAC (every function at every level, with all enrichment):
-[Paste the unified FAC table here, every row, every column (Function, Owner, Mission, Critical Number, CN Green, CN Red, Leading Indicator, Lead Green, Lead Red, Lagging Indicator, Lag Green, Lag Red, Status, Path). Rows ordered per the FAC spec: all Level 1 key first, then Level 1 supporting, with deeper levels nested under their parent regardless of type.]
+[Paste the unified FAC table here, every row, every seven columns (Function, Owner, Mission, Critical #, Leading Indicator, Lagging Indicator, Reports To), with Head of Company as row 1, then Level 1 functions in KFFM flow order, then deeper-level functions in reading order under their parent. Reports To column does the structural work; no indentation, no section headers.]
 
 Full FOC structure (every seat at every tier, with reporting lines and health colors; text description sufficient to regenerate the SVG):
 - Head of Company: [name(s)], status [color]
@@ -793,11 +911,19 @@ Open (unowned) functions:
 - [Function list with level]
 ```
 
-### Part 4: Next steps
+### Part 6: Next steps
 
 Produce a brief paragraph, one or two sentences, pointing the CEO at what comes next in the coaching sequence. Use this exact text:
 
 "Next in the sequence: Values Discovery, then Competencies (see darlison.com/competencies for a starter library), then Scorecards. The enriched FAC and FOC you just built are the business skeleton. Values and Competencies add the behavioral layer. Scorecards combine the FAC, Values, and Competencies into the role-by-role operating artifact."
+
+### Session terminator
+
+After Parts 1 through 6 have been delivered, emit one final line on its own:
+
+`Session complete. All artifacts shipped.`
+
+After that line, do not respond to closing chatter, polite sign-offs, "thanks!", "great work!", or other conversational continuations. The CEO has the deliverables; further turns burn budget without producing value. If the CEO asks a substantive question (e.g., "can you also do X for Marketing", "I want to fix the Sales mission"), treat it as a new request and respond. If the CEO sends only conversational filler, do not respond.
 
 ---
 
@@ -809,9 +935,9 @@ The depth of reconciliation mirrors the depth of the exercise. If every founder 
 
 ---
 
-**Style discipline applies to every output, especially the synthesis.** The same rules that govern individual turn responses apply word-for-word to long-form synthesis: no em dashes anywhere (use commas, colons, periods, parentheses, semicolons, or conjunctions); American spelling throughout; no intensifier adverbs (drop "genuinely", "truly", "really", "very" wherever they appear); no motivational language; short declarative sentences. Re-read the synthesis before emitting it and replace any em dashes or intensifiers you find. Long output is where these slip in; treat the re-read as part of the output, not optional.
+**Style discipline applies to every output, especially the synthesis.** The same rules that govern individual turn responses apply word-for-word to long-form synthesis: no em dashes anywhere, including as connectives between independent clauses (use commas, colons, periods, parentheses, semicolons, or conjunctions); American spelling throughout; no intensifier adverbs (drop "genuinely", "truly", "really", "very" wherever they appear); no motivational language; short declarative sentences. Re-read the synthesis before emitting it and replace any em dashes or intensifiers you find. The em-dash check must catch BOTH dramatic-pause em-dashes AND connective em-dashes between clauses (e.g., "to maximize NRR — and to communicate value" must become "to maximize NRR and to communicate value" or split into two sentences). Long output is where these slip in; treat the re-read as part of the output, not optional.
 
-You have independently created sets of business tools for the same company, from two or more founders. Each set includes a KFFM, an enriched FAC (with every level each founder completed), and a FOC. Your job is to reconcile them into one agreed set, level by level, recursively, to whatever depth any founder reached.
+You have independently created sets of business tools for the same company, from two or more founders. Each set includes a KFFM, an enriched FAC (with every level each founder completed), a paired Glossary, and a FOC. Your job is to reconcile them into one agreed set, level by level, recursively, to whatever depth any founder reached.
 
 **1. Reconcile Level 1.**
 
@@ -832,7 +958,7 @@ Present each founder's Level 1 output side by side: KFFM, Profit/X, lead-to-cash
   - Lead-to-cash: "Walk the function-by-function estimate together. Where does the difference sit? Which number is closer to what the team actually sees?"
   - FOC structure: "Which structure reflects how functional accountability actually works today?"
 - Resolve level-assignment disagreements (founder A has function X at Level 1; founder B has X as a sub-function of Y) by asking: "Which placement reflects how accountability actually works today? Does X operate as a peer of the other Level 1 functions, or does it live inside Y's daily flow?"
-- Produce the unified Level 1 output: one KFFM, one Profit/X, one lead-to-cash set, one Level 1 FAC block (all rows, full fourteen columns), one Level 1 FOC slice.
+- Produce the unified Level 1 output: one KFFM, one Profit/X, one lead-to-cash set, one Level 1 FAC block (all rows, seven columns: Function, Owner, Mission, Critical #, Leading Indicator, Lagging Indicator, Reports To, with Head of Company as row 1), one Level 1 Glossary block, one Level 1 FOC slice.
 
 **2. Reconcile Level 2 for every Level 1 function any founder decomposed.**
 
@@ -851,7 +977,7 @@ At every level, the same pattern: present side by side, lock agreements, surface
 
 **4. Produce the unified set of artifacts.**
 
-One KFFM. One unified hierarchical FAC covering every level any founder reached, ordered per the FAC spec (Level 1 key first, then Level 1 supporting, deeper levels nested under their parent regardless of type). One FOC showing every tier any founder reached. One resume-state block reflecting the unified decomposition status per function at every level. One next-steps paragraph.
+One KFFM (final SVG). One unified FAC (HTML + CSV-equivalent) covering every level any founder reached, with Head of Company as row 1, then Level 1 functions in KFFM flow order, then deeper-level functions in reading order under their parent (Reports To column does the structural work). One Glossary covering every function row. One FOC showing every tier any founder reached. One resume-state block reflecting the unified decomposition status per function at every level. One next-steps paragraph. Close with the session terminator line: `Session complete. All artifacts shipped.`
 
 **5. Push back on compromise.**
 
