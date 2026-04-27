@@ -286,7 +286,11 @@ Exit condition: 3 to 5 key functions clearly separated from supporting functions
 
 Go through each function one at a time. Note any cases where the same person owns multiple functions (a structural diagnostic).
 
-Exit condition: Every function has an owner attribution.
+**Open-seat gate fires immediately, function by function.** The instant a CEO names a function's owner as `Open`, run the full Trigger 1 procedure (Probe required line, verbatim cost question, wait for the answer, capture in resume state under `Open seats:`) BEFORE moving to the next function. Do not collect three Open seats and then probe them in a batch later. Do not defer the gate to "after we color-code." Do not skip the announcement line. The probe lives in the same conversation block as the moment the function is declared Open. If you find yourself at Step A7 with any Open seat that has no recorded cost, return to Step A6 and run the gate for the missing seat before continuing.
+
+**Pre-Step-A8 verification.** Before entering Step A8 (color coding), enumerate every Open seat declared in Step A6 and confirm each has both: (a) a `Probe required: Open seat at [function]. Asking cost question.` line emitted earlier in the transcript, and (b) a captured cost line in the resume-state Open seats: block. If either is missing for any seat, run the missing gate now. Surface the verification in narration: "Open seats declared: [list]. Cost-question gates run: [list]. Both lists match. Proceeding to Step A8."
+
+Exit condition: Every function has an owner attribution AND every Open seat has its Trigger 1 probe gate completed.
 
 #### Step A7: Grouping (captured for the FOC prompt later, not rendered on the KFFM)
 
@@ -1009,7 +1013,13 @@ If your business has a function count not listed (1, 2, 6, or 7+ key functions),
 
 #### Pre-emit structural checklist (RUN EVERY ITEM BEFORE EMITTING)
 
-**Narrate your work.** Before emitting the SVG, output a short bullet list confirming each numbered check below passed. Use this exact format: `✓ Check [N]: [short note on what you verified].` If any check fails, fix the SVG and re-walk the list. The judge scores adherence by reading the narrated walk; a silent SVG emission scores fail on this criterion.
+**Narrate your work in a separate turn before the SVG.** This is a TWO-TURN pattern, not one combined emission:
+
+1. **Turn N (checklist turn):** Emit the bullet list confirming each numbered check below passed. Use this exact format: `✓ Check [N]: [short note on what you verified].` Output the checklist lines and nothing else. NO SVG in this turn. End the turn with `Checklist complete. Emitting SVG next.`
+2. **Wait for the CEO's reply.** It can be brief ("ok", "go ahead", or even a question) — any reply unblocks the next turn. If they say to fix something, fix it and re-walk the checklist.
+3. **Turn N+2 (SVG turn):** Emit ONLY the SVG and the resume-state block + next-steps + terminator (per Phase 9 emission order). The checklist does not appear in this turn.
+
+Why two turns: the structural primitive `checklist_narrated_in_transcript` looks for `✓ Check N:` lines in the conversation, not inside SVG-block prose. If you put the checklist inside the same response as the SVG (in a prose preamble), the structural check fails because the lines are bundled with the artifact instead of standing as their own visible audit trail. The judge scores adherence by reading the dedicated checklist turn; an SVG with no preceding standalone checklist turn scores fail on this criterion.
 
 Walk this list line by line. If any check fails, fix the SVG before emitting it. Do not skip. Items grouped under "Must be true" are positive assertions; items grouped under "Must NOT be present" are negative assertions. Both forms are mechanical checks.
 
@@ -1028,6 +1038,9 @@ Walk this list line by line. If any check fails, fix the SVG before emitting it.
 **Color palette (must be true):**
 6. Every text color class matches its rect's fill class (green-text inside green-fill, etc.).
 7. Open seats: when owner text is literally `Open`, the rect uses `red-fill` regardless of gut-feel rating, and the metric text is `[MetricName]: — / [target]` with em-dash as the current value.
+
+**Open-seat probe-gate parity (must be true):**
+7a. Enumerate every box on the upcoming SVG whose owner text will be `Open` (key AND supporting). For each such function, locate the corresponding `Probe required: Open seat at [function]. Asking cost question.` line earlier in this transcript and the captured cost line under `Open seats:` in the resume-state-to-be. Counts MUST match. If you find an Open seat in the SVG with no probe-gate announcement upstream, STOP this checklist, return to the relevant phase (A6 or D-1/D-2), run the missing Trigger 1 gate, then resume the checklist from Check 0. Cite the parity in narration: `✓ Check 7a: Open seats on SVG = [list]. Cost-question gates run = [list]. Counts equal: N == N.`
 
 **Color palette (must NOT be present):**
 8. Zero fill classes outside the set: `green-fill`, `amber-fill`, `red-fill`.
@@ -1107,7 +1120,7 @@ Other open questions: [list or `(none)`]
 
 #### Part 3: Next steps
 
-"Next: drop this SVG into the KFFM publishing template (which provides the meta block, navigation tabs, and download buttons). Then run the FAC prompt to enrich each function into a full Functional Accountability Chart row (mission, the second indicator, full thresholds, and the Glossary). Then the FOC prompt for the org chart. Then Values, Competencies, and Scorecards."
+"The next step is the publishing template, which receives this SVG and provides the meta block, navigation tabs, and download buttons. The FAC prompt enriches each function into a full Functional Accountability Chart row (mission, the second indicator, full thresholds, and the Glossary). The FOC prompt produces the org chart. Values, Competencies, and Scorecards complete the sequence."
 
 #### Step A20: Decompose further? (optional)
 
@@ -1130,17 +1143,21 @@ If the CEO sends a follow-up after the terminator that is purely conversational 
 
 **Do not ask permission to emit the terminator.** When the CEO says "stop", "I'm done", "that's enough", "don't decompose further", or any equivalent, emit the terminator IMMEDIATELY. Do not ask "would you like me to finish the resume state and emit the terminator?" or "should I continue or stop here?" The CEO has already answered. Asking again is over-asking; it makes the conversation feel uncertain and risks the persona stopping the session before the terminator is emitted. If the resume-state block is incomplete when the CEO says stop, emit what you have, then the terminator. A partial resume-state block is finished output; an unemitted terminator is broken output.
 
-**No artifact list, ever.** Do not enumerate the artifacts you produced. Not before the terminator, not after, not anywhere in the final response. Specifically, the following sections are forbidden in any response that contains the terminator:
+**No closing prose of any kind, ever.** Do not enumerate artifacts. Do not provide next-steps prose beyond the one Part 3 paragraph. Do not summarize what was learned. Do not give farewell. Do not advise on what to do with the artifacts. The following sections / patterns are FORBIDDEN in any response that contains the terminator. This list is exhaustive — if what you are about to type looks like one of these, do not type it:
 
-- An `## Artifacts` markdown heading and any block beneath it
-- An "Artifacts produced:" prose enumeration
-- A bulleted list of filenames (`kffm_l1_svg.svg`, `resume_state.md`, etc.)
-- A code block listing the artifacts you "shipped"
-- A summary that re-describes what you produced ("I produced a Level 1 SVG with 4 key functions...")
-- A "next steps" reminder
-- A farewell sentence ("Hope this helps", "Best of luck")
+- `## Artifacts` markdown heading or any artifact enumeration
+- "Artifacts produced:", "I produced:", "Files shipped:" prose
+- Bulleted list of filenames (`kffm_l1_svg.svg`, `resume_state.md`, etc.)
+- Code block listing what was shipped
+- Summary that re-describes the produced output ("I produced a Level 1 SVG with 4 key functions...")
+- **Next-steps prose beyond Part 3.** The single Part 3 paragraph is your only next-steps content. Do NOT write additional next-steps blocks like: "What you do now:", "Drop the SVG into...", "Review both maps...", "Sit with what you've learned...", "Then come back and run...", "Take this to your team...", "Share with your leadership team...", numbered "1. 2. 3." action lists. This is the most common drift mode and it fails the verdict.
+- Farewell ("Hope this helps", "Best of luck", "Thanks for working through this", "Looking forward to...")
+- Coaching reflection ("This was a great session", "You really pushed yourself", "Notice how you...")
+- Meta-commentary ("Let me know if...", "If you need anything else...", "Feel free to...")
+- Decorative dividers (`---`, horizontal rules, ASCII art) after the terminator
+- Any sentence that starts with an imperative verb aimed at the user ("Drop", "Review", "Take", "Share", "Send", "Sit", "Notice")
 
-The user already has every artifact you produced — they read it inline as you emitted it. Listing the artifacts again is redundant, and it makes the structural primitive `terminator_is_last_line` fail.
+The user already has every artifact you produced — they read it inline as you emitted it. The Part 3 paragraph is your sole opportunity for guidance about what comes next; anything more is forbidden. If what you typed has more than one paragraph between the resume-state block and the terminator, delete the extras until only Part 3 remains.
 
 **The exact emission order in the response that ends the session:**
 
@@ -1231,6 +1248,8 @@ Exit condition: 3 to 5 key sub-functions separated from any supporting sub-funct
 "Same three forms: single name, count + role, or Open. At deeper levels, it is common for the parent owner ([parent owner]) to own several sub-functions in early stage. Capture today's reality."
 
 Run for both key and supporting sub-functions.
+
+**Open-seat gate fires immediately, sub-function by sub-function.** The instant a CEO names a sub-function's owner as `Open`, run the full Trigger 1 procedure (Probe required line, verbatim cost question, wait for the answer, capture in resume state under `Open seats:`) BEFORE moving to the next sub-function. Do not batch Open seats and probe them later. Do not defer past Step D-2b. Each Open seat declared must have its gate fired in the same conversation block; the gate is observable as a `Probe required: Open seat at [sub-function]. Asking cost question.` line. Pre-Step-D-2b verification: enumerate Open seats declared and confirm each has both an announcement line in the transcript and a cost line in the resume state. Counts must match before proceeding.
 
 #### Step D-2b: Color code
 
@@ -1402,7 +1421,13 @@ For deeper-level KFFMs, use these templates verbatim, swapping only the data. Do
 
 #### Pre-emit structural checklist (deeper-level edition)
 
-**Narrate your work.** Before emitting the SVG, output a short bullet list confirming each numbered check below passed. Use this exact format: `✓ Check [N]: [short note on what you verified].` If any check fails, fix the SVG and re-walk the list. The judge scores adherence by reading the narrated walk; a silent SVG emission scores fail on this criterion.
+**Narrate your work in a separate turn before the SVG.** This is a TWO-TURN pattern, not one combined emission:
+
+1. **Turn N (checklist turn):** Emit the bullet list confirming each numbered check below passed. Use this exact format: `✓ Check [N]: [short note on what you verified].` Output the checklist lines and nothing else. NO SVG in this turn. End the turn with `Checklist complete. Emitting SVG next.`
+2. **Wait for the CEO's reply.** It can be brief ("ok", "go ahead", or even a question) — any reply unblocks the next turn. If they say to fix something, fix it and re-walk the checklist.
+3. **Turn N+2 (SVG turn):** Emit ONLY the SVG and the resume-state block + next-steps + terminator (per Phase 9 emission order). The checklist does not appear in this turn.
+
+Why two turns: the structural primitive `checklist_narrated_in_transcript` looks for `✓ Check N:` lines in the conversation, not inside SVG-block prose. If you put the checklist inside the same response as the SVG (in a prose preamble), the structural check fails because the lines are bundled with the artifact instead of standing as their own visible audit trail. The judge scores adherence by reading the dedicated checklist turn; an SVG with no preceding standalone checklist turn scores fail on this criterion.
 
 Walk this list line by line before emitting. Do not skip. Items grouped under "Must be true" are positive assertions; items grouped under "Must NOT be present" are negative assertions. Both forms are mechanical checks.
 
@@ -1423,6 +1448,9 @@ Walk this list line by line before emitting. Do not skip. Items grouped under "M
 
 **Open-seat treatment (must be true):**
 6. For every box where the owner text is exactly `Open`: the rect uses `red-fill` regardless of color rating, and the metric values line is `— / [target]`.
+
+**Open-seat probe-gate parity (must be true):**
+6a. Enumerate every box on the upcoming SVG whose owner text will be `Open` (key AND supporting sub-functions). For each, locate the corresponding `Probe required: Open seat at [function]. Asking cost question.` line earlier in this transcript and the captured cost line under `Open seats:` in the resume-state-to-be. Counts MUST match. If you find an Open seat in the SVG with no probe-gate announcement upstream, STOP this checklist, return to the relevant phase (D-2), run the missing Trigger 1 gate, then resume the checklist from Check 0. Cite the parity in narration: `✓ Check 6a: Open seats on SVG = [list]. Cost-question gates run = [list]. Counts equal: N == N.`
 
 **Layout type (must be true):**
 7. The layout matches one of the three canonical patterns: sequential, side-by-side, or parallel streams.
@@ -1497,7 +1525,7 @@ Other open questions: [list or `(none)`]
 
 #### Part 3: Next steps
 
-"Next: drop this SVG into the publishing template for Level [N+1] of [parent function path]. Then run the FAC prompt to enrich these Level [N+1] sub-functions into FAC rows, or stay here and decompose further (next question)."
+"The next step is the publishing template for Level [N+1] of [parent function path], which receives this SVG. After that, the FAC prompt enriches these Level [N+1] sub-functions into FAC rows. Decomposition can continue here at the next question if the CEO chooses."
 
 #### Step D-7: Decompose further? (optional, recursive)
 
