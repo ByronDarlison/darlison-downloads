@@ -391,10 +391,10 @@ This is a working, complete reference for a small flat company. Pattern-match ag
 .conn    { stroke: #aaa; stroke-width: 1; fill: none; }
 </style></defs>
 
-  <!-- Tier 1: Head of Company -->
+  <!-- Tier 1: Head of Company. Casey M is a duplicate (appears in 3 boxes), so the owner label uses red-text. -->
   <rect x="385" y="40" width="150" height="60" class="neutral-fill" rx="6"/>
   <text x="460" y="62" text-anchor="middle" class="fn-name neutral-text">Head of Company</text>
-  <text x="460" y="82" text-anchor="middle" class="owner neutral-text">Casey M</text>
+  <text x="460" y="82" text-anchor="middle" class="owner red-text">Casey M</text>
 
   <!-- Connector from Head down to tier-2 distributing bar -->
   <line x1="460" y1="100" x2="460" y2="140" class="conn"/>
@@ -406,10 +406,11 @@ This is a working, complete reference for a small flat company. Pattern-match ag
   <text x="115" y="202" text-anchor="middle" class="fn-name red-text">Marketing</text>
   <text x="115" y="222" text-anchor="middle" class="owner red-text">Open</text>
 
+  <!-- Sales: Casey M (duplicate) -->
   <line x1="345" y1="140" x2="345" y2="180" class="conn"/>
   <rect x="270" y="180" width="150" height="60" class="neutral-fill" rx="6"/>
   <text x="345" y="202" text-anchor="middle" class="fn-name neutral-text">Sales</text>
-  <text x="345" y="222" text-anchor="middle" class="owner neutral-text">Casey M</text>
+  <text x="345" y="222" text-anchor="middle" class="owner red-text">Casey M</text>
 
   <line x1="575" y1="140" x2="575" y2="180" class="conn"/>
   <rect x="500" y="180" width="150" height="60" class="neutral-fill" rx="6"/>
@@ -434,18 +435,15 @@ This is a working, complete reference for a small flat company. Pattern-match ag
   <text x="420" y="342" text-anchor="middle" class="fn-name neutral-text">Account Executive</text>
   <text x="420" y="362" text-anchor="middle" class="owner neutral-text">Sam K</text>
 
-  <!-- Sub-functions under Delivery: one Senior Consultant (vertical-stack illustration with single child as side-by-side) -->
+  <!-- Senior Consultant under Delivery: Casey M (duplicate) -->
   <line x1="575" y1="240" x2="575" y2="280" class="conn"/>
   <rect x="500" y="320" width="150" height="60" class="neutral-fill" rx="6"/>
   <text x="575" y="342" text-anchor="middle" class="fn-name neutral-text">Senior Consultant</text>
-  <text x="575" y="362" text-anchor="middle" class="owner neutral-text">Casey M</text>
-
-  <!-- Casey M appears twice (Sales + Senior Consultant), so both their owner labels render in red-text per the duplicate-name rule -->
-  <!-- (In the real SVG this renders by overriding the owner element's class to red-text instead of neutral-text. The rule applies to both boxes where the duplicate appears.) -->
+  <text x="575" y="362" text-anchor="middle" class="owner red-text">Casey M</text>
 </svg>
 ```
 
-The reference shows: a flat Head-of-Company-plus-four-tier-2 layout, one function in red because it is Open (Marketing), one duplicate-owner pattern (Casey M appears as Head of Company, as Sales owner, AND as Senior Consultant — so the `Casey M` owner labels in those boxes use red-text even though the box itself uses neutral-fill). The Marketing box is red-fill because the owner is Open; the Open-seat probe gate runs upstream of this SVG.
+The reference shows: a flat Head-of-Company-plus-four-tier-2 layout, one function in red because it is Open (Marketing), one duplicate-owner pattern (Casey M appears in 3 boxes — as Head of Company, as Sales owner, AND as Senior Consultant — so all three `Casey M` owner labels use `class="owner red-text"` even though the boxes themselves use neutral-fill). The Marketing box is red-fill because the owner is Open; the Open-seat probe gate runs upstream of this SVG.
 
 Coordinates are stated explicitly so a future SVG can copy the pattern: tier-1 box centered at viewBox.width/2; tier-2 boxes at y=180 with center x at 115, 345, 575, 805 for a 4-function layout in a 920-wide viewBox.
 
