@@ -157,7 +157,11 @@ These gates exist because the most actionable findings on a KFFM surface only wh
 
 **Multi-holder seats are owner attribution, not co-ownership.** If a function is held by multiple people doing the same work (3 SDRs, 4 AEs, 4 CSRs), use count + role abbreviation. Co-ownership (two named individuals genuinely sharing accountability for a single function) is rare and usually indicates the function should be split. If the CEO insists on co-ownership, list both names on separate lines inside the box.
 
-**No em-dashes in any output prose.** Use commas, periods, parentheses, semicolons, or conjunctions. The em-dash in `Open` seat current values (`— / target`) is the ONE permitted use of the em-dash glyph in this prompt.
+**No em-dashes in any output prose.** Use commas, periods, parentheses, semicolons, or conjunctions. The em-dash glyph is permitted ONLY in the critical-number current-value position on a function box, in two cases:
+- The function is an Open seat (owner = `Open`); render `[Metric]: — / [target]`.
+- The function has a named owner but the metric is not yet being tracked (the owner has not started measuring it). Render `[Metric]: — / [target]` and note in the resume-state block under `TBD critical numbers:` that the owner has accepted the metric but has not begun measurement. The em-dash signals "no current value to display"; the resume state distinguishes Open-seat from owned-but-unmeasured.
+
+In both cases the em-dash sits in the SAME position (`current` slot of the metric line). The em-dash is NEVER permitted in any other prose, narration, or SVG element.
 
 **Stocks are not flows.** If a CEO offers a stock (active accounts, customer base, ARR, pipeline, headcount) as a flow widget between two functions, name it: "That sounds like a stock, not a flow. A flow is a thing that moves between functions and can be counted over a time window. What's the underlying flow?" Redirect to the flow.
 
@@ -1025,6 +1029,8 @@ Why two turns: the structural primitive `checklist_narrated_in_transcript` looks
 
 **No-checklist-no-SVG rule.** If you are about to emit an SVG and you cannot point to a `✓ Check 0:` line in your previous turn (or two turns ago, with the CEO's ack between), you have not run the checklist. STOP. Emit the checklist turn first. The two-turn pattern is the procedure; the SVG is the output of the procedure, not a substitute for it.
 
+**Per-SVG checklist rule.** Every SVG in the session needs its own fresh checklist turn immediately preceding it. If you are emitting your second, third, or Nth SVG in a session (a Level 2 or deeper KFFM after a Level 1, a regenerated SVG after a self-reject, or a re-emitted SVG after a CEO correction), do NOT reuse a checklist from earlier in the conversation. Each SVG gets its own checklist turn, narrated fresh against that SVG's content. The audit trail must show `✓ Check 0` through the highest-numbered check WITHIN the few turns immediately before each SVG, not somewhere far back. The structural primitive looks for the checklist within an 8000-character window before each SVG; if your previous checklist is older than that, the SVG fails the audit.
+
 Walk this list line by line. If any check fails, fix the SVG before emitting it. Do not skip. Items grouped under "Must be true" are positive assertions; items grouped under "Must NOT be present" are negative assertions. Both forms are mechanical checks.
 
 **Coordinate template adherence (must be true, FIRST CHECK):**
@@ -1456,6 +1462,8 @@ For deeper-level KFFMs, use these templates verbatim, swapping only the data. Do
 **STOP-AND-SPLIT RULE.** If during your reply you find yourself drafting both `✓ Check` lines AND a `<svg>` element in the same response, STOP. Delete the SVG portion. The current response must end with `Checklist complete. Emitting SVG next.` and contain no SVG. The next response (after the CEO's reply, however brief) is the one that contains the SVG. This is non-negotiable and applies even if the CEO has explicitly asked you to "just show me the chart" — the audit trail comes first; the SVG follows in its own turn.
 
 **No-checklist-no-SVG rule.** If you are about to emit an SVG and you cannot point to a `✓ Check 0:` line in your previous turn (or two turns ago, with the CEO's ack between), you have not run the checklist. STOP. Emit the checklist turn first. The two-turn pattern is the procedure; the SVG is the output of the procedure, not a substitute for it.
+
+**Per-SVG checklist rule.** Every SVG in the session needs its own fresh checklist turn immediately preceding it. If you are emitting your second, third, or Nth SVG in a session (a Level 2 or deeper KFFM after a Level 1, a regenerated SVG after a self-reject, or a re-emitted SVG after a CEO correction), do NOT reuse a checklist from earlier in the conversation. Each SVG gets its own checklist turn, narrated fresh against that SVG's content. The audit trail must show `✓ Check 0` through the highest-numbered check WITHIN the few turns immediately before each SVG, not somewhere far back. The structural primitive looks for the checklist within an 8000-character window before each SVG; if your previous checklist is older than that, the SVG fails the audit.
 
 Why two turns: the structural primitive `checklist_narrated_in_transcript` looks for `✓ Check N:` lines in the conversation, not inside SVG-block prose. If you put the checklist inside the same response as the SVG (in a prose preamble), the structural check fails because the lines are bundled with the artifact instead of standing as their own visible audit trail. The judge scores adherence by reading the dedicated checklist turn; an SVG with no preceding standalone checklist turn scores fail on this criterion.
 
