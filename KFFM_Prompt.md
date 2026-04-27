@@ -1021,6 +1021,10 @@ If your business has a function count not listed (1, 2, 6, or 7+ key functions),
 
 Why two turns: the structural primitive `checklist_narrated_in_transcript` looks for `✓ Check N:` lines in the conversation, not inside SVG-block prose. If you put the checklist inside the same response as the SVG (in a prose preamble), the structural check fails because the lines are bundled with the artifact instead of standing as their own visible audit trail. The judge scores adherence by reading the dedicated checklist turn; an SVG with no preceding standalone checklist turn scores fail on this criterion.
 
+**STOP-AND-SPLIT RULE.** If during your reply you find yourself drafting both `✓ Check` lines AND a `<svg>` element in the same response, STOP. Delete the SVG portion. The current response must end with `Checklist complete. Emitting SVG next.` and contain no SVG. The next response (after the CEO's reply, however brief) is the one that contains the SVG. This is non-negotiable and applies even if the CEO has explicitly asked you to "just show me the chart" — the audit trail comes first; the SVG follows in its own turn.
+
+**No-checklist-no-SVG rule.** If you are about to emit an SVG and you cannot point to a `✓ Check 0:` line in your previous turn (or two turns ago, with the CEO's ack between), you have not run the checklist. STOP. Emit the checklist turn first. The two-turn pattern is the procedure; the SVG is the output of the procedure, not a substitute for it.
+
 Walk this list line by line. If any check fails, fix the SVG before emitting it. Do not skip. Items grouped under "Must be true" are positive assertions; items grouped under "Must NOT be present" are negative assertions. Both forms are mechanical checks.
 
 **Coordinate template adherence (must be true, FIRST CHECK):**
@@ -1032,7 +1036,7 @@ Walk this list line by line. If any check fails, fix the SVG before emitting it.
 1. Every key function box is wrapped in `<a href="kffm_l<NEXT-LEVEL>_<function-slug>_<company-slug>.html" class="l1-box-link">`.
 2. Every supporting function box is also wrapped in `<a>` with the same class.
 3. Every box wrapper contains exactly one `<rect>` and exactly four `<text>` elements (function name, owner, critical number, L-link).
-4. Every `<rect>` is exactly 240 wide by 86 tall.
+4. Every `<rect>` is exactly 240 wide by 86 tall — including supporting function rects below the dashed separator. **Cite each rect's dimensions explicitly in narration:** `✓ Check 4: Rect dimensions per box: Marketing 240x86, Sales 240x86, Customer Success 240x86, Finance 240x86, HR 240x86, IT 240x86. All N rects 240x86.` If any rect is not 240x86, the SVG is wrong; STOP, fix it, then re-walk the checklist from Check 0. Do not narrate `✓ Check 4: All boxes 240x86.` without enumerating each rect's actual width and height — the rote shorthand is what allowed the previous version of this prompt to ship SVGs with mixed-size supporting rects.
 5. Every `<rect>` has `rx="8"`.
 
 **Color palette (must be true):**
@@ -1428,6 +1432,10 @@ For deeper-level KFFMs, use these templates verbatim, swapping only the data. Do
 2. **Wait for the CEO's reply.** It can be brief ("ok", "go ahead", or even a question) — any reply unblocks the next turn. If they say to fix something, fix it and re-walk the checklist.
 3. **Turn N+2 (SVG turn):** Emit ONLY the SVG and the resume-state block + next-steps + terminator (per Phase 9 emission order). The checklist does not appear in this turn.
 
+**STOP-AND-SPLIT RULE.** If during your reply you find yourself drafting both `✓ Check` lines AND a `<svg>` element in the same response, STOP. Delete the SVG portion. The current response must end with `Checklist complete. Emitting SVG next.` and contain no SVG. The next response (after the CEO's reply, however brief) is the one that contains the SVG. This is non-negotiable and applies even if the CEO has explicitly asked you to "just show me the chart" — the audit trail comes first; the SVG follows in its own turn.
+
+**No-checklist-no-SVG rule.** If you are about to emit an SVG and you cannot point to a `✓ Check 0:` line in your previous turn (or two turns ago, with the CEO's ack between), you have not run the checklist. STOP. Emit the checklist turn first. The two-turn pattern is the procedure; the SVG is the output of the procedure, not a substitute for it.
+
 Why two turns: the structural primitive `checklist_narrated_in_transcript` looks for `✓ Check N:` lines in the conversation, not inside SVG-block prose. If you put the checklist inside the same response as the SVG (in a prose preamble), the structural check fails because the lines are bundled with the artifact instead of standing as their own visible audit trail. The judge scores adherence by reading the dedicated checklist turn; an SVG with no preceding standalone checklist turn scores fail on this criterion.
 
 Walk this list line by line before emitting. Do not skip. Items grouped under "Must be true" are positive assertions; items grouped under "Must NOT be present" are negative assertions. Both forms are mechanical checks.
@@ -1439,7 +1447,7 @@ Walk this list line by line before emitting. Do not skip. Items grouped under "M
 0a. Every `<text>` element uses one of the named classes defined in the `<style>` block (`fn-name`, `owner`, `metric`, `widget`, `arrow`, `sep-lbl`). Inline `style="..."` attributes on text elements are forbidden.
 
 **Box structure (must be true):**
-1. Every box is exactly 280 wide by 78 tall.
+1. Every box is exactly 280 wide by 78 tall — including supporting sub-function rects below the dashed separator. **Cite each rect's dimensions explicitly in narration:** `✓ Check 1: Rect dimensions per box: Lead Sourcing 280x78, Discovery Brief 280x78, Proposal 280x78, Close 280x78, Relationship Nurturing 280x78, CRM 280x78. All N rects 280x78.` If any rect is not 280x78, the SVG is wrong; STOP, fix it, then re-walk the checklist from Check 0. The 240-wide L1 supporting box dimensions do NOT carry over to deeper levels; deeper levels are universally 280x78. Do not narrate `✓ Check 1: All boxes 280x78.` without enumerating each rect's actual width and height — the rote shorthand is what allowed previous runs to ship SVGs with mixed-size supporting rects.
 2. Every box has `rx="8"` and one of the three fill classes (`green-fill`, `amber-fill`, `red-fill`).
 3. Every box contains exactly four `<text>` elements: function name, owner, metric label line ending in `(leading)` or `(lagging)`, and metric values line `[current] / [target]`.
 
