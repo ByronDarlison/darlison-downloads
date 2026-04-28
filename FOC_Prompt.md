@@ -102,7 +102,7 @@ Whatever pattern exists today, capture it. Do not impose a structure the CEO has
 1. Output verbatim: `Probe required: Open seat at [function name]. Asking cost question.`
 2. Ask verbatim: `What is this Open seat costing the business per quarter? In missed revenue, missed expansion, or work falling on someone else? Best estimate is fine.`
 3. Wait for the CEO's answer. Do not infer a cost. Do not summarize. Do not move on.
-4. Capture in the resume-state block under `Open seats:` using the format `[function]: ~$N/quarter — [one-line cause from CEO's answer]`.
+4. Capture in the resume-state block under `Open seats:` using the format `[function]: ~$N/quarter -- [one-phrase cause from CEO's answer]`. Use `--` (double hyphen-minus) as the separator, NOT `—` (em-dash). Em-dashes are forbidden in all resume-state prose.
 
 **Open-seat gate fires immediately, function by function.** The instant a CEO names a function's owner as `Open` (whether inherited from the KFFM or surfaced fresh in this session), run the full Trigger 1 procedure BEFORE moving to the next function. Do not collect three Open seats and probe them in a batch later. Do not defer the gate to "after we draw the chart." The probe lives in the same conversation block as the moment the function is declared Open. If you find yourself in a later phase with any Open seat that has no recorded cost, return to the relevant phase and run the gate for the missing seat before continuing.
 
@@ -121,7 +121,7 @@ These gates exist because the most actionable findings on a FOC surface only whe
 
 **Do not invent names or titles.** When reflecting back what the CEO said, do not edit, rename, or invent owners. If the CEO has not named someone for a function, the answer is `Open`. If a person's title is non-functional ("Director of Special Projects"), ask what function that role performs and use the function name on the chart.
 
-**No em-dashes in any output prose.** Use commas, periods, parentheses, semicolons, or conjunctions. Co-ownership separator on the chart (` + `) is the only allowed use of the plus glyph in this context, and it is on the chart, not in prose.
+**No em-dashes (`—`) anywhere in output.** Not in resume-state prose, not in narration, not in the Open-seat capture format. Use `--` (double hyphen-minus), `,`, `;`, `:`, `(`, or sentence breaks. The em-dash glyph is reserved entirely for chart-level critical-number current-value placeholders in the KFFM (`— / target` for Open seats) — and the FOC does not have those. So in this prompt, `—` should appear ZERO times in any output. If you need a separator in a list or sentence, use `--`. The only special chart glyph in the FOC is the co-owner separator ` + ` (space-plus-space), which sits inside an SVG `<text>` element, not in prose.
 
 **American spelling.** Color, not colour. Behavior, not behaviour. Organize, not organise.
 
@@ -331,11 +331,25 @@ The FOC is read top-down with parent functions above their children and connecto
 - Origin at top-left of viewBox.
 - Box dimensions: 150 wide × 60 tall, rounded corners with `rx="6"`.
 - Tier 1 (Head of Company): single box centered horizontally on the viewBox, top edge at y=40.
-- Tier 2 (functions reporting to Head of Company): boxes at y=180 (140 below tier 1), evenly spaced horizontally across the chart's full width. The first tier-2 box's center is at x = 75 + (chart_left_padding); the last tier-2 box's center is at x = chart_width - 75. Other tier-2 box centers are evenly distributed between those endpoints.
+- Tier 2 (functions reporting to Head of Company): boxes at y=180 (140 below tier 1). **Use these exact x-coordinates by tier-2 count — do not compute, do not improvise:**
+
+  | Tier-2 count | viewBox width | Box x-coordinates (use verbatim) |
+  |---|---|---|
+  | 1 | 320 | [85] |
+  | 2 | 580 | [115, 345] |
+  | 3 | 840 | [115, 345, 575] |
+  | 4 | 1100 | [115, 345, 575, 805] |
+  | 5 | 1360 | [115, 345, 575, 805, 1035] |
+  | 6 | 1620 | [115, 345, 575, 805, 1035, 1265] |
+
+  Each tier-2 box is at one of these exact x values, paired with y=180. Spacing is constant at 230px between adjacent box centers. **If you find yourself computing tier-2 x by formula, stop and copy from the table.** Out-of-table counts (0 or 7+) are out of scope; consolidate before drawing.
 - Tier 3+ (sub-functions hanging from a tier-2 parent): boxes at y=320 (140 below tier 2). For a parent with N children:
-  - If N ≤ 2: place children side-by-side under the parent, horizontally centered on the parent's x.
-  - If N ≥ 3: stack children vertically. First child top edge at y=460; subsequent children at y=460 + 70 * (i-1) for i in 1..N. Each child's center x is at parent.x + 96 (offset right from the parent).
+  - If N == 1: child centered at parent.x.
+  - If N == 2: children at parent.x − 80 and parent.x + 80 (side-by-side, 160px apart).
+  - If N ≥ 3: stack children vertically. First child top edge at y=460; subsequent children at y=460 + 70 * (i−1) for i in 1..N. Each child's center x is at parent.x + 96 (offset right from the parent so the vertical-stack stub line stays clear of adjacent tier-3 columns).
 - Tier 4+ (sub-sub-functions): same vertical-stack pattern but one tier deeper, with child x at parent.x + 96.
+
+**Tier-3 column-collision rule.** When two adjacent tier-2 parents both have tier-3 children, the right edges of the LEFT parent's tier-3 columns must clear the left edges of the RIGHT parent's tier-3 columns by at least 30px. With tier-2 spacing at 230px and box width 150px, this means a tier-2 parent at x and another at x+230 leaves only 80px of clearance for tier-3 children sitting under each. If a left parent has children stacked at parent.x and a right parent has children stacked at (parent.x+230)+96, the right parent's children sit at x+326 — comfortably past the left parent's x+150 right edge. But if the LEFT parent uses the +96 offset (children at x+96, right edge x+96+150 = x+246) and the RIGHT parent's children are at (x+230)+96 = x+326, clearance is only 80px. **Cite tier-3 left-edges and right-edges per column to verify clearance:** `✓ Check 5a: Tier-3 column edges: parent A at x=345 children right-edge x=591; parent B at x=575 children left-edge x=671. Clearance 80px (>= 30px required).`
 
 **Connector lines.**
 - All connectors use `class="conn"` with stroke `#aaa`, stroke-width 1, fill none.
@@ -492,7 +506,8 @@ Walk this list line by line before emitting. Do not skip. Items grouped under "m
 
 **Connectors and labels (must NOT be present):**
 13. Zero connector lines pass through any `<rect>` (no line crosses through a box).
-14. Zero text elements outside any `<rect>` other than nothing (the FOC has no decorative labels; every `<text>` element is inside a box).
+14. **Zero text elements outside any `<rect>`. The FOC has no decorative labels, no annotations, no captions, no notes-on-the-chart.** Every single `<text>` element MUST sit inside a box's bounds. If you find yourself wanting to add a "Scattered: [names]" label, a "Distributed across:" note, a tier name caption, or any other annotation on the chart itself — STOP. Do NOT add it. Such information belongs in the resume-state block under `Notes:` or `Multi-holder seats:`, NEVER on the chart. The chart is purely structural: boxes + connectors. **Cite verification in narration:** `✓ Check 14: Text elements total: N. Text elements inside a rect bounds: N. Text elements outside any rect: 0. No annotations, captions, or notes on the chart.`
+14a. **Zero inline `style="..."` attributes on any element.** Every `<text>`, `<rect>`, and `<line>` uses the canonical class names declared in the `<defs><style>` block. If you are tempted to add `style="font-size: 9; fill: #666"` to a text element to make it small or grey, that text element is by definition NOT a structural element of the FOC and should not be on the chart at all (see Check 14). Inline styles are forbidden because they bypass the class system that the structural primitives audit.
 
 **ViewBox sanity (must be true):**
 15. viewBox starts at `0 0`. viewBox width equals the rightmost-element-x + 40px padding. viewBox height equals the bottom-most-element-y + 30px padding. No content extends beyond viewBox bounds.
@@ -527,9 +542,15 @@ FAC available: [yes | no]
 
 Tier-2 grouping: [flat | grouped | two-axis]
 
-Tier-2 leaders:
+Tier-2 key-function leaders:
 1. [Leader name | Open] -- Parent functions: [list] -- Color: [neutral | red]
 2. [...]
+
+Tier-2 supporting-function owners:
+1. [Owner name | Open] -- Function: [supporting function name] -- Reports to: [Head of Company | key function name] -- Color: [neutral | red]
+2. [...]
+
+(Note: tier-2 key-function leaders and tier-2 supporting-function owners are listed in TWO separate sections, never combined as peers. Downstream prompts read these as distinct categories. If a person owns both a key function and a supporting function, they appear once in each section.)
 
 Sub-function hierarchy (key functions):
 - [Function]: [list of sub-function boxes with owners]
@@ -539,7 +560,7 @@ Sub-function hierarchy (supporting functions):
 - [Function]: [list of sub-function boxes with owners]
 - [...]
 
-Open seats: [list with `[function]: ~$N/quarter — [cause]` per seat, or `(none)`]
+Open seats: [list, one per line, format: `[function]: ~$N/quarter -- [one-phrase cause]`. Use `--` (double hyphen-minus) as the separator, NOT `—` (em-dash). Em-dashes are forbidden in resume-state prose. The amount uses `~$` prefix and `/quarter` suffix. Cause is a noun phrase, not a sentence. Examples that pass: `Demand Gen: ~$127K/quarter -- qualified lead pipeline shortfall`, `Channel Manager: ~$200K-$320K/quarter -- partner revenue not pursued`. Or `(none)` if no Open seats. Range amounts use hyphen-minus: `$200K-$320K`.]
 
 Duplicate-owner findings: [list with `[name]: [function list]`, or `(none)`]
 
