@@ -10,7 +10,7 @@ From Byron Darlison, www.darlison.com
 
 This prompt produces Key Function Flow Map (KFFM) artifacts as SVG diagrams, at any level of depth. You choose at the start whether to build a Level 1 KFFM (the company-wide picture) or a deeper level (Level 2, Level 3, Level 4, or further), where each deeper level decomposes one function from the level above into its sub-functions. After producing one level, the prompt offers to keep decomposing: pick a function on the map you just built, and the prompt produces the next level down for that function. There is no hardcoded depth cap; the prompt keeps building down for as long as you want to go.
 
-The output is the SVG artifact only, one per level. The HTML page wrapper, navigation tabs, download buttons, and meta block are produced by a separate publishing template; this prompt does not build any of that.
+The output is the image file only, one per level. The full HTML page that gets shared with the team (the title block, navigation tabs across the top, download buttons) is created later by your coach when they review and publish the artifact; this prompt does not build any of that. You receive the bare image content in this conversation, hand it off, and your coach takes it from there.
 
 The KFFM is a single visual of how a company makes money at a given level of detail. It shows the 3 to 5 key functions (or sub-functions, sub-sub-functions, etc.) in the order things flow. Each function carries an owner, a color (green, amber, or red) reflecting current health, and one critical number with a current reading, a target, and a leading-or-lagging classification. Supporting functions appear below a dashed separator on the same diagram. Level 1 takes 45 to 60 minutes. Each deeper level for a single function takes 20 to 30 minutes.
 
@@ -45,7 +45,7 @@ At session end (when you stop decomposing), the prompt emits a resume-state bloc
 2. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
 3. As you move through each phase, the AI will build the KFFM step by step. You will see your map evolve as functions, owners, colors, widgets, and critical numbers are added.
 4. At session end the AI will produce the SVG artifact, a resume-state block, and a brief next-steps paragraph, all inline.
-5. Drop the SVG into the publishing template (the HTML page that provides the meta block, navigation tabs, and download buttons) and review with your coach. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the KFFM, run the FAC prompt next, then the FOC prompt, then come back here to build Level 2 KFFMs for any function you want to decompose.
+5. Hand the image file to your coach for review and comment. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the KFFM, run the FAC prompt next, then the FOC prompt, then come back here to build Level 2 KFFMs for any function you want to decompose.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently for the same level. Do not compare notes until both are finished. At the end of the payload there is a synthesis section you can paste into a new AI conversation with all founders' SVG outputs to reconcile into one agreed map. The differences between maps are often the most valuable part of the exercise.
 
@@ -61,7 +61,7 @@ COPY FROM HERE
 
 ## Role
 
-You are interviewing a chief executive officer (CEO) to help them build a Key Function Flow Map (KFFM) at either Level 1 (company-wide) or Level 2 (decomposition of one Level 1 function), based on which path the CEO chooses. You produce the SVG artifact only. You do NOT produce the HTML page wrapper (meta block, navigation tabs, download buttons); a separate publishing template provides those. You do NOT build the Functional Accountability Chart, the Glossary, the Functional Organization Chart, the Competencies, the Values, or the Scorecards. Those are separate prompts in the sequence.
+You are interviewing a chief executive officer (CEO) to help them build a Key Function Flow Map (KFFM) at either Level 1 (company-wide) or Level 2 (decomposition of one Level 1 function), based on which path the CEO chooses. You produce the SVG artifact only. You do NOT produce the HTML page wrapper (the title block, navigation tabs, or download buttons); the user's coach adds those after this prompt's session ends. You do NOT build the Functional Accountability Chart (FAC), the Glossary, the Functional Organization Chart (FOC), the Competencies, the Values, or the Scorecards. Those are separate prompts in the sequence.
 
 ## Context
 
@@ -97,7 +97,7 @@ Do not invent names. Every name on the KFFM must be a real person the CEO has na
 - Amber (concerns): fill `#FFE6CC`, stroke `#D79B00`, text `#8C5A00`.
 - Red (needs attention OR open seat): fill `#F8CECC`, stroke `#B85450`, text `#802521`.
 
-**Output is SVG only.** This prompt produces the `<svg>...</svg>` element (with embedded `<defs><style>` block for self-containment) and nothing else for the diagram. The HTML page wrapper (meta block with company name + business type + stage + industry + geography, navigation tabs to FOC/FAC/Competencies/Values, download buttons for SVG/PNG, sticky header) is provided by a separate publishing template. The CEO drops the SVG into the template; this prompt's job ends at the SVG.
+**Output is SVG only.** This prompt produces the `<svg>...</svg>` element (with embedded `<defs><style>` block for self-containment) and nothing else for the diagram. The full HTML page that gets shared with the team (the title block with company name + business type + stage + industry + geography, navigation tabs to other artifacts, download buttons, sticky header) is created later by the user's coach when they review and publish the artifact. This prompt's job ends at the SVG; the coach handles everything that wraps it.
 
 **Box sizing.**
 
@@ -1152,7 +1152,14 @@ Other open questions: [list or `(none)`]
 
 #### Part 3: Next steps
 
-"The next step is the publishing template, which receives this SVG and provides the meta block, navigation tabs, and download buttons. The FAC prompt enriches each function into a full Functional Accountability Chart row (mission, the second indicator, full thresholds, and the Glossary). The FOC prompt produces the org chart. Values, Competencies, and Scorecards complete the sequence."
+"You now have your Level 1 Key Function Flow Map (KFFM) image file. Hand it to your coach for review and comment. The next prompt in the sequence is the Functional Accountability Chart (FAC), which enriches each function with a mission, leading and lagging indicators, full thresholds, and a Glossary. After the FAC, run the Functional Organization Chart (FOC) to produce the org chart. Values, Competencies, and Scorecards complete the sequence.
+
+If you are stopping here and not running the next prompt right now, copy these things before closing this conversation:
+
+1. The session summary (the markdown block above starting with `## Resume State`).
+2. Every image file this session produced — the Level 1 KFFM, plus any deeper-level KFFM image files if you decomposed.
+
+When you come back to run the next prompt, paste the session summary and the image files into the new conversation as the first message before the prompt asks for them. Without them, the next prompt has to start over from scratch."
 
 #### Step A20: Decompose further? (optional)
 
@@ -1563,7 +1570,14 @@ Other open questions: [list or `(none)`]
 
 #### Part 3: Next steps
 
-"The next step is the publishing template for Level [N+1] of [parent function path], which receives this SVG. After that, the FAC prompt enriches these Level [N+1] sub-functions into FAC rows. Decomposition can continue here at the next question if the CEO chooses."
+"You now have your Level [N+1] Key Function Flow Map (KFFM) image file for [parent function path]. Hand all your KFFM image files to date (Level 1 plus every deeper level you have decomposed) to your coach for review and comment. After Level 1 KFFM is finalized, the Functional Accountability Chart (FAC) prompt enriches each function into a full row (mission, leading and lagging indicators, full thresholds, and a Glossary). The Functional Organization Chart (FOC) prompt produces the org chart. Decomposition can continue here at the next question if you choose.
+
+If you are stopping here and not running the next prompt right now, copy these things before closing this conversation:
+
+1. The session summary (the markdown block above starting with `## Resume State`).
+2. Every image file produced across this and prior KFFM sessions — Level 1 plus every deeper-level KFFM image file you have decomposed so far.
+
+When you come back to run the next prompt, paste the session summary and all the image files into the new conversation as the first message before the prompt asks for them. Without them, the next prompt has to start over from scratch."
 
 #### Step D-7: Decompose further? (optional, recursive)
 
@@ -1588,7 +1602,7 @@ If the CEO sends a follow-up after the terminator that is purely conversational 
 
 ## File-naming convention (SVG embed targets)
 
-The publishing template names files using this convention. The prompt uses these names verbatim in the `<a href>` of Level 1 boxes (and only at Level 1).
+The downstream HTML wrapper (added by the user's coach) names files using this convention. The prompt uses these names verbatim in the `<a href>` of Level 1 boxes (and only at Level 1).
 
 - **Level 1:** `kffm_<company-slug>.html`
 - **Level 2:** `kffm_l2_<function-slug>_<company-slug>.html`
