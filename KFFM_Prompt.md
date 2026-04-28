@@ -95,7 +95,7 @@ Do not invent names. Every name on the KFFM must be a real person the CEO has na
 
 - Green (healthy): fill `#D5E8D4`, stroke `#82B366`, text `#2F6B25`.
 - Amber (concerns): fill `#FFE6CC`, stroke `#D79B00`, text `#8C5A00`.
-- Red (needs attention OR open seat): fill `#F8CECC`, stroke `#B85450`, text `#802521`.
+- Red (needs attention OR open seat): fill `#F8CECC`, stroke `#B85450`, text `#B91414`.
 
 **Output is SVG only.** This prompt produces the `<svg>...</svg>` element (with embedded `<defs><style>` block for self-containment) and nothing else for the diagram. The full HTML page that gets shared with the team (the title block with company name + business type + stage + industry + geography, navigation tabs to other artifacts, download buttons, sticky header) is created later by the user's coach when they review and publish the artifact. This prompt's job ends at the SVG; the coach handles everything that wraps it.
 
@@ -473,7 +473,7 @@ Emit a single self-contained `<svg>` element with embedded `<defs><style>` block
       .red-fill    { fill: #F8CECC; stroke: #B85450; stroke-width: 1.5; }
       .green-text  { fill: #2F6B25; }
       .amber-text  { fill: #8C5A00; }
-      .red-text    { fill: #802521; }
+      .red-text    { fill: #B91414; }
       .fn-name { font-size: 14px; font-weight: 700; }
       .owner   { font-size: 11px; font-style: italic; }
       .metric  { font-size: 11px; font-weight: 500; }
@@ -556,7 +556,7 @@ This is the canonical L1 KFFM. Pattern-match against this. Every other L1 KFFM y
       .red-fill    { fill: #F8CECC; stroke: #B85450; stroke-width: 1.5; }
       .green-text  { fill: #2F6B25; }
       .amber-text  { fill: #8C5A00; }
-      .red-text    { fill: #802521; }
+      .red-text    { fill: #B91414; }
       .fn-name { font-size: 14px; font-weight: 700; }
       .owner   { font-size: 11px; font-style: italic; }
       .metric  { font-size: 11px; font-weight: 500; }
@@ -569,7 +569,7 @@ This is the canonical L1 KFFM. Pattern-match against this. Every other L1 KFFM y
       .l2c-head { font-size: 12px; font-weight: 700; fill: #1a1a1a; }
       .l1-link { font-size: 11px; fill: #326AB5; text-decoration: underline; font-weight: 600; }
       .profitx-svg { font-size: 14px; font-weight: 700; fill: #326AB5; font-style: italic; }
-      .cash-glyph { font-size: 24px; font-weight: 800; fill: #14532d; }
+      .cash-glyph { font-size: 32px; font-weight: 800; fill: #14532d; }
       a.l1-box-link { cursor: pointer; }
       a.l1-box-link rect { transition: filter 0.15s; }
       a.l1-box-link:hover rect { filter: brightness(0.96) drop-shadow(0 3px 6px rgba(0,0,0,0.18)); }
@@ -624,7 +624,7 @@ This is the canonical L1 KFFM. Pattern-match against this. Every other L1 KFFM y
     <text x="570" y="355" text-anchor="middle" class="l1-link">(↓ to Level 2)</text>
   </a>
   <line x1="690" y1="323" x2="745" y2="323" class="arrow" marker-end="url(#arr)"/>
-  <text x="755" y="330" class="cash-glyph">$$$</text>
+  <text x="780" y="335" text-anchor="middle" font-size="32" class="cash-glyph">$$$</text>
 
   <!-- Per-function cycle time, right-aligned at each box's bottom-right corner -->
   <text x="260" y="183" text-anchor="end" class="cycle">+10 days</text>
@@ -673,7 +673,7 @@ This is the canonical L1 KFFM. Pattern-match against this. Every other L1 KFFM y
 The Pillar HR reference above shows the 4-function 2x2 layout. When your CEO has only 3 key functions, copy from THIS reference instead. Acme Consulting is fictional; swap the data for your CEO's business. Coordinates are verbatim from the JSON template `3-functions-single-row`.
 
 ```xml
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 720"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 720"
      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">
   <defs>
     <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
@@ -685,7 +685,7 @@ The Pillar HR reference above shows the 4-function 2x2 layout. When your CEO has
       .red-fill    { fill: #F8CECC; stroke: #B85450; stroke-width: 1.5; }
       .green-text  { fill: #2F6B25; }
       .amber-text  { fill: #8C5A00; }
-      .red-text    { fill: #802521; }
+      .red-text    { fill: #B91414; }
       .fn-name { font-size: 14px; font-weight: 700; }
       .owner   { font-size: 11px; font-style: italic; }
       .metric  { font-size: 11px; font-weight: 500; }
@@ -698,7 +698,7 @@ The Pillar HR reference above shows the 4-function 2x2 layout. When your CEO has
       .l2c-head { font-size: 12px; font-weight: 700; fill: #1a1a1a; }
       .l1-link { font-size: 11px; fill: #326AB5; text-decoration: underline; font-weight: 600; }
       .profitx-svg { font-size: 14px; font-weight: 700; fill: #326AB5; font-style: italic; }
-      .cash-glyph { font-size: 24px; font-weight: 800; fill: #14532d; }
+      .cash-glyph { font-size: 32px; font-weight: 800; fill: #14532d; }
       a.l1-box-link { cursor: pointer; }
     </style>
   </defs>
@@ -712,40 +712,40 @@ The Pillar HR reference above shows the 4-function 2x2 layout. When your CEO has
     <rect x="40" y="80" width="240" height="86" class="amber-fill" rx="8"/>
     <text x="160" y="100" text-anchor="middle" class="fn-name amber-text">Sales</text>
     <text x="160" y="117" text-anchor="middle" class="owner amber-text">Lina M</text>
-    <text x="160" y="135" text-anchor="middle" class="metric amber-text">Signed Engagements: 4 / 5 (lagging)</text>
+    <text x="160" y="135" text-anchor="middle" class="metric amber-text">Signed Engagements: 4 / 5</text>
     <text x="160" y="155" text-anchor="middle" class="l1-link">(↓ to Level 2)</text>
   </a>
-  <line x1="280" y1="123" x2="310" y2="123" class="arrow" marker-end="url(#arr)"/>
-  <text x="295" y="116" text-anchor="middle" class="widget">Engagements</text>
+  <line x1="280" y1="123" x2="400" y2="123" class="arrow" marker-end="url(#arr)"/>
+  <text x="340" y="116" text-anchor="middle" class="widget">Engagements</text>
 
   <a href="kffm_l2_delivery_acme_consulting.html" class="l1-box-link">
-    <rect x="310" y="80" width="240" height="86" class="green-fill" rx="8"/>
-    <text x="430" y="100" text-anchor="middle" class="fn-name green-text">Delivery</text>
-    <text x="430" y="117" text-anchor="middle" class="owner green-text">3 Consultants</text>
-    <text x="430" y="135" text-anchor="middle" class="metric green-text">Projects Closed: 4 / 4 (lagging)</text>
-    <text x="430" y="155" text-anchor="middle" class="l1-link">(↓ to Level 2)</text>
+    <rect x="400" y="80" width="240" height="86" class="green-fill" rx="8"/>
+    <text x="520" y="100" text-anchor="middle" class="fn-name green-text">Delivery</text>
+    <text x="520" y="117" text-anchor="middle" class="owner green-text">3 Consultants</text>
+    <text x="520" y="135" text-anchor="middle" class="metric green-text">Projects Closed: 4 / 4</text>
+    <text x="520" y="155" text-anchor="middle" class="l1-link">(↓ to Level 2)</text>
   </a>
-  <line x1="550" y1="123" x2="580" y2="123" class="arrow" marker-end="url(#arr)"/>
-  <text x="565" y="116" text-anchor="middle" class="widget">Closed projects</text>
+  <line x1="640" y1="123" x2="760" y2="123" class="arrow" marker-end="url(#arr)"/>
+  <text x="700" y="116" text-anchor="middle" class="widget">Closed projects</text>
 
   <a href="kffm_l2_finance_acme_consulting.html" class="l1-box-link">
-    <rect x="580" y="80" width="240" height="86" class="green-fill" rx="8"/>
-    <text x="700" y="100" text-anchor="middle" class="fn-name green-text">Finance</text>
-    <text x="700" y="117" text-anchor="middle" class="owner green-text">Pat S</text>
-    <text x="700" y="135" text-anchor="middle" class="metric green-text">DSO: 35 / 40 days (leading)</text>
-    <text x="700" y="155" text-anchor="middle" class="l1-link">(↓ to Level 2)</text>
+    <rect x="760" y="80" width="240" height="86" class="green-fill" rx="8"/>
+    <text x="880" y="100" text-anchor="middle" class="fn-name green-text">Finance</text>
+    <text x="880" y="117" text-anchor="middle" class="owner green-text">Pat S</text>
+    <text x="880" y="135" text-anchor="middle" class="metric green-text">DSO: 35 / 40 days</text>
+    <text x="880" y="155" text-anchor="middle" class="l1-link">(↓ to Level 2)</text>
   </a>
-  <line x1="820" y1="123" x2="840" y2="123" class="arrow" marker-end="url(#arr)"/>
-  <text x="855" y="130" class="cash-glyph">$$$</text>
+  <line x1="1000" y1="123" x2="1020" y2="123" class="arrow" marker-end="url(#arr)"/>
+  <text x="1080" y="132" text-anchor="middle" font-size="32" class="cash-glyph">$$$</text>
 
   <!-- Cycle-time labels under each box -->
   <text x="260" y="183" text-anchor="end" class="cycle">+14 days</text>
-  <text x="530" y="183" text-anchor="end" class="cycle">+45 days</text>
-  <text x="800" y="183" text-anchor="end" class="cycle">+35 days</text>
+  <text x="620" y="183" text-anchor="end" class="cycle">+45 days</text>
+  <text x="980" y="183" text-anchor="end" class="cycle">+35 days</text>
 
   <!-- Profit/X line just above dashed separator -->
-  <text x="430" y="240" text-anchor="middle" class="profitx-svg">Profit / X = Profit per Engagement</text>
-  <line x1="40" y1="247" x2="820" y2="247" stroke="#bbb" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="520" y="240" text-anchor="middle" class="profitx-svg">Profit / X = Profit per Engagement</text>
+  <line x1="40" y1="247" x2="1000" y2="247" stroke="#bbb" stroke-width="1" stroke-dasharray="4,4"/>
 
   <!-- Supporting functions row -->
   <text x="40" y="272" class="section-lbl">Supporting functions</text>
@@ -753,7 +753,7 @@ The Pillar HR reference above shows the 4-function 2x2 layout. When your CEO has
     <rect x="40" y="280" width="240" height="86" class="green-fill" rx="8"/>
     <text x="160" y="300" text-anchor="middle" class="fn-name green-text">HR</text>
     <text x="160" y="317" text-anchor="middle" class="owner green-text">Lina M</text>
-    <text x="160" y="335" text-anchor="middle" class="metric green-text">Talent Density: 80% / 80% (lagging)</text>
+    <text x="160" y="335" text-anchor="middle" class="metric green-text">Talent Density: 80% / 80%</text>
     <text x="160" y="355" text-anchor="middle" class="l1-link">(↓ to Level 2)</text>
   </a>
 
@@ -781,7 +781,7 @@ When your CEO has 5 key functions, copy from THIS reference. Acme Manufacturing 
       .red-fill    { fill: #F8CECC; stroke: #B85450; stroke-width: 1.5; }
       .green-text  { fill: #2F6B25; }
       .amber-text  { fill: #8C5A00; }
-      .red-text    { fill: #802521; }
+      .red-text    { fill: #B91414; }
       .fn-name { font-size: 14px; font-weight: 700; }
       .owner   { font-size: 11px; font-style: italic; }
       .metric  { font-size: 11px; font-weight: 500; }
@@ -794,7 +794,7 @@ When your CEO has 5 key functions, copy from THIS reference. Acme Manufacturing 
       .l2c-head { font-size: 12px; font-weight: 700; fill: #1a1a1a; }
       .l1-link { font-size: 11px; fill: #326AB5; text-decoration: underline; font-weight: 600; }
       .profitx-svg { font-size: 14px; font-weight: 700; fill: #326AB5; font-style: italic; }
-      .cash-glyph { font-size: 24px; font-weight: 800; fill: #14532d; }
+      .cash-glyph { font-size: 32px; font-weight: 800; fill: #14532d; }
       a.l1-box-link { cursor: pointer; }
     </style>
   </defs>
@@ -854,8 +854,8 @@ When your CEO has 5 key functions, copy from THIS reference. Acme Manufacturing 
     <text x="565" y="335" text-anchor="middle" class="metric amber-text">DSO: 55 / 45 days (leading)</text>
     <text x="565" y="355" text-anchor="middle" class="l1-link">(↓ to Level 2)</text>
   </a>
-  <line x1="685" y1="323" x2="740" y2="323" class="arrow" marker-end="url(#arr)"/>
-  <text x="750" y="330" class="cash-glyph">$$$</text>
+  <line x1="820" y1="323" x2="980" y2="323" class="arrow" marker-end="url(#arr)"/>
+  <text x="1020" y="335" text-anchor="middle" font-size="32" class="cash-glyph">$$$</text>
 
   <!-- Cycle-time labels for both rows -->
   <text x="260" y="183" text-anchor="end" class="cycle">+10 days</text>
@@ -904,27 +904,32 @@ Treat the JSON block below as the authoritative source. When you emit an SVG, co
 {
   "L1_TEMPLATES": {
     "3-functions-single-row": {
-      "viewbox": "0 0 860 720",
+      "viewbox": "0 0 1120 720",
       "key_boxes": [
         {"x": 40, "y": 80, "w": 240, "h": 86},
-        {"x": 310, "y": 80, "w": 240, "h": 86},
-        {"x": 580, "y": 80, "w": 240, "h": 86}
+        {"x": 400, "y": 80, "w": 240, "h": 86},
+        {"x": 760, "y": 80, "w": 240, "h": 86}
       ],
       "inter_box_arrows": [
-        {"x1": 280, "y1": 123, "x2": 310, "y2": 123},
-        {"x1": 550, "y1": 123, "x2": 580, "y2": 123}
+        {"x1": 280, "y1": 123, "x2": 400, "y2": 123},
+        {"x1": 640, "y1": 123, "x2": 760, "y2": 123}
       ],
-      "output_arrow": {"x1": 820, "y1": 123, "x2": 840, "y2": 123},
-      "cash_glyph": {"x": 855, "y": 130, "class": "cash-glyph"},
+      "widget_label_positions": [
+        {"x": 340, "y": 116, "anchor": "middle"},
+        {"x": 700, "y": 116, "anchor": "middle"}
+      ],
+      "output_arrow": {"x1": 1000, "y1": 123, "x2": 1040, "y2": 123},
+      "cash_glyph": {"x": 1080, "y": 132, "class": "cash-glyph", "anchor": "middle", "font_size": 32, "note": "Floating glyph, NOT a box. Cash is the outcome of the flow, not a function. The breathing room (40px past arrow tip, viewBox right at 1120) is what makes the destination read clearly without a container."},
       "cycle_label_positions": [
         {"x": 260, "y": 183, "anchor": "end"},
-        {"x": 530, "y": 183, "anchor": "end"},
-        {"x": 800, "y": 183, "anchor": "end"}
+        {"x": 620, "y": 183, "anchor": "end"},
+        {"x": 980, "y": 183, "anchor": "end"}
       ],
       "profitx_y": 240,
-      "dashed_separator": {"y": 247, "x1": 40, "x2": 820},
+      "profitx_x": 520,
+      "dashed_separator": {"y": 247, "x1": 40, "x2": 1000},
       "supporting_row_y": 280,
-      "supporting_box_xs": [40, 310, 580],
+      "supporting_box_xs": [40, 400, 760],
       "time_to_money_y": 470
     },
     "4-functions-2x2": {
@@ -940,7 +945,7 @@ Treat the JSON block below as the authoritative source. When you emit an SVG, co
       "primary_inter_row_path": "M 570 166 L 570 220 L 570 280",
       "alt_inter_row_line": {"x1": 160, "y1": 166, "x2": 160, "y2": 280},
       "output_arrow": {"x1": 690, "y1": 323, "x2": 745, "y2": 323},
-      "cash_glyph": {"x": 755, "y": 330, "class": "cash-glyph"},
+      "cash_glyph": {"x": 780, "y": 335, "class": "cash-glyph", "anchor": "middle", "font_size": 32, "note": "Floating glyph, NOT a box. text-anchor=middle and font-size=32 are required as inline attributes; the .cash-glyph CSS class sets font-size 32 by default but emit it inline anyway so the element reads correctly even if the class is overridden."},
       "cycle_label_positions": [
         {"x": 260, "y": 183, "anchor": "end"},
         {"x": 670, "y": 183, "anchor": "end"},
@@ -954,28 +959,34 @@ Treat the JSON block below as the authoritative source. When you emit an SVG, co
       "time_to_money_y": 638
     },
     "5-functions-3-plus-2": {
-      "viewbox": "0 0 1130 720",
+      "viewbox": "0 0 1040 720",
       "key_boxes_row1": [
         {"x": 40, "y": 80, "w": 240, "h": 86},
-        {"x": 310, "y": 80, "w": 240, "h": 86},
-        {"x": 580, "y": 80, "w": 240, "h": 86}
+        {"x": 400, "y": 80, "w": 240, "h": 86},
+        {"x": 760, "y": 80, "w": 240, "h": 86}
       ],
       "key_boxes_row2": [
-        {"x": 175, "y": 280, "w": 240, "h": 86},
-        {"x": 445, "y": 280, "w": 240, "h": 86}
+        {"x": 220, "y": 280, "w": 240, "h": 86},
+        {"x": 580, "y": 80 + 200, "w": 240, "h": 86}
       ],
       "row1_inter_box_arrows": [
-        {"x1": 280, "y1": 123, "x2": 310, "y2": 123},
-        {"x1": 550, "y1": 123, "x2": 580, "y2": 123}
+        {"x1": 280, "y1": 123, "x2": 400, "y2": 123},
+        {"x1": 640, "y1": 123, "x2": 760, "y2": 123}
       ],
-      "row2_inter_box_arrow": {"x1": 415, "y1": 323, "x2": 445, "y2": 323},
-      "inter_row_path": "M 700 166 L 700 220 L 445 220 L 445 280",
-      "output_arrow": {"x1": 685, "y1": 323, "x2": 740, "y2": 323},
-      "cash_glyph": {"x": 750, "y": 330, "class": "cash-glyph"},
+      "row1_widget_label_positions": [
+        {"x": 340, "y": 116, "anchor": "middle"},
+        {"x": 700, "y": 116, "anchor": "middle"}
+      ],
+      "row2_inter_box_arrow": {"x1": 460, "y1": 323, "x2": 580, "y2": 323},
+      "row2_widget_label_position": {"x": 520, "y": 316, "anchor": "middle"},
+      "inter_row_path": "M 880 166 L 880 220 L 580 220 L 580 280",
+      "output_arrow": {"x1": 820, "y1": 323, "x2": 1040, "y2": 323},
+      "cash_glyph": {"x": 1080, "y": 332, "class": "cash-glyph", "anchor": "middle", "font_size": 32, "note": "Floating glyph, NOT a box. Cash is the outcome of the flow, not a function."},
       "profitx_y": 408,
-      "dashed_separator": {"y": 415, "x1": 40, "x2": 1090},
+      "profitx_x": 520,
+      "dashed_separator": {"y": 415, "x1": 40, "x2": 1000},
       "supporting_row_y": 450,
-      "supporting_box_xs_by_count": {"1": [40], "2": [40, 305], "3": [40, 305, 570]},
+      "supporting_box_xs_by_count": {"1": [40], "2": [40, 400], "3": [40, 400, 760]},
       "time_to_money_y": 638
     }
   },
@@ -984,14 +995,16 @@ Treat the JSON block below as the authoritative source. When you emit an SVG, co
 }
 ```
 
-**3 key functions, sequential single row (viewBox 860x720):**
-- Box positions: (40, 80), (310, 80), (580, 80)
-- Inter-box arrows: (280, 123)→(310, 123), (550, 123)→(580, 123)
-- Output arrow: (820, 123)→(840, 123); $$$ symbol at (855, 130)
-- Cycle-time labels: (260, 183), (530, 183), (800, 183) (text-anchor end)
-- Profit/X y=240, dashed separator y=247 spanning x=40 to x=820
-- Supporting row: y=280, supporting boxes at x=40, 310, 580 (1 to 3 supporting)
-- Time-to-money block: starts at y=470
+**3 key functions, sequential single row (viewBox 1120x720):**
+- Box positions: (40, 80), (400, 80), (760, 80)
+- Inter-box arrows: (280, 123)→(400, 123), (640, 123)→(760, 123)
+- Output arrow: (1000, 123)→(1040, 123); $$$ glyph at (1080, 132) with `text-anchor="middle"` and `font-size="32"` (overrides the .cash-glyph base size to make the destination read clearly without being a box). The glyph sits 40px past the arrow tip — that breathing room is what signals "cash is the outcome, not another function."
+- Widget label midpoints (text-anchor middle): x=340 (between box 1 and 2), x=700 (between box 2 and 3)
+- Cycle-time labels: (260, 183), (620, 183), (980, 183) (text-anchor end)
+- Profit/X line y=240 centered at x=520 (text-anchor middle)
+- Dashed separator y=247 spanning x=40 to x=1000
+- Supporting row: y=280, supporting boxes at x=40, 400, 760 (1 to 3 supporting)
+- Time-to-money block: starts at y=470, x=40 (text-anchor start)
 
 **4 key functions in 2 rows of 2 (Pillar HR pattern, viewBox 850x720):**
 - Box positions: (40, 80), (450, 80), (40, 280), (450, 280)
@@ -1001,11 +1014,15 @@ Treat the JSON block below as the authoritative source. When you emit an SVG, co
 - Supporting row: y=450, boxes at x=40, 305, 570 (3 supporting; if 2 supporting use x=40, 305; if 1 use x=40)
 - Time-to-money block: starts at y=638
 
-**5 key functions in 2 rows (3 + 2, viewBox 1130x720):**
-- Row 1 (3 boxes): (40, 80), (310, 80), (580, 80)
-- Row 2 (2 boxes): (175, 280), (445, 280)
-- Inter-row arrow: (700, 166)→(700, 220)→(445, 220)→(445, 280)
-- All other geometry follows the 4-function pattern, scaled to width 1130
+**5 key functions in 2 rows (3 + 2, viewBox 1040x720):**
+- Row 1 (3 boxes): (40, 80), (400, 80), (760, 80)
+- Row 2 (2 boxes): (220, 280), (580, 280)
+- Row 1 inter-box arrows: (280, 123)→(400, 123), (640, 123)→(760, 123)
+- Row 1 widget midpoints: x=340, x=700 (text-anchor middle)
+- Inter-row path: M 880 166 L 880 220 L 580 220 L 580 280
+- Row 2 inter-box arrow: (460, 323)→(580, 323); widget at x=520
+- Output arrow: (820, 323)→(980, 323); $$$ glyph at (1000, 330) with text-anchor middle
+- All other geometry consistent with 1040 viewBox
 
 **Forbidden layouts.** Do NOT do any of the following, ever:
 - Place 3 functions in a 2-row layout. Use the 3-functions-single-row template.
@@ -1035,20 +1052,48 @@ Walk this list line by line. If any check fails, fix the SVG before emitting it.
 
 **Coordinate template adherence (must be true, FIRST CHECK):**
 0. The chosen layout matches one of the published templates. Template selection is fully determined by KEY function count, not your judgment:
-   - **3 key functions → `3-functions-single-row`** with viewBox EXACTLY `0 0 860 720`, box x-coords from {40, 310, 580}, all at y=80.
+   - **3 key functions → `3-functions-single-row`** with viewBox EXACTLY `0 0 1040 720`, box x-coords from {40, 400, 760}, all at y=80.
    - **4 key functions → `4-functions-2x2`** with viewBox EXACTLY `0 0 850 720`, box x-coords from {40, 450}, y-coords from {80, 280}.
-   - **5 key functions → `5-functions-3-plus-2`** with viewBox EXACTLY `0 0 1130 720`, row 1 x-coords from {40, 310, 580} at y=80, row 2 x-coords from {175, 445} at y=280.
+   - **5 key functions → `5-functions-3-plus-2`** with viewBox EXACTLY `0 0 1040 720`, row 1 x-coords from {40, 400, 760} at y=80, row 2 x-coords from {220, 580} at y=280.
    - 1, 2, 6, or 7+ key functions are out of scope; refuse and ask the CEO to consolidate to 3-5.
 
    **You do not get to mix templates.** A 3-function business does NOT use viewBox 850 (that is the 4-function viewBox); it uses viewBox 860. A 3-function business does NOT place boxes at y=280 (that is row 2 of the 4-function or 5-function templates).
 
    **Cite the template AND every key-box coordinate AND viewBox in narration:** `✓ Check 0: KEY function count = N. Template = 'NAME'. ViewBox = 0 0 W H. Key-box positions: [(x1,y1), (x2,y2), ...]. Every (x,y) appears in template's key_boxes JSON: yes.`
 
-   Example for a 3-function business: `✓ Check 0: KEY function count = 3. Template = '3-functions-single-row'. ViewBox = 0 0 860 720. Key-box positions: [(40,80), (310,80), (580,80)]. Every (x,y) appears in template's key_boxes JSON: yes.`
+   Example for a 3-function business: `✓ Check 0: KEY function count = 3. Template = '3-functions-single-row'. ViewBox = 0 0 1040 720. Key-box positions: [(40,80), (400,80), (760,80)]. Every (x,y) appears in template's key_boxes JSON: yes.`
 
    Example that would FAIL Check 0: `✓ Check 0: KEY function count = 3. Template = '4-functions-2x2'. ViewBox = 0 0 850 720. Key-box positions: [(40,80), (450,80), (40,280)].` — wrong template (4-function template used for 3-function business), wrong viewBox (850 instead of 860), wrong y-coord (280 is row 2 of the 4-function template). STOP, re-pick template by count, regenerate.
 
-**Self-reject and regenerate.** After emitting the SVG, immediately parse your own output and verify: for every `<rect>` element, its `(x, y)` is in the chosen template's `key_boxes` list (or in `supporting_box_xs` at `supporting_row_y` for supporting functions). If you find ANY coordinate not in the template, your SVG is wrong. Do not narrate further checks. Output the line `Coordinate self-check FAILED. Regenerating from template '<name>' coordinates verbatim.` and emit a fresh SVG using ONLY the template's JSON values. Then restart the checklist from Check 0.
+### Post-emit parse-and-verify (mandatory)
+
+After emitting the SVG, in your NEXT message — before saying anything else to the user — you MUST run the deterministic geometric checks below. Do not narrate from intent; **parse the actual `<rect>`, `<text>`, and `<line>` elements you just wrote** and compute each check from those numbers. If every check passes, output `Post-emit verification: PASS` and proceed to the resume-state block. If any check fails, output `Post-emit verification: FAIL — <which check, which element>. Regenerating.` and emit a corrected SVG in a fresh turn after re-walking the full pre-emit checklist from Check 0.
+
+This phase exists because narration-based self-checks ("every rect at template position") let bad geometry slip through. Parsing-based self-checks force the agent to compute actual numbers from the actual emitted SVG, which catches what narration misses.
+
+**Check P1 — Every rect inside viewBox.** Read the `viewBox` attribute on the `<svg>` element (e.g. `viewBox="0 0 1120 720"` → vb_x=0, vb_y=0, vb_w=1120, vb_h=720). Walk every `<rect>`. For each, verify:
+- `rect.x ≥ vb_x` (left edge inside)
+- `rect.x + rect.width ≤ vb_x + vb_w` (right edge inside)
+- `rect.y ≥ vb_y` (top edge inside)
+- `rect.y + rect.height ≤ vb_y + vb_h` (bottom edge inside)
+
+Cite rect-by-rect: `✓ Check P1: ViewBox = 0 0 1120 720. Rect Marketing at (40, 80, 240×86): right=280 ≤ 1120 ✓, bottom=166 ≤ 720 ✓. ... All N rects fully inside viewBox: yes.`
+
+**Check P2 — Every rect coordinate matches the chosen template.** Read the template name you cited in Check 0. Walk every `<rect>` and verify (x, y) is in that template's key_boxes (or supporting_box_xs at supporting_row_y for supporting functions). If any coordinate is not in the template, the SVG is wrong; regenerate.
+
+Cite rect-by-rect: `✓ Check P2: Template = '3-functions-single-row'. Rect at (40, 80) ∈ key_boxes ✓, (400, 80) ∈ key_boxes ✓, (760, 80) ∈ key_boxes ✓. Supporting at (40, 280) ∈ supporting_box_xs at supporting_row_y ✓.`
+
+**Check P3 — Cash glyph breathing room.** Find the `<text>` element with class `cash-glyph`. Verify (a) it has `text-anchor="middle"` inline, (b) it has `font-size="32"` inline, (c) compute `glyph_left_edge ≈ x − 32` (half of font-size estimate) and verify `glyph_left_edge ≥ rightmost_rect_right_edge + 50`.
+
+Cite explicitly: `✓ Check P3: Cash glyph element: <text x="1080" y="132" text-anchor="middle" font-size="32" class="cash-glyph">$$$</text>. anchor=middle ✓, font-size=32 ✓. Rightmost rect right-edge = 1000 (Finance/Operations at x=760 + 240). glyph_left_edge = 1080 − 32 = 1048. Clearance = 1048 − 1000 = 48 px. Required ≥ 50 px → FAIL: regenerating with x=1080 unchanged but rechecking; the 48 vs 50 boundary means I need x ≥ 1082.` (Acceptable target: x=1080 with the canonical 32-px glyph estimate gives ~48 px which is a hair under; lean toward x=1085 if the structural primitive flags borderline cases.)
+
+**Check P4 — Every line connects to a rect or another line.** Walk every `<line>` element. For each (x1, y1) and (x2, y2) endpoint, verify it sits within 6 px of some rect edge (top, bottom, left, right, center-x, center-y) OR on another line's path. If any endpoint is dangling in white space, the SVG has an orphan connector; regenerate.
+
+Cite line-by-line: `✓ Check P4: Line[1] (200, 166)→(200, 280): start at Marketing box bottom-center ✓, end at Influencer/Affiliate top-center ✓. ... All N line endpoints anchored.`
+
+**On any FAIL:** output `Post-emit verification: FAIL — Check PN: <one-sentence failure>. Regenerating.` Do NOT continue. In the next turn, re-walk the full pre-emit checklist and emit a corrected SVG. Repeat the post-emit verification on the new SVG until it passes.
+
+**On all PASS:** output `Post-emit verification: PASS — all four checks clean.` Then proceed directly to the resume-state block.
 
 **Box structure (must be true):**
 1. Every key function box is wrapped in `<a href="kffm_l<NEXT-LEVEL>_<function-slug>_<company-slug>.html" class="l1-box-link">`. **Cite each anchor's href explicitly per function:** `✓ Check 1: Anchor wrapping per box: Marketing → <a href="kffm_l2_marketing_pillar_hr.html"> ✓, Sales → <a href="kffm_l2_sales_pillar_hr.html"> ✓, Customer Success → <a href="kffm_l2_customer_success_pillar_hr.html"> ✓, Finance → <a href="kffm_l2_finance_pillar_hr.html"> ✓. All N key boxes wrapped: yes.` Do not narrate `✓ Check 1: Every box wrapped.` without enumerating each box and its href — the rote shorthand is what allowed previous runs to ship L1 SVGs with zero anchors.
@@ -1059,10 +1104,13 @@ Walk this list line by line. If any check fails, fix the SVG before emitting it.
 
 **Color palette (must be true):**
 6. Every text color class matches its rect's fill class (green-text inside green-fill, etc.).
-7. Open seats: when owner text is literally `Open`, the rect uses `red-fill` regardless of gut-feel rating, and the metric text is `[MetricName]: — / [target]` with em-dash as the current value. **Cite each Open seat's actual rect class verbatim:** `✓ Check 7: Open seats and rect classes: Marketing rect class="red-fill" ✓, Channel Manager rect class="red-fill" ✓, Lead Sourcing rect class="red-fill" ✓. All N Open-seat rects use red-fill: yes.` If you are tempted to leave a rect at `amber-fill` or `green-fill` because the underlying gut-feel was amber/green, do not — the Open-seat override is structural and overrides the gut-feel rating. Do not narrate `✓ Check 7: Open seats correctly red.` without enumerating each Open seat's actual `class=` attribute on its rect.
+7. Open seats: when owner text is literally `Open`, the rect uses `red-fill` regardless of gut-feel rating, and the metric text is `[MetricName]: — / [target]` with em-dash as the current value. **Cite each Open seat's actual rect class AND every text element's color class verbatim:** `✓ Check 7: Open seats — rect + every <text> color class: Marketing rect class="red-fill" ✓, fn-name class="fn-name red-text" ✓, owner class="owner red-text" ✓, metric class="metric red-text" ✓; Channel Manager rect class="red-fill" ✓, fn-name class="fn-name red-text" ✓, owner class="owner red-text" ✓, metric class="metric red-text" ✓. All N Open-seat boxes: rect=red-fill AND every <text> uses red-text: yes.` If you are tempted to leave a rect at `amber-fill` or `green-fill` because the underlying gut-feel was amber/green, do not — the Open-seat override is structural and overrides the gut-feel rating. **The most common failure is rendering the rect red but leaving owner text class as `green-text` or `amber-text` so the word "Open" displays in the wrong color.** Visit each Open-seat box's owner `<text>` element and confirm `class="owner red-text"` literally — copy the attribute value. Do not narrate `✓ Check 7: Open seats correctly red.` without enumerating each Open seat's actual `class=` attribute on its rect AND each of its text elements.
 
 **Open-seat probe-gate parity (must be true):**
 7a. Enumerate every box on the upcoming SVG whose owner text will be `Open` (key AND supporting). For each such function, locate the corresponding `Probe required: Open seat at [function]. Asking cost question.` line earlier in this transcript and the captured cost line under `Open seats:` in the resume-state-to-be. Counts MUST match. If you find an Open seat in the SVG with no probe-gate announcement upstream, STOP this checklist, return to the relevant phase (A6 or D-1/D-2), run the missing Trigger 1 gate, then resume the checklist from Check 0. Cite the parity in narration: `✓ Check 7a: Open seats on SVG = [list]. Cost-question gates run = [list]. Counts equal: N == N.`
+
+**Cash glyph rule (must be true):**
+7b. The `$$$` cash glyph at the end of the output arrow MUST use **all three** required attributes inline: `text-anchor="middle"`, `font-size="32"`, AND the template's prescribed (x, y). At font-size 32 the rendered "$$$" is ~64 px wide; with anchor middle the visible left edge is x − 32 and the visible right edge is x + 32. The template positions the glyph so this rendered span sits at least 50 px past the rightmost rect's right edge — that breathing room is what signals the glyph is a destination, not another box. Without `text-anchor="middle"` the text starts at x and extends rightward, overflowing the viewBox. Without `font-size="32"` the glyph renders at 24 px (the older default) and the spacing reads cramped. **Cite the cash-glyph element verbatim in narration:** `✓ Check 7b: Cash glyph: <text x="1080" y="132" text-anchor="middle" font-size="32" class="cash-glyph">$$$</text>. anchor=middle ✓, font-size=32 ✓, (x=1080, y=132) matches the 3-fn template ✓.` If you find yourself writing the cash glyph element without all three attributes inline, fix it before continuing the checklist.
 
 **Color palette (must NOT be present):**
 8. Zero fill classes outside the set: `green-fill`, `amber-fill`, `red-fill`.
@@ -1071,12 +1119,15 @@ Walk this list line by line. If any check fails, fix the SVG before emitting it.
 9. Each box's first `<text>` is the function name in `class="fn-name [color]-text"`.
 10. Each box's second `<text>` is the owner in `class="owner [color]-text"`.
 11. Each box's third `<text>` is `[Metric]: [current] / [target]` in `class="metric [color]-text"`.
+11a. **Every metric text fits inside its 240-wide box.** The metric `<text>` is rendered at font-size 11 with text-anchor middle; characters average ~6.2px wide so the metric line should be **38 characters or fewer**, including the metric name, colon, current value, slash, and target. Examples that fit: `Leads: 120 / 150`, `MQLs: — / 400`, `Signed contracts: 8 / 12`, `Conversion: 2.8% / 3.0%`. Examples that overflow and visually clip: `Qualified inbound leads from website: 1200 / 1500` (47 chars), `New customers acquired this month: — / 12 (lagging)` (52 chars), `Conversion rate (cold): 2.8% / 3.0% (leading)` (44 chars). Abbreviate the metric name and drop parenthetical `(leading)` / `(lagging)` qualifiers from the SVG (those belong on the FAC table, not the L1 chart). **Cite the character count of every metric text per box:** `✓ Check 11a: Metric text lengths: Marketing "MQLs: 320 / 400" = 16 chars ✓, Sales "Signed contracts: 8 / 12" = 24 chars ✓, Customer Success "Renewals: 92% / 95%" = 19 chars ✓, Finance "Cash days: 45 / 60" = 18 chars ✓. All N metric texts ≤ 38 chars: yes.` If any metric text exceeds 38 characters, abbreviate the metric name and re-emit before continuing the checklist.
 12. Each box's fourth `<text>` is `(↓ to Level 2)` in `class="l1-link"` (color #326AB5, blue).
 
 **Connectors and labels (must be true):**
 13. Every adjacent pair of key functions in flow order has a connecting `<line>` or `<path>` with `class="arrow"` and `marker-end="url(#arr)"`.
 14. Every inter-function arrow has a widget label `<text>` in `class="widget"` near it (within ~50px of the arrow midpoint). **Cite every arrow and its widget label per pair:** `✓ Check 14: Inter-function arrows + widget labels: Marketing → Sales 'Qualified leads' ✓, Sales → Customer Success 'Signed contracts' ✓, Customer Success → Finance 'Renewals' ✓. All N inter-function arrows have a widget label: yes.` Do not narrate `✓ Check 14: All arrows have labels.` without enumerating each arrow pair and its label text — that shorthand is what allowed previous runs to ship SVGs with one or two missing widget labels.
-14a. Every widget label is 25 characters or fewer. Labels positioned between adjacent boxes truncate visually if longer; abbreviate before emitting. Examples that fit: "Leads", "Qualified leads", "Signed contracts", "Engineered jobs", "Delivered jobs". Examples that DO NOT fit: "Qualified inbound leads from website", "New customers acquired this month". Count the characters before emitting; rewrite if over 25.
+14a. **Every widget label is 18 characters or fewer AND uses only complete words.** Widget labels are rendered at font-size 12 with text-anchor middle, so character width averages ~6.5px and an 18-char label is ~117px wide. The 3-function template gives 120px gap between adjacent boxes; the 4-function 2x2 template gives 170px gap. 18 chars is the universal upper bound that fits cleanly in the narrowest gap with ~3px padding each side. Labels longer than 18 chars overlap into the adjacent box at render time even though the structural primitives cannot detect it. Examples that fit: "Leads", "Qualified leads" (15), "Signed contracts" (16), "Engineered jobs" (15), "Closed projects" (15), "Completed projects" (18). Examples that DO NOT fit: "Qualified inbound leads" (23), "New customers acquired" (22), "Retained + Expansion" (20).
+
+**NEVER truncate a word to meet the cap.** If your natural label is "Completed Projects" (18 chars, fits) keep it whole. Do NOT chop to "Completed Proj" (14 chars but visibly broken). If the natural full-word label is OVER 18 chars, find a SHORTER complete-word phrase: "Retained + Expansion" (20) → "Retained accounts" (17) or "Retention" (9), NOT "Retained + Expan" (16, broken). The cap forces concision, not word-chopping. **Cite per-label char count AND confirm complete words in narration:** `✓ Check 14a: Widget label lengths: 'Engagements' = 11 chars ✓ (complete word), 'Completed projects' = 18 chars ✓ (complete words). All N widget labels ≤ 18 chars and use complete words: yes.`
 15. External inputs (inbound leads from outside the business) appear above the first key function with downward arrows.
 
 **Profit/X and lead-to-cash (must be true):**
@@ -1101,7 +1152,7 @@ The structural check rejects any L1 SVG whose `Time to money` block does not con
 19. `Supporting functions` label appears in `class="section-lbl"` immediately above the supporting box row.
 
 **ViewBox sanity (must be true):**
-20. viewBox dimensions equal the rightmost-element-x + ~40px padding by the bottom-element-y + ~30px padding. No content extends beyond viewBox bounds.
+20. viewBox dimensions equal the rightmost-element-x + ~40px padding by the bottom-element-y + ~30px padding. No content extends beyond viewBox bounds. **Cite the rightmost-x of every box AND the rightmost-x of every text element vs viewBox width:** `✓ Check 20: ViewBox = 0 0 850 720. Rightmost rect: Sales x=450 + width=240 = right-edge 690; padding 850-690 = 160px ✓. Rightmost <text>: profitx-svg "Profit / X = Profit per Customer" centered at x=425, anchor=middle, est. width 220, right-edge ~535; padding 850-535 = 315px ✓. Rightmost l2c-text "Expansion lead-to-cash: 14 days" at x=425 anchor=middle, est. width 200, right-edge ~525; padding 850-525 = 325px ✓. Bottom-most rect: HR y=400 + 86 = bottom-edge 486; viewBox H=720; padding 720-486 = 234px ✓. All elements have ≥ 30px clearance from viewBox right and bottom edges: yes.` The most common failure is text near the right edge — particularly long metric strings, the cash output arrow, or the "$$$" symbol — extending past the viewBox width and visually clipping when rendered. **For every text element near the chart's right edge, compute its estimated rendered width** (font-size * char-count * 0.55 for sans-serif at 11-13px) and confirm `text-x ± width/2` (for text-anchor middle) or `text-x + width` (for text-anchor start) sits ≥ 20px inside the viewBox. If any element clips, increase the viewBox width before emitting.
 
 **Render-and-inspect (when the conversation supports inline SVG rendering):**
 21. After completing checks 1 through 20, render the SVG inline in the conversation. Visually compare against the canonical Pillar HR L1 reference above. If anything looks off (boxes overlapping, text clipping, missing arrows, off-palette colors, alignment drift), fix and re-render before emitting Part 2.
@@ -1342,6 +1393,10 @@ Emit a single self-contained `<svg>` with embedded `<defs><style>`. Use the same
   - **Parallel streams** (canonical: Pillar HR Marketing L2): boxes arranged in columns, one column per stream, with arrows showing each stream feeding a common output funnel. Use viewBox 1100 wide.
   - **Side-by-side independent** (canonical: Pillar HR HR L2): two or three boxes side by side, no flow arrow between them, each a parallel function maintaining a stock. Use this ONLY when the parent function genuinely has parallel independent sub-functions. Use viewBox 720 wide; for 2 boxes, x=40 and x=400.
 - **Supporting separator:** If supporting sub-functions exist at this level, render the dashed separator + `Supporting sub-functions` label between the key sub-function area and the supporting sub-function area, same convention as Level 1.
+
+- **Supporting sub-functions are standalone — they have NO flow arrows between them and NO flow arrows crossing the dashed separator.** The defining property of a supporting sub-function is that it builds capability rather than moving a transaction forward. By construction, a supporting sub-function does not flow into another sub-function (key or supporting); it stands on its own and reports to whichever key sub-function it serves. If you find yourself drawing a sequential arrow from one supporting box to another, OR drawing an arrow that crosses the dashed separator (whether downward from key to supporting or upward from supporting to key), you have misclassified a sub-function. **The classification check:** every box connected by a flow arrow `<line ... marker-end="url(#arr)">` belongs to the KEY flow. Every box NOT in that connected flow chain is supporting. Place all flow-connected boxes ABOVE the dashed separator; place all standalone boxes BELOW.
+
+  **Common misclassification trap:** if your L2 has 4 boxes (A → B → C → D in sequential flow), all four are KEY. The dashed separator does NOT belong between A and B-C-D, even if A is the "input" and B-C-D are the "output stages." The disappearance test for supporting placement is: "If [box] disappeared tomorrow, would the parent function still produce its critical number this week?" — if the box is upstream in the flow, removing it kills the flow. That makes it KEY, not supporting.
 - **viewBox:** Sized to fit content + 20px padding each side. Common widths: 720 for sequential or side-by-side, 900 for medium streams, 1100 for wide streams.
 
 #### Reference: complete canonical Pillar HR Level 2 sub-function SVG (sequential layout)
@@ -1361,7 +1416,7 @@ This is the canonical L2 KFFM for Tech Support. Pattern-match against this for s
       .red-fill    { fill: #F8CECC; stroke: #B85450; stroke-width: 1.5; }
       .green-text  { fill: #2F6B25; }
       .amber-text  { fill: #8C5A00; }
-      .red-text    { fill: #802521; }
+      .red-text    { fill: #B91414; }
       .fn-name { font-size: 14px; font-weight: 700; }
       .owner   { font-size: 11px; font-style: italic; }
       .metric  { font-size: 11px; font-weight: 500; }
@@ -1416,7 +1471,7 @@ This is the canonical L2 KFFM for HR. Use for parallel-independent decomposition
       .red-fill    { fill: #F8CECC; stroke: #B85450; stroke-width: 1.5; }
       .green-text  { fill: #2F6B25; }
       .amber-text  { fill: #8C5A00; }
-      .red-text    { fill: #802521; }
+      .red-text    { fill: #B91414; }
       .fn-name { font-size: 14px; font-weight: 700; }
       .owner   { font-size: 11px; font-style: italic; }
       .metric  { font-size: 11px; font-weight: 500; }
@@ -1492,7 +1547,10 @@ Walk this list line by line before emitting. Do not skip. Items grouped under "M
 5. Zero `(↓ to Level N+2)` text elements inside boxes (deeper levels have no inline next-level link).
 
 **Open-seat treatment (must be true):**
-6. For every box where the owner text is exactly `Open`: the rect uses `red-fill` regardless of color rating, and the metric values line is `— / [target]`.
+6. For every box where the owner text is exactly `Open`: the rect uses `red-fill` regardless of color rating, and the metric values line is `— / [target]`. **Cite each Open-seat box's rect class AND every text element's color class verbatim:** `✓ Check 6: Open seats — rect + every <text> color class: Knowledge Architect rect class="red-fill" ✓, fn-name class="fn-name red-text" ✓, owner class="owner red-text" ✓, metric label class="metric red-text" ✓, metric values class="metric red-text" ✓. All N Open-seat boxes: rect=red-fill AND every <text> uses red-text: yes.` The most common failure is rendering the rect red but leaving the owner text class as `green-text` or `amber-text` so the word "Open" displays in the wrong color. Visit each Open-seat box and copy the literal `class="..."` value from each `<text>` element.
+
+**Metric text fits inside box (must be true):**
+6b. Every metric label line and metric values line fits inside the 280-wide box. The metric `<text>` is rendered at font-size 11; characters average ~6.2px wide so each line should be **45 characters or fewer**. **Cite the character count of every metric line per box:** `✓ Check 6b: Metric line lengths: Discovery Brief label "Briefs delivered (lagging)" = 26 chars ✓, values "8 / 12" = 6 chars ✓; Proposal label "Win rate (leading)" = 18 chars ✓, values "32% / 40%" = 9 chars ✓. All N metric lines ≤ 45 chars: yes.` If any metric line exceeds 45 characters, abbreviate the metric name and re-emit before continuing the checklist.
 
 **Open-seat probe-gate parity (must be true):**
 6a. Enumerate every box on the upcoming SVG whose owner text will be `Open` (key AND supporting sub-functions). For each, locate the corresponding `Probe required: Open seat at [function]. Asking cost question.` line earlier in this transcript and the captured cost line under `Open seats:` in the resume-state-to-be. Counts MUST match. If you find an Open seat in the SVG with no probe-gate announcement upstream, STOP this checklist, return to the relevant phase (D-2), run the missing Trigger 1 gate, then resume the checklist from Check 0. Cite the parity in narration: `✓ Check 6a: Open seats on SVG = [list]. Cost-question gates run = [list]. Counts equal: N == N.`
@@ -1515,11 +1573,12 @@ Walk this list line by line before emitting. Do not skip. Items grouped under "M
 **Supporting separator (must be true, only if supporting sub-functions exist):**
 14. Dashed separator (`stroke-dasharray="4,4"`, `stroke="#bbb"`) appears between key sub-function area and supporting sub-function area.
 15. Label `Supporting sub-functions` appears in `class="section-lbl"` (or equivalent) just above the supporting row.
+15a. **No flow arrow crosses the dashed separator. No flow arrow connects two boxes that are both below the separator.** A flow arrow is any `<line>` or `<path>` with `marker-end="url(#arr)"`. **Cite separator integrity in narration**: `✓ Check 15a: Dashed separator at y=395. Flow arrows: line[1] (270,168)→(270,198) — both endpoints above 395 (key flow) ✓; line[2] (270,280)→(270,310) — both endpoints above 395 ✓; line[3] (270,392)→(270,422) — y2=422 BELOW separator y=395, but y1=392 ABOVE → CROSSES separator → FAIL: classification error. The boxes connected by line[3] are both KEY in the flow, so the supporting separator must move BELOW box[4]. Regenerating with separator y=535.` If any flow arrow crosses the separator OR connects two boxes below the separator, fix the classification before emitting.
 
 **ViewBox sanity (must be true):**
 16. viewBox starts at `0 40` (the first box's y is 88 = 40 + 48 top margin).
 17. viewBox width matches the chosen layout (720 for sequential and side-by-side, 1100 for parallel streams).
-18. viewBox height accommodates the bottom-most element + ~24px bottom padding.
+18. viewBox height accommodates the bottom-most element + ~24px bottom padding. **Cite per-element clearance:** `✓ Check 18: ViewBox = 0 40 720 350. Rightmost rect: x=130 + 280 = 410; padding 720-410 = 310px ✓. Rightmost <text>: widget at x=420, est. width 60 → right-edge 480; padding 240px ✓. Bottom-most rect: y=312 + 78 = 390; viewBox bottom = 40+350 = 390; padding 0px → expand viewBox height to 410 (+20px) ✗ → using viewBox 0 40 720 380 (height 380, bottom-padding 24px ✓). All elements have ≥ 20px clearance from viewBox right and bottom edges: yes.` For every text element near the right edge — particularly long widget labels or metric values — compute estimated rendered width (font-size * char-count * 0.55) and confirm `text-x ± width/2` (anchor middle) sits ≥ 20px inside the viewBox. If anything clips, expand viewBox before emitting.
 
 **Render-and-inspect:**
 19. After completing checks 1 through 18, render the SVG inline in the conversation. Visually compare against the appropriate canonical reference (sequential or side-by-side). If anything looks off, fix and re-render before emitting Part 2.

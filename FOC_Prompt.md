@@ -95,7 +95,7 @@ Whatever pattern exists today, capture it. Do not impose a structure the CEO has
 
 **Supporting functions.** Each supporting function from the KFFM hangs from the key function it reports to (captured in KFFM Step A9 or Phase D-2c at the deeper level). If the supporting function reports to the Head of Company directly, it sits to one side of the chart at tier 2. Do not duplicate supporting functions.
 
-**Duplicate-owner detection.** The FOC's most valuable structural finding is the same person owning multiple functions. Whenever a name appears in more than one box, that name renders in red (`#791f1f`) in every box where it appears. The visual signal makes it impossible to miss; the FAC then captures the role-by-role accountabilities.
+**Duplicate-owner detection.** The FOC's most valuable structural finding is the same person owning multiple functions. Whenever a name appears in more than one box, that name renders in red (`#B91414`) in every box where it appears. The visual signal makes it impossible to miss; the FAC then captures the role-by-role accountabilities.
 
 **Co-ownership.** When two named individuals genuinely share accountability for one function, list both names on a single line inside the box separated by ` + ` (space-plus-space). Color: italic dark blue (`#326AB5`). Co-ownership is rare and usually indicates the function should be split; if the CEO insists, capture it and flag in the resume state.
 
@@ -383,7 +383,10 @@ The FOC is read top-down with parent functions above their children and connecto
 - Origin at top-left of viewBox.
 - Box dimensions: 150 wide × 60 tall, rounded corners with `rx="6"`.
 - Tier 1 (Head of Company): single box centered horizontally on the viewBox, top edge at y=40.
-- Tier 2 (functions reporting to Head of Company): boxes at y=180 (140 below tier 1). **Use these exact x-coordinates by tier-2 count — do not compute, do not improvise:**
+**Uniform vertical spacing.** Every box on the FOC is 150 wide by 60 tall. Adjacent rows (tier-N bottom to tier-(N+1) top, AND consecutive children inside a vertical stack) are separated by exactly **30 px of empty space**, giving **90 px center-to-center** spacing throughout the chart. This produces a steady visual rhythm — no more cramped vertical stacks beneath airy tier-1-to-tier-2 jumps.
+
+- Tier 1 (Head of Company): box at y=40, bottom edge y=100.
+- Tier 2 (functions reporting to Head of Company): boxes at y=130 (30 px below tier 1's bottom edge). **Use these exact x-coordinates by tier-2 count — do not compute, do not improvise:**
 
   | Tier-2 count | viewBox width | Box x-coordinates (use verbatim) | Tier-1 (Head of Company) x |
   |---|---|---|---|
@@ -394,30 +397,38 @@ The FOC is read top-down with parent functions above their children and connecto
   | 5 | 1150 | [40, 270, 500, 730, 960] | 500 |
   | 6 | 1380 | [40, 270, 500, 730, 960, 1190] | 615 |
 
-  Each tier-2 box is at one of these exact x values, paired with y=180. Spacing is constant at 230px between adjacent box LEFT EDGES. The Head of Company tier-1 box sits at viewBox-center − 75 (so its center matches viewBox-center). **If you find yourself computing tier-2 x or tier-1 x by formula, stop and copy from the table.** Out-of-table counts (0 or 7+) are out of scope; consolidate before drawing.
-- Tier 3+ (sub-functions hanging from a tier-2 parent): boxes at y=320 (140 below tier 2). All references to `parent.x` in this section mean the parent rect's `x` attribute, which is the parent box's LEFT EDGE in SVG coordinates (NOT the center). The parent box's center is at `parent.x + 75` (since boxes are 150 wide). For a parent with N children:
+  Each tier-2 box is at one of these exact x values, paired with y=130. Spacing is constant at 230px between adjacent box LEFT EDGES. The Head of Company tier-1 box sits at viewBox-center − 75 (so its center matches viewBox-center). **If you find yourself computing tier-2 x or tier-1 x by formula, stop and copy from the table.** Out-of-table counts (0 or 7+) are out of scope; consolidate before drawing.
+- Tier 3+ (sub-functions hanging from a tier-2 parent): boxes at y=220 (30 px below tier 2's bottom edge y=190). All references to `parent.x` in this section mean the parent rect's `x` attribute, which is the parent box's LEFT EDGE in SVG coordinates (NOT the center). The parent box's center is at `parent.x + 75` (since boxes are 150 wide). For a parent with N children:
   - **If N == 1**: one child at the same x as the parent. Child rect `x = parent.x`. Single child sits directly under the parent.
-  - **If N == 2**: two children side-by-side. Default placement is Child A rect `x = parent.x - 75`. Child B rect `x = parent.x + 75`. Centers are 150px apart, which means child A's right edge sits exactly under parent's center and child B's left edge sits exactly under parent's center (they touch under the parent center).
+  - **If N == 2**: two children side-by-side. Default placement is Child A rect `x = parent.x - 90`. Child B rect `x = parent.x + 90`. Centers are 180 px apart so the boxes have a **30 px horizontal gap** between them (right edge of A at parent.x + 60, left edge of B at parent.x + 90). This 30 px sibling gap matches the 30 px vertical gap used everywhere else on the chart, so two children of the same parent read as distinct boxes rather than one merged box with a divider.
 
-    **Edge case — leftmost tier-2 parent (parent.x = 40):** the default would put child A at x = -35, which is off the left edge of the viewBox. When `parent.x - 75 < 0`, shift the layout right: Child A rect `x = parent.x` (40); Child B rect `x = parent.x + 150` (190). Both children sit to the right of the parent's center. The parent's connector line still runs straight down to the distributing bar; the bar extends from child A center (115) to child B center (265).
+    **Edge case — leftmost tier-2 parent (parent.x = 40):** the default would put child A at x = 40 - 90 = -50, which is off the left edge of the viewBox. When `parent.x - 90 < 0`, shift the layout right: Child A rect `x = parent.x` (40); Child B rect `x = parent.x + 180` (220). Both children sit to the right of the parent's center, with the same 30 px sibling gap (right edge of A at 190, left edge of B at 220). The parent's connector line still runs straight down to the distributing bar; the bar extends from child A center (115) to child B center (295).
+
+    **THIS RULE APPLIES TO TIER-4 EDGE CASES TOO.** When a tier-3 parent at parent.x ≤ 40 has N==2 children, the same shift-right pattern applies to its tier-4 children. **Cite the edge-case detection per such parent in narration**: `✓ Check (leftmost-edge): parent Closing at x=40 has N=2 children. Default Child A.x would be 40 - 75 = -35 (off viewBox). Edge-case rule applied: Child A.x = 40, Child B.x = 190. Both children inside viewBox.` If you find yourself writing a child rect with x < 0, you forgot the edge case; STOP, fix, restart the checklist.
 
     **Edge case — rightmost tier-2 parent**: the default Child B placement is `parent.x + 75`. With parent at the rightmost x and box width 150, this puts child B's right edge well within the viewBox (parent.x + 75 + 150 = parent.x + 225). The viewBox is sized for tier-2 boxes alone (table column 2), so tier-3 children may extend beyond — expand the viewBox width if needed, citing the new width in narration.
-  - **If N ≥ 3**: stack children VERTICALLY in a single column. The column's x is fixed: every child's rect `x = parent.x` (same x as the parent — they form a column directly under the parent). First child rect `y = 460`. Second child rect `y = 530`. Third child rect `y = 600`. Pattern: child_i rect `y = 460 + 70 * (i-1)` for i in 1..N. Children stack vertically, 70px center-to-center, all at the same x.
+  - **If N ≥ 3**: stack children VERTICALLY in a single column. The column's x is fixed: every child's rect `x = parent.x` (same x as the parent — they form a column directly under the parent). **First child rect `y = 220`** (same starting y as the side-by-side layouts; tier-3 begins exactly 30 px below tier-2's bottom edge regardless of layout type). Subsequent children stack downward at **90 px center-to-center**, matching the rest of the chart's vertical rhythm: child_i rect `y = 220 + 90 * (i-1)` for i in 1..N. Pattern: y = 220, 310, 400, 490, 580, 670, 760, 850. Children stack vertically, all at the same x. The 30 px of empty space between consecutive boxes matches the 30 px gap between every other row on the chart.
 
-  **Cite per-tier-3 column the parent.x and the child.x verbatim:** `✓ Check 5a: Tier-3 layout per parent: Sales (parent.x=270, 3 children stacked at x=270, y=460/530/600); Customer Success (parent.x=500, 2 children at x=420 and x=580, y=320). All tier-3 child x values match the rule for their parent's child count.`
+  **Cap N at 8.** If a tier-2 parent has more than 8 children, you have either (a) elided a tier (i.e., flattened tier-4 boxes into tier-3) or (b) a tier-2 that should be split into multiple tier-2 functions on the chart. Either way, do NOT stack more than 8 boxes vertically. Surface the issue: "Operations Manager has 14 sub-functions; that's beyond what fits cleanly. Either group them into 6-8 sub-function categories with headcounts in each, or split Operations Manager into multiple tier-2 functions on the FOC." Wait for the CEO's direction before continuing. **Cite per-parent child count in narration:** `✓ Check 5d: Tier-3 children counts per tier-2 parent: Sales = 3, Operations Manager = 8, Finance Manager = 1. All ≤ 8: yes.`
+
+  **Cite per-tier-3 column the parent.x and the child.x verbatim:** `✓ Check 5a: Tier-3 layout per parent: Sales (parent.x=270, 3 children stacked at x=270, y=220/310/400); Customer Success (parent.x=500, 2 children at x=420 and x=580, y=220). All tier-3 child x values match the rule for their parent's child count; all rows separated by uniform 30 px gap (90 px center-to-center).`
 
   **Anti-pattern**: putting tier-3 children at `parent.x + 96` or `parent.x + 246` or `parent.x + 80` for N≥3 cases. Those numbers came from earlier iterations of this spec and produced overlap with the next tier-2 parent's children. The correct rule for N≥3 is the SIMPLEST possible: same x as parent, vertical stack.
 
-- Tier 4+ (sub-sub-functions): same pattern but one tier deeper. Tier-4 children of a tier-3 parent at (parent.x, parent.y) follow the same N==1 / N==2 / N≥3 rules with `parent.x` set to the tier-3 box's x and `parent.y` shifted down by 140 (tier-4 row at y = tier-3 row + 140).
+- Tier 4+ (sub-sub-functions): only renderable when their tier-3 parent is in the side-by-side layout (N==1 or N==2 children of the tier-2 parent). When tier-3 is in the vertical-stack layout (N≥3 children of tier-2), DO NOT render tier-4 boxes at all — there is no horizontal room. Instead, fold the tier-4 count into the tier-3 box's owner line: `<owner-name> + N staff` (e.g., owner `CNC Operation` with `6-7 operators` already does this). If the CEO insists on showing tier-4 explicitly, recommend they split the parent function into multiple tier-2 boxes so each gets its own column. **Cite tier-4 handling per stacked-tier-3 parent in narration:** `✓ Check 5c: Tier-3 stacked-column parents and their tier-4 handling: Operations Manager (8 children, stacked) — 0 tier-4 boxes rendered, headcounts folded into owner lines. No tier-4 collisions: yes.`
+
+  When tier-3 is side-by-side (N==1 or N==2), tier-4 children of a tier-3 parent at (parent.x, parent.y) follow the same N==1 / N==2 / N≥3 rules with `parent.x` set to the tier-3 box's x and `parent.y` shifted down by 90 (tier-4 row at y = tier-3 row + 90 = 220 + 90 = 310). Tier-5 and deeper are out of scope.
 
 **Tier-3 column-collision rule.** With tier-2 boxes spaced 230px apart (constant from the tier-2 table) and tier-3 children stacked at `parent.x` (same x as parent), adjacent tier-3 columns are also 230px apart — leaving 80px of clearance between rect right edges and next-rect left edges (230 - 150 = 80). That's well above the 30px minimum. **Cite the clearance per adjacent pair:** `✓ Check 5b: Adjacent tier-3 columns: Sales children at x=270 (right edge 420); Customer Success children at x=500 (left edge 500). Clearance 80px (>= 30px required).`
 
 **Connector lines.**
 - All `<line>` connector elements use `class="conn"` with stroke `#aaa`, stroke-width 1, fill none. The `conn` class applies EXCLUSIVELY to `<line>` elements; never to `<text>` elements. There is no such thing as a `<text class="conn">`.
-- From parent down to a horizontal distributing bar: `<line>` from parent's bottom-center to a point 40px below parent's bottom edge.
+- From parent down to a horizontal distributing bar: `<line>` from parent's bottom-center to a point **15 px below parent's bottom edge** (the midpoint of the 30-px gap between this row and the next). For tier-1 (HoC), bar y = 115. For tier-2, bar y = 205.
 - Horizontal distributing bar: `<line>` spanning from the leftmost child's center-x to the rightmost child's center-x at the same y.
 - From the distributing bar down to each child's top: `<line>` from (child.center.x, bar.y) to (child.center.x, child.top.y).
-- For vertical-stack children (≥3 under one parent): a single vertical line from parent's bottom-center down to the y of the last child, plus a short horizontal stub from that vertical line to each child's left edge.
+- For vertical-stack children (≥3 under one parent): a single vertical line from parent's bottom-center (`parent.x + 75`, `parent.y + 60`) down to the **center-y of the last child** (`last_child.y + 30`). The line MUST terminate at the last child's vertical midpoint, NOT at the last child's bottom edge or the chart's bottom. A trailing line that extends past the last child into empty space is a bug. Plus, for each child, a short horizontal stub from the vertical line at the child's center-y to that child's left edge: `<line>` from (`parent.x + 75`, `child.y + 30`) to (`child.x`, `child.y + 30`).
+
+  **Cite the EXACT `<line>` element you will emit per vertical-stack parent, computing y2 = last_child.y + 30 explicitly:** `✓ Check (vertical-stack connectors): Sales/Marketing parent at (40, 130). Last child = Sales Operations, child #3, y = 220 + 90*2 = 400. Connector y2 = last_child.y + 30 = 430. Emitting <line x1="115" y1="190" x2="115" y2="430" class="conn"/>. y2 (430) ≤ last_child.y + 30 (430): yes. No trailing line.` **If your computed y2 exceeds last_child.y + 30, you are about to emit a trailing line.** STOP, recompute y2 from last_child.y + 30, fix the line, then continue.
 
 **Box content.**
 - Two text elements per box (function name on top, owner below) when the function name fits on one line.
@@ -425,13 +436,13 @@ The FOC is read top-down with parent functions above their children and connecto
 - Function name: `class="fn-name [color]-text"`, font-size 12, font-weight 700, text-anchor middle, x = box.center.x, y = box.top.y + 22 (single-line) or box.top.y + 18 / box.top.y + 32 (two-line).
 - Owner: `class="owner [color]-text"`, font-size 11, font-style italic, text-anchor middle, x = box.center.x, y = box.top.y + 42 (single-line name) or box.top.y + 50 (two-line name).
 - For co-owners: owner line reads `[Name A] + [Name B]`, italic, color `#326AB5` (override the [color]-text class), single line.
-- For duplicate names: owner text uses the red-text color (`#791f1f`) regardless of the box's fill color. The structural finding (this person is in two boxes) overrides the operational color.
+- For duplicate names: owner text uses the red-text color (`#B91414`) regardless of the box's fill color. The structural finding (this person is in two boxes) overrides the operational color.
 
 **Color treatment.**
 - Two box states: `red-fill` and `neutral-fill`.
 - `red-fill`: fill `#fcebeb`, stroke `#B85450`, stroke-width 1.5. Use when the function's color rating from the KFFM is red OR the owner is `Open` OR the function has a duplicate name.
 - `neutral-fill`: fill `#ffffff`, stroke `#888`, stroke-width 1. Use for everything else (green, amber, no-color, no problem).
-- `red-text`: fill `#791f1f`, font-weight 600. Use inside any `red-fill` box AND for any duplicate-name owner regardless of box color.
+- `red-text`: fill `#B91414`, font-weight 600. Use inside any `red-fill` box AND for any duplicate-name owner regardless of box color.
 - `neutral-text`: fill `#222`. Use inside `neutral-fill` boxes for non-duplicate owners.
 
 **Required `<defs>` style block at the top of the SVG.**
@@ -440,7 +451,7 @@ The FOC is read top-down with parent functions above their children and connecto
 <defs><style>
 .red-fill     { fill: #fcebeb; stroke: #B85450; stroke-width: 1.5; }
 .neutral-fill { fill: #ffffff; stroke: #888;    stroke-width: 1; }
-.red-text     { fill: #791f1f; font-weight: 600; }
+.red-text     { fill: #B91414; font-weight: 600; }
 .neutral-text { fill: #222; }
 .fn-name { font-size: 12px; font-weight: 700; }
 .owner   { font-size: 11px; font-style: italic; }
@@ -459,7 +470,7 @@ This is a working, complete reference for a small flat company. Pattern-match ag
   <defs><style>
 .red-fill     { fill: #fcebeb; stroke: #B85450; stroke-width: 1.5; }
 .neutral-fill { fill: #ffffff; stroke: #888;    stroke-width: 1; }
-.red-text     { fill: #791f1f; font-weight: 600; }
+.red-text     { fill: #B91414; font-weight: 600; }
 .neutral-text { fill: #222; }
 .fn-name { font-size: 12px; font-weight: 700; }
 .owner   { font-size: 11px; font-style: italic; }
@@ -471,56 +482,56 @@ This is a working, complete reference for a small flat company. Pattern-match ag
   <text x="460" y="62" text-anchor="middle" class="fn-name neutral-text">Head of Company</text>
   <text x="460" y="82" text-anchor="middle" class="owner red-text">Casey M</text>
 
-  <!-- Connector from Head down to tier-2 distributing bar -->
-  <line x1="460" y1="100" x2="460" y2="140" class="conn"/>
-  <line x1="115" y1="140" x2="805" y2="140" class="conn"/>
+  <!-- Connector from Head down to tier-2 distributing bar (bar y=115, mid-gap of the 30-px space between HoC bottom y=100 and tier-2 top y=130) -->
+  <line x1="460" y1="100" x2="460" y2="115" class="conn"/>
+  <line x1="115" y1="115" x2="805" y2="115" class="conn"/>
 
-  <!-- Tier 2: 4 key functions, evenly spaced -->
-  <line x1="115" y1="140" x2="115" y2="180" class="conn"/>
-  <rect x="40" y="180" width="150" height="60" class="red-fill" rx="6"/>
-  <text x="115" y="202" text-anchor="middle" class="fn-name red-text">Marketing</text>
-  <text x="115" y="222" text-anchor="middle" class="owner red-text">Open</text>
+  <!-- Tier 2: 4 key functions at y=130 (30 px below HoC bottom) -->
+  <line x1="115" y1="115" x2="115" y2="130" class="conn"/>
+  <rect x="40" y="130" width="150" height="60" class="red-fill" rx="6"/>
+  <text x="115" y="152" text-anchor="middle" class="fn-name red-text">Marketing</text>
+  <text x="115" y="172" text-anchor="middle" class="owner red-text">Open</text>
 
   <!-- Sales: Casey M (duplicate) -->
-  <line x1="345" y1="140" x2="345" y2="180" class="conn"/>
-  <rect x="270" y="180" width="150" height="60" class="neutral-fill" rx="6"/>
-  <text x="345" y="202" text-anchor="middle" class="fn-name neutral-text">Sales</text>
-  <text x="345" y="222" text-anchor="middle" class="owner red-text">Casey M</text>
+  <line x1="345" y1="115" x2="345" y2="130" class="conn"/>
+  <rect x="270" y="130" width="150" height="60" class="neutral-fill" rx="6"/>
+  <text x="345" y="152" text-anchor="middle" class="fn-name neutral-text">Sales</text>
+  <text x="345" y="172" text-anchor="middle" class="owner red-text">Casey M</text>
 
-  <line x1="575" y1="140" x2="575" y2="180" class="conn"/>
-  <rect x="500" y="180" width="150" height="60" class="neutral-fill" rx="6"/>
-  <text x="575" y="202" text-anchor="middle" class="fn-name neutral-text">Delivery</text>
-  <text x="575" y="222" text-anchor="middle" class="owner neutral-text">Jamie L</text>
+  <line x1="575" y1="115" x2="575" y2="130" class="conn"/>
+  <rect x="500" y="130" width="150" height="60" class="neutral-fill" rx="6"/>
+  <text x="575" y="152" text-anchor="middle" class="fn-name neutral-text">Delivery</text>
+  <text x="575" y="172" text-anchor="middle" class="owner neutral-text">Jamie L</text>
 
-  <line x1="805" y1="140" x2="805" y2="180" class="conn"/>
-  <rect x="730" y="180" width="150" height="60" class="neutral-fill" rx="6"/>
-  <text x="805" y="202" text-anchor="middle" class="fn-name neutral-text">Finance</text>
-  <text x="805" y="222" text-anchor="middle" class="owner neutral-text">Pat S</text>
+  <line x1="805" y1="115" x2="805" y2="130" class="conn"/>
+  <rect x="730" y="130" width="150" height="60" class="neutral-fill" rx="6"/>
+  <text x="805" y="152" text-anchor="middle" class="fn-name neutral-text">Finance</text>
+  <text x="805" y="172" text-anchor="middle" class="owner neutral-text">Pat S</text>
 
-  <!-- Sub-functions under Sales: two AEs -->
-  <line x1="345" y1="240" x2="345" y2="280" class="conn"/>
-  <line x1="270" y1="280" x2="420" y2="280" class="conn"/>
-  <line x1="270" y1="280" x2="270" y2="320" class="conn"/>
-  <rect x="195" y="320" width="150" height="60" class="neutral-fill" rx="6"/>
-  <text x="270" y="342" text-anchor="middle" class="fn-name neutral-text">Account Executive</text>
-  <text x="270" y="362" text-anchor="middle" class="owner neutral-text">Robin H</text>
+  <!-- Tier 3 (side-by-side, N=2): two AEs under Sales. Sales parent.x=270, parent.center=345. Child A.x = 345 - 90 - 75 = 180? No: rule is rect.x = parent.x ± 90, so Child A.x = 270 - 90 = 180, Child B.x = 270 + 90 = 360. Centers at 255 and 435; gap between right edge of A (330) and left edge of B (360) = 30 px. Distributing bar y=205 (mid-gap of 30 px between tier-2 bottom y=190 and tier-3 top y=220). -->
+  <line x1="345" y1="190" x2="345" y2="205" class="conn"/>
+  <line x1="255" y1="205" x2="435" y2="205" class="conn"/>
+  <line x1="255" y1="205" x2="255" y2="220" class="conn"/>
+  <rect x="180" y="220" width="150" height="60" class="neutral-fill" rx="6"/>
+  <text x="255" y="242" text-anchor="middle" class="fn-name neutral-text">Account Executive</text>
+  <text x="255" y="262" text-anchor="middle" class="owner neutral-text">Robin H</text>
 
-  <line x1="420" y1="280" x2="420" y2="320" class="conn"/>
-  <rect x="345" y="320" width="150" height="60" class="neutral-fill" rx="6"/>
-  <text x="420" y="342" text-anchor="middle" class="fn-name neutral-text">Account Executive</text>
-  <text x="420" y="362" text-anchor="middle" class="owner neutral-text">Sam K</text>
+  <line x1="435" y1="205" x2="435" y2="220" class="conn"/>
+  <rect x="360" y="220" width="150" height="60" class="neutral-fill" rx="6"/>
+  <text x="435" y="242" text-anchor="middle" class="fn-name neutral-text">Account Executive</text>
+  <text x="435" y="262" text-anchor="middle" class="owner neutral-text">Sam K</text>
 
-  <!-- Senior Consultant under Delivery: Casey M (duplicate) -->
-  <line x1="575" y1="240" x2="575" y2="280" class="conn"/>
-  <rect x="500" y="320" width="150" height="60" class="neutral-fill" rx="6"/>
-  <text x="575" y="342" text-anchor="middle" class="fn-name neutral-text">Senior Consultant</text>
-  <text x="575" y="362" text-anchor="middle" class="owner red-text">Casey M</text>
+  <!-- Senior Consultant under Delivery: Casey M (duplicate). Tier 3, N=1, child x = parent.x. -->
+  <line x1="575" y1="190" x2="575" y2="220" class="conn"/>
+  <rect x="500" y="220" width="150" height="60" class="neutral-fill" rx="6"/>
+  <text x="575" y="242" text-anchor="middle" class="fn-name neutral-text">Senior Consultant</text>
+  <text x="575" y="262" text-anchor="middle" class="owner red-text">Casey M</text>
 </svg>
 ```
 
 The reference shows: a flat Head-of-Company-plus-four-tier-2 layout, one function in red because it is Open (Marketing), one duplicate-owner pattern (Casey M appears in 3 boxes — as Head of Company, as Sales owner, AND as Senior Consultant — so all three `Casey M` owner labels use `class="owner red-text"` even though the boxes themselves use neutral-fill). The Marketing box is red-fill because the owner is Open; the Open-seat probe gate runs upstream of this SVG.
 
-Coordinates are stated explicitly so a future SVG can copy the pattern: tier-1 box centered at viewBox.width/2; tier-2 boxes at y=180 with center x at 115, 345, 575, 805 for a 4-function layout in a 920-wide viewBox.
+Coordinates are stated explicitly so a future SVG can copy the pattern: tier-1 box at y=40; tier-2 boxes at y=130 with center x at 115, 345, 575, 805 for a 4-function layout in a 920-wide viewBox; tier-3 row at y=220. Vertical rhythm is uniform: every row is separated by 30 px of empty space (90 px center-to-center).
 
 For other layouts, scale the pattern: a 3-function tier-2 layout uses a 720-wide viewBox with tier-2 centers at 115, 360, 605. A 5-function tier-2 layout uses a 1140-wide viewBox with tier-2 centers at 115, 360, 605, 850, 1095. The horizontal bar always runs from the leftmost tier-2 center to the rightmost.
 
@@ -549,12 +560,12 @@ Walk this list line by line before emitting. Do not skip. Items grouped under "m
 5. Every box on the chart is reachable from the Head of Company by following connectors (no orphan boxes).
 
 **Color treatment (must be true):**
-6. Every `<rect>` whose owner text is `Open` uses `red-fill`.
+6. Every `<rect>` whose owner text is `Open` uses `red-fill`. **Cite each Open-seat box's rect class AND every text element's color class verbatim:** `✓ Check 6: Open seats — rect + every <text> color class: Marketing rect class="red-fill" ✓, fn-name class="fn-name red-text" ✓, owner "Open" class="owner red-text" ✓; Operations rect class="red-fill" ✓, fn-name class="fn-name red-text" ✓, owner "Open" class="owner red-text" ✓. All N Open-seat boxes: rect=red-fill AND every <text> uses red-text: yes.` The most common failure is rendering the rect red but leaving owner text class as `neutral-text` so the word "Open" displays in dark grey. Copy the literal `class="..."` value from each Open-seat box's owner `<text>` element.
 7. Every `<rect>` whose function color rating from the KFFM was red uses `red-fill`.
 8. Every other `<rect>` uses `neutral-fill`.
 
 **Duplicate-owner treatment (must be true):**
-9. For every owner name that appears in more than one box: every box where that name appears uses red-text on the owner line, regardless of the box's fill color. The function name color follows the box's fill (neutral-fill → neutral-text fn-name; red-fill → red-text fn-name); only the owner label is forced to red.
+9. For every owner name that appears in more than one box: every box where that name appears uses red-text on the owner line, regardless of the box's fill color. The function name color follows the box's fill (neutral-fill → neutral-text fn-name; red-fill → red-text fn-name); only the owner label is forced to red. **Step 1 — enumerate duplicates by counting owner-name occurrences across all boxes:** `✓ Check 9 step 1: Owner-name counts: "Casey M" = 3 (Head of Company, Sales, Senior Consultant); "Wife" = 2 (Finance, HR); "Open" = 1 (does not count as duplicate); "Marcus" = 1; "Priya" = 1. Duplicate names (count ≥ 2): ["Casey M", "Wife"].` **Step 2 — for every duplicate name, cite each box's owner `<text>` class verbatim:** `✓ Check 9 step 2: Casey M boxes: Head of Company class="owner red-text" ✓, Sales class="owner red-text" ✓, Senior Consultant class="owner red-text" ✓. Wife boxes: Finance class="owner red-text" ✓, HR class="owner red-text" ✓. All duplicate-owner labels use class="owner red-text": yes.` The most common failure is the agent narrating "duplicates colored red" without actually rendering red — the rote sentence is what allowed previous runs to ship FOCs with `Wife` in `class="owner neutral-text"` in two boxes. Copy the literal `class="..."` attribute from each duplicate-owner `<text>` element. The literal word `Open` does NOT count as a duplicate even when multiple Open seats exist; Open seats use `class="owner red-text"` because the box is red-fill, not because of duplicate-owner detection.
 
 **Co-ownership treatment (must be true):**
 10. For every function with co-owners, the owner line reads `[Name A] + [Name B]` on a single line, italic, color `#326AB5`. The box uses its color rating's fill (neutral-fill if green/amber, red-fill if red).
@@ -573,12 +584,49 @@ Walk this list line by line before emitting. Do not skip. Items grouped under "m
 **ViewBox sanity (must be true):**
 15. viewBox starts at `0 0`. viewBox width equals the rightmost-element-x + 40px padding. viewBox height equals the bottom-most-element-y + 30px padding. No content extends beyond viewBox bounds.
 
+**Compute viewBox dimensions LAST, AFTER placing every box.** It is a common bug to size the viewBox for tier-2 alone and then add tier-3 children that extend past it. Walk the chart bottom-up:
+- Find the maximum (rect.y + rect.height) across ALL rects on the chart, including every tier-3 vertical-stack child.
+- Find the maximum (rect.x + rect.width) across ALL rects.
+- viewBox.height = max-bottom + 30 (round up to nearest 10).
+- viewBox.width = max-right + 40 (round up to nearest 10).
+
+**Cite the actual MAX values in narration, enumerating every rect's right edge and bottom edge:**
+`✓ Check 15: ViewBox sizing computed AFTER all boxes placed. Rect right edges: HoC=535, Sales/Marketing=190, Sourcing=190, Sales Development=190, Closing=190, Sales Operations=190, Account Executive A=265, Account Executive B=415, Customer Success=420, ..., Product/Engineering=880. Max right edge = 880. ViewBox.width = 880 + 40 = 920. Rect bottom edges: HoC=100, tier-2=190, Sourcing=280, Sales Development=370, Closing=460, Sales Operations=550, Account Executives=640. Max bottom edge = 640. ViewBox.height = 640 + 30 = 670. Final: viewBox="0 0 920 670". Every rect's bottom ≤ 670: yes. Every rect's right ≤ 920: yes.`
+
+**If you set viewBox.height before adding tier-3 boxes, you are guaranteed to clip them.** Compute it last. If the structural primitive `rects_within_viewbox` flags any clipping, your viewBox is wrong; expand it.
+
 **Render-and-inspect:**
 16. After completing checks 0 through 15, render the SVG inline in the conversation. Visually compare against the canonical Acme Consulting reference above. If anything looks off (boxes overlapping, text clipping, missing connectors, off-palette colors, alignment drift, an Open box not red, a duplicate name not red), fix and re-render before emitting Part 2.
 
-### Self-reject and regenerate
+### Post-emit parse-and-verify (mandatory)
 
-After emitting the SVG, immediately parse your own output and verify: every `<rect>` has dimensions 150×60 with rx=6; every `<text>` is inside a box's bounding box; every connector is between adjacent tiers; every Open seat owner text is exactly the literal word `Open`; every duplicate-named owner is in red-text. If you find ANY violation, your SVG is wrong. Output the line `Self-check FAILED. Regenerating from canonical pattern.` and **then re-walk the entire pre-emit checklist (Check 0 through Check 15) in its own dedicated turn before emitting the corrected SVG.** The two-turn pattern applies to every SVG you emit, including regenerations. Do NOT emit the corrected SVG in the same turn as the `Self-check FAILED.` line; do NOT skip the checklist for the corrected SVG; do NOT bundle checklist + SVG. Each emitted `<svg>...</svg>` block must have its own preceding `✓ Check 0` through `✓ Check 15` narration in the turn immediately before it.
+After emitting the SVG, in your NEXT message — before saying anything else to the user — you MUST run the four deterministic geometric checks below. Do not narrate from intent; **parse the actual `<rect>` and `<line>` elements you just wrote** and compute each check from those numbers. If every check passes, output `Post-emit verification: PASS` and proceed to the resume-state block. If any check fails, output `Post-emit verification: FAIL — <which check, which element>. Regenerating.` and emit a corrected SVG in a fresh turn after re-walking the full pre-emit checklist (Check 0 through Check 15).
+
+This phase exists because narration-based self-checks ("every rect has dims 150×60") let bad geometry slip through. Parsing-based self-checks force the agent to compute actual numbers from the actual emitted SVG, which catches what narration misses.
+
+**Check P1 — Every rect inside viewBox.** Read the `viewBox` attribute on the `<svg>` element (e.g. `viewBox="0 0 920 670"` → vb_x=0, vb_y=0, vb_w=920, vb_h=670). Then walk every `<rect>` element. For each, verify:
+- `rect.x ≥ vb_x` (left edge inside)
+- `rect.x + rect.width ≤ vb_x + vb_w` (right edge inside)
+- `rect.y ≥ vb_y` (top edge inside)
+- `rect.y + rect.height ≤ vb_y + vb_h` (bottom edge inside)
+
+Cite the result rect-by-rect: `✓ Check P1: ViewBox = 0 0 920 670. Rect HoC at (385, 40, 150×60): right=535 ≤ 920 ✓, bottom=100 ≤ 670 ✓. Rect Sales at (40, 130, 150×60): right=190, bottom=190 ✓. ... Rect Account Executive Jake at (-35, 640, 150×60): left=-35 < 0 FAIL.` If any fails, the SVG is broken; regenerate.
+
+**Check P2 — Every line endpoint anchored.** Walk every `<line>` element. For each (x1, y1) and (x2, y2) endpoint, verify the endpoint is anchored — meaning EITHER:
+- it sits within 6 px of some `<rect>`'s top, bottom, left, right, center-x, or center-y, OR
+- it sits on (or within 6 px of) some other `<line>`'s path (endpoint or interior).
+
+Cite the result line-by-line: `✓ Check P2: Line[1] (460,100)→(460,115): start at HoC bottom-center ✓, end on horizontal bar y=115 (line[2] interior) ✓. Line[2] (115,115)→(805,115): both endpoints meet vertical drops at children's center-x ✓. ... Line[N] (115,190)→(115,610): start at parent (Sales) bottom-center ✓, end at (115,610) — but last child Sales Operations center-y = 220 + 90×3 + 30 = 520. 610 > 520 by 90 px → FAIL: line extends past last child. Regenerating.`
+
+**Check P3 — Tier-row gaps uniform.** Cluster all rects by y (rects whose top edges are within 25 px of each other belong to the same tier). For each adjacent pair of tier rows, compute gap = top_of_lower_tier − bottom_of_upper_tier and verify 25 ≤ gap ≤ 95.
+
+Cite tier-by-tier: `✓ Check P3: Tier rows by y — Tier 1 at y=40 (HoC, bottom=100). Tier 2 at y=130 (4 boxes, bottom=190). Tier 3 at y=220 (vertical-stack children, bottom=550). Gaps: tier1→tier2 = 130−100 = 30 ✓, tier2→tier3 = 220−190 = 30 ✓. All gaps within [25, 95]: yes.`
+
+**Check P4 — Sample owner-text colors.** For Open-seat boxes and duplicate-name boxes, verify the owner `<text>` element actually has class `red-text` (not `neutral-text`). Cite each: `✓ Check P4: Open-seat boxes: Marketing — owner class="owner red-text" ✓; Sales Development — owner class="owner red-text" ✓. Duplicate-owner boxes (name appears in ≥2 places): Sarah in Head of Company, Sales/Marketing, Product/Engineering — class="owner red-text" in all 3 ✓.`
+
+**On any FAIL:** output `Post-emit verification: FAIL — Check PN: <one-sentence failure>. Regenerating.` Do NOT continue to the resume state. In the next turn, re-walk the full pre-emit checklist (Check 0 through Check 15) and emit a corrected SVG. The post-emit verification then runs again on the new SVG. Repeat until verification passes.
+
+**On all PASS:** output `Post-emit verification: PASS — all four checks clean.` Then proceed directly to the resume-state block.
 
 ### Part 2: Resume-state block
 
