@@ -12,7 +12,9 @@ This prompt produces a Functional Organization Chart (FOC) as a single SVG diagr
 
 The output is the SVG artifact only. The HTML page wrapper, navigation tabs, download buttons, and meta block are produced by a separate publishing template; this prompt does not build any of that. The session takes 30 to 45 minutes for a typical 10–50-person company.
 
-The FOC is built from a finished Key Function Flow Map (KFFM) at Level 1 and (optionally) the Functional Accountability Chart (FAC) for the same company. The KFFM names the key functions, the supporting functions, the owner of each, and the color rating. The FAC names the role each owner plays, the critical number, and (where it exists) the second seat or shared accountability inside one function. The FOC takes those facts as boundary conditions and asks the structural questions a chart needs but the KFFM and FAC do not capture: who reports to whom, how functions group, where the same person appears more than once, where a function is genuinely co-owned, and where supporting functions sit in the hierarchy.
+The FOC is built from a finished Key Function Flow Map (KFFM). At minimum, the Level 1 KFFM is required. Level 2 KFFMs (one per decomposed Level 1 function) are strongly recommended; they let the FOC populate tier 3 of the chart from your already-finished decomposition rather than asking you to recall sub-function structure from memory mid-interview. Level 3 KFFMs (one per decomposed Level 2 sub-function) populate tier 4 of the FOC. Each KFFM level you provide saves a phase of in-conversation elicitation and produces a more complete chart. The Functional Accountability Chart (FAC) for the same company is optional; it gives the FOC role labels and second-seat data for suggesting tier-2 groupings.
+
+The KFFM names the key functions, the supporting functions, the owner of each, and the color rating. The FAC names the role each owner plays, the critical number, and (where it exists) the second seat or shared accountability inside one function. The FOC takes those facts as boundary conditions and asks the structural questions a chart needs but the KFFM and FAC do not capture: who reports to whom, how functions group, where the same person appears more than once, where a function is genuinely co-owned, and where supporting functions sit in the hierarchy.
 
 This prompt does NOT build the Key Function Flow Map (KFFM), the Functional Accountability Chart (FAC), the Glossary, the Competencies, the Values, or the Scorecards. Those are separate prompts in the sequence. The FOC reconciles back to the KFFM; the KFFM does not change to fit the FOC.
 
@@ -42,12 +44,13 @@ After the last audit pass, the prompt emits the SVG, a resume-state block, and a
 **How to use it**
 
 1. Finish the KFFM Level 1 first. The FOC needs the key functions, supporting functions, owners, and colors as input. If you do not have a finished KFFM, run the KFFM prompt first.
-2. (Optional) Finish the FAC. The FOC works without the FAC, but if you have it the prompt can use the FAC's role labels and second-seat data to suggest tier-2 groupings.
-3. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but Claude is recommended for the visual diagram.
-4. Paste your finished KFFM (the SVG or a function-by-function listing) into the conversation when the prompt asks for it.
-5. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
-6. The AI will produce the SVG artifact, a resume-state block, and a brief next-steps paragraph, all inline.
-7. Drop the SVG into the publishing template (the HTML page that provides the meta block, navigation tabs, and download buttons) and review with your coach. The AI produces a first draft. A person who knows your business can challenge it.
+2. (Strongly recommended) Build Level 2 KFFMs for each Level 1 key function before running the FOC. Each Level 2 KFFM names the sub-functions inside one Level 1 function. The FOC reads those sub-functions directly to build deeper-tier organizational layers (tier 3 of the FOC). If you skip Level 2 KFFMs, the FOC will fall back to asking you in-conversation to recall sub-functions from memory, which is less complete and harder to validate.
+3. (Optional) Finish the FAC. The FOC works without the FAC, but if you have it the prompt can use the FAC's role labels and second-seat data to suggest tier-2 groupings.
+4. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but Claude is recommended for the visual diagram.
+5. Paste your finished KFFMs (the Level 1 KFFM AND every Level 2+ KFFM you have produced) into the conversation when the prompt asks for them. Each KFFM can be the SVG itself or a function-by-function listing.
+6. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
+7. The AI will produce the SVG artifact, a resume-state block, and a brief next-steps paragraph, all inline.
+8. Drop the SVG into the publishing template (the HTML page that provides the meta block, navigation tabs, and download buttons) and review with your coach. The AI produces a first draft. A person who knows your business can challenge it.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently against the same finished KFFM. Do not compare notes until both are finished. The differences between FOCs are often the most valuable part of the exercise: they reveal disagreements about who reports to whom that need resolution before the team can scale.
 
@@ -148,27 +151,49 @@ Wait for all five answers. If the participant gives only some, ask for the rest 
 
 Capture in the resume state under `Company basics:`.
 
-### Step 0b: Boundary conditions from the KFFM
+### Step 0b: Boundary conditions from the KFFM (all levels)
 
-"Paste your finished Level 1 KFFM into the conversation. Either the SVG itself, or a function-by-function listing in this format:
+"Paste every finished KFFM level you have produced for this company. The Level 1 KFFM is required. Any Level 2 KFFMs (decomposed sub-functions for one or more Level 1 functions) are strongly recommended if you have them. Level 3 and deeper KFFMs are useful too. Each deeper level you provide saves you from being asked to recall sub-functions from memory later in this interview.
+
+For each level, paste either the SVG itself or a function-by-function listing.
+
+**Level 1 listing format:**
 
 ```
+Level 1 KFFM:
 Key functions:
-1. [Function] — Owner: [name | count + role | Open] — Color: [green | amber | red]
+1. [Function] -- Owner: [name | count + role | Open] -- Color: [green | amber | red]
 2. ...
 
 Supporting functions:
-1. [Function] — Owner: [...] — Color: [...] — Reports to: [key function name | Head of Company]
+1. [Function] -- Owner: [...] -- Color: [...] -- Reports to: [key function name | Head of Company]
 2. ...
 
 Head of Company: [name(s)]
 ```
 
-If you don't have a finished KFFM, stop and run the KFFM prompt first. The FOC interview needs that information as input."
+**Level 2+ listing format (one per decomposed function):**
 
-Wait for the input. Parse it. Surface the parsed boundary back to the CEO for confirmation: "I have these N key functions and M supporting functions. The Head of Company is [name]. Confirm before we continue."
+```
+Level 2 KFFM (parent: [Level 1 function name]):
+Key sub-functions:
+1. [Sub-function] -- Owner: [name | count + role | Open] -- Color: [...]
+2. ...
 
-Capture under `Boundary conditions from KFFM:` in the resume state.
+Supporting sub-functions:
+1. [Sub-function] -- Owner: [...] -- Color: [...] -- Reports to: [...]
+2. ...
+```
+
+If you don't have a finished Level 1 KFFM, stop and run the KFFM prompt first. The FOC interview needs at minimum the Level 1 information as input. If you have Level 2+ KFFMs, paste them all in this same turn so the FOC can use them as deeper-tier data instead of asking you to recall sub-functions from memory."
+
+Wait for the input. Parse it. Surface the parsed boundary back to the CEO for confirmation: "I have Level 1 with N key functions and M supporting functions. Head of Company is [name]. I also have Level 2 KFFMs for [list of function names that have Level 2 data], totaling [N] sub-functions. Confirm before we continue."
+
+If only Level 1 is provided, note this in the resume state under `KFFM levels available: Level 1 only` and proceed; the FOC interview will fall back to asking the CEO directly for sub-function structure in Phase 3.
+
+If Level 2+ are provided, capture them under `KFFM levels available: [list]` in the resume state. The FOC will pre-populate Phase 3 (sub-functions and individual contributors) from the Level 2+ KFFM data and confirm with the CEO rather than re-eliciting from memory.
+
+Capture all KFFM levels under `Boundary conditions from KFFM:` in the resume state.
 
 ### Step 0c: FAC available?
 
@@ -233,7 +258,15 @@ Exit condition: every tier-2 grouping has a leader (or `Open`) and a color ratin
 
 ### Step 3a: Sub-functions per tier-2 function
 
-For each key function from the KFFM, ask:
+For each key function from the Level 1 KFFM, the source of sub-function data depends on what the CEO provided in Step 0b:
+
+**Case A — Level 2 KFFM available for this function.** Use the Level 2 KFFM data directly. Surface back what's already there:
+
+"For [Function], your Level 2 KFFM lists these sub-functions: [list with owners and colors]. Confirm before I add them to the chart. Any of these sub-functions that should be split, merged, renamed, or marked Open?"
+
+If the CEO confirms, use the Level 2 sub-functions verbatim. If the CEO edits, capture the edits and recommend a Level 2 KFFM revisit. Do NOT silently update the FOC; flag the divergence in the resume state.
+
+**Case B — No Level 2 KFFM for this function.** Ask directly:
 
 "Inside the [Function] function, who else works there besides [owner from KFFM]? List by sub-function: do you have an Account Executive sub-function, a Sales Development sub-function, a Channel sub-function? For each sub-function, name the function and how many people perform it."
 
@@ -242,11 +275,13 @@ The CEO's answer typically is a mix of:
 - Multi-holder seats (3 SDRs, 4 AEs).
 - Sub-functions with one owner and a couple of direct reports (a Lead Developer with three Senior Developers reporting in).
 
-Render each as a separate box on the FOC. Multi-holder seats become N separate boxes (one per person) with the same function name (Account Executive ×4 = four boxes named "Account Executive") and individual owner names. The KFFM's count + role attribution becomes individual boxes here.
+After the CEO answers, recommend they build a Level 2 KFFM for this function before the next FOC pass; in-conversation answers are useful but less robust than a finished Level 2.
+
+**For both cases:** Render each sub-function as a separate box on the FOC. Multi-holder seats become N separate boxes (one per person) with the same function name (Account Executive ×4 = four boxes named "Account Executive") and individual owner names. The KFFM's count + role attribution becomes individual boxes here.
 
 If a sub-function has no owner today (Channel Manager seat exists but is unfilled), capture as `Open` and run the Open-seat probe gate.
 
-Capture under `Sub-functions:` keyed by parent function.
+Capture under `Sub-functions:` keyed by parent function. Also note the source for each parent: `[Function]: from Level 2 KFFM | from CEO direct elicitation`.
 
 ### Step 3b: Hierarchy inside the function
 
