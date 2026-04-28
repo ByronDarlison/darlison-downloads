@@ -333,23 +333,28 @@ The FOC is read top-down with parent functions above their children and connecto
 - Tier 1 (Head of Company): single box centered horizontally on the viewBox, top edge at y=40.
 - Tier 2 (functions reporting to Head of Company): boxes at y=180 (140 below tier 1). **Use these exact x-coordinates by tier-2 count — do not compute, do not improvise:**
 
-  | Tier-2 count | viewBox width | Box x-coordinates (use verbatim) |
-  |---|---|---|
-  | 1 | 320 | [85] |
-  | 2 | 580 | [115, 345] |
-  | 3 | 840 | [115, 345, 575] |
-  | 4 | 1100 | [115, 345, 575, 805] |
-  | 5 | 1360 | [115, 345, 575, 805, 1035] |
-  | 6 | 1620 | [115, 345, 575, 805, 1035, 1265] |
+  | Tier-2 count | viewBox width | Box x-coordinates (use verbatim) | Tier-1 (Head of Company) x |
+  |---|---|---|---|
+  | 1 | 230 | [40] | 40 |
+  | 2 | 460 | [40, 270] | 155 |
+  | 3 | 690 | [40, 270, 500] | 270 |
+  | 4 | 920 | [40, 270, 500, 730] | 385 |
+  | 5 | 1150 | [40, 270, 500, 730, 960] | 500 |
+  | 6 | 1380 | [40, 270, 500, 730, 960, 1190] | 615 |
 
-  Each tier-2 box is at one of these exact x values, paired with y=180. Spacing is constant at 230px between adjacent box centers. **If you find yourself computing tier-2 x by formula, stop and copy from the table.** Out-of-table counts (0 or 7+) are out of scope; consolidate before drawing.
-- Tier 3+ (sub-functions hanging from a tier-2 parent): boxes at y=320 (140 below tier 2). For a parent with N children:
-  - If N == 1: child centered at parent.x.
-  - If N == 2: children at parent.x − 80 and parent.x + 80 (side-by-side, 160px apart).
-  - If N ≥ 3: stack children vertically. First child top edge at y=460; subsequent children at y=460 + 70 * (i−1) for i in 1..N. Each child's center x is at parent.x + 96 (offset right from the parent so the vertical-stack stub line stays clear of adjacent tier-3 columns).
-- Tier 4+ (sub-sub-functions): same vertical-stack pattern but one tier deeper, with child x at parent.x + 96.
+  Each tier-2 box is at one of these exact x values, paired with y=180. Spacing is constant at 230px between adjacent box LEFT EDGES. The Head of Company tier-1 box sits at viewBox-center − 75 (so its center matches viewBox-center). **If you find yourself computing tier-2 x or tier-1 x by formula, stop and copy from the table.** Out-of-table counts (0 or 7+) are out of scope; consolidate before drawing.
+- Tier 3+ (sub-functions hanging from a tier-2 parent): boxes at y=320 (140 below tier 2). All references to `parent.x` in this section mean the parent rect's `x` attribute, which is the parent box's LEFT EDGE in SVG coordinates (NOT the center). The parent box's center is at `parent.x + 75` (since boxes are 150 wide). For a parent with N children:
+  - **If N == 1**: one child at the same x as the parent. Child rect `x = parent.x`. Single child sits directly under the parent.
+  - **If N == 2**: two children side-by-side. Child A rect `x = parent.x - 75`. Child B rect `x = parent.x + 75`. Centers are 150px apart, which means child A's right edge sits exactly under parent's center and child B's left edge sits exactly under parent's center (they touch under the parent center).
+  - **If N ≥ 3**: stack children VERTICALLY in a single column. The column's x is fixed: every child's rect `x = parent.x` (same x as the parent — they form a column directly under the parent). First child rect `y = 460`. Second child rect `y = 530`. Third child rect `y = 600`. Pattern: child_i rect `y = 460 + 70 * (i-1)` for i in 1..N. Children stack vertically, 70px center-to-center, all at the same x.
 
-**Tier-3 column-collision rule.** When two adjacent tier-2 parents both have tier-3 children, the right edges of the LEFT parent's tier-3 columns must clear the left edges of the RIGHT parent's tier-3 columns by at least 30px. With tier-2 spacing at 230px and box width 150px, this means a tier-2 parent at x and another at x+230 leaves only 80px of clearance for tier-3 children sitting under each. If a left parent has children stacked at parent.x and a right parent has children stacked at (parent.x+230)+96, the right parent's children sit at x+326 — comfortably past the left parent's x+150 right edge. But if the LEFT parent uses the +96 offset (children at x+96, right edge x+96+150 = x+246) and the RIGHT parent's children are at (x+230)+96 = x+326, clearance is only 80px. **Cite tier-3 left-edges and right-edges per column to verify clearance:** `✓ Check 5a: Tier-3 column edges: parent A at x=345 children right-edge x=591; parent B at x=575 children left-edge x=671. Clearance 80px (>= 30px required).`
+  **Cite per-tier-3 column the parent.x and the child.x verbatim:** `✓ Check 5a: Tier-3 layout per parent: Sales (parent.x=270, 3 children stacked at x=270, y=460/530/600); Customer Success (parent.x=500, 2 children at x=420 and x=580, y=320). All tier-3 child x values match the rule for their parent's child count.`
+
+  **Anti-pattern**: putting tier-3 children at `parent.x + 96` or `parent.x + 246` or `parent.x + 80` for N≥3 cases. Those numbers came from earlier iterations of this spec and produced overlap with the next tier-2 parent's children. The correct rule for N≥3 is the SIMPLEST possible: same x as parent, vertical stack.
+
+- Tier 4+ (sub-sub-functions): same pattern but one tier deeper. Tier-4 children of a tier-3 parent at (parent.x, parent.y) follow the same N==1 / N==2 / N≥3 rules with `parent.x` set to the tier-3 box's x and `parent.y` shifted down by 140 (tier-4 row at y = tier-3 row + 140).
+
+**Tier-3 column-collision rule.** With tier-2 boxes spaced 230px apart (constant from the tier-2 table) and tier-3 children stacked at `parent.x` (same x as parent), adjacent tier-3 columns are also 230px apart — leaving 80px of clearance between rect right edges and next-rect left edges (230 - 150 = 80). That's well above the 30px minimum. **Cite the clearance per adjacent pair:** `✓ Check 5b: Adjacent tier-3 columns: Sales children at x=270 (right edge 420); Customer Success children at x=500 (left edge 500). Clearance 80px (>= 30px required).`
 
 **Connector lines.**
 - All `<line>` connector elements use `class="conn"` with stroke `#aaa`, stroke-width 1, fill none. The `conn` class applies EXCLUSIVELY to `<line>` elements; never to `<text>` elements. There is no such thing as a `<text class="conn">`.
