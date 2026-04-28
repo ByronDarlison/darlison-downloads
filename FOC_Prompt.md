@@ -352,7 +352,7 @@ The FOC is read top-down with parent functions above their children and connecto
 **Tier-3 column-collision rule.** When two adjacent tier-2 parents both have tier-3 children, the right edges of the LEFT parent's tier-3 columns must clear the left edges of the RIGHT parent's tier-3 columns by at least 30px. With tier-2 spacing at 230px and box width 150px, this means a tier-2 parent at x and another at x+230 leaves only 80px of clearance for tier-3 children sitting under each. If a left parent has children stacked at parent.x and a right parent has children stacked at (parent.x+230)+96, the right parent's children sit at x+326 — comfortably past the left parent's x+150 right edge. But if the LEFT parent uses the +96 offset (children at x+96, right edge x+96+150 = x+246) and the RIGHT parent's children are at (x+230)+96 = x+326, clearance is only 80px. **Cite tier-3 left-edges and right-edges per column to verify clearance:** `✓ Check 5a: Tier-3 column edges: parent A at x=345 children right-edge x=591; parent B at x=575 children left-edge x=671. Clearance 80px (>= 30px required).`
 
 **Connector lines.**
-- All connectors use `class="conn"` with stroke `#aaa`, stroke-width 1, fill none.
+- All `<line>` connector elements use `class="conn"` with stroke `#aaa`, stroke-width 1, fill none. The `conn` class applies EXCLUSIVELY to `<line>` elements; never to `<text>` elements. There is no such thing as a `<text class="conn">`.
 - From parent down to a horizontal distributing bar: `<line>` from parent's bottom-center to a point 40px below parent's bottom edge.
 - Horizontal distributing bar: `<line>` spanning from the leftmost child's center-x to the rightmost child's center-x at the same y.
 - From the distributing bar down to each child's top: `<line>` from (child.center.x, bar.y) to (child.center.x, child.top.y).
@@ -517,7 +517,7 @@ Walk this list line by line before emitting. Do not skip. Items grouped under "m
 
 ### Self-reject and regenerate
 
-After emitting the SVG, immediately parse your own output and verify: every `<rect>` has dimensions 150×60 with rx=6; every `<text>` is inside a box's bounding box; every connector is between adjacent tiers; every Open seat owner text is exactly the literal word `Open`; every duplicate-named owner is in red-text. If you find ANY violation, your SVG is wrong. Output the line `Self-check FAILED. Regenerating from canonical pattern.` and emit a fresh SVG using the reference's structure verbatim. Then restart the checklist from Check 0.
+After emitting the SVG, immediately parse your own output and verify: every `<rect>` has dimensions 150×60 with rx=6; every `<text>` is inside a box's bounding box; every connector is between adjacent tiers; every Open seat owner text is exactly the literal word `Open`; every duplicate-named owner is in red-text. If you find ANY violation, your SVG is wrong. Output the line `Self-check FAILED. Regenerating from canonical pattern.` and **then re-walk the entire pre-emit checklist (Check 0 through Check 15) in its own dedicated turn before emitting the corrected SVG.** The two-turn pattern applies to every SVG you emit, including regenerations. Do NOT emit the corrected SVG in the same turn as the `Self-check FAILED.` line; do NOT skip the checklist for the corrected SVG; do NOT bundle checklist + SVG. Each emitted `<svg>...</svg>` block must have its own preceding `✓ Check 0` through `✓ Check 15` narration in the turn immediately before it.
 
 ### Part 2: Resume-state block
 
