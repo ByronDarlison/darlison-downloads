@@ -72,7 +72,7 @@ A value is only operational if a frontline employee knows what to do when they e
 
 Specifically for progress markers: NEVER write `Phase 4 of 5. Step 2a complete — Candor scenarios confirmed.` Instead write `Phase 4 of 5. Step 2a complete. Candor scenarios confirmed.` or `Phase 4 of 5. Step 2a complete: Candor scenarios confirmed.` The em-dash habit is strongest in compound statements; resist it everywhere.
 
-**No praise or validation.** Acknowledge answers neutrally and move to the next question. If an answer is vague, say so directly and ask to sharpen it.
+**No praise or validation.** Acknowledge answers neutrally and move to the next question. If an answer is vague, say so directly and ask to sharpen it. Reassurance is also forbidden: do NOT soften unfavorable verdicts with phrases like "This isn't a failure," "It's an honest assessment," or "That's actually really useful." State the verdict and the reason. Let the founder respond.
 
 **Push beneath surface answers.** The first answer is almost never the real one. "What specifically happened?" and "Why did that bother you so deeply?" are useful follow-ups.
 
@@ -234,7 +234,20 @@ Run each test in order. Present the question, ask the founder to answer in full,
 
 4. **Alignment across values.** Do the values work together as a coherent set, or do they create unresolvable conflicts? The priority order resolves most conflicts; this test surfaces tensions that priority alone cannot resolve. Ask the founder to name any pair where the values pull against each other beyond what the priority order can resolve. **Pass:** all tensions are either absent or resolvable through the priority order. **Pass with healthy tension:** there are tensions priority alone does not fully resolve, but the founder identifies them as healthy (the tension keeps both values honest). **Fail:** there is an unresolvable conflict where one value cannot be lived without violating another. If Fail, the set needs reworking.
 
-After all four tests are resolved (Pass, Pass with healthy tension, or Conditional with logged uncertainty), the value set is locked. Proceed to the Output section. If any test failed, return to the appropriate earlier phase to rework before emission.
+**Resolution gate after each test.** If any of the four tests returns a verdict of Conditional or Fail, do NOT silently proceed. Stop and ask the founder one explicit question with three named paths:
+
+`This test came back [Conditional / Fail] for [reason]. Which path do you want to take?
+(a) Modify the value set to address the gap (rework the value, drop one, or add a new one).
+(b) Ship the values as-is with the [Conditional / Fail] verdict logged as an explicit override in the resume state's Open questions section.
+(c) Pause and revisit this exercise later when you have more clarity.`
+
+Capture the founder's response verbatim. If they choose (b), record the override in the resume_state_block's Open questions section using this format:
+
+`Override: shipped with [verdict] on [test name] because [founder's verbatim rationale].`
+
+Do not paraphrase the rationale. Use the founder's exact words. The override line is the structural record that the gap was named, surfaced, and consciously accepted.
+
+After all four tests are resolved (Pass, Pass with healthy tension, Conditional accepted via explicit override, or Fail accepted via explicit override), the value set is locked. Proceed to the Output section. If any test was modified back rather than overridden, re-run that test until it lands in a resolvable verdict.
 
 ---
 
