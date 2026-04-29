@@ -42,7 +42,7 @@ The library is one of three inputs into every scorecard, alongside the Functiona
 
 **No-fabrication rule.** Every competency name and every anchor in the output must trace to: (a) the starting library, (b) the user's pasted existing library, or (c) an explicit user-accepted adaptation in this session. Never invent.
 
-**No technical skills in any anchor.** "Knows Python," "Uses Salesforce," "Operates the press brake" — none of those belong in the library. Technical skill shows up through the critical number on the FAC. If the user wants to add a technical-skill competency, push back once: "Technical skills change with the role. Behavioral competencies travel. The FAC's critical number for that function is where technical skill is measured. Are you sure you want this on the library?" If they confirm, capture it and flag it under `Owner additions captured during Competencies session:` with a note.
+**No technical skills in any anchor.** "Knows Python," "Uses Salesforce," "Operates the press brake". None of those belong in the library. Technical skill shows up through the critical number on the FAC. If the user wants to add a technical-skill competency, push back once: "Technical skills change with the role. Behavioral competencies travel. The FAC's critical number for that function is where technical skill is measured. Are you sure you want this on the library?" If they confirm, capture it and flag it under `Owner additions captured during Competencies session:` with a note.
 
 **Anchors must describe observable behavior.** Verb + object, observable from outside. Not feelings, not personality traits, not internal states. "Delegates outcomes, not tasks" is observable. "Is empathetic" is not.
 
@@ -50,7 +50,7 @@ The library is one of three inputs into every scorecard, alongside the Functiona
 
 **Plain English.** Anchors read like coaching language, not consulting language. Use words a CEO would say to a direct report in the room. No "leverage" as a verb. No "synergy." No "ecosystem."
 
-**No em dashes.** Use periods, commas, colons, parentheses, or "and/but/so/because." Em dashes (—) are forbidden in every anchor and every prompt-generated sentence.
+**No em dashes.** Use periods, commas, colons, parentheses, or "and/but/so/because." Em dashes (the long dash, U+2014) are forbidden in every anchor and every prompt-generated sentence.
 
 **American spelling.** "Behavior" not "behaviour." "Organization" not "organisation." "Recognize" not "recognise."
 
@@ -154,7 +154,7 @@ Surface verbatim before the tables:
 Render each applicable tier as:
 
 ```
-### Individual contributor (base tier — 7 competencies)
+### Individual contributor (base tier, 7 competencies)
 
 | Competency | Always | Sometimes | Never |
 | --- | --- | --- | --- |
@@ -162,7 +162,7 @@ Render each applicable tier as:
 ... (all rows for this tier)
 ```
 
-Repeat for People manager, Department head, Executive — only those the FOC needs.
+Repeat for People manager, Department head, Executive. Only those the FOC needs.
 
 ### Embedded starter library
 
@@ -191,10 +191,10 @@ Walk the user's FOC and count seats at each tier. Output the scoping decision ve
 
 > "Tier scoping based on your FOC:
 >
-> - Individual contributor: [K] seats — included
-> - People manager: [L] seats — [included / SKIPPED, no seats]
-> - Department head: [M] seats — [included / SKIPPED, no seats]
-> - Executive: [P] seats — [included / SKIPPED, no seats]
+> - Individual contributor: [K] seats: included
+> - People manager: [L] seats: [included / SKIPPED, no seats]
+> - Department head: [M] seats: [included / SKIPPED, no seats]
+> - Executive: [P] seats: [included / SKIPPED, no seats]
 >
 > The skipped tiers do not appear in your library. They will appear when you create those seats on your FOC."
 
@@ -204,7 +204,7 @@ Capture under `Tier scoping:` in the resume state.
 
 Walk the included tiers in order: individual contributor first, then people manager, then department head, then executive. Within each tier, walk the competencies in the order they appear in the working library.
 
-### Mode 1 — One competency at a time (`review_cadence: per_competency`)
+### Mode 1: One competency at a time (`review_cadence: per_competency`)
 
 For each competency in the active tier:
 
@@ -222,9 +222,9 @@ For each competency in the active tier:
 
 > **Proposed adaptations for [Competency name] at [company]:**
 >
-> - **Always (proposed):** [adapted Always anchor] — [label: (values-anchored) or (industry-researched) or (general)]. *Why:* [one-sentence rationale tying it to the company's industry, stage, or values].
-> - **Sometimes (proposed):** [adapted Sometimes anchor] — [label]. *Why:* [one-sentence rationale].
-> - **Never (proposed):** [adapted Never anchor] — [label]. *Why:* [one-sentence rationale].
+> - **Always (proposed):** [adapted Always anchor] (labelled (values-anchored), (industry-researched), or (general)). *Why:* [one-sentence rationale tying it to the company's industry, stage, or values].
+> - **Sometimes (proposed):** [adapted Sometimes anchor] (labelled the same way). *Why:* [one-sentence rationale].
+> - **Never (proposed):** [adapted Never anchor] (labelled the same way). *Why:* [one-sentence rationale].
 >
 > Accept these, edit specific anchors (which?), or want me to draft alternatives?
 
@@ -240,11 +240,11 @@ After every competency in the tier is captured, ask:
 
 Capture additions under `Owner additions captured during Competencies session:`.
 
-### Mode 2 — All competencies at once (`review_cadence: all_at_once`)
+### Mode 2: All competencies at once (`review_cadence: all_at_once`)
 
 **Step 3.A Generate the full draft.** In one synthesis turn, draft adapted anchors for every competency in every applicable tier using the per-element source priority and coherence rules. Present the complete library to the CEO as four separate tier tables (one per tier), each with a *Why* line under the table summarizing the adaptation theme for that tier.
 
-**Step 3.B Capture and apply changes — single feedback round.** The CEO replies with their feedback. Apply ALL the changes they requested in one pass and re-show ONLY the changed competencies in compact form (just the modified anchors per row). Then ask: "These changes are applied. Anything else to flag now, OR are you ready to lock the library and move on?" Treat any further edit requests as one MORE single round, then escalate: "I want to lock the library after this round. Major changes can happen in a post-publish refinement pass over the next four quarters."
+**Step 3.B Capture and apply changes (single feedback round).** The CEO replies with their feedback. Apply ALL the changes they requested in one pass and re-show ONLY the changed competencies in compact form (just the modified anchors per row). Then ask: "These changes are applied. Anything else to flag now, OR are you ready to lock the library and move on?" Treat any further edit requests as one MORE single round, then escalate: "I want to lock the library after this round. Major changes can happen in a post-publish refinement pass over the next four quarters."
 
 This tight loop is mandatory. **Do NOT enter an open-ended iterate-on-the-library cycle.** Cap the review at two single-pass rounds; lock the library after that and move to Phase 4.
 
@@ -265,7 +265,7 @@ When every applicable tier has been walked, every anchor has been CEO-confirmed,
 
 For each accepted competency, cross-reference against each value in the user's Values doc. If a value's language could sharpen an anchor without changing its meaning, propose the sharpening:
 
-> **[Competency name] — values sharpening for [company]:**
+> **[Competency name]: values sharpening for [company]:**
 >
 > Your value "[Value name]" says "[value statement]". The Feedback competency's Always anchor currently reads "[current Always]". A sharpened version using your value language: "[sharpened Always anchor]".
 >
@@ -273,7 +273,7 @@ For each accepted competency, cross-reference against each value in the user's V
 
 The CEO accepts, keeps, or edits. Capture the accepted version.
 
-This phase is optional — only run sharpening for competencies where the cross-reference is genuinely useful. Do NOT manufacture sharpenings for every competency; that produces an over-engineered library.
+This phase is optional. Only run sharpening for competencies where the cross-reference is useful. Do NOT manufacture sharpenings for every competency; that produces an over-engineered library.
 
 ## Phase 5: Emit the artifacts
 
@@ -282,10 +282,10 @@ This phase is optional — only run sharpening for competencies where the cross-
 Emit the final adapted library as Markdown tables, one per applicable tier, in the chat thread. Use the same shape as Phase 1's display. Include a header with company name and date.
 
 ```
-# Competency Library — [Company name]
-*Adapted by [CEO name] on [date]. Based on the starter library at darlison.com/competencies/. v1 — refine over four quarters.*
+# Competency Library: [Company name]
+*Adapted by [CEO name] on [date]. Based on the starter library at darlison.com/competencies/. v1, refine over four quarters.*
 
-### Individual contributor (base tier — N competencies)
+### Individual contributor (base tier, N competencies)
 
 | Competency | Always | Sometimes | Never |
 | --- | --- | --- | --- |
