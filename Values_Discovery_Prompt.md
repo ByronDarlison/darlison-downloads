@@ -8,7 +8,7 @@
 
 ---
 
-This prompt interviews you to discover your company's core values. Not aspirational statements for the website, but real operating principles that guide how a team makes decisions when the founder is not in the room. The exercise takes about 50 minutes and produces a markdown document with confirmed values in priority order, always/sometimes/never scenarios, guiding questions, and one hiring question per value.
+This prompt interviews you to discover your company's core values. Not aspirational statements for the website, but real operating principles that guide how a team makes decisions when the founder is not in the room. The exercise takes about 55 minutes and produces a markdown document with confirmed values in priority order, always/sometimes/never scenarios, guiding questions, and one hiring question per value, after the value set has passed four final alignment tests against your destination.
 
 **What to expect**
 
@@ -18,7 +18,7 @@ The prompt moves through 5 phases:
 2. **Excavate the values.** Seven story prompts that surface values from defining moments, not direct questions. (20 minutes)
 3. **Test the fit.** Each candidate value is pressure-tested against 10 tests and conflict-ranked. (10 minutes)
 4. **Make them actionable.** Rewrite until every value directs behavior, tells someone what to stop, and works on day one. Build always/sometimes/never scenarios and guiding questions. (10 minutes)
-5. **Hiring questions.** One "Tell me about a time" question per value, designed to invite a real story that reveals whether the value is genuine or aspirational in the candidate. (5 minutes)
+5. **Lock the set.** One "Tell me about a time" hiring question per value, then four final tests on the complete value set (destination alignment, attraction alignment, cost alignment, internal alignment). (10 minutes)
 
 Then 4 tests (destination, attraction, cost, alignment), a complete markdown document, and a multi-founder synthesis section.
 
@@ -206,7 +206,9 @@ Repeat this process for each value in priority order until all values have confi
 
 ---
 
-## Phase 5 – Hiring questions
+## Phase 5 – Lock the set
+
+### Step 1 – Hiring questions
 
 For each confirmed value, propose one interview question designed to invite a real story that reveals whether the value is genuine or aspirational in the candidate. The base question must follow this format:
 
@@ -217,6 +219,22 @@ The base format is non-negotiable: every hiring question opens with "Tell me abo
 Ground each question in the value's directive language and visible opposite from Phase 4. A hiring question for "Candor" tests for moments the candidate volunteered hard information; a hiring question for "Bias to ship" tests for moments the candidate cut scope to ship.
 
 Present the proposed questions one at a time. For each, state the value, propose the base question, ask the founder to confirm or modify, and incorporate any sub-questions the founder wants to add before moving to the next value.
+
+### Step 2 – Final set tests
+
+Once all hiring questions are locked, run four final tests on the complete value set as a whole. These tests evaluate the SET, not individual values. Phase 3's ten tests evaluated each value individually for fit; these four test whether the values work together to deliver what the founder is trying to build.
+
+Run each test in order. Present the question, ask the founder to answer in full, then state the verdict (Pass, Conditional, or Fail) with a one-sentence rationale grounded in the founder's answer. Do not move to the next test until the current one is resolved.
+
+1. **Destination alignment.** Do these values, lived in priority order, actually solve the bottleneck the founder named in Phase 1 and make the destination reachable? Walk through how each value contributes. **Pass:** the founder can trace each value to a specific part of the destination. **Conditional:** the founder believes the values help but cannot fully trace the connection; capture as an Open question. **Fail:** one or more values do not contribute to the destination, or actively pull against it. If Fail, prompt the founder to either reframe the values, drop the misaligned ones, or accept the gap with explicit override.
+
+2. **Attraction alignment.** Will these values attract the people the founder needs to build the company described in Phase 1, and will they repel the people who would slow it down? Ask the founder to name (a) the kind of person these values attract and (b) the kind of person these values repel. **Pass:** the attracted profile matches the founder's destination team and the repelled profile is acceptable cost. **Conditional:** values attract some right people but also some wrong ones. **Fail:** values attract people who undermine the destination, or repel the people the founder needs.
+
+3. **Cost alignment.** Each value carries a cost when lived. Has the founder explicitly named the cost of each value? Is the founder actually willing to pay each cost in practice over the next quarter, not just in theory? **Pass:** the founder can articulate the cost per value and commits without hedging. **Conditional:** the founder commits in theory but expresses uncertainty about consistent practice; capture the uncertainty in the resume_state_block's Open questions section verbatim from the founder's words. **Fail:** the founder is not willing to pay the cost of one or more values. If Fail, drop or reframe the value before proceeding.
+
+4. **Alignment across values.** Do the values work together as a coherent set, or do they create unresolvable conflicts? The priority order resolves most conflicts; this test surfaces tensions that priority alone cannot resolve. Ask the founder to name any pair where the values pull against each other beyond what the priority order can resolve. **Pass:** all tensions are either absent or resolvable through the priority order. **Pass with healthy tension:** there are tensions priority alone does not fully resolve, but the founder identifies them as healthy (the tension keeps both values honest). **Fail:** there is an unresolvable conflict where one value cannot be lived without violating another. If Fail, the set needs reworking.
+
+After all four tests are resolved (Pass, Pass with healthy tension, or Conditional with logged uncertainty), the value set is locked. Proceed to the Output section. If any test failed, return to the appropriate earlier phase to rework before emission.
 
 ---
 
