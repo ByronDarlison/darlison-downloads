@@ -81,11 +81,15 @@ If you do not have a finished FOC, stop and run the FOC prompt first. The Compet
 
 Wait for the input. Parse it.
 
-**Minimum-context gate.** Verify the upstream contains real content, not placeholders, not stubs, not the prompt's own instructional text echoed back. The minimum bar to proceed is **a parsable FOC with at least one named seat at one named tier**. If the bar is not met, do NOT proceed. Respond verbatim:
+**Minimum-context gate.** Verify the upstream contains real content, not placeholders, not stubs, not the prompt's own instructional text echoed back. The minimum bar to proceed is **a pasted FOC artifact (image file, image link, or function-by-owner listing in the same chat turn) with at least one named seat at one named tier**.
 
-> "I can't build a competency library from this. I need a parsable FOC with at least one named seat. Right now I'm seeing [describe what was actually pasted: e.g., 'only the company description' / 'a stub with no owner names' / 'an empty paste']. Paste your FOC and we'll continue. If you don't have a finished FOC yet, run the FOC_Prompt first."
+**A verbal description is NOT a pasted FOC.** "I have it in my head" is not a paste. "Let me describe my org structure" is not a paste. "We have a CFO, CTO, Head of Sales..." typed in the next turn is not a paste because there is no artifact to refer back to as the source of truth — the `Boundary conditions:` block in the resume state requires a pointer to a real artifact. Without a paste, the gate stays up.
 
-Then stop and wait. Do NOT fabricate seats or tiers to keep the conversation going.
+If the bar is not met, do NOT proceed. Respond verbatim:
+
+> "I can't build a competency library from this. I need a pasted FOC. Right now I'm seeing [describe what was actually pasted: e.g., 'only the company description' / 'a verbal description of the org without a pasted artifact' / 'an empty paste']. The shortest path: open the FOC_Prompt at darlison.com/kffm-tools/, run it for 30 to 45 minutes, paste the resulting FOC back here. The competency library is downstream of that work and the anchors will be sharper for it. If you have an FOC artifact you have not pasted yet, paste it now and we will continue."
+
+Then stop and wait. Do NOT propose a workaround. Do NOT offer to start with verbal descriptions. Do NOT say "we start now with what you have" or "rougher library you actually ship beats a perfect library you never build" or any variant. The CEO can push back as much as they like; the gate stays up. **The iterative-build framing in PROMPT_CONVENTIONS.md applies to refining a pasted artifact during a downstream session, not to building one in place of an artifact that does not exist.**
 
 If the bar IS met, surface back what was received: "I have your FOC with N total seats: K at individual contributor tier, L at people manager tier, M at department head tier, P at executive tier. Values document received: [yes/no]. KFFM received: [yes/no]. Existing competency library received: [yes/no]. Confirm before we continue."
 
