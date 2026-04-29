@@ -297,7 +297,11 @@ Move to the next function.
 >
 > **Review prompt:** Walk through the rows top to bottom. Tell me which to keep, which to modify (specify which elements), and which to replace entirely. You can also flag cross-function inconsistencies (e.g., "Row 4's leading indicator and Row 7's lagging indicator both look at the same thing — fix"). I'll apply your changes in one pass and re-show the affected rows.
 
-**Step 1.B Capture and apply changes.** The CEO replies with their feedback. Apply changes function-by-function: re-draft the affected elements (using the same source priority + coherence rules) and re-show ONLY the changed rows. Repeat until the CEO signs off ("looks good", "ready to move on", or equivalent).
+**Step 1.B Capture and apply changes — SINGLE feedback round.** The CEO replies with their feedback. Apply ALL the changes they requested in one pass and re-show ONLY the changed rows in a compact "diff" format (just the modified elements per row, not the full row block). Then ask the CEO: "These changes are applied. Anything else to flag now, OR are you ready to lock the table and move on to the glossary?" Treat any further edit requests as one MORE single round, then escalate: "I want to lock the table after this round and move forward. Major changes can happen in a post-publish refinement pass. Confirm?"
+
+This tight loop is mandatory because re-emitting a 15+ row table per iteration consumes significant time and tokens. **Do not enter an open-ended iterate-on-the-table cycle.** Cap the review at two single-pass rounds; lock the table after that and move to Phase 2 (glossary build) where you can still surface follow-up edits at finer grain.
+
+**The CEO signing off any of these phrasings ends the table-review cycle:** "looks good", "ready to move on", "lock it", "ship it", "approved", "fine", "ok", "let's continue".
 
 **Step 1.C Apply gates.** Once all rows are signed off, walk the captured data and:
 - For every Open-seat owner, surface the inherited cost from the upstream KFFM and capture it in the session summary under `Open seats:` (no re-probe).
@@ -423,7 +427,18 @@ Cite explicitly: `✓ Check P1: Expected functions from KFFM + FOC = ['Sales/Mar
 
 Cite per row: `✓ Check P2: Sales/Marketing row: 7 td cells, all non-empty (Function, Owner=Sarah, Mission, Critical #, Leading, Lagging, Reports To=Head of Company) ✓. Customer Success row: 7 td cells, all non-empty ✓. ... All N rows have 7 non-empty cells: yes.`
 
-**Check P3 — Glossary has matching entries for every row.** Walk every function name extracted in Check P1; verify that for each, there is exactly one `<h3>` element in the glossary with matching text. Order MUST match (rows and glossary entries in the same sequence).
+**Check P3a — Glossary uses raw HTML, not Markdown.** Before counting entries, scan the Phase 5b emission for these forbidden patterns:
+- Lines starting with `### ` (Markdown h3 heading)
+- Lines starting with `## ` (Markdown h2 heading)
+- Lines starting with `### **` (Markdown h3 with bold)
+
+If ANY are present in the Phase 5b glossary block, **the glossary is in the wrong format regardless of how many entries were emitted**. Output:
+
+> `Post-emit verification: FAIL — Check P3a: glossary emitted as Markdown (### Function name) instead of raw HTML (<h3>Function name</h3>). The structural primitive `fac_glossary_completeness` parses HTML <h3> elements only and will fail with zero matches against a Markdown glossary. Regenerating the entire glossary as raw HTML.`
+
+Then in the same turn, re-emit the entire Phase 5b glossary as raw HTML (`<h2>Glossary</h2>` + one `<h3>` per row + `<div class="gloss">` paragraphs). Do NOT use any Markdown headings in the regenerated output. After re-emitting, recount and proceed to Check P3b.
+
+**Check P3b — Glossary has matching entries for every row.** Walk every function name extracted in Check P1; verify that for each, there is exactly one `<h3>` element in the glossary with matching text. Order MUST match (rows and glossary entries in the same sequence).
 
 **Compute counts EXPLICITLY.** Output the literal numbers:
 - `table_rows = [N]`
