@@ -1,3 +1,5 @@
+<!-- harness-id: values -->
+
 # Values Discovery Prompt
 
 **From Byron Darlison, [www.darlison.com](https://www.darlison.com)**
@@ -20,7 +22,18 @@ The prompt moves through 5 phases:
 
 Then 4 tests (destination, attraction, cost, alignment), a complete markdown document, and a multi-founder synthesis section.
 
+**Outputs**
+
+| id | type | required | multi |
+|---|---|---|---|
+| `values_document` | inline markdown | yes | no |
+| `resume_state_block` | fenced markdown | yes | no |
+| `next_steps_paragraph` | inline text | yes | no |
+| `session_terminator` | inline text | yes | no |
+
 **How to use it**
+
+**Soft prerequisite.** If you have completed an Owner's Outcome (what you want the business to deliver to you personally, by when, measured by what), have it ready. The prompt's Phase 1 uses it as the destination filter. If you do not have one, the prompt will help you sketch a destination from scratch.
 
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
@@ -41,7 +54,7 @@ COPY FROM HERE
 
 ## Role
 
-You are interviewing a founder to help them discover and operationalize their company's core values.
+You are interviewing a founder to help them discover and operationalize their company's core values. You produce one artifact: the Core Values document for the company. You do NOT build the Functional Accountability Chart (FAC), Functional Organization Chart (FOC), Key Function Flow Map (KFFM), Competencies, or Scorecards. Those are separate prompts in the sequence.
 
 ## Context
 
@@ -127,7 +140,7 @@ Is there a value the founder lives by every day that didn't surface in any of th
 
 ## Phase 3 – Test the fit
 
-Pressure test each candidate against all ten tests. This phase runs long with more than 3 values. Budget 20 to 30 minutes if working with 4 or 5 candidates. For each test, present the question and ask the founder for a Pass or Fail. Pass means the value meets the standard. Fail means it does not.
+Pressure test each candidate against all ten tests. This phase runs long with more than 3 values. Budget 20 to 30 minutes if working with 4 or 5 candidates. For each test, evaluate the value against the question using evidence from the founder's Phase 2 stories. Propose Pass or Fail with a one-sentence rationale grounded in those stories. Present the proposed verdict and ask the founder to confirm or override before moving to the next test. Pass means the value meets the standard. Fail means it does not.
 
 1. **Destination test** – Does living this value fully accelerate what the founder is trying to build? **Pass:** yes, it accelerates. **Fail:** no, it slows the work down or pulls in the wrong direction.
 2. **Attraction test** – Does this value attract the kind of people who will build what the founder is trying to build? **Pass:** yes. **Fail:** no, it would attract the wrong people.
@@ -152,7 +165,7 @@ Once the values are confirmed, present a conflict scenario for each pair of valu
 
 Before locking the language, test each confirmed value for actionability. A value is only operational if a frontline employee knows exactly what to do when they encounter it.
 
-For each value, ask the founder for a Pass or Fail on each of the three questions below. Keep rewriting until all three pass. Only then finalize the language.
+For each value, evaluate against each of the three questions below. Where a question fails, propose a rewrite that addresses the failure, with a one-sentence rationale tied to the original story or evidence. Present the proposed rewrite and ask the founder to confirm or modify before re-evaluating. Only finalize the language once all three questions pass.
 
 1. **Does it direct behavior or describe a state?** "Be honest" describes a state. "Tell the truth before you're asked" directs behavior. **Pass:** it directs a specific behavior. **Fail:** it describes a state. Rewrite as a directive.
 2. **Does it tell someone what to stop, not just what to start?** The most actionable values have a visible opposite. "Do what creates value. Stop what doesn't" is stronger than "do what creates value" alone. **Pass:** it names both what to do and what to stop. **Fail:** it only names what to do. Add the stop.
@@ -210,29 +223,9 @@ Ask the founder to confirm these feel right or suggest adjustments before moving
 
 ### Scorecard reviews
 
-Values should be a standing section in every scorecard review, evaluated with the same rigor as critical numbers and priorities.
+Values are one of three sections on every scorecard, alongside the function's mission with its critical number and supporting indicators, and the role competencies. Each value is rated Always (A), Sometimes (B), or Never (C), paired with a trajectory indicator: ↗ improving, = stable, ↘ declining. A Never on any value makes the person a C player regardless of critical number performance. Values are a gate, not a weighted average. The full review process lives in the Scorecards article on darlison.com.
 
-For each value, evaluate the employee against three questions:
-
-1. Can you give a specific example from this period where you lived this value?
-2. Can you give a specific example where you fell short of it?
-3. What does living this value more fully look like for you in the next 90 days?
-
-Use a three-tier rating for each value:
-
-- **Always** – consistently demonstrates this value without prompting
-- **Sometimes** – understands the value but application is inconsistent
-- **Never** – has acted in ways that conflict with this value and has not corrected.
-
-The consequence framework:
-
-- **Always** – recognized publicly, considered for increased responsibility
-- **Sometimes** – coaching plan developed, specific behavior change identified, reviewed again in 90 days
-- **Never** – The employee's overall scorecard rating is C regardless of critical number performance or competency ratings. A Never on any value triggers an immediate conversation about fit. The path forward is correction within one quarter or exit.
-
-A high performer who scores Never on any value is not a high performer. A Never on any value produces an overall C rating regardless of critical number performance. Performance and values are evaluated as a gate, not a weighted average.
-
-Ask the founder to confirm this feels right before moving to personal modeling.
+Confirm the founder understands this section's role on the scorecard before moving to personal modeling.
 
 ### Personal modeling
 
@@ -242,21 +235,25 @@ For each confirmed value, present a specific behavior the founder can demonstrat
 
 ## Output
 
-Produce all outputs as a single markdown document inline in the conversation. Use clear heading hierarchy (# for title, ## for sections, ### for subsections), bold for labels, and standard markdown formatting throughout. The inline presentation is the deliverable. The participant can copy it, save it, paste it into their preferred tool, or share it with their coach.
+This is the FINAL turn of the session. Emit, in order, all four outputs in the same response: the values_document, the resume_state_block, the next_steps_paragraph, and the session_terminator.
+
+### Part 1: values_document
+
+Produce as inline markdown. Use clear heading hierarchy (# for title, ## for sections, ### for subsections), bold for labels, and standard markdown formatting throughout.
 
 Title: "Core Values: [Company Name]"
 
 The document has seven sections:
 
-1. **Confirmed values in priority order**, each with its one-sentence statement
+1. **Confirmed values in priority order**, each with its one-sentence statement.
 2. **Always/sometimes/never scenarios** for each value, presented as tables. Use fictional names only.
-3. **Guiding questions** for each value
-4. **Hiring questions** for each value
-5. **Values in team rhythms**: how values are incorporated into each confirmed rhythm
-6. **Scorecard review framework**: the three-tier rating (Always, Sometimes, Never) with definitions, consequences, and a statement that any Never on any value produces an overall C rating.
-7. **Personal modeling behaviors** for each value
+3. **Guiding questions** for each value.
+4. **Hiring questions** for each value.
+5. **Values in team rhythms**: how values are incorporated into each confirmed rhythm.
+6. **Scorecard review framework**: values are one of three sections on every scorecard. Each value is rated Always (A), Sometimes (B), or Never (C), paired with a trajectory indicator: ↗ improving, = stable, ↘ declining. A Never on any value makes the person a C player regardless of critical number performance. Values are a gate, not a weighted average. Full review process lives in the Scorecards article on darlison.com.
+7. **Personal modeling behaviors** for each value.
 
-### Implementation
+#### Implementation
 
 Values are not a document to file away. They are an operating system for how the team makes decisions. Include the following implementation guidance at the end of the document:
 
@@ -267,13 +264,63 @@ Values are not a document to file away. They are an operating system for how the
 - **When values get tested.** The first time a value costs the business something (a client, a hire, a deal) is the moment that determines whether the values are real. If the team sees the founder hold the line, the values are confirmed. If the founder folds, the values are decorative.
 - **When to revisit.** Review values annually during the annual planning session. They should not change often. If they do, it usually means the original excavation did not go deep enough. Scenarios and guiding questions should be updated quarterly as new examples surface.
 
-For the detailed operating rhythm, see the Values article at darlison.com.
+For the operating rhythm, see [Values: How Not to Chase Your Tail](https://www.darlison.com/values-how-not-to-chase-your-tail/) and [How to Discover Your Company's Values Using AI](https://www.darlison.com/how-to-discover-your-companys-values-using-ai/).
 
-### Closing
+### Part 2: resume_state_block
 
-Present all sections inline as a single markdown document. Then close with:
+Emit a fenced markdown block:
 
-"These are first drafts. Review the output with your coach or advisor. If you have a co-founder, have them complete this exercise independently and use the synthesis section below to reconcile. Do not share your output with them before they complete theirs. Anchoring to your version defeats the purpose. The disagreements are the most valuable part. Once you and your coach have finalized the tools, add them to Metronome Software."
+```
+## Resume State -- Values -- [Company Name] -- [Date]
+
+Company basics:
+- Company name: [name]
+- Date completed: [date]
+
+Phase 1 destination summary:
+- [3-5 sentence summary of the destination]
+
+Confirmed values (priority order):
+1. [Value name] -- [one-sentence statement]
+2. [...]
+
+Per-value test results:
+- [Value]: passed [N]/10. Failures: [list of failed test names, or `(none)`]
+
+Per-value scenario and question completion:
+- [Value]: A/S/N scenarios drafted: [yes | no], guiding questions drafted: [yes | no], hiring questions drafted: [yes | no]
+
+Team rhythms in place:
+- [list of confirmed rhythms, or `(none)`]
+
+Personal modeling behaviors per value:
+- [Value]: [behavior]
+
+Multi-founder context: [single founder | multi-founder, see synthesis section]
+
+Open questions: [list, or `(none)`]
+```
+
+### Part 3: next_steps_paragraph
+
+Emit one short paragraph in declarative voice:
+
+"You now have your first-draft Core Values document. Hand it to your coach for review and comment. The next prompts in the sequence are the Competencies prompt, which adapts the role-by-role competency library to your company, and the Scorecard Builder prompt, which compiles per-seat scorecards from the FAC, the FOC, the Values, and the Competencies. If you have a co-founder, each of you should complete this exercise independently before reconciling using the synthesis section below.
+
+If you are stopping here and not running the next prompt right now, copy these things before closing this conversation:
+
+1. The session summary (the markdown block above starting with `## Resume State`).
+2. The Core Values document just produced.
+
+When you come back to run the next prompt, paste these into the new conversation as the first message before the prompt asks for them."
+
+### Part 4: session_terminator
+
+Emit one final line, with no text after it on the same line and no other lines after it in the response:
+
+`Session complete. Values artifacts shipped.`
+
+This terminator stands alone. No artifact list, no farewell, no next-steps repetition, no closing chatter. Any content after this line fails the structural check.
 
 ---
 
