@@ -52,7 +52,7 @@ The library is one of three inputs into every scorecard, alongside the Functiona
 
 **No em dashes.** Use periods, commas, colons, parentheses, or "and/but/so/because." Em dashes (the long dash, U+2014) are forbidden in every anchor and every prompt-generated sentence.
 
-**American spelling.** "Behavior" not "behaviour." "Organization" not "organisation." "Recognize" not "recognise."
+**American spelling.** Use the -ize suffix in verbs (organize, recognize, analyze, finalize). Use the -or suffix in nouns (behavior, color, honor, labor). The -er suffix in nouns where applicable (center, meter). Avoid British variants throughout the library.
 
 **Allow iteration upstream.** If the CEO realizes mid-session that their FOC is missing a seat, capture the addition under `Upstream additions captured during Competencies session:` and proceed using the corrected picture. Flag the upstream additions in the closing handoff so the CEO can update the FOC after the session.
 
@@ -222,9 +222,9 @@ For each competency in the active tier:
 
 > **Proposed adaptations for [Competency name] at [company]:**
 >
-> - **Always (proposed):** [adapted Always anchor] (labelled (values-anchored), (industry-researched), or (general)). *Why:* [one-sentence rationale tying it to the company's industry, stage, or values].
-> - **Sometimes (proposed):** [adapted Sometimes anchor] (labelled the same way). *Why:* [one-sentence rationale].
-> - **Never (proposed):** [adapted Never anchor] (labelled the same way). *Why:* [one-sentence rationale].
+> - **Always (proposed):** [adapted Always anchor] (labeled (values-anchored), (industry-researched), or (general)). *Why:* [one-sentence rationale tying it to the company's industry, stage, or values].
+> - **Sometimes (proposed):** [adapted Sometimes anchor] (labeled the same way). *Why:* [one-sentence rationale].
+> - **Never (proposed):** [adapted Never anchor] (labeled the same way). *Why:* [one-sentence rationale].
 >
 > Accept these, edit specific anchors (which?), or want me to draft alternatives?
 
