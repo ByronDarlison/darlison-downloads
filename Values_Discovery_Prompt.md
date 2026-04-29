@@ -239,32 +239,24 @@ This is the FINAL turn of the session. Emit, in order, all four outputs in the s
 
 ### Part 1: values_document
 
-Produce as inline markdown. Use clear heading hierarchy (# for title, ## for sections, ### for subsections), bold for labels, and standard markdown formatting throughout.
+Produce as inline markdown. Use clear heading hierarchy (`#` for title, `##` for value sections, `###` for subsections), bold for labels, and standard markdown formatting throughout.
 
-Title: "Core Values: [Company Name]"
+Title: `# Core Values: [Company Name]`
 
-The document has seven sections:
+Immediately under the title, one short line: `Values are listed in priority order. If two conflict, the earlier one wins.`
 
-1. **Confirmed values in priority order**, each with its one-sentence statement.
-2. **Always/sometimes/never scenarios** for each value, presented as tables. Use fictional names only.
-3. **Guiding questions** for each value.
-4. **Hiring questions** for each value.
-5. **Values in team rhythms**: how values are incorporated into each confirmed rhythm.
-6. **Scorecard review framework**: values are one of three sections on every scorecard. Each value is rated Always (A), Sometimes (B), or Never (C), paired with a trajectory indicator: ↗ improving, = stable, ↘ declining. A Never on any value makes the person a C player regardless of critical number performance. Values are a gate, not a weighted average. Full review process lives in the Scorecards article on darlison.com.
-7. **Personal modeling behaviors** for each value.
+Then the priority list: a numbered list of 3 to 5 values. Each item is the value name in bold followed by an em-free single-sentence tagline. Use the format `1. **[Name]** — [tagline]` (replace the dash with a colon if you prefer; never an em dash).
 
-#### Implementation
+Then a horizontal rule (`---`) and a per-value section for each confirmed value, in priority order. Each per-value section contains, in this order:
 
-Values are not a document to file away. They are an operating system for how the team makes decisions. Include the following implementation guidance at the end of the document:
+1. A `##` heading with the value name and tagline: `## [Name]: [tagline]`
+2. An Always/Sometimes/Never markdown table. Three columns, one row. Each cell is a multi-sentence rich-prose scenario with a fictional name (never the names from the founder's stories) and a concrete consequence drawn from the founder's business context. The Always cell shows the value visibly driving a decision; the Sometimes cell shows the value understood but not fully applied; the Never cell shows the value violated and the team learning the wrong lesson.
+3. A `### Guiding questions` subsection with a numbered list of 3 to 5 questions a team member could ask themselves in the moment a decision needs to be made.
+4. A `### Hiring question` subsection with a single italicized question in the format `*Tell me about a time [situation that directly tests the value]. What happened?*`.
 
-- **First 30 days.** Introduce the values to the leadership team using the scenarios and guiding questions. Do not present them as finished. Present them as a draft and ask: does this match how we actually operate? Refine based on the conversation.
-- **First 90 days.** Incorporate values into the team rhythms. Start with the weekly leadership meeting and weekly one-on-ones. Add the daily stand-up and monthly all-hands once the rhythm is established.
-- **First scorecard cycle.** Add the values section to every scorecard review. The first cycle will feel awkward. That is normal. The second cycle is where it becomes real.
-- **Hiring.** Add the hiring questions to every interview process immediately. Do not wait for the rest to be in place.
-- **When values get tested.** The first time a value costs the business something (a client, a hire, a deal) is the moment that determines whether the values are real. If the team sees the founder hold the line, the values are confirmed. If the founder folds, the values are decorative.
-- **When to revisit.** Review values annually during the annual planning session. They should not change often. If they do, it usually means the original excavation did not go deep enough. Scenarios and guiding questions should be updated quarterly as new examples surface.
+Separate each per-value section from the next with a horizontal rule (`---`).
 
-For the operating rhythm, see [Values: How Not to Chase Your Tail](https://www.darlison.com/values-how-not-to-chase-your-tail/) and [How to Discover Your Company's Values Using AI](https://www.darlison.com/how-to-discover-your-companys-values-using-ai/).
+The document contains nothing else. No team rhythms, no scorecard review framework, no personal modeling behaviors, no implementation guidance, no article links. The values are the artifact.
 
 ### Part 2: resume_state_block
 
