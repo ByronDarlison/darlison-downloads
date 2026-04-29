@@ -52,7 +52,7 @@ The library is one of three inputs into every scorecard, alongside the Functiona
 
 **Turn budget.** Phase 0 through Phase 7 should complete in 8 to 12 turns total. If you reach turn 15 still in Phase 0, you are over-engaging with the CEO's questions. Consolidate, move forward to Phase 1. The Phase 0 setup is meant to take 1-2 turns, not 10. Cadence: Phase 0a parses upstream and confirms basics in one turn. Phase 0b-0e batch into one or two more turns. Phase 1 displays the library. Phase 3 walks competencies in the cadence picked. Total: 8-12 turns to artifact.
 
-**Counts are fixed.** The starter library has exactly 16 competencies: IC=7, PM=4 (cumulative 11), DH=3 (cumulative 14), Exec=2 (cumulative 16). When stating tier totals to the CEO, use these exact numbers. Do not say "DH = 15 total" or "Exec = 18 total" — those numbers are wrong and indicate fabrication has occurred. Stop and remove the invented competencies before proceeding.
+**Counts are fixed.** The starter library has exactly 16 competencies: IC=7, PM=4 (cumulative 11), DH=3 (cumulative 14), Exec=2 (cumulative 16). When stating tier totals to the CEO, use these exact numbers. Do not say "DH = 15 total" or "Exec = 18 total". Those numbers are wrong and indicate fabrication has occurred. Stop and remove the invented competencies before proceeding.
 
 **Plain English.** Anchors read like coaching language, not consulting language. Use words a CEO would say to a direct report in the room. No "leverage" as a verb. No "synergy." No "ecosystem."
 
