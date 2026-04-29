@@ -83,7 +83,7 @@ Wait for the input. Parse it.
 
 **Minimum-context gate.** Verify the upstream contains real content, not placeholders, not stubs, not the prompt's own instructional text echoed back. The minimum bar to proceed is **a pasted FOC artifact (image file, image link, or function-by-owner listing in the same chat turn) with at least one named seat at one named tier**.
 
-**A verbal description is NOT a pasted FOC.** "I have it in my head" is not a paste. "Let me describe my org structure" is not a paste. "We have a CFO, CTO, Head of Sales..." typed in the next turn is not a paste because there is no artifact to refer back to as the source of truth — the `Boundary conditions:` block in the resume state requires a pointer to a real artifact. Without a paste, the gate stays up.
+**A verbal description is NOT a pasted FOC.** "I have it in my head" is not a paste. "Let me describe my org structure" is not a paste. "We have a CFO, CTO, Head of Sales..." typed in the next turn is not a paste because there is no artifact to refer back to as the source of truth. The `Boundary conditions:` block in the resume state requires a pointer to a real artifact. Without a paste, the gate stays up.
 
 If the bar is not met, do NOT proceed. Respond verbatim:
 
