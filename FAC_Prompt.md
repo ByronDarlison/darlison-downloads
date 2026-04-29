@@ -530,7 +530,7 @@ The glossary MUST contain **exactly one `<h3>` entry per row in the table you em
    - `<div class="gloss">` containing exactly three `<p>` elements — Critical, Leading, Lagging — each labeled with `<strong class="label">Critical: [metric].</strong>`, etc.
    - `</div>`
 
-4. **After emitting all N entries, count the `<h3>` elements you wrote in this turn.** Output a verification line: `✓ Emitted [count] <h3> entries; expected [N]; match: yes/no.` If the count does not match N, regenerate the missing entries IN THIS SAME TURN before ending. Do NOT end the turn with `Glossary emitted` if the count is short — fix it first.
+4. **After emitting all N entries, count the entries you wrote in this turn.** Output a verification line that does NOT contain literal HTML tags (the parse-and-verify primitive parses raw `<h3>` text as glossary entries, so wrapping the verification line in `<h3>` tags or including `<h3>` as text creates a phantom entry). Use this exact phrasing: `Emitted [count] glossary entries; expected [N]; match: yes/no.` (no leading checkmark, no `<h3>` text in the verification line). If the count does not match N, regenerate the missing entries IN THIS SAME TURN before ending. Do NOT end the turn with `Glossary emitted` if the count is short — fix it first.
 
 5. **Only after the count matches**, end the turn with the literal line `Glossary emitted. Running post-emit parse-and-verify next.` and STOP.
 
