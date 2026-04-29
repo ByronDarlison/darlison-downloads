@@ -8,7 +8,7 @@
 
 ---
 
-This prompt interviews you to discover and operationalize your company's core values. Not aspirational statements for the website, but real operating principles that guide how a team makes decisions when the founder is not in the room. Values without a plan are useless, so this process does not just define them, it makes them operational. The exercise takes about 60 minutes and produces a markdown document with confirmed values, always/sometimes/never scenarios, guiding questions, hiring questions, team rhythm integration, a scorecard framework, and personal modeling behaviors.
+This prompt interviews you to discover your company's core values. Not aspirational statements for the website, but real operating principles that guide how a team makes decisions when the founder is not in the room. The exercise takes about 50 minutes and produces a markdown document with confirmed values in priority order, always/sometimes/never scenarios, guiding questions, and one hiring question per value.
 
 **What to expect**
 
@@ -18,7 +18,7 @@ The prompt moves through 5 phases:
 2. **Excavate the values.** Seven story prompts that surface values from defining moments, not direct questions. (20 minutes)
 3. **Test the fit.** Each candidate value is pressure-tested against 10 tests and conflict-ranked. (10 minutes)
 4. **Make them actionable.** Rewrite until every value directs behavior, tells someone what to stop, and works on day one. Build always/sometimes/never scenarios and guiding questions. (10 minutes)
-5. **Build them out.** Team involvement, hiring questions, team rhythms, scorecard reviews, and personal modeling behaviors. (15 minutes)
+5. **Hiring questions.** One "Tell me about a time" question per value, designed to invite a real story that reveals whether the value is genuine or aspirational in the candidate. (5 minutes)
 
 Then 4 tests (destination, attraction, cost, alignment), a complete markdown document, and a multi-founder synthesis section.
 
@@ -60,7 +60,7 @@ You are interviewing a founder to help them discover and operationalize their co
 
 Core values are the operating principles that guide how a team makes decisions when the founder is not in the room. They are not aspirational statements. They are not marketing copy. They are discovered from real behavior, tested under pressure, and made specific enough that a frontline employee knows exactly what to do when they encounter one.
 
-Values without implementation are useless. This exercise produces both the values and the full operational framework: always/sometimes/never scenarios, guiding questions, hiring questions, team rhythm integration, scorecard reviews, and personal modeling behaviors. The output is a single deliverable the founder shares with their coach.
+A value is only operational if a frontline employee knows what to do when they encounter it. This exercise produces the values themselves plus the operational expression that makes each one specific: always/sometimes/never scenarios, guiding questions, and a hiring question. The team rhythms, scorecard reviews, and personal modeling behaviors that turn values into a live operating system are covered by separate prompts in the sequence; this prompt produces only the values artifact.
 
 ## Rules
 
@@ -183,53 +183,15 @@ Repeat this process for each value in priority order until all values have confi
 
 ---
 
-## Phase 5 – Build them out
+## Phase 5 – Hiring questions
 
-### Team involvement
+For each confirmed value, propose one interview question designed to invite a real story that reveals whether the value is genuine or aspirational in the candidate. Each question follows this format:
 
-The team's role is not to create these values. That work is done. Their role is to build them out from the inside. For each confirmed value, bring the team together and ask three questions:
+`Tell me about a time [situation that directly tests the value]. What happened?`
 
-1. What does this look like in how we actually work together day to day (can you give a real example)?
-2. What would tell you that someone is living this value?
-3. What would frustrate you if someone wasn't?
+Ground each question in the value's directive language and visible opposite from Phase 4. A hiring question for "Tell the truth before you're asked" tests for moments the candidate volunteered hard information; a hiring question for "Bias to ship" tests for moments the candidate cut scope to ship.
 
-Their answers validate the values from the frontline and improve the always/sometimes/never scenarios and guiding questions with specificity that can't be seen from the founder's chair.
-
-### Hiring
-
-Present one suggested interview question per confirmed value, designed to invite a real story that reveals whether the value is genuine or aspirational in the candidate. Each question should follow this format:
-
-Tell me about a time [situation that directly tests the value]. What happened?
-
-Present the questions one at a time and ask the founder to confirm each one makes sense or suggest how to improve it before moving on.
-
-### Team rhythms
-
-Before discussing how to incorporate values into meetings, confirm which of the following rhythms the founder currently has in place:
-
-- Daily stand-ups
-- Weekly leadership team reviews
-- Weekly one-on-one reviews
-- Monthly all-hands reviews
-
-For each confirmed rhythm, present how values should be incorporated:
-
-- **Daily stand-ups** – One person opens with a brief values moment: a single sentence describing something from the previous day where a value showed up or was tested. No discussion. Just a pulse check that keeps values in daily awareness.
-- **Weekly leadership team reviews** – Open every meeting by highlighting one example from the past week where a value visibly drove a decision or behavior. Name the value, describe what happened, name who lived it. Two minutes. Non-negotiable.
-- **Weekly one-on-ones** – Include one values-based question in every one-on-one. Which value felt hardest to live this week and why? Was there a decision this week that one of the values helped navigate?
-- **Monthly all-hands reviews** – Dedicate a standing agenda item to values. Present one real example per value (anonymized if necessary) showing the value in action across the business that month. Celebrate the always examples publicly. Address the never examples privately.
-
-Ask the founder to confirm these feel right or suggest adjustments before moving to scorecard reviews.
-
-### Scorecard reviews
-
-Values are one of three sections on every scorecard, alongside the function's mission with its critical number and supporting indicators, and the role competencies. Each value is rated Always (A), Sometimes (B), or Never (C), paired with a trajectory indicator: ↗ improving, = stable, ↘ declining. A Never on any value makes the person a C player regardless of critical number performance. Values are a gate, not a weighted average. The full review process lives in the Scorecards article on darlison.com.
-
-Confirm the founder understands this section's role on the scorecard before moving to personal modeling.
-
-### Personal modeling
-
-For each confirmed value, present a specific behavior the founder can demonstrate visibly so the team sees the values as operational, not aspirational. Ask the founder to confirm each one before closing.
+Present the proposed questions one at a time. For each, state the value, propose the question, and ask the founder to confirm or modify before moving to the next value.
 
 ---
 
@@ -280,13 +242,7 @@ Per-value test results:
 - [Value]: passed [N]/10. Failures: [list of failed test names, or `(none)`]
 
 Per-value scenario and question completion:
-- [Value]: A/S/N scenarios drafted: [yes | no], guiding questions drafted: [yes | no], hiring questions drafted: [yes | no]
-
-Team rhythms in place:
-- [list of confirmed rhythms, or `(none)`]
-
-Personal modeling behaviors per value:
-- [Value]: [behavior]
+- [Value]: A/S/N scenarios drafted: [yes | no], guiding questions drafted: [yes | no], hiring question drafted: [yes | no]
 
 Multi-founder context: [single founder | multi-founder, see synthesis section]
 
@@ -322,7 +278,7 @@ If there is more than one founder involved in this business, each founder has no
 
 ---
 
-*There are [number] founders who have each independently completed a values discovery process. Each has generated a full output including confirmed values with language, always/sometimes/never scenarios, guiding questions, hiring questions, and an implementation plan. Each founder's complete output is pasted below, clearly labeled by founder name.*
+*There are [number] founders who have each independently completed a values discovery process. Each has generated a Core Values document including confirmed values in priority order, always/sometimes/never scenarios, guiding questions, and one hiring question per value. Each founder's complete output is pasted below, clearly labeled by founder name.*
 
 *Using all outputs provided, please:*
 
@@ -332,8 +288,8 @@ If there is more than one founder involved in this business, each founder has no
 *4. Reconcile differences through the shared destination. Ask each founder to confirm their Phase 1 destination so it can be used as the filter*
 *5. Propose a single unified set of 3–5 values with agreed language that every founder can stand behind*
 *6. Merge the always/sometimes/never scenarios and guiding questions for each confirmed value, keeping the strongest examples from each founder's output*
-*7. Reconcile any differences in hiring questions, team rhythms, scorecard approaches, and personal modeling*
-*8. Present a single complete final output that represents the company's values framework*
+*7. Reconcile any differences in hiring questions across founders*
+*8. Present a single complete final Core Values document that represents the company's values*
 
 *Push back on anything that feels like a compromise rather than a genuine agreement. Keep working until every founder can say: these are ours.*
 
