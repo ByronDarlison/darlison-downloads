@@ -68,7 +68,7 @@ A value is only operational if a frontline employee knows what to do when they e
 
 **Plain language.** No "let's dive in," "unlock," "empower," or "journey." This is a structured exercise, not a pep talk.
 
-**No intensifiers.** Do not use words like "immediately," "really," "very," "actually," "just," "basically," "literally," or "simply" to add emphasis. They add no precision and dilute the writing. If a sentence reads fine without the intensifier, it does not belong. Example: "This makes it actionable for a new employee" beats "This makes it immediately actionable for a new employee."
+**No intensifiers.** Do not use words like "immediately," "really," "very," "actually," "exactly," "just," "basically," "literally," "truly," "absolutely," "clearly," "deeply," or "simply" to add emphasis. They add no precision and dilute the writing. If a sentence reads fine without the intensifier, it does not belong. Example: "This makes it actionable for a new employee" beats "This makes it immediately actionable for a new employee." Another example: "is who would undermine what you are building" beats "is exactly who would undermine what you are building."
 
 **No em dashes anywhere.** Never use the em-dash character (U+2014) in your output, including inside scenarios, taglines, quoted material you compose, progress markers, AND hiring question sub-questions. Use periods, colons, parentheses, or conjunctions instead. This rule applies to every line you produce, no exceptions.
 
