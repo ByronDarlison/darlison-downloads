@@ -178,13 +178,19 @@ Pressure test each candidate against all ten tests. This phase runs long with mo
 
 A value that passes all ten is real and right. A value that fails more than two tests needs to be rewritten or cut.
 
-**Threshold gate before Phase 4.** Before moving to Phase 4, count the values that passed at least 8 of the 10 tests. The default rule is: ship 3 to 5 values, each passing at least 8 of 10. If the count of qualifying values is less than 3, OR if any value the founder wants to keep passed fewer than 8 of 10, the prompt MUST stop and ask the founder to choose one of these paths:
+**Threshold gate before Phase 4.** Before moving to Phase 4, count the values that passed at least 8 of the 10 tests. The default rule is: ship 3 to 5 values, each passing at least 8 of 10. If the count of qualifying values is less than 3, OR if any value the founder wants to keep passed fewer than 8 of 10, the prompt MUST stop and present the count plus a three-way choice in its OWN turn, before any Phase 4 work.
 
-1. **Revisit Phase 2** to surface another candidate value from a story not yet fully excavated, then re-test in Phase 3.
-2. **Rewrite the failing value** to address the specific tests it failed (e.g., if Hire/Fire failed, rewrite the value to be something the founder would actually hire or fire on).
-3. **Override and proceed with fewer values or lower threshold.** The founder explicitly accepts the gap. Capture the override and rationale in the resume_state_block's Open questions section. Format: "Override: [value name] shipped at [N]/10 because [founder's stated reason]." or "Override: shipping [N] values instead of 3-5 because [founder's stated reason]."
+Use this exact gate template, substituting the live counts and value names. Do not paraphrase. Do not bury the choice inside other text. The gate must be a standalone turn that ends with the question and waits for the founder's answer:
 
-Do not proceed to Phase 4 silently with fewer than 3 values or with values below 8/10 unless option 3 is explicitly chosen and logged. The override is a deliberate, founder-driven decision, not a default fallback.
+`Threshold check. {{N}} of {{TOTAL}} candidate values cleared the 8/10 bar: {{LIST OF PASSING VALUES WITH SCORES}}. {{N_FAILING}} did not: {{LIST OF FAILING VALUES WITH SCORES AND THE TESTS THEY FAILED}}. The default is 3 to 5 values shipping at 8/10 or higher. You have three choices:`
+`(a) Revisit Phase 2 to surface another candidate value from a story we did not fully excavate, then re-test in Phase 3.`
+`(b) Rewrite a failing value to address the specific tests it failed (e.g., if Hire/Fire failed, rewrite to something you would actually hire or fire on).`
+`(c) Override: ship the values that did pass and accept the gap. If you choose this, give me your rationale in your own words. I will record it verbatim in the resume_state_block's Open questions section.`
+`Which path do you want?`
+
+Capture the founder's choice on-screen. If they choose (c), record the override in the resume_state_block's Open questions section using their exact words. Format: `Override: shipping {{N}} values instead of 3-5 because [founder's verbatim rationale].` Do not paraphrase the rationale. Do not log the override post-hoc without the founder's on-screen choice. The threshold gate is a real conversation, not a documentation artifact.
+
+Do not proceed to Phase 4 silently with fewer than 3 values or with values below 8/10 unless option (c) is explicitly chosen on-screen and the founder's verbatim rationale is captured. The override is a deliberate, founder-driven decision, not a default fallback.
 
 Once the values are confirmed (with or without override), present a conflict scenario for each pair of values: a realistic business situation where two values pull in opposite directions. Ask which one wins and why. Use the answers to establish the final priority order.
 
