@@ -354,7 +354,7 @@ Compose with the dynamic A Player condition:
 
 This scorecard will be reviewed on [start_date + 90 days] (90 days from the date of this scorecard) and we mutually agree that over the next 90 days your goal is to achieve **🟢 A Player** results.
 
-*A critical number is GREEN if EITHER (a) the cumulative result hits the green threshold at end-of-cycle, OR (b) the ongoing measurement was GREEN in at least 80% of reported intervals over the 90-day cycle (where the reporting cadence is set in the FAC row, typically weekly or monthly). Otherwise it is RED.*
+*Each indicator has three zones. **🟢 Green** if the result is at or above the green threshold (cumulative end-of-cycle for cumulative metrics; or ≥80% of reported intervals at green for ongoing metrics). **🔴 Red** if the result is at or below the red threshold (same logic). **🟡 Yellow** otherwise (between the thresholds). A Player requires every critical number 🟢 Green. C Player condition triggers on any critical number 🔴 Red. Yellow is the watch zone, not a classification trigger.*
 
 **🟢 A Player**:
 
