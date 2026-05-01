@@ -252,18 +252,18 @@ Exit Phase 3: every Sometimes / Never row has either captured evidence (with opt
 
 Apply the GREEN / RED rule from the design principles to the actuals captured in Step 0e.
 
-> "Phase 4 of 8. Critical numbers. Applying the rule:
+> "Phase 4 of 8. Critical numbers. Applying the ternary rule:
 >
-> *A critical number is GREEN if EITHER (a) the cumulative result hits the green threshold at end-of-cycle, OR (b) the ongoing measurement was GREEN in at least 80% of reported intervals over the 90-day cycle. Otherwise RED.*"
+> *Each indicator has three zones. 🟢 Green if at/above the green threshold (cumulative end-of-cycle for cumulative metrics; or ≥80% of reported intervals at green for ongoing metrics). 🔴 Red if at/below the red threshold (same logic). 🟡 Yellow otherwise (between the thresholds, or mixed-interval results that don't hit 80% in either direction).*"
 
 For each indicator in the scorecard's function blocks:
 
-1. Read the threshold from the scorecard ("≥ X" Green, "< Y" Red, etc.).
+1. Read the threshold pair from the scorecard (Green threshold, Red threshold).
 2. Read the actuals the user pasted.
 3. Determine the metric type:
-   - If the actual is a single end-of-cycle number and the metric is described as cumulative (e.g., "MAT Growth+Profit Forecast/Actual," "Quarterly Priorities Completed"): apply rule (a).
-   - If the actual is a series of interval readings (e.g., monthly FCF Margin readings, weekly OBT Completion): apply rule (b). Count the intervals at or above the green threshold; if ≥ 80% are green, the indicator is 🟢 Green; otherwise 🔴 Red.
-4. Output: "[Function name] / [Indicator name]: actual [value], rule [a/b], result 🟢 Green / 🔴 Red."
+   - **Cumulative metric** (single end-of-cycle number, e.g., "MAT Growth+Profit Forecast/Actual," "Quarterly Priorities Completed"): apply the rule directly. At/above green → 🟢 Green. At/below red → 🔴 Red. Between → 🟡 Yellow.
+   - **Ongoing metric** (series of interval readings, e.g., monthly FCF Margin, weekly OBT Completion): count the intervals. If ≥80% of intervals are at/above green → 🟢 Green. If ≥80% are at/below red → 🔴 Red. Otherwise → 🟡 Yellow.
+4. Output: "[Function name] / [Indicator name]: actual [value], metric type [cumulative/ongoing], result 🟢 Green / 🟡 Yellow / 🔴 Red."
 
 If the metric type is ambiguous from the scorecard, ask the user: "Is [indicator] a cumulative metric (one end-of-cycle number) or an ongoing metric (intervals across the cycle)? The threshold-rule branch depends on this."
 
