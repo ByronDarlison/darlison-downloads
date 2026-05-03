@@ -332,7 +332,7 @@ Open questions: [list, or `(none)`]
 
 Emit one short paragraph in declarative voice:
 
-"You now have your first-draft Core Values document. Hand it to your coach for review and comment. The next prompts in the sequence are the Competencies prompt, which adapts the role-by-role competency library to your company, and the Scorecard Builder prompt, which compiles per-seat scorecards from the FAC, the FOC, the Values, and the Competencies. If you have a co-founder, each of you should complete this exercise independently before reconciling using the synthesis section below.
+"You now have your first-draft Core Values document. Hand it to your coach for review and comment. The Core Values document is one of the three inputs to the Scorecard Builder, alongside your Functional Accountability Chart and your Competencies library. The next prompts in the sequence are the Competencies prompt, which adapts the role-by-role competency library to your company, and the Scorecard Builder prompt, which compiles per-seat scorecards from the FAC, the FOC, the Values, and the Competencies. When you are ready to compile per-seat scorecards, run the Scorecard Builder at https://www.darlison.com/scorecards-tools/. If you have a co-founder, each of you should complete this exercise independently before reconciling using the synthesis section below.
 
 If you are stopping here and not running the next prompt right now, copy these things before closing this conversation:
 
