@@ -1203,7 +1203,7 @@ Other open questions: [list or `(none)`]
 
 #### Part 3: Next steps
 
-"You now have your Level 1 Key Function Flow Map (KFFM) image file. Hand it to your coach for review and comment. The next prompt in the sequence is the Functional Accountability Chart (FAC), which enriches each function with a mission, leading and lagging indicators, full thresholds, and a Glossary. After the FAC, run the Functional Organization Chart (FOC) to produce the org chart. Values, Competencies, and Scorecards complete the sequence.
+"You now have your Level 1 Key Function Flow Map (KFFM) image file. Hand it to your coach for review and comment. The next prompt in the sequence is the Functional Accountability Chart (FAC), which enriches each function with a mission, leading and lagging indicators, full thresholds, and a Glossary. After the FAC, run the Functional Organization Chart (FOC) to produce the org chart. Values, Competencies, and Scorecards complete the sequence. Once you have completed the FAC, your FAC rows feed into the Scorecard Builder. When you are ready to compile per-seat scorecards from your FAC, Values, and Competencies, run the Scorecard Builder at https://www.darlison.com/scorecards-tools/.
 
 If you are stopping here and not running the next prompt right now, copy these things before closing this conversation:
 

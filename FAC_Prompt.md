@@ -626,7 +626,7 @@ Other open questions: [list or `(none)`]
 
 Emit one short paragraph in declarative voice:
 
-"You now have your complete first-draft set of artifacts: every Key Function Flow Map (KFFM) image file (Level 1 plus every deeper level you decomposed), your Functional Organization Chart (FOC) image file, and your Functional Accountability Chart (FAC) table and glossary just produced. Hand all of them to your coach for review and comment. The next prompt in the sequence is the Competencies prompt, which builds the role-by-role competency library, then the Scorecard Builder prompt, which compiles per-role scorecards from the FAC, the FOC, the Values, and the Competencies. Optional: build a Level 2 FAC for any function you have a Level 2 KFFM for.
+"You now have your complete first-draft set of artifacts: every Key Function Flow Map (KFFM) image file (Level 1 plus every deeper level you decomposed), your Functional Organization Chart (FOC) image file, and your Functional Accountability Chart (FAC) table and glossary just produced. Hand all of them to your coach for review and comment. Your FAC rows are the primary input to the Scorecard Builder, alongside your Values and Competencies library. The next prompt in the sequence is the Competencies prompt, which builds the role-by-role competency library, then the Scorecard Builder prompt, which compiles per-role scorecards from the FAC, the FOC, the Values, and the Competencies. When you are ready to compile per-seat scorecards, run the Scorecard Builder at https://www.darlison.com/scorecards-tools/. Optional: build a Level 2 FAC for any function you have a Level 2 KFFM for.
 
 If you are stopping here and not running the next prompt right now, copy these things before closing this conversation:
 
