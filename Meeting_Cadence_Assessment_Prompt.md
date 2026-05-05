@@ -57,6 +57,8 @@ The meeting cadence consists of eight meetings at six frequencies. Each meeting 
 7. Annual Meeting (2 full days, leadership team, owner: CEO)
 8. Quarterly Scorecard Review (60-90 min, leader and direct report, owner: the leader)
 
+**Optional ninth meeting (Weekly Cascade Email).** Some leadership teams supplement the eight with a Weekly Cascade Email: a short written message from the CEO to the whole company once a week. Treat this as optional, not as a ninth canonical meeting. If the user volunteers it in the sweep step, capture it as a renamed cascade artifact and assess it for owner, cadence, and content; do not assess it as Missing if absent.
+
 Every meeting has a single named owner. The owner is the person accountable for running the agenda, including Good News and Values Recognition. If the owner can't attend, they delegate to a 2IC or another second who runs the meeting in their place. The owner is not the same as "the people who attend"; it is the one person whose name belongs in the meeting's owner column.
 
 If the team already runs meetings under different names (Weekly Business Review, OKR Check-ins, Bet Reviews, All Hands, L10), these are not separate from the eight; they are local names for the same meetings. Map them to the canonical names; do not add the canonical eight as parallel meetings alongside the existing ones. Running parallel meetings for the same purpose splits attention and signals the canonical system as "extra."
@@ -70,6 +72,15 @@ If the team already runs meetings under different names (Weekly Business Review,
 - **WDYR**: "What Do You Recommend?" A coaching habit. When a leader brings a problem, the coaching response is to ask what they'd do, not to solve it for them. Leaders are expected to share examples each week of using WDYR with their own teams.
 
 **Daily Huddle plurality.** The Daily Huddle is plural by design. The leadership team huddles, and each functional team (sales, marketing, operations, engineering, etc.) huddles separately. The leadership huddle runs first; function huddles run after. When you ask about the Daily Huddle, ask whether function-team huddles run as well as the leadership huddle. Capture each one's owner separately. A company that runs only a leadership huddle has the meeting Partial; the cascade is missing.
+
+**Daily Huddle row aggregation in the assessment.** The assessment renders one row for "Daily Huddle" even when multiple huddles exist. Aggregation rules:
+
+- **Status:** the worst status across the leadership huddle and any function huddles. If leadership is In place and one function huddle is Missing, render Partial.
+- **Owner:** Named only if every running huddle has a named owner; otherwise Group or Not yet assigned. Note "leadership: <name>; sales: <name>; ops: <name>" in the agenda-coverage detail.
+- **Frequency / Duration:** the leadership huddle's actual cadence and length; flag in the Key gap if function huddles run materially differently.
+- **Agenda coverage:** the leadership huddle's coverage; in the Key gap, surface the cascade gap if function huddles are missing items the leadership huddle covers (or vice versa).
+
+A company that runs only a meeting for one slice of the org (shop-floor only, customer-team only, leadership only) is Partial, not In place; the cascade is what makes the meeting structural.
 
 ## Rules
 
@@ -195,7 +206,13 @@ For the **owner** field, record one of:
 
 A meeting without a named owner is a structural gap, even if the meeting itself happens. **A meeting with Owner = Group or Not yet assigned cannot be rated "In place"; cap Status at Partial regardless of agenda coverage. The owner gap is itself a missing piece of the meeting.**
 
-**Sweep before producing the assessment.** After Meeting 8 and before producing the assessment, ask: *"Are there any other regular meetings on your team's calendar (weekly, monthly, or quarterly) that we have not covered? List them. We will map each one to the canonical eight or flag it as a parallel meeting."* Capture each one. Map renamed meetings to the canonical (record the local name); flag duplicates as parallel meetings for Phase 1 reconciliation in Recommended Next Steps.
+**Sweep before producing the assessment.** After Meeting 8 and before producing the assessment, ask: *"Are there any other regular meetings on your team's calendar (weekly, monthly, or quarterly) that we have not covered? List them. We will map each one to the canonical eight or flag it as a parallel meeting."* Capture each one and route it to one of three buckets:
+
+1. **Renamed canonical.** Same purpose, same audience, same agenda as one of the canonical eight, just under a local name. Record the local name on the canonical meeting; do not list separately.
+2. **Parallel duplicate.** Same purpose and audience as a canonical meeting that already exists. Flag for Phase 1 reconciliation in Recommended Next Steps: pick one, rename and integrate.
+3. **Functional or operational.** Legitimate working meeting that is not one of the canonical eight (sprint planning, project review, design crit, deal review, customer escalation sync). Keep as-is. Do not assess against the canonical agenda. Note in the assessment under a brief "Other Meetings" subsection so the participant sees the full operating rhythm.
+
+The Weekly Cascade Email (optional ninth) routes into bucket 3 as a renamed cascade artifact if the user runs one.
 
 **Meeting Status aggregation rule.** Aggregate the meeting's Status from agenda coverage + owner + frequency / duration:
 
@@ -231,7 +248,7 @@ For each of the eight meetings, produce a section with:
 
 **Frequency:** How often it actually happens, versus how often it should (canonical cadence: Daily Huddle = daily, Weekly Leadership = weekly, etc.).
 
-**Duration:** How long it actually runs, versus how long it should (canonical duration per the meetings list above). Skip this line if frequency is the issue.
+**Duration:** How long it actually runs, versus how long it should (canonical duration per the meetings list above). Skip this line only when the meeting is Missing (no instances to time) or when frequency is so far off the canonical that duration is moot (e.g., a "monthly" town hall that has run twice in a year). If the meeting runs at roughly the right cadence but the wrong length, keep the duration line; it is the more useful gap.
 
 **Agenda coverage:** For each standing agenda item, state whether it is In place, Partial, or Missing. One line per item. No elaboration needed.
 
@@ -262,7 +279,12 @@ Based on the gaps identified, recommend the implementation order. Follow these p
 
 **Quarterly Scorecard Review precondition.** This meeting depends on Function Scorecards existing. If the company has no scorecards, the Quarterly Scorecard Review will necessarily be Missing; recommend the Function Scorecards build exercise as a precursor in Implementation rather than installing the meeting first.
 
-**CEO-bottleneck flag.** If a single named owner appears on more than three of the eight meetings, name this in Recommended Next Steps as a delegation gap, distinct from any missing meetings. Phrase it directly: *"<Name> currently owns <N> of the 8 meetings. The bottleneck on <Name> is the structural pattern, not just the missing meetings. The install plan should include reassigning ownership of at least one weekly and one monthly meeting to a function lead."*
+**CEO-bottleneck flag.** If a single named owner appears on more than three meeting types in the canonical eight, name this in Recommended Next Steps as a delegation gap, distinct from any missing meetings.
+
+- **Count by meeting type, not instance.** Owning four function huddles plus the leadership huddle still counts as one type (Daily Huddle), not five. Owning six weekly one-on-ones still counts as one type (Weekly One-on-One), not six.
+- **Denominator is the canonical eight, not the meetings the company currently runs.** A CEO who owns four of the eight types is bottlenecked even if half the eight are Missing; the install plan should reassign before installing.
+
+Phrase it directly: *"<Name> currently owns <N> of the 8 meeting types. The bottleneck on <Name> is the structural pattern, not just the missing meetings. The install plan should include reassigning ownership of at least one weekly and one monthly meeting to a function lead."*
 
 ### One Thing
 
