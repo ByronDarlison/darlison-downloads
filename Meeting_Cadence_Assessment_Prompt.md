@@ -57,11 +57,11 @@ The meeting cadence consists of eight meetings at six frequencies. Each meeting 
 7. Annual Meeting (2 full days, leadership team, owner: CEO)
 8. Quarterly Scorecard Review (60-90 min, leader and direct report, owner: the leader)
 
-**Optional ninth meeting (Weekly Cascade Email).** Some leadership teams supplement the eight with a Weekly Cascade Email: a short written message from the CEO to the whole company once a week. Treat this as optional, not as a ninth canonical meeting. If the user volunteers it in the sweep step, capture it as a renamed cascade artifact and assess it for owner, cadence, and content; do not assess it as Missing if absent.
+**Optional ninth meeting (Weekly Cascade).** Some leadership teams supplement the eight with a Weekly Cascade: a short message from the CEO to the whole company once a week. Treat this as optional, not as a ninth canonical meeting. The cascade can be written (email, Slack post) or non-written (a regular spoken update at the Monthly Town Hall, a weekly all-hands voicemail, daily phone rounds with location leads). The cascade mechanism matters; the medium does not. If the user runs a non-written cascade, capture it in Other Operating-Rhythm Artifacts with cadence, owner, and reach; do not penalize for not being an email.
 
 Every meeting has a single named owner. The owner is the person accountable for running the agenda, including Good News and Values Recognition. If the owner can't attend, they delegate to a 2IC or another second who runs the meeting in their place. The owner is not the same as "the people who attend"; it is the one person whose name belongs in the meeting's owner column.
 
-If the team already runs meetings under different names (Weekly Business Review, OKR Check-ins, Bet Reviews, All Hands, L10), these are not separate from the eight; they are local names for the same meetings. Map them to the canonical names; do not add the canonical eight as parallel meetings alongside the existing ones. Running parallel meetings for the same purpose splits attention and signals the canonical system as "extra."
+If the team already runs meetings under different names (Weekly Business Review, OKR Check-ins, Bet Reviews, All Hands, L10, Monday Sync, Toolbox Talk, Morning Open, Pulse, MBR), these are not separate from the eight; they are local names for the same meetings. Map them to the canonical names; do not add the canonical eight as parallel meetings alongside the existing ones. Running parallel meetings for the same purpose splits attention and signals the canonical system as "extra."
 
 **Vocabulary used in the agenda walk-through.** When you see these terms in the standing-agenda items below, use these definitions if the user asks:
 
@@ -70,16 +70,18 @@ If the team already runs meetings under different names (Weekly Business Review,
 - **QHAG**: Quarterly Highly Achievable Goal. The 90-day target.
 - **Sprint Lane**: A cross-functional execution swimlane the leadership team owns through the quarter. 3-5 lanes per quarter, distinct from individual weekly priorities. If the team uses functional OKRs or individual priorities instead of cross-functional Sprint Lanes, score Sprint Lane status as Partial, not Missing; the priority discipline exists but the cross-functional integration is the gap.
 - **WDYR**: "What Do You Recommend?" A coaching habit. When a leader brings a problem, the coaching response is to ask what they'd do, not to solve it for them. Leaders are expected to share examples each week of using WDYR with their own teams. WDYR can only be In place at the Weekly Leadership Team Meeting if it is at least Partial in the Weekly One-on-One; leaders cannot report on a habit they do not have.
-- **Widget**: The smallest repeatable unit of value the business produces and sells. For product companies, the unit shipped. For service companies, the standard engagement, billable hour, project type, treatment session, or matter. If the company runs more than one materially different widget (services plus product, multi-business-unit, multi-location with different unit economics), each widget needs its own forecast-vs-actual line in the Monthly Meeting. If the team has not yet defined its widget, score Widget Forecast as Missing; do not silently translate to "revenue."
-- **2IC**: Second-in-command. The named backup who runs the meeting if the owner cannot attend.
+- **Widget**: The smallest repeatable unit of value the business produces and sells. For product companies, the unit shipped. For service companies, the standard engagement, billable hour, project type, treatment session, or matter. If the company runs more than one materially different widget (services plus product, multi-business-unit, multi-location with different unit economics), each widget needs its own forecast-vs-actual line in the Monthly Meeting. If the widget has materially variable price points or margin (more than 3x range, e.g., wedding dresses from $2K to $20K, custom projects with very different scope), forecast both units and weighted-average margin per unit; a unit-only forecast misses the cash-flow variance. If the team has not yet defined its widget, score Widget Forecast as Missing; do not silently translate to "revenue."
+- **2IC**: Second-in-command. The named backup who runs the meeting if the owner cannot attend. In leadership teams of four or fewer, every member can be named as 2IC for at least two meetings; do not require unique 2ICs per meeting at this scale.
 
 **Daily Huddle plurality.** The Daily Huddle is plural by design. The leadership team huddles, and each functional team (sales, marketing, operations, engineering, etc.) huddles separately. The leadership huddle runs first; function huddles run after. When you ask about the Daily Huddle, ask whether function-team huddles run as well as the leadership huddle. Capture each one's owner separately. A company that runs only a leadership huddle has the meeting Partial; the cascade is missing.
 
 **Daily Huddle plurality, special cases.**
 
 - **Flat organizations (typically under 30 people, no functional separation).** When the company is structurally one team, the leadership huddle is the team huddle. Do not penalize for missing function huddles. Note this in the assessment so the rule re-engages once the team grows past functional separation.
-- **Multi-site / multi-location organizations.** Location huddles count as function huddles for cascade purposes. The "leadership-huddle-runs-first" rule relaxes to "leadership huddle runs the same business day" when locations open before headquarters convenes. Capture each location's owner separately in agenda-coverage detail. Same approach for multi-business-unit companies: each business unit is treated as a function for cascade purposes.
+- **Multi-site / multi-location organizations.** Location huddles count as function huddles for cascade purposes. The "leadership-huddle-runs-first" rule relaxes to "leadership huddle runs the same business day" when locations open before headquarters convenes. Capture each location's owner separately in agenda-coverage detail. Same approach for multi-business-unit companies: each business unit is treated as a function for cascade purposes. The leadership huddle audience is the leadership team regardless of where they are physically located; phone-bridge or video-bridge huddles count if they run on a fixed cadence with a named owner.
 - **Practitioner-owner / partner / equity-holding location lead structure.** Treat partners and practitioner-owners as leaders for cascade purposes; they own their team's huddle and one-on-ones AND map into the parent leadership team for the Weekly Leadership Team Meeting. They appear in two layers of the cascade, not one. Same applies to law-firm partners, agency creative directors who hold equity, healthcare associate partners, and similar partner-model structures.
+- **Project-based businesses (construction, agencies, professional services, consultancies).** Treat each active project, jobsite, matter, or engagement as a function for cascade purposes. Project huddles run at project start-of-day under the project lead (foreman, PM, engagement lead, partner-in-charge); the leadership huddle runs above them.
+- **Appointment-driven / shift-scheduled retail and clinical businesses.** When the leadership team is never all on shift simultaneously (bridal retail, salons, clinics with rotating practitioners), the leadership huddle may run async (a Slack thread, a voice memo, a daily email) to avoid forcing a synchronous meeting at a time no leader is on shift. Treat the async leadership cascade as In place if it runs daily with a named owner. Location/shift huddles run at shift-open under the on-shift lead; on days with no senior on shift, name a standing 2IC.
 
 **Daily Huddle row aggregation in the assessment.** The assessment renders one row for "Daily Huddle" even when multiple huddles exist. Aggregation rules:
 
@@ -90,7 +92,11 @@ If the team already runs meetings under different names (Weekly Business Review,
 
 **Slice-only meetings are Partial, not In place.** This rule applies generally, not only to the Daily Huddle. A company that runs a Town Hall for one slice of the org (clinic-only, shop-floor-only, headquarters-only) without a whole-company forum has the meeting Partial; the cascade is what makes the meeting structural. When two slice-meetings together cover the company (e.g., monthly all-hands plus a clinics-only practitioner forum), aggregate the same way as the Daily Huddle: status is the worst across slices; cascade gaps surface in Key gap.
 
+**Temporal slices (recorded / async cascade).** Slice rules cover spatial slices (one location, one division) and temporal slices (one shift, async-only viewers). A recorded Town Hall that part-time or shift-scheduled staff watch async counts as full-cascade if the recording is shared the same day and acknowledgement is captured (a brief shift-start mention, a check-in, or read-receipts). Live-only town halls in shift-scheduled businesses are inherently slice-only; render Partial with the temporal-slice gap noted in Key gap.
+
 **One-on-One cascade depth.** Weekly One-on-One assessment counts every leader-direct-report pair in the company, not only the CEO's directs. Aggregation rules mirror the Daily Huddle: Status is the worst across all running pairs; Owner is "Multiple (named)" with pairs listed in agenda-coverage detail when multiple leaders run them; if a leader who should be running them is not, that leader's missing one-on-ones are a Partial signal at the company level.
+
+**One-on-One cadence for part-time / shift-scheduled / contractor directs.** If a leader's direct reports are part-time, contract, or shift-scheduled, weekly may not be the right cadence for that layer. Bi-weekly, after-each-shift-block, or monthly may substitute. Document the alternate cadence as in band; do not flag as Partial purely for not being weekly. The discipline is structured, predictable one-on-ones at a cadence that fits the work pattern, not weekly-or-nothing.
 
 ## Rules
 
@@ -200,7 +206,7 @@ If the team already runs meetings under different names (Weekly Business Review,
 **Quarterly Scorecard Review:**
 - Does it happen every 90 days?
 - Scorecard review covering mission, critical number, metrics, competencies, and values?
-- Skip-level review conducted one month before?
+- Skip-level review conducted one month before? (Skip-level presumes 3+ full reporting layers. In flat organizations with under three layers, mark Skip-Level as Not applicable, not Missing.)
 - One improvement identified?
 - Is that improvement checked in on weekly in the one-on-one?
 
@@ -223,9 +229,11 @@ A meeting without a named owner is a structural gap, even if the meeting itself 
 1. **Renamed canonical.** Same purpose, same audience, same agenda as one of the canonical eight, just under a local name. Record the local name on the canonical meeting; do not list separately.
 2. **Parallel duplicate.** Same purpose and audience as a canonical meeting that already exists. Flag for Phase 1 reconciliation in Recommended Next Steps: pick one, rename and integrate.
 3. **Cascaded canonical at a sub-team level.** A canonical meeting (typically Weekly Leadership or One-on-One) running for a divisional, regional, or business-unit sub-leadership team in addition to the parent leadership team's instance (e.g., a Clinic Lead Therapist weekly call under a parent leadership team meeting; a regional sales leadership weekly under a corporate weekly). Assess against the canonical agenda. Render under the parent meeting with a sub-row; do not double-count toward the eight.
-4. **Functional or operational artifact.** Legitimate working meeting or written cascade that is not one of the canonical eight (sprint planning, project review, design crit, deal review, customer escalation sync, weekly CEO email). Keep as-is. Do not assess against the canonical agenda. Note in a brief "Other Operating-Rhythm Artifacts" subsection of the assessment so the participant sees the full operating rhythm.
+4. **Functional or operational artifact.** Legitimate working meeting or cascade artifact that is not one of the canonical eight (sprint planning, project review, design crit, deal review, customer escalation sync, weekly CEO email, weekly safety call, weekly cash sit-down). Keep as-is. Do not assess against the canonical agenda. Note in a brief "Other Operating-Rhythm Artifacts" subsection of the assessment so the participant sees the full operating rhythm.
 
-The Weekly Cascade Email (optional ninth) routes into bucket 4. Render it under the Other Operating-Rhythm Artifacts subsection with cadence, owner, and content noted; do not score it against the canonical eight.
+**Bucket 4 feeder note.** If a Bucket 4 artifact has the same content as a canonical meeting at a different audience or cadence (e.g., a CEO-and-bookkeeper weekly cash review where the canonical Monthly would have the leadership team review the same content), surface this as a "feeder" note in the Implementation section: it is the seed for the canonical meeting, not a parallel. The install plan expands the audience and tightens the cadence rather than starting from scratch.
+
+The Weekly Cascade (optional ninth, written or non-written) routes into bucket 4. Render under Other Operating-Rhythm Artifacts with cadence, owner, and reach noted; do not score against the canonical eight.
 
 **Meeting Status aggregation rule.** Aggregate the meeting's Status from agenda coverage + owner + frequency / duration:
 
@@ -242,7 +250,11 @@ The Weekly Cascade Email (optional ninth) routes into bucket 4. Render it under 
 - **Annual meetings.** Once per 12 to 15 months is in band.
 - **Duration.** Within 50% over the canonical maximum is in band; longer is materially off (e.g., a 90-minute Daily Huddle, a 2-hour Weekly Leadership).
 
-**Audience defines the meeting.** A planning ritual run solo by the founder is not the canonical Annual Meeting, regardless of how strategic the content is; record the canonical as Missing and note the solo ritual in Key gap. The same logic applies to any meeting whose canonical audience is the leadership team: if the audience is wrong, the meeting is Missing or Partial, not In place. The leadership team is what makes the meeting structural.
+**Seasonality carve-out.** If the business is materially seasonal (over 2x peak-to-trough revenue swing: bridal, retail with holiday peaks, education with term-driven peaks), the Monthly Meeting may run weekly during peak and monthly otherwise; treat as in band if the cadence is named, deliberate, and tied to the season.
+
+**Small-team Annual carve-out.** For leadership teams of three or fewer, a one-day intensive may substitute for the canonical two-day Annual if all six systems are covered and a formal 3HAG is produced. Tag as In place if the agenda and outputs are complete; the duration band relaxes by one day for small teams.
+
+**Audience defines the meeting.** A planning ritual run solo by the founder is not the canonical Annual Meeting, regardless of how strategic the content is; record the canonical as Missing and note the solo ritual in Key gap. The same logic applies to any meeting whose canonical audience is the leadership team: if the audience is wrong, the meeting is Missing or Partial, not In place. The leadership team is what makes the meeting structural. Examples: a monthly P&L review run solo by the CEO with the bookkeeper is not the canonical Monthly (record as Missing, note the precursor); a Weekly Leadership Team Meeting run by the CEO and CFO only without the rest of the leadership team is Partial, not In place.
 
 ## Output: Meeting Cadence Assessment
 
@@ -303,12 +315,22 @@ Based on the gaps identified, recommend the implementation order. Follow these p
 
 **Quarterly Scorecard Review precondition.** This meeting depends on Function Scorecards existing. If the company has no scorecards, the Quarterly Scorecard Review will necessarily be Missing; recommend the Function Scorecards build exercise as a precursor in Implementation rather than installing the meeting first.
 
-**CEO-bottleneck flag.** If a single named owner appears on more than three meeting types in the canonical eight, name this in Recommended Next Steps as a delegation gap, distinct from any missing meetings.
+**CEO-bottleneck flags.** Two flags fire independently; both go in Recommended Next Steps as delegation gaps, distinct from any missing meetings.
+
+**Flag 1: Meeting-ownership concentration.** If a single named owner appears on more than three meeting types in the canonical eight, fire this flag.
 
 - **Count by meeting type, not instance.** Owning four function huddles plus the leadership huddle still counts as one type (Daily Huddle), not five. Owning six weekly one-on-ones still counts as one type (Weekly One-on-One), not six.
 - **Denominator is the canonical eight, not the meetings the company currently runs.** A CEO who owns four of the eight types is bottlenecked even if half the eight are Missing; the install plan should reassign before installing.
 
-Phrase it directly: *"<Name> currently owns <N> of the 8 meeting types. The bottleneck on <Name> is the structural pattern, not just the missing meetings. The install plan should include reassigning ownership of at least one weekly and one monthly meeting to a function lead."*
+Phrase: *"<Name> currently owns <N> of the 8 meeting types. The bottleneck on <Name> is the structural pattern, not just the missing meetings. The install plan should include reassigning ownership of at least one weekly meeting to a function lead."*
+
+**Flag 2: Founder-as-sole-operator.** If the company runs no leadership-team forum at any cadence (Daily Huddle leadership tier, Weekly Leadership, Monthly, Quarterly, Annual all Missing or wrong-audience), fire this flag regardless of the canonical-owner count. Owning zero meeting types because nothing canonical runs is a worse bottleneck signal than owning four.
+
+Phrase: *"<Name> currently runs no leadership-team forum at any cadence. The team's operating rhythm is held together by ad-hoc contact (phone, hallway, text). This is the founder-as-sole-operator pattern; the install plan must start with installing one leadership-team forum (typically the leadership Daily Huddle or the Weekly Leadership Team Meeting) before any other layer."*
+
+**Flag 3: Operational-seat occupancy.** If the user describes themselves as personally doing buying, selling, hiring, or quality-controlling on top of running the company, fire this flag. Owner-occupies-an-operational-seat is a different and often worse bottleneck shape than meeting-ownership concentration.
+
+Phrase: *"<Name> currently occupies the <buyer / senior-seller / hiring / quality-control> seat in addition to owning <N> meeting types. The meeting bottleneck and the operational-seat bottleneck are linked; the install plan must include both: delegate the operational seat AND reassign meeting ownership."*
 
 ### One Thing
 
