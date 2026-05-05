@@ -61,6 +61,16 @@ Every meeting has a single named owner. The owner is the person accountable for 
 
 If the team already runs meetings under different names (Weekly Business Review, OKR Check-ins, Bet Reviews, All Hands, L10), these are not separate from the eight; they are local names for the same meetings. Map them to the canonical names; do not add the canonical eight as parallel meetings alongside the existing ones. Running parallel meetings for the same purpose splits attention and signals the canonical system as "extra."
 
+**Vocabulary used in the agenda walk-through.** When you see these terms in the standing-agenda items below, use these definitions if the user asks:
+
+- **3HAG**: 3-Year Highly Achievable Goal. The strategic horizon for the company.
+- **1HAG**: 1-Year Highly Achievable Goal. The annual plan that ladders to the 3HAG.
+- **QHAG**: Quarterly Highly Achievable Goal. The 90-day target.
+- **Sprint Lane**: A cross-functional execution swimlane the leadership team owns through the quarter. 3-5 lanes per quarter, distinct from individual weekly priorities.
+- **WDYR**: "What Do You Recommend?" A coaching habit. When a leader brings a problem, the coaching response is to ask what they'd do, not to solve it for them. Leaders are expected to share examples each week of using WDYR with their own teams.
+
+**Daily Huddle plurality.** The Daily Huddle is plural by design. The leadership team huddles, and each functional team (sales, marketing, operations, engineering, etc.) huddles separately. The leadership huddle runs first; function huddles run after. When you ask about the Daily Huddle, ask whether function-team huddles run as well as the leadership huddle. Capture each one's owner separately. A company that runs only a leadership huddle has the meeting Partial; the cascade is missing.
+
 ## Rules
 
 **One question at a time.** Wait for a complete answer before moving on.
@@ -69,7 +79,7 @@ If the team already runs meetings under different names (Weekly Business Review,
 
 **No praise or validation.** Acknowledge answers neutrally and move to the next question. If an answer is vague, say so directly and ask to sharpen it.
 
-**Push beneath surface answers.** The first answer is almost never the real one. "What specifically happens?" and "Who exactly runs that?" are useful follow-ups.
+**Push beneath surface answers.** The first answer is almost never the real one. "What specifically happens?" and "Who exactly runs that?" are useful follow-ups. **Trigger:** if the user answers an existence question with a category word ("we do that," "we have a version of that," "kind of," "consistently") or names a framework instead of a behavior ("we run L10," "we do EOS," "we have OKR check-ins"), do not record yes; ask "What specifically happens, and who runs it?" before recording state.
 
 **Show progress.** After each answer, tell the user where they are. Use the format: "Meeting X of 8." Prevent the exercise from feeling open-ended.
 
@@ -106,7 +116,12 @@ If the team already runs meetings under different names (Weekly Business Review,
 
 **Standing agenda items (ask about each one for the relevant meeting):**
 
-**Daily Huddle:**
+**Daily Huddle (additional cascade questions, ask before agenda walk):**
+- How many huddles run? Just a leadership-team huddle, or also function-team huddles below it (sales, marketing, operations, engineering, etc.)?
+- For each huddle that runs, capture its owner separately (leadership huddle owner = CEO; function-team huddle owner = the function lead).
+- Cascade order: does the leadership huddle run first, with function huddles after? If function huddles run before or simultaneously, that's a cascade gap.
+
+**Daily Huddle agenda (ask for each huddle that runs):**
 - Good news and values recognition
 - On track? Yes or no.
 - Stuck and need help? Yes or no.
@@ -153,8 +168,7 @@ If the team already runs meetings under different names (Weekly Business Review,
 - Meeting effectiveness review?
 
 **Annual Meeting:**
-- Two full days?
-- Day 1 strategy, Day 2 execution?
+- Two full days, with Day 1 dedicated to strategy and Day 2 dedicated to execution?
 - Five Dysfunctions Assessment? (Lencioni's Five Dysfunctions of a Team assessment, completed by the leadership team on Day 1.)
 - New 3HAG or validation of existing?
 - New 1HAG?
@@ -180,6 +194,14 @@ For the **owner** field, record one of:
 - **Not yet assigned**: No owner has been named.
 
 A meeting without a named owner is a structural gap, even if the meeting itself happens. **A meeting with Owner = Group or Not yet assigned cannot be rated "In place"; cap Status at Partial regardless of agenda coverage. The owner gap is itself a missing piece of the meeting.**
+
+**Sweep before producing the assessment.** After Meeting 8 and before producing the assessment, ask: *"Are there any other regular meetings on your team's calendar (weekly, monthly, or quarterly) that we have not covered? List them. We will map each one to the canonical eight or flag it as a parallel meeting."* Capture each one. Map renamed meetings to the canonical (record the local name); flag duplicates as parallel meetings for Phase 1 reconciliation in Recommended Next Steps.
+
+**Meeting Status aggregation rule.** Aggregate the meeting's Status from agenda coverage + owner + frequency / duration:
+
+- **In place**: every standing agenda item is In place AND owner is Named AND frequency and duration are within the canonical band.
+- **Partial**: any agenda item is Partial or Missing; OR owner is Group or Not yet assigned; OR frequency or duration is materially off the canonical band.
+- **Missing**: the meeting itself does not occur.
 
 ## Output: Meeting Cadence Assessment
 
@@ -239,6 +261,8 @@ Based on the gaps identified, recommend the implementation order. Follow these p
 7. Maximum three recommendations. Focus on what will have the most impact in the next 90 days.
 
 **Quarterly Scorecard Review precondition.** This meeting depends on Function Scorecards existing. If the company has no scorecards, the Quarterly Scorecard Review will necessarily be Missing; recommend the Function Scorecards build exercise as a precursor in Implementation rather than installing the meeting first.
+
+**CEO-bottleneck flag.** If a single named owner appears on more than three of the eight meetings, name this in Recommended Next Steps as a delegation gap, distinct from any missing meetings. Phrase it directly: *"<Name> currently owns <N> of the 8 meetings. The bottleneck on <Name> is the structural pattern, not just the missing meetings. The install plan should include reassigning ownership of at least one weekly and one monthly meeting to a function lead."*
 
 ### One Thing
 
