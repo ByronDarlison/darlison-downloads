@@ -32,7 +32,7 @@ The prompt moves through 8 phases:
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience, especially for the longer per-competency walks.
 2. Paste your FOC, Values document, and KFFM at the start when asked. If you do not have an FOC yet, answer the three yes/no tier questions and we will continue.
 3. Walk each competency. Accept the proposed anchors, edit specific wording, or ask for alternatives. The library only contains what you accept; nothing is added silently.
-4. When the exercise is complete, the AI produces the final library as Markdown tables inline in the conversation and as a single Markdown code block you save as `[company-slug]-competency-library.md`.
+4. When the exercise is complete, the AI produces the final library as Markdown tables. Where your output appears depends on the AI. Save the document as `[company-slug]-competency-library.md` to keep your output.
 5. Review the output with your coach or advisor. Once you and your coach have finalized the library, add it to Metronome Software. The Scorecard Builder prompt reads this file alongside your FAC and Values doc.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. At the end of the prompt there is a synthesis section you can paste into a new AI conversation with both outputs to reconcile into one agreed library. The disagreements about which behaviors define "good at this job" are often the most valuable part of the exercise.
@@ -358,11 +358,11 @@ The CEO accepts, keeps, or edits. Capture the accepted version.
 
 This phase is optional. Only run sharpening for competencies where the cross-reference is useful. Do NOT manufacture sharpenings for every competency; that produces an over-engineered library.
 
-## Phase 5: Emit the artifacts
+## Output
 
-**Output formatting standard.** *"Produce all outputs as a single markdown document inline in the conversation. Use clear heading hierarchy (# for title, ## for sections, ### for subsections), bold for labels, and standard markdown formatting throughout. The inline presentation is the deliverable. The participant can copy it, save it, paste it into their preferred tool, or share it with their coach."*
+Produce a Markdown document titled `Competency Library - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `[company-slug]-competency-library.md`.
 
-### Step 5a: In-chat library emission
+### Step 5a: Library emission
 
 Emit the final adapted library as Markdown tables, one per applicable tier, in the chat thread. Use the same shape as Phase 1's display. Include a header with company name and date.
 
@@ -383,29 +383,25 @@ Emit the final adapted library as Markdown tables, one per applicable tier, in t
 
 ### Step 5b: Implementation guidance (part of the output document)
 
-Append the following Implementation section to the in-chat library, before emitting the downloadable Markdown block. This tells the CEO how to use the library they just built in their existing operating rhythm.
+Append the following Implementation section to the library, as part of the same document, before closing.
 
 ```
 ## Implementation
 
-**How often to update.** Treat the library as a v1. Refine the anchors over four quarters as you see them in use. Major revisions land at the start of a quarter, not mid-quarter, so ratings stay comparable.
-
-**When something changes.** A new tier appears (you hire your first department head), a competency stops mapping to behavior you actually see, or a value gets renamed. Update the library at the next quarterly planning session, not in real time. Capture the change request in a running notes file between sessions.
-
-**Team rollout.** Start with yourself. The CEO's scorecard uses the full executive tier. Once you have completed one quarterly review against your own library, cascade to your direct reports. Do not roll the library out to the full company before the leadership team has used it for at least one quarter.
-
-**Where it fits in the meeting cadence.** The library is read at every quarterly scorecard review (one per person, per quarter), and at every quarterly Functional Accountability Chart review (the full leadership team together). It does not appear in weekly or monthly meetings. The competency anchors are the shared reference when a manager and a person disagree on a rating.
-
-**Read the companion article.** The full framework is at https://www.darlison.com/competencies/.
+- Save the document as `[company-slug]-competency-library.md` so you can find it again. The Scorecard Builder prompt will read this file alongside your FAC and Values doc.
+- **How often to update.** Treat the library as a v1. Refine the anchors over four quarters as you see them in use. Major revisions land at the start of a quarter, not mid-quarter, so ratings stay comparable.
+- **When something changes.** A new tier appears (you hire your first department head), a competency stops mapping to behavior you actually see, or a value gets renamed. Update the library at the next quarterly planning session, not in real time. Capture the change request in a running notes file between sessions.
+- **Team rollout.** Start with yourself. The CEO's scorecard uses the full executive tier. Once you have completed one quarterly review against your own library, cascade to your direct reports. Do not roll the library out to the full company before the leadership team has used it for at least one quarter.
+- **Where it fits in the meeting cadence.** The library is read at every quarterly scorecard review (one per person, per quarter), and at every quarterly Functional Accountability Chart review (the full leadership team together). It does not appear in weekly or monthly meetings. The competency anchors are the shared reference when a manager and a person disagree on a rating.
+- Review the output with your coach or advisor. Once finalized, add the tool to Metronome Software.
+- Read the companion article at https://www.darlison.com/competencies/ for the full framework.
 ```
 
-### Step 5c: Downloadable Markdown emission
+### Step 5c: Closing line
 
-Emit the same content (library tables + Implementation section) as a single Markdown code block the CEO can copy into a `.md` file:
+After producing the document, close with:
 
-> "Below is the same library plus the Implementation section in a single Markdown block. Copy everything between the fences into a file named `[company-slug]-competency-library.md`. Save it next to your FAC and Values doc. The Scorecard Builder prompt will read this file."
-
-Then output the Markdown block in a single fenced code block.
+*"Your competency library document is ready. Save it as `[company-slug]-competency-library.md` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
 
 ## Phase 6: Post-emit parse-and-verify
 

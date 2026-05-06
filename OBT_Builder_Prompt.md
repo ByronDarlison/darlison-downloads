@@ -1,6 +1,6 @@
 # One Big Thing (OBT) Builder
 
-From Byron Darlison, www.darlison.com
+From Byron Darlison - www.darlison.com
 
 **This prompt is a work in progress.** I am actively refining it based on feedback from founders and coaches who use it. If you run into problems, find something that could be better, or improve upon any part of this, please email me at byron@darlison.com. Every piece of feedback makes this tool more useful for the next person.
 
@@ -23,7 +23,8 @@ The prompt moves through four phases:
 
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
-3. At the end, the AI will produce your OBT document inline in the conversation, inside a single fenced markdown code block. Copy the contents of that code block into a file and save it. Review it with your coach. On the deadline date, come back to the document and answer the two follow-up questions at the bottom.
+3. Where your output appears depends on the AI. Save the document as `obt-[company]-[date].md` to keep your output.
+4. Review the output with your coach or advisor. Once you and your coach have finalized the OBT, add it to Metronome Software. On the deadline date, come back to the document and answer the two follow-up questions at the bottom.
 
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
@@ -213,17 +214,17 @@ Record the deadline as an exact date. Do the math against today's date from Step
 
 If the participant names an upstream problem, offer to reshape the exercise around that problem and run Phase 2 again. If they say no, confirm and proceed to Phase 4.
 
-## Phase 4: Output
+## Output
 
-Produce the OBT document inline in the conversation, inside a single fenced markdown code block. The code block is the source of truth and must always be produced. If your platform also supports native document rendering (Claude Artifact, ChatGPT Canvas, Gemini Canvas) you may additionally render the document there for easier reading, but the fenced code block must always be produced regardless.
+Produce a Markdown document titled `One Big Thing - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `obt-[company]-[date].md`.
 
-On the first line inside the code block, place a comment with a suggested filename so the user can copy it directly:
+On the first line inside the document (or the first line inside the fenced code block fallback), place a comment with a suggested filename so the user can copy it directly:
 
 `<!-- filename: obt-[company-slug]-[YYYY-MM-DD].md -->` (e.g. `<!-- filename: obt-buildx-design-2026-04-24.md -->`).
 
 Use the date from Step 3 for the filename and the header. Do not substitute or infer the date.
 
-**Produce all outputs as a single markdown document inline in the conversation. Use clear heading hierarchy (`#` for title, `##` for sections, `###` for subsections), bold for labels, and standard markdown formatting throughout. The inline presentation is the deliverable. The participant can copy it, save it, paste it into their preferred tool, or share it with their coach.**
+Use clear heading hierarchy (`#` for title, `##` for sections, `###` for subsections), bold for labels, and standard markdown formatting throughout.
 
 Document title at the top as an H1: `# One Big Thing -- [Company Name] -- [DD MMM YYYY]`
 

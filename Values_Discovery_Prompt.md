@@ -2,7 +2,7 @@
 
 # Values Discovery Prompt
 
-**From Byron Darlison, [www.darlison.com](https://www.darlison.com)**
+From Byron Darlison - www.darlison.com
 
 **This prompt is a work in progress.** I am actively refining it based on feedback from founders and coaches who use it. If you run into problems, find something that could be better, or improve upon any part of this, please email me at byron@darlison.com. Every piece of feedback makes this tool more useful for the next person.
 
@@ -37,8 +37,9 @@ Then 4 tests (destination, attraction, cost, alignment), a complete markdown doc
 
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
-3. At the end, the AI will produce your confirmed values with all supporting materials as a single markdown document presented inline in the conversation.
-4. Review the output with your coach in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the tools, add them to Metronome Software.
+3. At the end, the AI will produce your confirmed values with all supporting materials as a markdown document.
+4. Where your output appears depends on the AI. Save the document as `core-values-[company]-[date].md` to keep your output.
+5. Review the output with your coach in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the values, add them to Metronome Software.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. At the end of the prompt there is a synthesis section you can paste into a new AI conversation with both outputs to reconcile into one agreed set of values. The differences between outputs are the most valuable part of the exercise.
 
@@ -278,9 +279,11 @@ After all four tests are resolved (Pass, Pass with healthy tension, Conditional 
 
 This is the FINAL turn of the session. Emit, in order, all four outputs in the same response: the values_document, the resume_state_block, the next_steps_paragraph, and the session_terminator.
 
+The values_document is the saveable artifact. Produce a Markdown document titled `Core Values - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `core-values-[company]-[date].md`. The other three parts (resume_state_block, next_steps_paragraph, session_terminator) follow inline in the same response.
+
 ### Part 1: values_document
 
-Produce as inline markdown. Use clear heading hierarchy (`#` for title, `##` for value sections, `###` for subsections), bold for labels, and standard markdown formatting throughout.
+Use clear heading hierarchy (`#` for title, `##` for value sections, `###` for subsections), bold for labels, and standard markdown formatting throughout.
 
 Title: `# Core Values: {{COMPANY_NAME}}`. Substitute the actual company name captured in Phase 1 Step 0. Do not emit `[Company Name]` as a literal placeholder.
 
@@ -297,7 +300,16 @@ Then a horizontal rule (`---`) and a per-value section for each confirmed value,
 
 Separate each per-value section from the next with a horizontal rule (`---`).
 
-The document contains nothing else. No team rhythms, no scorecard review framework, no personal modeling behaviors, no implementation guidance, no article links. The values are the artifact.
+After the per-value sections, include one final Implementation subsection with the following content (verbatim, no expansion):
+
+### Implementation
+
+- Save the document as `core-values-[company]-[date].md` so you can find it again.
+- Review the values with your coach or advisor before sharing them with the team. The AI produced a first draft; a person who knows the business can challenge it.
+- Once you and your coach have finalized the values, add them to Metronome Software so the team has a single source of truth.
+- The Core Values document feeds the Competencies prompt and the Scorecard Builder. Run those prompts next when you are ready to compile per-seat scorecards.
+
+The document contains nothing else beyond the values, the per-value sections, and the Implementation subsection. No team rhythms, no scorecard review framework, no personal modeling behaviors, no article links beyond what is named in Implementation.
 
 ### Part 2: resume_state_block
 
@@ -332,7 +344,7 @@ Open questions: [list, or `(none)`]
 
 Emit one short paragraph in declarative voice:
 
-"You now have your first-draft Core Values document. Hand it to your coach for review and comment. The Core Values document is one of the three inputs to the Scorecard Builder, alongside your Functional Accountability Chart and your Competencies library. The next prompts in the sequence are the Competencies prompt, which adapts the role-by-role competency library to your company, and the Scorecard Builder prompt, which compiles per-seat scorecards from the FAC, the FOC, the Values, and the Competencies. When you are ready to compile per-seat scorecards, run the Scorecard Builder at https://www.darlison.com/scorecards-tools/. If you have a co-founder, each of you should complete this exercise independently before reconciling using the synthesis section below.
+"You now have your first-draft Core Values document. Hand it to your coach or advisor for review and comment. Once you and your coach have finalized the values, add them to Metronome Software. The Core Values document is one of the three inputs to the Scorecard Builder, alongside your Functional Accountability Chart and your Competencies library. The next prompts in the sequence are the Competencies prompt, which adapts the role-by-role competency library to your company, and the Scorecard Builder prompt, which compiles per-seat scorecards from the FAC, the FOC, the Values, and the Competencies. When you are ready to compile per-seat scorecards, run the Scorecard Builder at https://www.darlison.com/scorecards-tools/. If you have a co-founder, each of you should complete this exercise independently before reconciling using the synthesis section below.
 
 If you are stopping here and not running the next prompt right now, copy these things before closing this conversation:
 

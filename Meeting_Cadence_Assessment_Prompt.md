@@ -28,7 +28,8 @@ For each meeting, the AI asks whether it exists, who owns it, what your team cur
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. Answer each question honestly. The value of this assessment is in surfacing what is missing, not in confirming what is working. If a meeting exists but the agenda is inconsistent, say so. If a meeting does not exist at all, say that. If your team calls a meeting something different from the canonical name, say that too.
 3. At the end, the AI will produce your Meeting Cadence Assessment with a summary, meeting-by-meeting review, systems coverage analysis, and prioritized next steps.
-4. Review the output with your coach or advisor. Once you and your coach have finalized the cadence and any installation moves, add the meetings to Metronome Software so your team has a single source of truth for the operating rhythm.
+4. Where your output appears depends on the AI. Save the document as `meeting-cadence-[company]-[date].md` to keep your output.
+5. Review the output with your coach or advisor. Once you and your coach have finalized the cadence and any installation moves, add the meetings to Metronome Software so your team has a single source of truth for the operating rhythm.
 
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
@@ -274,11 +275,11 @@ The Weekly Cascade (optional ninth, written or non-written) routes into bucket 4
 
 **Audience defines the meeting.** A planning ritual run solo by the founder is not the canonical Annual Meeting, regardless of how strategic the content is; record the canonical as Missing and note the solo ritual in Key gap. The same logic applies to any meeting whose canonical audience is the leadership team: if the audience is wrong, the meeting is Missing or Partial, not In place. The leadership team is what makes the meeting structural. Examples: a monthly P&L review run solo by the CEO with the bookkeeper is not the canonical Monthly (record as Missing, note the precursor); a Weekly Leadership Team Meeting run by the CEO and CFO only without the rest of the leadership team is Partial, not In place.
 
-## Output: Meeting Cadence Assessment
+## Output
 
-Produce all outputs as a single markdown document inline in the conversation. Use clear heading hierarchy (# for title, ## for sections, ### for subsections), bold for labels, and standard markdown formatting throughout. The inline presentation is the deliverable; the participant can copy it, save it, paste it into their preferred tool, or share it with their coach.
+Produce a Markdown document titled `Meeting Cadence Assessment - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `meeting-cadence-[company]-[date].md`.
 
-The document title is: **Meeting Cadence Assessment, [Company Name]**.
+Use clear heading hierarchy (`#` for title, `##` for sections, `###` for subsections), bold for labels, and standard markdown formatting throughout.
 
 After the interview, produce a document with the following structure:
 

@@ -32,7 +32,8 @@ The prompt moves through 5 phases:
 2. Have your Functional Accountability Chart, Values document, and Competencies library ready to paste. If you do not have a Competencies library yet, run the Competencies Builder prompt first at darlison.com/competencies-tools/.
 3. Confirm one scorecard or many. Multi-seat batch mode produces one scorecard per seat in a single pass and saves you re-pasting shared inputs.
 4. For each seat, name the Functional Accountability Chart row(s), the applicable competency tier(s), the signers, and (if follow-on cycle) paste the prior Review Record.
-5. Review the output with your coach or advisor. Once you and your coach have finalized the tools, add them to Metronome Software. Sign together at the start of the 90-day cycle. The scorecard does not change for 90 days unless both parties agree.
+5. Where your output appears depends on the AI. Save the document as `scorecard-[seat-owner-slug]-[YYYY-MM-DD].md` to keep your output.
+6. Review the output with your coach or advisor. Once you and your coach have finalized the tools, add them to Metronome Software. Sign together at the start of the 90-day cycle. The scorecard does not change for 90 days unless both parties agree.
 
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
@@ -440,45 +441,32 @@ Output the verification block verbatim:
 
 If any check fails, regenerate the failing section in-turn before exiting Phase 3.
 
-## Phase 4: Emit the artifacts
+## Output
 
-*"Produce all outputs as a single markdown document inline in the conversation. Use clear heading hierarchy (# for title, ## for sections, ### for subsections), bold for labels, and standard markdown formatting throughout. The inline presentation is the deliverable. The participant can copy it, save it, paste it into their preferred tool, or share it with their coach."*
+Produce a Markdown document titled `Scorecard - [Seat Owner Name] - [Cycle Start Date]` for each seat, containing the structure assembled in Phase 2. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `scorecard-[seat-owner-slug]-[YYYY-MM-DD].md`. Save next to the Functional Accountability Chart, Values doc, and Competencies library. The Scorecard Review prompt will read this file at the end of the 90-day cycle.
 
-### Step 4a: In-chat scorecard emission
+### Step 4a: Scorecard emission
 
-Emit the compiled scorecard for each seat inline in the chat thread. Use the structure assembled in Phase 2.
+Emit the compiled scorecard for each seat using the structure assembled in Phase 2 (Header + contract sentence, Function blocks, Values, Role Competencies, Development Commitment if applicable, Expectation, Signoff).
 
-### Step 4b: Downloadable Markdown emission
+### Step 4b: Implementation guidance (part of the output document)
 
-For each seat, emit the same content as a single Markdown code block the user can copy into a `.md` file:
-
-> "Below is the compiled scorecard for [seat owner] in a single Markdown block. Copy everything between the fences into a file named `scorecard-[seat-owner-slug]-[YYYY-MM-DD].md`. Save it next to your Functional Accountability Chart, Values doc, and Competencies library.
->
-> The Scorecard Review prompt will read this file at the end of the 90-day cycle."
-
-Then output the Markdown block in a single fenced code block.
-
-### Step 4c: Implementation guidance (part of the output document)
-
-After the scorecard markdown block, append a short Implementation section that tells the user how to use the scorecard they just compiled:
+Append the following Implementation section to each scorecard document, before closing.
 
 ```
 ## Implementation
 
-**When to sign.** Sign this scorecard with the named manager(s) at the start of the 90-day cycle. Once signed, it does not change for 90 days unless both parties agree.
-
-**Weekly cadence.** Owners of each Function should review their critical / leading / lagging indicators in their weekly one-on-one with their manager. The leading indicator is the early-warning signal; if it goes red, act before the critical number does.
-
-**Mid-cycle changes.** If the Functional Accountability Chart, Values, or Competencies library is updated mid-cycle, the scorecard does NOT recompile. The next cycle's scorecard will reflect those changes. The current contract holds for 90 days.
-
-**At the 90-day review.** Run the Scorecard Review prompt with this scorecard as input. The review produces ratings, classification, and (if applicable) a Development Commitment that becomes input to the next cycle's Scorecard Builder run.
-
-**Where it fits in the meeting cadence.** Read once at signing. Reviewed weekly in the seat owner's one-on-one. Re-rated at the 90-day review event. Re-compiled for the next cycle at the same event.
-
-**Read the companion article.** The full framework is at https://www.darlison.com/scorecards/.
+- Save the document as `scorecard-[seat-owner-slug]-[YYYY-MM-DD].md` so you can find it again. Save it next to your Functional Accountability Chart, Values doc, and Competencies library.
+- **When to sign.** Sign this scorecard with the named manager(s) at the start of the 90-day cycle. Once signed, it does not change for 90 days unless both parties agree.
+- **Weekly cadence.** Owners of each Function should review their critical / leading / lagging indicators in their weekly one-on-one with their manager. The leading indicator is the early-warning signal; if it goes red, act before the critical number does.
+- **Mid-cycle changes.** If the Functional Accountability Chart, Values, or Competencies library is updated mid-cycle, the scorecard does NOT recompile. The next cycle's scorecard will reflect those changes. The current contract holds for 90 days.
+- **At the 90-day review.** Run the Scorecard Review prompt with this scorecard as input. The review produces ratings, classification, and (if applicable) a Development Commitment that becomes input to the next cycle's Scorecard Builder run.
+- **Where it fits in the meeting cadence.** Read once at signing. Reviewed weekly in the seat owner's one-on-one. Re-rated at the 90-day review event. Re-compiled for the next cycle at the same event.
+- Review the output with your coach or advisor. Once finalized, add the tool to Metronome Software.
+- Read the companion article at https://www.darlison.com/scorecards/ for the full framework.
 ```
 
-### Step 4d: Batch compile report (multi-seat only)
+### Step 4c: Batch compile report (multi-seat only)
 
 If `mode: batch`, after all per-seat scorecards are emitted, output a short summary:
 
@@ -494,6 +482,12 @@ Compiled [N] first-cycle scorecards on [start date]:
 
 Save each scorecard to its individual file. Sign each one separately with the seat owner and the named manager(s) at the start of the cycle.
 ```
+
+### Step 4d: Closing line
+
+After producing the document(s), close with:
+
+*"Your scorecard document is ready. Save it as `scorecard-[seat-owner-slug]-[YYYY-MM-DD].md` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
 
 ## Phase 5: Resume state and terminator
 
