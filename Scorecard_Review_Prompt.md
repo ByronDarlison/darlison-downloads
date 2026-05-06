@@ -333,7 +333,7 @@ Example flag: "Behavior is weekly but follow-up is at the next quarterly review.
 
 Exit Phase 5: either a complete S/C/C/F draft is captured for the user's recommended Development Commitment, or the user has confirmed 'no Development Commitment needed.'
 
-## Output
+## Phase 6: Output
 
 Produce a Markdown document titled `Scorecard Review Perspective - [Seat Owner Name] - [Cycle Start Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `scorecard-review-perspective-[name-slug]-[role]-[YYYY-MM-DD].md`.
 
