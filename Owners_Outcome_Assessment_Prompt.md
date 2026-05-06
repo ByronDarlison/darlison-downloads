@@ -25,7 +25,7 @@ Then a deliverable document with an embedded quarterly review prompt.
 2. The AI will ask a few setup questions first (about two minutes), then guide you through the full assessment.
 3. At the end, the AI will produce a document with your Owner's Outcome statement, design constraints, gap scorecard, one committed action, and a review date. That document includes the quarterly review prompt, so each quarter you open it and start the review.
 4. Where your output appears depends on the AI. Save the document as `owners-outcome-[company-slug]-[date].md` to keep your output.
-5. Review the output with your coach or advisor in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can improve it. Once you and your coach have finalized the assessment, add it to Metronome Software so the Owner's Outcome and committed action show up in your operating rhythm.
+5. Review the output with your coach or advisor in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can improve it. Once you and your coach have finalized the assessment, add it to your team's system of record so the Owner's Outcome and committed action show up in your operating rhythm.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. The differences are some of the most useful information you can bring into the next planning session.
 
@@ -442,7 +442,7 @@ Then include the full quarterly review prompt below so the owner can open the do
   2. An entry for the next quarterly review. Title: "Owner's Outcome Quarterly Review." Due date: the start of the next fiscal quarter. Description: "Open the latest Owner's Outcome file and start the quarterly review. Have 30 minutes available."
 - If no task management tool was specified but a calendar was, add the review dates to the calendar. If neither, remind the owner to schedule the review themselves.
 - Review the document with your coach or advisor before the next quarterly review. The AI maps your structure; a person who knows your business can challenge whether the action is honest. Note any refinements in the Coach Review Notes section so they carry into the next cycle.
-- Once you and your coach have finalized the assessment, add it to Metronome Software so the Owner's Outcome and committed action show up in your operating rhythm.
+- Once you and your coach have finalized the assessment, add it to your team's system of record so the Owner's Outcome and committed action show up in your operating rhythm.
 
 ---
 
@@ -484,13 +484,13 @@ Step 12 (Updated Document): Produce a new Markdown document, named with today's 
 
 Step 13 (Task Management): If a task management tool was specified in the configuration, create two entries. One for the new committed action (title: the action, due date: the committed date, description: the discrepancy, success measure, and link to the new file). One for the next quarterly review (title: "Owner's Outcome Quarterly Review," due date: start of next fiscal quarter, description: "Open the latest Owner's Outcome file and start the quarterly review. Have 30 minutes available."). If no task management tool, remind the owner to schedule the review themselves.
 
-Step 14 (Coach and Metronome Software): Review the updated document with the coach or advisor before the next quarterly review. Once finalized, update the Owner's Outcome and committed action in Metronome Software so they remain visible in the operating rhythm.
+Step 14 (Coach and your team's system of record): Review the updated document with the coach or advisor before the next quarterly review. Once finalized, update the Owner's Outcome and committed action in your team's system of record so they remain visible in the operating rhythm.
 
 ---
 
 After producing the document, close with:
 
-*"Your Owner's Outcome document is ready. Save it as `owners-outcome-[company-slug]-[date].md` to keep your output. Review with your coach or advisor, then add it to Metronome Software. The structure does not change just because the quarter is busy."*
+*"Your Owner's Outcome document is ready. Save it as `owners-outcome-[company-slug]-[date].md` to keep your output. Review with your coach or advisor, then add it to your team's system of record. The structure does not change just because the quarter is busy."*
 
 ---
 

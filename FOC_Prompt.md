@@ -50,7 +50,7 @@ After the last audit pass, the prompt emits the SVG, a resume-state block, and a
 3. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
 4. The AI will produce a self-contained HTML document wrapping the SVG, plus a resume-state block and a brief next-steps paragraph.
 5. Where your output appears depends on the AI. Save the document as `foc-[company]-[date].html` to keep your output.
-6. Review the output with your coach or advisor, along with all your Key Function Flow Map (KFFM) image files (Level 1 plus any deeper levels). The AI produces a first draft. A person who knows your business can challenge it. Once finalized, add the FOC to Metronome Software.
+6. Review the output with your coach or advisor, along with all your Key Function Flow Map (KFFM) image files (Level 1 plus any deeper levels). The AI produces a first draft. A person who knows your business can challenge it. Once finalized, add the FOC to your team's system of record.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently against the same finished KFFM. Do not compare notes until both are finished. The differences between FOCs are often the most valuable part of the exercise: they reveal disagreements about who reports to whom that need resolution before the team can scale.
 
@@ -95,7 +95,7 @@ Whatever pattern exists today, capture it. Do not impose a structure the CEO has
 
 **Supporting functions.** Each supporting function from the KFFM hangs from the key function it reports to (captured in KFFM Step A9 or Phase D-2c at the deeper level). If the supporting function reports to the Head of Company directly, it sits to one side of the chart at tier 2. Do not duplicate supporting functions.
 
-**Duplicate-owner detection.** The FOC's most valuable structural finding is the same person owning multiple functions. Whenever a name appears in more than one box, that name renders in red (`#B91414`) in every box where it appears. The visual signal makes it impossible to miss; the FAC then captures the role-by-role accountabilities.
+**Duplicate-owner detection.** The FOC's most valuable structural finding is the same person owning multiple functions. Whenever a name appears in more than one box, that name renders in red (`#791F1F`) in every box where it appears. The visual signal makes it impossible to miss; the FAC then captures the role-by-role accountabilities.
 
 **Co-ownership.** When two named individuals genuinely share accountability for one function, list both names on a single line inside the box separated by ` + ` (space-plus-space). Color: italic dark blue (`#326AB5`). Co-ownership is rare and usually indicates the function should be split; if the CEO insists, capture it and flag in the resume state.
 
@@ -442,22 +442,22 @@ The FOC is read top-down with parent functions above their children and connecto
 - Function name: `class="fn-name [color]-text"`, font-size 12, font-weight 700, text-anchor middle, x = box.center.x, y = box.top.y + 22 (single-line) or box.top.y + 18 / box.top.y + 32 (two-line).
 - Owner: `class="owner [color]-text"`, font-size 11, font-style italic, text-anchor middle, x = box.center.x, y = box.top.y + 42 (single-line name) or box.top.y + 50 (two-line name).
 - For co-owners: owner line reads `[Name A] + [Name B]`, italic, color `#326AB5` (override the [color]-text class), single line.
-- For duplicate names: owner text uses the red-text color (`#B91414`) regardless of the box's fill color. The structural finding (this person is in two boxes) overrides the operational color.
+- For duplicate names: owner text uses the red-text color (`#791F1F`) regardless of the box's fill color. The structural finding (this person is in two boxes) overrides the operational color.
 
 **Color treatment.**
 - Two box states: `red-fill` and `neutral-fill`.
-- `red-fill`: fill `#fcebeb`, stroke `#B85450`, stroke-width 1.5. Use when the function's color rating from the KFFM is red OR the owner is `Open` OR the function has a duplicate name.
+- `red-fill`: fill `#fcebeb`, stroke `#A32D2D`, stroke-width 1.5. Use when the function's color rating from the KFFM is red OR the owner is `Open` OR the function has a duplicate name.
 - `neutral-fill`: fill `#ffffff`, stroke `#888`, stroke-width 1. Use for everything else (green, amber, no-color, no problem).
-- `red-text`: fill `#B91414`, font-weight 600. Use inside any `red-fill` box AND for any duplicate-name owner regardless of box color.
+- `red-text`: fill `#791F1F`, font-weight 600. Use inside any `red-fill` box AND for any duplicate-name owner regardless of box color.
 - `neutral-text`: fill `#222`. Use inside `neutral-fill` boxes for non-duplicate owners.
 
 **Required `<defs>` style block at the top of the SVG.**
 
 ```xml
 <defs><style>
-.red-fill     { fill: #fcebeb; stroke: #B85450; stroke-width: 1.5; }
+.red-fill     { fill: #fcebeb; stroke: #A32D2D; stroke-width: 1.5; }
 .neutral-fill { fill: #ffffff; stroke: #888;    stroke-width: 1; }
-.red-text     { fill: #B91414; font-weight: 600; }
+.red-text     { fill: #791F1F; font-weight: 600; }
 .neutral-text { fill: #222; }
 .fn-name { font-size: 12px; font-weight: 700; }
 .owner   { font-size: 11px; font-style: italic; }
@@ -474,9 +474,9 @@ This is a working, complete reference for a small flat company. Pattern-match ag
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" width="920" height="460" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
   <defs><style>
-.red-fill     { fill: #fcebeb; stroke: #B85450; stroke-width: 1.5; }
+.red-fill     { fill: #fcebeb; stroke: #A32D2D; stroke-width: 1.5; }
 .neutral-fill { fill: #ffffff; stroke: #888;    stroke-width: 1; }
-.red-text     { fill: #B91414; font-weight: 600; }
+.red-text     { fill: #791F1F; font-weight: 600; }
 .neutral-text { fill: #222; }
 .fn-name { font-size: 12px; font-weight: 700; }
 .owner   { font-size: 11px; font-style: italic; }
@@ -715,7 +715,7 @@ Produce a self-contained HTML document titled `Functional Organization Chart - [
 
 The document contains, in order:
 
-1. **The FOC SVG.** The complete `<svg>...</svg>` element with embedded styles, built per the Phase 6 checklist. Every box, owner attribution, color (green `#D5E8D4`/`#82B366`/`#2F6B25`, amber `#FFE6CC`/`#D79B00`/`#8C5A00`, red `#F8CECC`/`#B85450`/`#B91414`, co-owner italic dark blue `#326AB5`), Open-seat red-fill override, duplicate-owner red text, supporting-function placement, hierarchy, and viewBox specification is exactly as defined in the Phase 6 checklist. Self-check rules from Phase 6 must pass before the SVG is emitted.
+1. **The FOC SVG.** The complete `<svg>...</svg>` element with embedded styles, built per the Phase 6 checklist. Every box, owner attribution, color (green `#EAF3DE`/`#3B6D11`/`#27500A`, amber `#FAEEDA`/`#854F0B`/`#633806`, red `#FCEBEB`/`#A32D2D`/`#791F1F`, co-owner italic dark blue `#326AB5`), Open-seat red-fill override, duplicate-owner red text, supporting-function placement, hierarchy, and viewBox specification is exactly as defined in the Phase 6 checklist. Self-check rules from Phase 6 must pass before the SVG is emitted.
 2. **The resume-state block** (the fenced markdown described in Part 2 of Phase 6).
 3. **The next-steps paragraph** (Part 3 of Phase 6).
 4. **The session terminator line** as the absolute last line of the response: `Session complete. FOC artifact shipped.`
@@ -730,11 +730,11 @@ The full publication wrapper (sticky title block with company name + business ty
 - When a name turns red across multiple boxes, raise it in the meeting cadence the same week. Duplicate ownership is the FOC's most actionable structural finding.
 - When an owner leaves, mark the seat Open immediately and run the cost-question probe at the next planning session.
 - When a function is genuinely co-owned for more than two quarters, propose splitting it. Real co-ownership rarely scales.
-- Review the output with your coach or advisor. Once finalized, add the FOC to Metronome Software.
+- Review the output with your coach or advisor. Once finalized, add the FOC to your team's system of record.
 
 After producing the document, close with one short line:
 
-*"Your FOC is ready. Save the document as `foc-[company]-[date].html` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
+*"Your FOC is ready. Save the document as `foc-[company]-[date].html` to keep your output. Review with your coach or advisor, then add it to your team's system of record."*
 
 ---
 

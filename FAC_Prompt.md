@@ -56,7 +56,7 @@ Finally, the prompt emits the table, the glossary, a session summary, a brief ne
 3. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
 4. The AI will produce a self-contained HTML document containing the FAC table and the FAC glossary, plus a session summary and a brief next-steps paragraph.
 5. Where your output appears depends on the AI. Save the document as `fac-[company]-[date].html` to keep your output.
-6. Review the output with your coach or advisor: every KFFM image file, your FOC image file, and the FAC just produced. The AI produces a first draft. A person who knows your business can challenge it. Once finalized, add the FAC to Metronome Software.
+6. Review the output with your coach or advisor: every KFFM image file, your FOC image file, and the FAC just produced. The AI produces a first draft. A person who knows your business can challenge it. Once finalized, add the FAC to your team's system of record.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently against the same finished KFFM and FOC. Do not compare notes until both are finished. The differences between FACs are often the most valuable part of the exercise: they reveal disagreements about what each function is actually for, what should be measured, and what good looks like.
 
@@ -676,11 +676,11 @@ The full publication wrapper (sticky title block with company name + business ty
 - When a row turns red on the critical number for two consecutive quarters, raise it as a structural problem in the meeting cadence: either the metric is wrong, the threshold is wrong, or the function is genuinely failing.
 - When an Open seat persists for more than two quarters, the cost-question answer from the upstream KFFM session should drive a hiring decision. The FAC's job is to keep the cost visible until the seat is filled.
 - When the CEO surfaces a new function during the FAC interview, recapture the upstream KFFM and FOC at the next pass so the three artifacts stay in sync.
-- Review the output with your coach or advisor. Once finalized, add the FAC to Metronome Software.
+- Review the output with your coach or advisor. Once finalized, add the FAC to your team's system of record.
 
 After producing the document, close with one short line:
 
-*"Your FAC is ready. Save the document as `fac-[company]-[date].html` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
+*"Your FAC is ready. Save the document as `fac-[company]-[date].html` to keep your output. Review with your coach or advisor, then add it to your team's system of record."*
 
 ---
 
