@@ -23,7 +23,7 @@ The prompt moves through 5 phases:
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. Answer each question as honestly as you can. There are no right answers. There are only documented answers that your team can react to.
 3. Where your output appears depends on the AI. Save the document as `planning-cascade-[company-slug]-[date].md` to keep your output.
-4. Review the output with your coach or advisor in the format they prefer, such as Mural or a similar visual workspace. Once you and your coach have finalized the tools, add them to Metronome Software.
+4. Review the output with your coach or advisor in the format they prefer, such as Mural or a similar visual workspace. Once you and your coach have finalized the tools, add them to your team's system of record.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. The disagreements between your outputs are the most valuable part. A synthesis section at the end of this prompt provides instructions for combining multiple outputs.
 
@@ -172,11 +172,11 @@ Disconnects from Phase 5. Open items from Phase 1 with article links. Placeholde
 - **When something goes red:** the owner posts a corrective action before the next leadership meeting.
 - **How to introduce to the team:** start with sprint lanes (current quarter), then walk up to QHAG, 1HAG, and 3HAG over the next planning sessions.
 - Reference: darlison.com/where-are-you-going.
-- Review the output with your coach or advisor in the format they prefer, such as Mural or a similar visual workspace. Once finalized, add the tools to Metronome Software.
+- Review the output with your coach or advisor in the format they prefer, such as Mural or a similar visual workspace. Once finalized, add the tools to your team's system of record.
 
 After producing the document, close with:
 
-*"Your planning cascade document is ready. Save it as `planning-cascade-[company-slug]-[date].md` to keep your output. Review with your coach or advisor, then add the finalized tools to Metronome Software."*
+*"Your planning cascade document is ready. Save it as `planning-cascade-[company-slug]-[date].md` to keep your output. Review with your coach or advisor, then add the finalized tools to your team's system of record."*
 
 ## Multi-stakeholder synthesis
 

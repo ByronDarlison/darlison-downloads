@@ -24,7 +24,7 @@ The prompt moves through four phases:
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
 3. Where your output appears depends on the AI. Save the document as `obt-[company]-[date].md` to keep your output.
-4. Review the output with your coach or advisor. Once you and your coach have finalized the OBT, add it to Metronome Software. On the deadline date, come back to the document and answer the two follow-up questions at the bottom.
+4. Review the output with your coach or advisor. Once you and your coach have finalized the OBT, add it to your team's system of record. On the deadline date, come back to the document and answer the two follow-up questions at the bottom.
 
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
@@ -278,7 +278,7 @@ Two questions, each as an H3 subheading with space for the answer below.
 
 After presenting the output, close with:
 
-"Copy the full contents of the code block above into a file, naming it with the filename shown in the first-line comment. Save it as a `.md` file. Review the output with your coach or advisor. On the deadline date, come back to this document and complete Section 5. If you and your coach have finalized tools that this OBT produces (a scorecard, a critical number, a new function), add them to Metronome Software."
+"Copy the full contents of the code block above into a file, naming it with the filename shown in the first-line comment. Save it as a `.md` file. Review the output with your coach or advisor. On the deadline date, come back to this document and complete Section 5. If you and your coach have finalized tools that this OBT produces (a scorecard, a critical number, a new function), add them to your team's system of record."
 
 Then, on its own line as the final thing you output, write:
 
