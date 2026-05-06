@@ -34,7 +34,7 @@ The prompt moves through 8 phases:
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. Have the signed scorecard for the cycle ready to paste at Phase 0. Have the actuals for each critical / leading / lagging indicator handy. Have the Skip-Level Review write-up (if your company is using that feature) ready to paste.
 3. Walk through the phases. Be honest at the rating stage and specific at the sharpening stage. The quality of the review lives in the evidence on the gaps.
-4. Save the Markdown output as `scorecard-review-perspective-[name]-[your-role]-[date].md`.
+4. Where your output appears depends on the AI. Save the document as `scorecard-review-perspective-[name]-[your-role]-[date].md` to keep your output.
 5. Bring the saved file to the live review meeting. Review the output with your coach or advisor. Once you and your coach have finalized the tools, add them to Metronome Software.
 
 **If your business has more than one decision-maker reviewing this scorecard (the seat owner plus one or more third-party reviewers): each person runs this prompt independently before the meeting.** Do not compare notes until everyone is finished. The disagreements between perspectives are the most valuable signal at the meeting.
@@ -333,11 +333,11 @@ Example flag: "Behavior is weekly but follow-up is at the next quarterly review.
 
 Exit Phase 5: either a complete S/C/C/F draft is captured for the user's recommended Development Commitment, or the user has confirmed 'no Development Commitment needed.'
 
-## Phase 6: Emit the artifact
+## Output
 
-*"Produce all outputs as a single markdown document inline in the conversation. Use clear heading hierarchy (# for title, ## for sections, ### for subsections), bold for labels, and standard markdown formatting throughout. The inline presentation is the deliverable. The participant can copy it, save it, paste it into their preferred tool, or share it with their coach."*
+Produce a Markdown document titled `Scorecard Review Perspective - [Seat Owner Name] - [Cycle Start Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `scorecard-review-perspective-[name-slug]-[role]-[YYYY-MM-DD].md`.
 
-### Step 6a: In-chat perspective draft
+### Step 6a: Perspective draft
 
 Emit the full perspective draft inline in the chat. Format:
 
@@ -405,29 +405,25 @@ I do not recommend a Development Commitment for the next cycle. [If applicable: 
 
 ### Step 6b: Implementation guidance (part of the output document)
 
-Append the following Implementation section to the in-chat perspective draft, before the downloadable Markdown block:
+Append the following Implementation section to the perspective draft, before closing.
 
 ```
 ## Implementation
 
-**Bring this draft to the live review meeting.** Each party (scorecard owner, manager, coach, anyone else reviewing) brings their own perspective draft. The manager facilitates the reconciliation conversation; the scorecard owner walks their self-ratings first; the third-party reviewers share theirs; the manager has the final call on what gets recorded.
-
-**Do not share your draft with other parties before the meeting.** Anchoring to another perspective defeats the purpose. The disagreements between perspectives are the most valuable signal at the meeting.
-
-**Post-meeting.** The manager (or coach) writes up the final Review Record using the agreed final ratings, classification, skip-level synthesis (if any), and Development Commitment text. The Review Record is signed by the seat owner, the manager, and any other formal signers (e.g., coach as facilitator).
-
-**The Development Commitment in the next-cycle scorecard.** If a Development Commitment is set at this review, it goes into the next-cycle scorecard via the Scorecard Builder prompt. There is no carry-forward state machine; each review's Development Commitment is a fresh decision.
-
-**Read the companion article.** The full framework is at https://www.darlison.com/scorecards/.
+- Save the document as `scorecard-review-perspective-[name-slug]-[role]-[YYYY-MM-DD].md` so you can find it again. Bring this file to the live review meeting.
+- **Bring this draft to the live review meeting.** Each party (scorecard owner, manager, coach, anyone else reviewing) brings their own perspective draft. The manager facilitates the reconciliation conversation; the scorecard owner walks their self-ratings first; the third-party reviewers share theirs; the manager has the final call on what gets recorded.
+- **Do not share your draft with other parties before the meeting.** Anchoring to another perspective defeats the purpose. The disagreements between perspectives are the most valuable signal at the meeting.
+- **Post-meeting.** The manager (or coach) writes up the final Review Record using the agreed final ratings, classification, skip-level synthesis (if any), and Development Commitment text. The Review Record is signed by the seat owner, the manager, and any other formal signers (e.g., coach as facilitator).
+- **The Development Commitment in the next-cycle scorecard.** If a Development Commitment is set at this review, it goes into the next-cycle scorecard via the Scorecard Builder prompt. There is no carry-forward state machine; each review's Development Commitment is a fresh decision.
+- Review the output with your coach or advisor. Once finalized, add the Review Record to Metronome Software.
+- Read the companion article at https://www.darlison.com/scorecards/ for the full framework.
 ```
 
-### Step 6c: Downloadable Markdown emission
+### Step 6c: Closing line
 
-Emit the same content (perspective draft + Implementation section) as a single Markdown code block:
+After producing the document, close with:
 
-> "Below is the same perspective draft plus the Implementation section in a single Markdown block. Copy everything between the fences into a file named `scorecard-review-perspective-[name-slug]-[role]-[YYYY-MM-DD].md`. Bring this file to the live review meeting."
-
-Then output the Markdown block in a single fenced code block.
+*"Your scorecard review perspective document is ready. Save it as `scorecard-review-perspective-[name-slug]-[role]-[YYYY-MM-DD].md` to keep your output. Bring it to the live review meeting. Review with your coach or advisor, then add the finalized Review Record to Metronome Software."*
 
 ## Phase 7: Resume state and terminator
 

@@ -1,6 +1,6 @@
 # Key Function Flow Map Builder
 
-From Byron Darlison – www.darlison.com
+From Byron Darlison - www.darlison.com
 
 **This prompt is a work in progress.** I am actively refining it based on feedback from founders and coaches who use it. If you run into problems, find something that could be better, or improve upon any part of this, please email me at byron@darlison.com. Every piece of feedback makes this tool more useful for the next person.
 
@@ -25,8 +25,9 @@ Then 4 tests (simplicity, transaction, control, alignment) and the final outputs
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience, especially for the visual diagrams.
 2. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
 3. As you move through each phase, the AI will build your KFFM diagram step by step. You will see your map evolve as functions, owners, colors, and widgets are added.
-4. When the exercise is complete, the AI will produce a Key Function Flow Map (SVG diagram), a Functional Accountability Chart (Markdown table), and a Functional Organization Chart (SVG diagram) inline in the conversation.
-5. Review the outputs with your coach in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the tools, add them to Metronome Software.
+4. When the exercise is complete, the AI will produce a Key Function Flow Map, a Functional Accountability Chart, and a Functional Organization Chart bundled into one self-contained HTML document.
+5. Where your output appears depends on the AI. Save the document as `kffm-builder-[company]-[date].html` to keep your output.
+6. Review the output with your coach or advisor. Once you and your coach have finalized the tools, add them to Metronome Software.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. At the end of the prompt there is a synthesis section you can paste into a new AI conversation with both outputs to reconcile into one agreed map. The differences between maps are often the most valuable part of the exercise.
 
@@ -210,7 +211,7 @@ Go through each supporting function. Record the reporting line. This will be use
 
 Exit condition: Every supporting function has a reporting line to either a key function or the Head of Company.
 
-**Visual checkpoint 2.** Update the KFFM diagram. Each key function box now shows the function name and the owner name (or "Open", or all co-owner names listed on separate lines in italic dark blue #326AB5). Color code each box: green, amber, or red based on the participant's gut feel. Supporting function boxes also show their assigned color (green, amber, or red) — not gray. Show it to the participant and ask: "Does this match how you see the business right now?"
+**Visual checkpoint 2.** Update the KFFM diagram. Each key function box now shows the function name and the owner name (or "Open", or all co-owner names listed on separate lines in italic dark blue #326AB5). Color code each box: green, amber, or red based on the participant's gut feel. Supporting function boxes also show their assigned color (green, amber, or red), not gray. Show it to the participant and ask: "Does this match how you see the business right now?"
 
 ---
 
@@ -316,11 +317,13 @@ Run all 4 tests. Do not skip any.
 
 ## Output
 
-Produce three deliverables inline in the conversation:
+Produce a self-contained HTML document titled `Key Function Flow Map Builder - [Company Name] - [Date]` containing the structure described below. The HTML must be self-contained: inline SVG, embedded CSS, no external fonts, scripts, or images. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ```html code block the participant can copy and save as `kffm-builder-[company]-[date].html`.
 
-1. **Key Function Flow Map** — SVG diagram (see Visual output section for specifications)
-2. **Functional Accountability Chart** — Markdown table
-3. **Functional Organization Chart** — SVG diagram (see Visual output section for specifications)
+The document contains, in order, three deliverables:
+
+1. **Key Function Flow Map**: SVG diagram (see Visual output section for specifications)
+2. **Functional Accountability Chart**: HTML table
+3. **Functional Organization Chart**: SVG diagram (see Visual output section for specifications)
 
 ### Deliverable 1: Key Function Flow Map (SVG diagram)
 
@@ -330,9 +333,9 @@ Before presenting the final diagram, state the lead-to-cash time. For each path,
 
 If there are open questions flagged during the exercise, list them after the diagram.
 
-### Deliverable 2: Functional Accountability Chart (Markdown table)
+### Deliverable 2: Functional Accountability Chart (HTML table)
 
-Title: "Functional Accountability Chart – [Company Name] – [Date]"
+Section heading: "Functional Accountability Chart - [Company Name] - [Date]"
 
 Produce two tables: one for key functions and one for supporting functions.
 
@@ -346,18 +349,18 @@ Before writing "TBD" for any threshold, push the participant: "For [critical num
 
 For supporting functions: the critical number should reflect the function's enabling role. Reports To shows which key function or Head of Company the supporting function reports to (as identified in Step 10a). Status is the green/amber/red color assigned during the exercise. Leave critical number as "TBD" if unknown.
 
-**Formatting.** Present as Markdown tables.
+**Formatting.** Present as HTML tables with embedded CSS for borders, padding, and the green/amber/red status cell coloring.
 
 ### Deliverable 3: Functional Organization Chart (SVG diagram)
 
-Title: "Functional Organization Chart – [Company Name] – [Date]"
+Section heading: "Functional Organization Chart - [Company Name] - [Date]"
 
-The Org Chart diagram is the deliverable. It contains everything: hierarchy, owners, status colors, reporting lines for supporting functions, and notes. No separate text description is needed — the diagram speaks for itself.
+The Org Chart diagram is the deliverable. It contains everything: hierarchy, owners, status colors, reporting lines for supporting functions, and notes. No separate text description is needed. The diagram speaks for itself.
 
 Generate the diagram using the following specifications:
 
 - Top level: Head of Company box showing the founder(s) name and title. Use the same green/amber/red color scheme as the function boxes. Ask the participant: "How would you rate the overall health of the Head of Company function? Green, yellow, or red?"
-- Second level: If the participant identified functional groupings in Step 8 (e.g., Revenue owning Marketing and Sales), show the grouping functions at Level 2 and the subfunctions at Level 3. If the participant said functions go directly under the Head of Company with no intermediate groupings, show all key functions at Level 2 — do not force groupings that do not exist.
+- Second level: If the participant identified functional groupings in Step 8 (e.g., Revenue owning Marketing and Sales), show the grouping functions at Level 2 and the subfunctions at Level 3. If the participant said functions go directly under the Head of Company with no intermediate groupings, show all key functions at Level 2. Do not force groupings that do not exist.
 - Supporting functions: Include all supporting functions in the diagram, connected to the function they report to (as identified in Step 10a). Supporting functions use dashed borders.
 - Color coding: All function boxes (key and supporting) use the same green/amber/red color scheme as the KFFM, based on the status assigned during the exercise. Green functions: light green fill (#EAF3DE), dark green border (#3B6D11), dark green text (#27500A). Amber functions: light amber fill (#FAEEDA), dark amber border (#854F0B), dark amber text (#633806). Red functions: light red fill (#FCEBEB), dark red border (#A32D2D), dark red text (#791F1F).
 - Open or inactive functions use a dashed border with their status color. If a function has no owner, use the coral color scheme: light coral fill (#FAECE7), coral border (#993C1D), coral text (#712B13). The owner field shows "Open."
@@ -371,15 +374,18 @@ Generate the diagram using the following specifications:
 
 **Self-check before showing the diagram.** Calculate all coordinates BEFORE writing any SVG. Do not render until all checks pass. (1) List every box on the bottom row with its x, width, and right edge (x + width). For any two adjacent boxes, the gap must be at least 20px. Subfunctions from different parent functions that share a row are the most common source of overlap. Calculate their positions independently from their respective parents, then verify clearance. (2) No connector lines cross through boxes. (3) Connector lines use clean right-angle paths (vertical down from parent, horizontal bar, vertical down to children). (4) All text is fully visible within its box. If any check fails, reduce box widths or increase spacing and re-check before rendering.
 
-**Instructions to the user.** "Review this with your coach in the format they prefer, such as Mural or a similar visual workspace. Once finalized, add to Metronome Software. Review as part of the quarterly planning process."
+### Implementation
 
----
+- Save the document as `kffm-builder-[company]-[date].html` and double-click to open in any browser.
+- These are first drafts. Plan to revisit each tool quarterly: confirm owners, refresh status colors, and update critical numbers as the business changes.
+- When a status turns red, address it in the meeting cadence the same week. When an owner leaves or a function changes shape, update the chart before the next leadership meeting so the picture stays honest.
+- Introduce the tools to the leadership team one at a time. Walk through the KFFM first, then the FAC, then the Functional Organization Chart. Let people react. Capture disagreements as a list, do not resolve them on the spot.
+- If you have a co-founder, have them complete this exercise independently and use the synthesis section below to reconcile. Do not share your output with them before they complete theirs. Anchoring to your version defeats the purpose. The disagreements are the most valuable part.
+- Review the output with your coach or advisor. Once finalized, add the tools to Metronome Software.
 
-### After the output
+After producing the document, close with one short line:
 
-Present all three deliverables inline, then close with:
-
-"These are first drafts. They will change as you live with them and learn what feels wrong. Review them with your coach in the format they prefer, such as Mural or a similar visual workspace. If you have a co-founder, have them complete this exercise independently and use the synthesis section below to reconcile. Do not share your output with them before they complete theirs. Anchoring to your version defeats the purpose. The disagreements are the most valuable part. Once you and your coach have finalized the tools, add them to Metronome Software. The AI produces drafts. People who know your business make them real."
+*"Your KFFM, FAC, and Functional Organization Chart are ready. Save the document as `kffm-builder-[company]-[date].html` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
 
 ---
 
@@ -391,7 +397,7 @@ The diagram is built iteratively at visual checkpoints 1, 2, and 3 during the ex
 
 **Color coding.** Green functions: light green fill (#EAF3DE), dark green border (#3B6D11), dark green text (#27500A). Amber functions: light amber fill (#FAEEDA), dark amber border (#854F0B), dark amber text (#633806). Red functions: light red fill (#FCEBEB), dark red border (#A32D2D), dark red text (#791F1F). At visual checkpoint 1 (before colors are assigned), use a neutral gray scheme for all boxes: light gray fill (#F1EFE8), gray border (#5F5E5A), dark gray text (#444441). From visual checkpoint 2 onward, all boxes (key and supporting) use their assigned green, amber, or red color.
 
-**Supporting functions** appear below a dashed separator line. First show the label "Supporting functions" on its own line. Then show the supporting function boxes below the label, color coded with their assigned green, amber, or red — not gray. Then show Profit/X prominently below the supporting function boxes. Then show the legend below Profit/X. This stacking order prevents overlap regardless of how many supporting functions there are.
+**Supporting functions** appear below a dashed separator line. First show the label "Supporting functions" on its own line. Then show the supporting function boxes below the label, color coded with their assigned green, amber, or red, not gray. Then show Profit/X prominently below the supporting function boxes. Then show the legend below Profit/X. This stacking order prevents overlap regardless of how many supporting functions there are.
 
 **Profit/X on the diagram.** Display the Profit/X candidate prominently below the supporting functions in blue (#326AB5), bold, 20px font size, in the format "Profit / X = Profit / [unit]". This makes the economic engine visible on the map itself.
 
