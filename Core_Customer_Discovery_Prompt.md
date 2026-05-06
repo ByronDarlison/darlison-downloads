@@ -36,7 +36,7 @@ This exercise references several frameworks. You do not need to have read any of
 2. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
 3. At the end, the AI will produce your Core Customer profile as a markdown document.
 4. Where your output appears depends on the AI. Save the document as `core-customer-[company]-[date].md` to keep your output.
-5. Review the output with your coach or advisor. If you do not have a coach, review it against your actual data. Does your CRM, billing, or retention data support the customer type you chose? Once you and your coach have finalized the Core Customer, add the profile to Metronome Software.
+5. Review the output with your coach or advisor. If you do not have a coach, review it against your actual data. Does your CRM, billing, or retention data support the customer type you chose? Once you and your coach have finalized the Core Customer, add the profile to your team's system of record.
 6. Read *Building a StoryBrand* by Donald Miller and create a BrandScript with your Core Customer as the character. The profile tells you who. The BrandScript tells you how to communicate with them.
 7. Bring the output to the next two exercises: the Market Map (tests whether you can reach this customer) and the Attribution Map (tests whether you are differentiated for them). This profile is their input.
 8. Compare this output against any existing customer-related documents you have, BrandScript, strategy documents, prior ICP exercises. Flag any contradictions. The most common drift is in revenue range and customer specificity.
@@ -263,11 +263,11 @@ At the end of the document, include:
 - Once a year, rebuild it from scratch. Do not update the old one. Start blank.
 - The test of whether the profile is alive: when someone proposes a new initiative, does someone ask "does this serve the Core Customer?"
 - For the full explanation of how the Core Customer fits into the operating system, read the article at darlison.com.
-- Review the document with your coach or advisor. Once finalized, add the Core Customer profile to Metronome Software so the team has a single source of truth.
+- Review the document with your coach or advisor. Once finalized, add the Core Customer profile to your team's system of record so the team has a single source of truth.
 
 After producing the document, close with:
 
-*"Your Core Customer Discovery document is ready. Save it as `core-customer-[company]-[date].md` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
+*"Your Core Customer Discovery document is ready. Save it as `core-customer-[company]-[date].md` to keep your output. Review with your coach or advisor, then add it to your team's system of record."*
 
 ---
 

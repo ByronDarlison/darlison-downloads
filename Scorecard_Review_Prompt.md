@@ -35,7 +35,7 @@ The prompt moves through 8 phases:
 2. Have the signed scorecard for the cycle ready to paste at Phase 0. Have the actuals for each critical / leading / lagging indicator handy. Have the Skip-Level Review write-up (if your company is using that feature) ready to paste.
 3. Walk through the phases. Be honest at the rating stage and specific at the sharpening stage. The quality of the review lives in the evidence on the gaps.
 4. Where your output appears depends on the AI. Save the document as `scorecard-review-perspective-[name]-[your-role]-[date].md` to keep your output.
-5. Bring the saved file to the live review meeting. Review the output with your coach or advisor. Once you and your coach have finalized the tools, add them to Metronome Software.
+5. Bring the saved file to the live review meeting. Review the output with your coach or advisor. Once you and your coach have finalized the tools, add them to your team's system of record.
 
 **If your business has more than one decision-maker reviewing this scorecard (the seat owner plus one or more third-party reviewers): each person runs this prompt independently before the meeting.** Do not compare notes until everyone is finished. The disagreements between perspectives are the most valuable signal at the meeting.
 
@@ -415,7 +415,7 @@ Append the following Implementation section to the perspective draft, before clo
 - **Do not share your draft with other parties before the meeting.** Anchoring to another perspective defeats the purpose. The disagreements between perspectives are the most valuable signal at the meeting.
 - **Post-meeting.** The manager (or coach) writes up the final Review Record using the agreed final ratings, classification, skip-level synthesis (if any), and Development Commitment text. The Review Record is signed by the seat owner, the manager, and any other formal signers (e.g., coach as facilitator).
 - **The Development Commitment in the next-cycle scorecard.** If a Development Commitment is set at this review, it goes into the next-cycle scorecard via the Scorecard Builder prompt. There is no carry-forward state machine; each review's Development Commitment is a fresh decision.
-- Review the output with your coach or advisor. Once finalized, add the Review Record to Metronome Software.
+- Review the output with your coach or advisor. Once finalized, add the Review Record to your team's system of record.
 - Read the companion article at https://www.darlison.com/scorecards/ for the full framework.
 ```
 
@@ -423,7 +423,7 @@ Append the following Implementation section to the perspective draft, before clo
 
 After producing the document, close with:
 
-*"Your scorecard review perspective document is ready. Save it as `scorecard-review-perspective-[name-slug]-[role]-[YYYY-MM-DD].md` to keep your output. Bring it to the live review meeting. Review with your coach or advisor, then add the finalized Review Record to Metronome Software."*
+*"Your scorecard review perspective document is ready. Save it as `scorecard-review-perspective-[name-slug]-[role]-[YYYY-MM-DD].md` to keep your output. Bring it to the live review meeting. Review with your coach or advisor, then add the finalized Review Record to your team's system of record."*
 
 ## Phase 7: Resume state and terminator
 
@@ -457,7 +457,7 @@ Then output the terminator:
 >
 > Bring this to the meeting. The manager facilitates the reconciliation; everyone walks their perspective; the manager has the final call. The final Review Record is written up post-meeting using the agreed conclusions.
 >
-> Review the output with your coach or advisor. Once you and your coach have finalized the perspective drafts, the Review Record, and any new Development Commitment, add the finalized Review Record to Metronome Software.
+> Review the output with your coach or advisor. Once you and your coach have finalized the perspective drafts, the Review Record, and any new Development Commitment, add the finalized Review Record to your team's system of record.
 >
 > Read the companion article at https://www.darlison.com/scorecards/ for the full framework.
 >

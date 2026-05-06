@@ -23,7 +23,7 @@ Then a summary and leadership team validation instructions.
 2. The AI will interview you one question at a time. Core Purpose first. Once locked in, it moves to BHAG.
 3. At the end, the AI will produce a summary with your Core Purpose, BHAG, Core Business, and Economic Engine as a markdown document.
 4. Where your output appears depends on the AI. Save the document as `core-purpose-bhag-[company]-[date].md` to keep your output.
-5. Review the output with your coach in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the Core Purpose and BHAG, add them to Metronome Software.
+5. Review the output with your coach in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the Core Purpose and BHAG, add them to your team's system of record.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. The output section includes instructions for bringing all outputs together.
 
@@ -259,7 +259,7 @@ Core Purpose and BHAG are not documents to file away. They are the foundation fo
 - **Team alignment.** Use Core Purpose as the opening frame for quarterly and annual planning sessions. Every team member should be able to state it from memory.
 - **Hiring.** Include Core Purpose in the hiring process. Candidates who are not drawn to the purpose will not stay through the hard parts.
 - **What to do when it feels wrong.** If Core Purpose stops resonating, do not change it immediately. First ask whether the business has drifted from the purpose, or whether the purpose was never quite right. The answer determines whether the fix is operational or foundational.
-- **Coach and Metronome Software.** Review the draft with your coach or advisor. Once you and your coach have finalized the Core Purpose and BHAG, add them to Metronome Software.
+- **Coach review.** Review the draft with your coach or advisor. Once you and your coach have finalized the Core Purpose and BHAG, add them to your team's system of record.
 
 For the detailed operating rhythm, see the relevant articles at darlison.com.
 
@@ -274,7 +274,7 @@ Do not share the founder's answers first. Collect the leadership team's answers,
 
 After producing the document, close with:
 
-*"Your Core Purpose and BHAG document is ready. Save it as `core-purpose-bhag-[company]-[date].md` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
+*"Your Core Purpose and BHAG document is ready. Save it as `core-purpose-bhag-[company]-[date].md` to keep your output. Review with your coach or advisor, then add it to your team's system of record."*
 
 ---
 

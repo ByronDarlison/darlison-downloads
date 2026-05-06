@@ -30,7 +30,7 @@ Output: a self-contained HTML document containing a prioritized punch list of cr
 3. Paste your KFFM, FAC, and Functional Organization Chart when prompted. Plain text, a table, or a description all work.
 4. The AI will run the checks, produce a prioritized list of issues, and after you resolve the critical issues, produce a single self-contained HTML document with the updated tools and diagrams.
 5. Where your output appears depends on the AI. Save the document as `kffm-reconciliation-[company-slug]-[date].html` to keep your output. Open it by double-clicking; it works in any browser without an internet connection.
-6. Review the output with your coach or advisor in the format they prefer, such as Mural or a similar visual workspace. The issues are the agenda. Once you and your coach have finalized the tools, update them in Metronome Software so the team works from the same set.
+6. Review the output with your coach or advisor in the format they prefer, such as Mural or a similar visual workspace. The issues are the agenda. Once you and your coach have finalized the tools, update them in your team's system of record so the team works from the same set.
 
 **When to run this.** Before every quarterly planning session. The three tools drift apart as they get updated independently. This check catches the drift.
 
@@ -294,13 +294,13 @@ Render as an HTML table with thin borders and bold header row.
 - Save the document as `kffm-reconciliation-[company-slug]-[date].html` so you can find it again. Open it by double-clicking; it works in any browser without an internet connection.
 - Anything still marked as TBD or open question is a decision for your next planning session. Bring this document to that session.
 - Run this audit before every quarterly planning session. The three tools drift apart as they get updated independently; this check catches the drift while it is still small.
-- Review the output with your coach or advisor in the format they prefer, such as Mural or a similar visual workspace. The issues are the agenda. Once you and your coach have finalized the tools, update them in Metronome Software so the team works from the same set.
+- Review the output with your coach or advisor in the format they prefer, such as Mural or a similar visual workspace. The issues are the agenda. Once you and your coach have finalized the tools, update them in your team's system of record so the team works from the same set.
 
 ---
 
 After producing the document, close with:
 
-*"Your KFFM Reconciliation document is ready. Save it as `kffm-reconciliation-[company-slug]-[date].html` to keep your output. Review with your coach or advisor, then update the finalized tools in Metronome Software."*
+*"Your KFFM Reconciliation document is ready. Save it as `kffm-reconciliation-[company-slug]-[date].html` to keep your output. Review with your coach or advisor, then update the finalized tools in your team's system of record."*
 
 ---
 
@@ -314,7 +314,7 @@ You have been given two KFFM Reconciliation reports completed independently by l
 2. **Disagreements.** Where the two reports diverge: one report shows a function on the KFFM that the other does not, different owners listed, different views on whether someone is overloaded. State each disagreement plainly. Two different reports against the supposedly same tools usually means the two leaders are working from different versions of those tools, which is itself the issue worth surfacing.
 3. **Open questions.** Issues that need a conversation between the leaders before the next planning session. List them as questions for that conversation.
 
-The disagreements are the point. Bring the synthesis along with both individual reports to the next planning session. Once the leaders agree on the resolved tools, update them in Metronome Software so the team works from one shared set.
+The disagreements are the point. Bring the synthesis along with both individual reports to the next planning session. Once the leaders agree on the resolved tools, update them in your team's system of record so the team works from one shared set.
 
 ---
 

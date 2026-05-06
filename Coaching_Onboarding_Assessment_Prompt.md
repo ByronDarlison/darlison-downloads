@@ -24,7 +24,7 @@ Then a deliverable document you email to Byron.
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. The AI will ask a few setup questions first (about two minutes), then guide you through the full assessment one question at a time.
 3. Where your output appears depends on the AI. Save the document as `coaching-onboarding-[company-slug]-[date].md` to keep your output.
-4. Email the saved document to byron@darlison.com before your first coaching session. Review the output with your coach or advisor at the first session. Once you and your coach have finalized the assessment, add it to Metronome Software so it stays current as the engagement evolves.
+4. Email the saved document to byron@darlison.com before your first coaching session. Review the output with your coach or advisor at the first session. Once you and your coach have finalized the assessment, add it to your team's system of record so it stays current as the engagement evolves.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. Email each document separately to byron@darlison.com. The differences between your answers are some of the most useful information Byron will have going into the first session.
 
@@ -276,7 +276,7 @@ Include any inconsistencies flagged in the Consistency Check and any alignment g
 - Save the document as `coaching-onboarding-[company-slug]-[date].md` so you can find it again.
 - Email the saved document to byron@darlison.com before your first coaching session. This is the deliverable Byron uses to prepare.
 - Review the output with your coach at the first session. The document is a starting point based on your answers today; the coaching conversation is where the real work begins.
-- Once you and your coach have finalized the assessment, add it to Metronome Software so it stays current as the engagement evolves.
+- Once you and your coach have finalized the assessment, add it to your team's system of record so it stays current as the engagement evolves.
 
 ---
 
@@ -292,13 +292,13 @@ You have been given two Coaching Onboarding Assessments completed independently 
 
 Do not pick a winner. Do not compromise. The disagreements are the point.
 
-After producing the synthesis, close with: "Email this synthesis along with both individual assessments to byron@darlison.com before your first coaching session. The disagreements are some of the most useful information for the first session. Review with your coach. Once aligned, add the resolved version to Metronome Software."
+After producing the synthesis, close with: "Email this synthesis along with both individual assessments to byron@darlison.com before your first coaching session. The disagreements are some of the most useful information for the first session. Review with your coach. Once aligned, add the resolved version to your team's system of record."
 
 ---
 
 After producing the document, close with:
 
-*"Your Coaching Onboarding Assessment is ready. Save it as `coaching-onboarding-[company-slug]-[date].md` to keep your output. Email it to byron@darlison.com before your first coaching session. Review with your coach at the first session, then add it to Metronome Software."*
+*"Your Coaching Onboarding Assessment is ready. Save it as `coaching-onboarding-[company-slug]-[date].md` to keep your output. Email it to byron@darlison.com before your first coaching session. Review with your coach at the first session, then add it to your team's system of record."*
 
 ---
 

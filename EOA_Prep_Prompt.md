@@ -26,7 +26,7 @@ Then a deliverable document you email to Byron.
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. If this is your first time, just answer the questions. If you have run this before, paste your previous EOA Prep document when the AI asks for it.
 3. Where your output appears depends on the AI. Save the document as `eoa-prep-[company-slug]-m[N]-[date].md` to keep your output.
-4. Email the saved document to byron@darlison.com **five business days before the meeting**. Review the output with your coach (Byron) at the meeting itself. After the meeting, update the document with your conclusions and new OBT during the personal review. Once finalized, add the OBT and any commitments to Metronome Software so they stay visible between meetings.
+4. Email the saved document to byron@darlison.com **five business days before the meeting**. Review the output with your coach (Byron) at the meeting itself. After the meeting, update the document with your conclusions and new OBT during the personal review. Once finalized, add the OBT and any commitments to your team's system of record so they stay visible between meetings.
 
 **After each meeting:** During the personal review at the end of the meeting, update your document with your conclusions, your new OBT, and any commitments you made. Save the updated document. You will paste it into the prompt before the next meeting.
 
@@ -367,7 +367,7 @@ Only include this section after 3+ runs.
 - Save the document as `eoa-prep-[company-slug]-m[N]-[YYYY-MM-DD].md` so you can find it again.
 - Email the saved file to byron@darlison.com **five business days before the meeting** so Byron can prepare.
 - After the meeting, during your personal review, update this document with your conclusions, your new OBT, and any commitments you made. Save the updated document. You will paste it into this prompt before the next meeting.
-- Review the new OBT and commitments with Byron at the meeting itself. Once finalized, add the OBT and any commitments to Metronome Software so they stay visible between meetings.
+- Review the new OBT and commitments with Byron at the meeting itself. Once finalized, add the OBT and any commitments to your team's system of record so they stay visible between meetings.
 
 ---
 
@@ -387,7 +387,7 @@ Email the synthesis along with both individual documents to byron@darlison.com f
 
 After producing the document, close with:
 
-*"Your EOA Prep document is ready. Save it as `eoa-prep-[company-slug]-m[N]-[YYYY-MM-DD].md` to keep your output. Email it to byron@darlison.com five business days before the meeting. Review with your coach at the meeting, then add your new OBT to Metronome Software."*
+*"Your EOA Prep document is ready. Save it as `eoa-prep-[company-slug]-m[N]-[YYYY-MM-DD].md` to keep your output. Email it to byron@darlison.com five business days before the meeting. Review with your coach at the meeting, then add your new OBT to your team's system of record."*
 
 ---
 
