@@ -358,7 +358,7 @@ The CEO accepts, keeps, or edits. Capture the accepted version.
 
 This phase is optional. Only run sharpening for competencies where the cross-reference is useful. Do NOT manufacture sharpenings for every competency; that produces an over-engineered library.
 
-## Output
+## Phase 5: Output
 
 Produce a Markdown document titled `Competency Library - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `[company-slug]-competency-library.md`.
 
