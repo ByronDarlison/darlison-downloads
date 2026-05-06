@@ -84,7 +84,7 @@ You are interviewing a chief executive officer (CEO) to help them build a Functi
 - **Critical number** — the single metric that proves the function is winning, with green and red thresholds inline.
 - **Leading indicator** — the metric that predicts the critical number, with green and red thresholds inline.
 - **Lagging indicator** — the metric that confirms the critical number after the period, with green and red thresholds inline.
-- **Reports to** — the parent function (from the FOC). Head of Company reports to `Board` when there is outside investment, or to the literal em-dash `—` for a founder-owned company with no board. **NEVER blank.** A blank Reports To cell is a structural failure that fails the post-emit verification.
+- **Reports to** — the parent function (from the FOC). Head of Company reports to `Board` when there is outside investment, or to the literal `--` (double hyphen-minus) for a founder-owned company with no board. **NEVER blank.** A blank Reports To cell is a structural failure that fails the post-emit verification.
 
 **The glossary** has one section per function with three short paragraphs:
 
@@ -287,7 +287,7 @@ For each function on the FOC in top-down order:
 
 **Step 1.1 Present the draft row.** Output verbatim:
 
-> **[Function name]** — Owner: [owner from FOC]. Reports to: [parent function from FOC, or `—` for HoC, or `Board` for HoC with outside investment].
+> **[Function name]** — Owner: [owner from FOC]. Reports to: [parent function from FOC, or `--` for HoC, or `Board` for HoC with outside investment].
 >
 > **Mission (proposed):** [one-sentence mission in third-person infinitive] — [label: (researched) or (general)]. *Why:* [one-sentence rationale].
 >
@@ -409,7 +409,7 @@ Walk this list line by line. If any check fails, fix the artifact before emittin
 4. Every row has a Critical number with non-empty green and red thresholds.
 5. Every row has a Leading indicator with non-empty green and red thresholds.
 6. Every row has a Lagging indicator with non-empty green and red thresholds.
-7. Every row has a non-empty Reports-to cell. **Cite the Reports-to value verbatim per row, with explicit handling of Head of Company:** `✓ Check 7: Reports-to per row: Head of Company → "—" (em-dash, no parent — NEVER blank), Sales/Marketing → "Head of Company", Customer Success → "Head of Company", Sourcing → "Sales/Marketing", ... All N rows have a non-empty Reports-to cell. Head of Company specifically: <td>—</td> (em-dash) ✓ if no outside investment, OR <td>Board</td> if board oversight exists. NEVER <td></td> (empty).` If you find yourself emitting `<td></td>` for the Head of Company's Reports To cell, STOP and replace with `<td>—</td>`.
+7. Every row has a non-empty Reports-to cell. **Cite the Reports-to value verbatim per row, with explicit handling of Head of Company:** `✓ Check 7: Reports-to per row: Head of Company → "--" (double hyphen-minus, no parent, NEVER blank), Sales/Marketing → "Head of Company", Customer Success → "Head of Company", Sourcing → "Sales/Marketing", ... All N rows have a non-empty Reports-to cell. Head of Company specifically: <td>--</td> ✓ if no outside investment, OR <td>Board</td> if board oversight exists. NEVER <td></td> (empty).` If you find yourself emitting `<td></td>` for the Head of Company's Reports To cell, STOP and replace with `<td>--</td>`.
 
 **Owner red-flag treatment (must be true):**
 8. Every Owner cell containing `Open` is wrapped in `<td class="owner-flag">`.
@@ -450,7 +450,7 @@ This phase exists because narration-based self-checks ("every row has all seven 
 
 Cite explicitly: `✓ Check P1: Expected functions from KFFM + FOC = ['Sales/Marketing', 'Customer Success', 'Finance/Operations', 'Product/Engineering']. Emitted rows: ['Sales/Marketing', 'Customer Success', 'Finance/Operations', 'Product/Engineering']. Sets equal: yes.` If any expected function is missing, regenerate.
 
-**Check P2 — Every row has all required cells.** The FAC table has exactly 7 columns: Function, Owner, Mission, Critical #, Leading Indicator, Lagging Indicator, Reports To. Walk every `<tr>` (excluding header `<tr>`); count `<td>` children; verify all 7 are present and non-empty (non-empty means at least one non-whitespace character; an em-dash `—` IS acceptable for explicit "no value"; an empty string is NOT).
+**Check P2 — Every row has all required cells.** The FAC table has exactly 7 columns: Function, Owner, Mission, Critical #, Leading Indicator, Lagging Indicator, Reports To. Walk every `<tr>` (excluding header `<tr>`); count `<td>` children; verify all 7 are present and non-empty (non-empty means at least one non-whitespace character; the literal `--` IS acceptable for explicit "no value"; an empty string is NOT).
 
 Cite per row: `✓ Check P2: Sales/Marketing row: 7 td cells, all non-empty (Function, Owner=Sarah, Mission, Critical #, Leading, Lagging, Reports To=Head of Company) ✓. Customer Success row: 7 td cells, all non-empty ✓. ... All N rows have 7 non-empty cells: yes.`
 
@@ -527,7 +527,7 @@ Bare HTML table content (no `<html>`, no `<body>`, no wrapper). Format:
   <td>[Critical # name] (<strong class="g-text">[green threshold]</strong>, <strong class="r-text">[red threshold]</strong>)</td>
   <td>[Leading name] (<strong class="g-text">[green]</strong>, <strong class="r-text">[red]</strong>)</td>
   <td>[Lagging name] (<strong class="g-text">[green]</strong>, <strong class="r-text">[red]</strong>)</td>
-  <td>[Parent function from FOC, or `Board` for Head of Company with outside investment, or `—` (em-dash) when there is no parent — Head of Company without outside investment ALWAYS uses `—`, NEVER blank]</td>
+  <td>[Parent function from FOC, or `Board` for Head of Company with outside investment, or `--` when there is no parent. Head of Company without outside investment ALWAYS uses `--`, NEVER blank]</td>
 </tr>
 
 [... one row per function in FOC top-down order ...]

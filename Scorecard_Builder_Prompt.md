@@ -23,7 +23,7 @@ The prompt moves through 5 phases:
 1. **Setup.** Paste your Functional Accountability Chart, Values document, and Competencies library. Confirm whether you are creating one scorecard or several at once, and whether each one is a first-cycle scorecard or a follow-on cycle that carries a Development Commitment from a prior review. (3 to 5 minutes)
 2. **Per-seat scoping.** For each seat owner, identify which Functional Accountability Chart row(s) they cover, which competency tier(s) apply, and who the signers are. If follow-on cycle, paste the prior Review Record so the Development Commitment can be transcribed onto the new scorecard. (2 to 4 minutes per seat)
 3. **Compile.** I assemble the scorecard(s) from your inputs. Function blocks come from the Functional Accountability Chart, Values come from the Values document, Competencies come from the library. The Development Commitment (if any) is transcribed verbatim from the Review Record. (1 minute per seat, deterministic)
-4. **Verify.** I run six structural checks (source trace, date math, Functional Accountability Chart coverage, tier match, Development Commitment alignment, em-dash check) before emitting anything. (1 minute)
+4. **Verify.** I run seven structural checks (source trace, threshold completeness, date math, Functional Accountability Chart coverage, tier match, Development Commitment alignment, em-dash check) before emitting anything. (1 minute)
 5. **Emit.** I produce the scorecard(s) inline in the conversation as Markdown, plus a single Markdown code block per seat that you save as a file. (1 minute)
 
 **How to use it**
@@ -441,7 +441,7 @@ Output the verification block verbatim:
 
 If any check fails, regenerate the failing section in-turn before exiting Phase 3.
 
-## Output
+## Phase 4: Output
 
 Produce a Markdown document titled `Scorecard - [Seat Owner Name] - [Cycle Start Date]` for each seat, containing the structure assembled in Phase 2. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `scorecard-[seat-owner-slug]-[YYYY-MM-DD].md`. Save next to the Functional Accountability Chart, Values doc, and Competencies library. The Scorecard Review prompt will read this file at the end of the 90-day cycle.
 
