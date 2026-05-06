@@ -29,7 +29,7 @@ For each meeting, the AI asks whether it exists, who owns it, what your team cur
 2. Answer each question honestly. The value of this assessment is in surfacing what is missing, not in confirming what is working. If a meeting exists but the agenda is inconsistent, say so. If a meeting does not exist at all, say that. If your team calls a meeting something different from the canonical name, say that too.
 3. At the end, the AI will produce your Meeting Cadence Assessment with a summary, meeting-by-meeting review, systems coverage analysis, and prioritized next steps.
 4. Where your output appears depends on the AI. Save the document as `meeting-cadence-[company]-[date].md` to keep your output.
-5. Review the output with your coach or advisor. Once you and your coach have finalized the cadence and any installation moves, add the meetings to Metronome Software so your team has a single source of truth for the operating rhythm.
+5. Review the output with your coach or advisor. Once you and your coach have finalized the cadence and any installation moves, add the meetings to your team's system of record so your team has a single source of truth for the operating rhythm.
 
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
@@ -374,7 +374,7 @@ Tell the user how to install or improve the cadence in their existing operating 
 - **Cascade order.** The Daily Huddle runs leadership first, then teams. The same person who runs the leadership huddle should not also be sitting in three function huddles afterward.
 - **When something goes wrong.** If a meeting starts overrunning its designed length, the format isn't being enforced; cut to the agenda, take problem-solving offline. If an owner leaves, name a 2IC the same week. If a function changes, update the meeting roster the same cycle.
 - **Where this fits in your operating rhythm.** The Quarterly Meeting is where the cadence gets reviewed and tuned. If a meeting hasn't been working for a quarter, kill it, fix it, or merge it then.
-- **Coach and Metronome Software.** Review the assessment with your coach or advisor. Once you and your coach have agreed on the install order, add the canonical meetings to Metronome Software so your team has a single source of truth for the operating rhythm.
+- **Coach review.** Review the assessment with your coach or advisor. Once you and your coach have agreed on the install order, add the canonical meetings to your team's system of record so your team has a single source of truth for the operating rhythm.
 
 For the detailed mechanics of each meeting, see the article at [www.darlison.com/the-eight-meetings-that-run-your-company](https://www.darlison.com/the-eight-meetings-that-run-your-company/).
 

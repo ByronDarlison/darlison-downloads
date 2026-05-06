@@ -27,7 +27,7 @@ Then a one-page summary with the decision, factors, dominant factor, structural 
 2. The AI will interview you one question at a time. It will move fast. Answer with yes or no when asked for yes or no. Do not explain.
 3. At the end, you will have a decision and a one-page summary of the structure that produced it.
 4. Where your output appears depends on the AI. Save the document as `digital-decision-[topic]-[date].md` to keep your output.
-5. Review the output with your coach or advisor. Once you and your coach have finalized the decision summary, add it to Metronome Software. If the decision tries to reopen itself, reread the saved document before deliberating again.
+5. Review the output with your coach or advisor. Once you and your coach have finalized the decision summary, add it to your team's system of record. If the decision tries to reopen itself, reread the saved document before deliberating again.
 
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
@@ -266,11 +266,11 @@ If a factor was missing and added, or a reality assessment changed during the pr
 - Save the document as `digital-decision-[topic]-[date].md` so you can find it again.
 - If the decision tries to reopen itself in the next two weeks, reread this document before deliberating again. The structure does not change just because the anxiety returns.
 - Review the document with your coach or advisor at your next session. The AI maps your structure; a person who knows you can challenge whether the structure is honest.
-- Once you and your coach have finalized the decision summary, add it to Metronome Software so the dominant factor and friction notes show up in your operating rhythm.
+- Once you and your coach have finalized the decision summary, add it to your team's system of record so the dominant factor and friction notes show up in your operating rhythm.
 
 After producing the document, close the conversation with one short line:
 
-*"Your decision summary is ready. Save it as `digital-decision-[topic]-[date].md` to keep your output. Review with your coach or advisor, then add it to Metronome Software. The structure does not change just because the anxiety returns."*
+*"Your decision summary is ready. Save it as `digital-decision-[topic]-[date].md` to keep your output. Review with your coach or advisor, then add it to your team's system of record. The structure does not change just because the anxiety returns."*
 
 ---
 

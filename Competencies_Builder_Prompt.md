@@ -33,7 +33,7 @@ The prompt moves through 8 phases:
 2. Paste your FOC, Values document, and KFFM at the start when asked. If you do not have an FOC yet, answer the three yes/no tier questions and we will continue.
 3. Walk each competency. Accept the proposed anchors, edit specific wording, or ask for alternatives. The library only contains what you accept; nothing is added silently.
 4. When the exercise is complete, the AI produces the final library as Markdown tables. Where your output appears depends on the AI. Save the document as `[company-slug]-competency-library.md` to keep your output.
-5. Review the output with your coach or advisor. Once you and your coach have finalized the library, add it to Metronome Software. The Scorecard Builder prompt reads this file alongside your FAC and Values doc.
+5. Review the output with your coach or advisor. Once you and your coach have finalized the library, add it to your team's system of record. The Scorecard Builder prompt reads this file alongside your FAC and Values doc.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. At the end of the prompt there is a synthesis section you can paste into a new AI conversation with both outputs to reconcile into one agreed library. The disagreements about which behaviors define "good at this job" are often the most valuable part of the exercise.
 
@@ -393,7 +393,7 @@ Append the following Implementation section to the library, as part of the same 
 - **When something changes.** A new tier appears (you hire your first department head), a competency stops mapping to behavior you actually see, or a value gets renamed. Update the library at the next quarterly planning session, not in real time. Capture the change request in a running notes file between sessions.
 - **Team rollout.** Start with yourself. The CEO's scorecard uses the full executive tier. Once you have completed one quarterly review against your own library, cascade to your direct reports. Do not roll the library out to the full company before the leadership team has used it for at least one quarter.
 - **Where it fits in the meeting cadence.** The library is read at every quarterly scorecard review (one per person, per quarter), and at every quarterly Functional Accountability Chart review (the full leadership team together). It does not appear in weekly or monthly meetings. The competency anchors are the shared reference when a manager and a person disagree on a rating.
-- Review the output with your coach or advisor. Once finalized, add the tool to Metronome Software.
+- Review the output with your coach or advisor. Once finalized, add the tool to your team's system of record.
 - Read the companion article at https://www.darlison.com/competencies/ for the full framework.
 ```
 
@@ -401,7 +401,7 @@ Append the following Implementation section to the library, as part of the same 
 
 After producing the document, close with:
 
-*"Your competency library document is ready. Save it as `[company-slug]-competency-library.md` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
+*"Your competency library document is ready. Save it as `[company-slug]-competency-library.md` to keep your output. Review with your coach or advisor, then add it to your team's system of record."*
 
 ## Phase 6: Post-emit parse-and-verify
 
@@ -459,7 +459,7 @@ Then output the terminator:
 >
 > If any upstream additions were captured, update your FOC accordingly before the next downstream prompt run.
 >
-> Review the output with your coach or advisor. Once you and your coach have finalized the library, add it to Metronome Software.
+> Review the output with your coach or advisor. Once you and your coach have finalized the library, add it to your team's system of record.
 >
 > Read the companion article at https://www.darlison.com/competencies/ for the full framework.
 >

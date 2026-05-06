@@ -26,7 +26,7 @@ The prompt moves through 4 phases:
 3. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity when you flag a concern, and move quickly through people you are not concerned about.
 4. The AI will produce a self-contained HTML document containing the team summary table, the scatter chart, and the action plans.
 5. Where your output appears depends on the AI. Save the document as `a-player-assessment-[company]-[date].html` to keep your output.
-6. Review the output with your coach or advisor before any team conversation. Once finalized, add the assessment to Metronome Software.
+6. Review the output with your coach or advisor before any team conversation. Once finalized, add the assessment to your team's system of record.
 
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
@@ -253,11 +253,11 @@ After the action plans, close with one short paragraph stating the count of A-Pl
 - When someone has an action plan, schedule the manager-to-person conversation within two weeks. The longer the gap between assessment and conversation, the less the assessment is worth.
 - When a Toxic-A surfaces, the action plan needs a 30-day decision date. Strong performance is not a reason to keep someone whose values are out of alignment. The cost of a Toxic-A on the team compounds.
 - When a C-Player surfaces, the action plan needs a clear performance improvement plan or an exit decision. There is no third option that respects the rest of the team.
-- Once you and your coach have finalized the assessment and action plans, add them to Metronome Software so the team picture and the per-person commitments stay visible in your operating rhythm.
+- Once you and your coach have finalized the assessment and action plans, add them to your team's system of record so the team picture and the per-person commitments stay visible in your operating rhythm.
 
 After producing the document, close with one short line:
 
-*"Your team assessment is ready. Save the document as `a-player-assessment-[company]-[date].html` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
+*"Your team assessment is ready. Save the document as `a-player-assessment-[company]-[date].html` to keep your output. Review with your coach or advisor, then add it to your team's system of record."*
 
 ## Tone
 

@@ -33,7 +33,7 @@ The prompt moves through 5 phases:
 3. Confirm one scorecard or many. Multi-seat batch mode produces one scorecard per seat in a single pass and saves you re-pasting shared inputs.
 4. For each seat, name the Functional Accountability Chart row(s), the applicable competency tier(s), the signers, and (if follow-on cycle) paste the prior Review Record.
 5. Where your output appears depends on the AI. Save the document as `scorecard-[seat-owner-slug]-[YYYY-MM-DD].md` to keep your output.
-6. Review the output with your coach or advisor. Once you and your coach have finalized the tools, add them to Metronome Software. Sign together at the start of the 90-day cycle. The scorecard does not change for 90 days unless both parties agree.
+6. Review the output with your coach or advisor. Once you and your coach have finalized the tools, add them to your team's system of record. Sign together at the start of the 90-day cycle. The scorecard does not change for 90 days unless both parties agree.
 
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
@@ -462,7 +462,7 @@ Append the following Implementation section to each scorecard document, before c
 - **Mid-cycle changes.** If the Functional Accountability Chart, Values, or Competencies library is updated mid-cycle, the scorecard does NOT recompile. The next cycle's scorecard will reflect those changes. The current contract holds for 90 days.
 - **At the 90-day review.** Run the Scorecard Review prompt with this scorecard as input. The review produces ratings, classification, and (if applicable) a Development Commitment that becomes input to the next cycle's Scorecard Builder run.
 - **Where it fits in the meeting cadence.** Read once at signing. Reviewed weekly in the seat owner's one-on-one. Re-rated at the 90-day review event. Re-compiled for the next cycle at the same event.
-- Review the output with your coach or advisor. Once finalized, add the tool to Metronome Software.
+- Review the output with your coach or advisor. Once finalized, add the tool to your team's system of record.
 - Read the companion article at https://www.darlison.com/scorecards/ for the full framework.
 ```
 
@@ -487,7 +487,7 @@ Save each scorecard to its individual file. Sign each one separately with the se
 
 After producing the document(s), close with:
 
-*"Your scorecard document is ready. Save it as `scorecard-[seat-owner-slug]-[YYYY-MM-DD].md` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
+*"Your scorecard document is ready. Save it as `scorecard-[seat-owner-slug]-[YYYY-MM-DD].md` to keep your output. Review with your coach or advisor, then add it to your team's system of record."*
 
 ## Phase 5: Resume state and terminator
 
@@ -521,7 +521,7 @@ Then output the terminator:
 >
 > Sign the scorecard(s) with the seat owner and named manager(s) at the start of the cycle. The 90-day clock runs from the date on the scorecard. The Scorecard Review prompt at the end of the cycle reads the signed scorecard as one of its inputs.
 >
-> Review the output with your coach or advisor. Once you and your coach have finalized the scorecard(s), add them to Metronome Software.
+> Review the output with your coach or advisor. Once you and your coach have finalized the scorecard(s), add them to your team's system of record.
 >
 > Read the companion article at https://www.darlison.com/scorecards/ for the full framework.
 >

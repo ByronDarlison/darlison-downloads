@@ -27,7 +27,7 @@ Then 4 tests (simplicity, transaction, control, alignment) and the final outputs
 3. As you move through each phase, the AI will build your KFFM diagram step by step. You will see your map evolve as functions, owners, colors, and widgets are added.
 4. When the exercise is complete, the AI will produce a Key Function Flow Map, a Functional Accountability Chart, and a Functional Organization Chart bundled into one self-contained HTML document.
 5. Where your output appears depends on the AI. Save the document as `kffm-builder-[company]-[date].html` to keep your output.
-6. Review the output with your coach or advisor. Once you and your coach have finalized the tools, add them to Metronome Software.
+6. Review the output with your coach or advisor. Once you and your coach have finalized the tools, add them to your team's system of record.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. At the end of the prompt there is a synthesis section you can paste into a new AI conversation with both outputs to reconcile into one agreed map. The differences between maps are often the most valuable part of the exercise.
 
@@ -381,11 +381,11 @@ Generate the diagram using the following specifications:
 - When a status turns red, address it in the meeting cadence the same week. When an owner leaves or a function changes shape, update the chart before the next leadership meeting so the picture stays honest.
 - Introduce the tools to the leadership team one at a time. Walk through the KFFM first, then the FAC, then the Functional Organization Chart. Let people react. Capture disagreements as a list, do not resolve them on the spot.
 - If you have a co-founder, have them complete this exercise independently and use the synthesis section below to reconcile. Do not share your output with them before they complete theirs. Anchoring to your version defeats the purpose. The disagreements are the most valuable part.
-- Review the output with your coach or advisor. Once finalized, add the tools to Metronome Software.
+- Review the output with your coach or advisor. Once finalized, add the tools to your team's system of record.
 
 After producing the document, close with one short line:
 
-*"Your KFFM, FAC, and Functional Organization Chart are ready. Save the document as `kffm-builder-[company]-[date].html` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
+*"Your KFFM, FAC, and Functional Organization Chart are ready. Save the document as `kffm-builder-[company]-[date].html` to keep your output. Review with your coach or advisor, then add it to your team's system of record."*
 
 ---
 
@@ -407,7 +407,7 @@ The diagram is built iteratively at visual checkpoints 1, 2, and 3 during the ex
 
 **Self-check before showing any diagram.** Calculate all coordinates BEFORE writing any SVG. Do not render until all checks pass. (1) List every box with its x, width, and right edge (x + width). For any two boxes on the same row, the right edge of the left box must be at least 20px less than the left edge of the right box. (2) List every widget label with its approximate width (character count × 7px). Verify it fits within the gap between the two boxes it sits between. (3) The legend must sit below the supporting function boxes with at least 10px clearance. (4) The viewBox height must accommodate all elements plus 20px padding at the bottom. (5) All arrow endpoints connect to the correct boxes. If any check fails, adjust the layout and re-check before rendering.
 
-If the AI system cannot generate SVG diagrams: "Use the text output to build the map and other artifacts in the format your coach prefers. Once you have reviewed with your coach, add the finalized tools to Metronome Software."
+If the AI system cannot generate SVG diagrams: "Use the text output to build the map and other artifacts in the format your coach prefers. Once you have reviewed with your coach, add the finalized tools to your team's system of record."
 
 ---
 

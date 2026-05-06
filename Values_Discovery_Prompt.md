@@ -39,7 +39,7 @@ Then 4 tests (destination, attraction, cost, alignment), a complete markdown doc
 2. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
 3. At the end, the AI will produce your confirmed values with all supporting materials as a markdown document.
 4. Where your output appears depends on the AI. Save the document as `core-values-[company]-[date].md` to keep your output.
-5. Review the output with your coach in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the values, add them to Metronome Software.
+5. Review the output with your coach in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the values, add them to your team's system of record.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. At the end of the prompt there is a synthesis section you can paste into a new AI conversation with both outputs to reconcile into one agreed set of values. The differences between outputs are the most valuable part of the exercise.
 
@@ -306,7 +306,7 @@ After the per-value sections, include one final Implementation subsection with t
 
 - Save the document as `core-values-[company]-[date].md` so you can find it again.
 - Review the values with your coach or advisor before sharing them with the team. The AI produced a first draft; a person who knows the business can challenge it.
-- Once you and your coach have finalized the values, add them to Metronome Software so the team has a single source of truth.
+- Once you and your coach have finalized the values, add them to your team's system of record so the team has a single source of truth.
 - The Core Values document feeds the Competencies prompt and the Scorecard Builder. Run those prompts next when you are ready to compile per-seat scorecards.
 
 The document contains nothing else beyond the values, the per-value sections, and the Implementation subsection. No team rhythms, no scorecard review framework, no personal modeling behaviors, no article links beyond what is named in Implementation.
@@ -344,7 +344,7 @@ Open questions: [list, or `(none)`]
 
 Emit one short paragraph in declarative voice:
 
-"You now have your first-draft Core Values document. Hand it to your coach or advisor for review and comment. Once you and your coach have finalized the values, add them to Metronome Software. The Core Values document is one of the three inputs to the Scorecard Builder, alongside your Functional Accountability Chart and your Competencies library. The next prompts in the sequence are the Competencies prompt, which adapts the role-by-role competency library to your company, and the Scorecard Builder prompt, which compiles per-seat scorecards from the FAC, the FOC, the Values, and the Competencies. When you are ready to compile per-seat scorecards, run the Scorecard Builder at https://www.darlison.com/scorecards-tools/. If you have a co-founder, each of you should complete this exercise independently before reconciling using the synthesis section below.
+"You now have your first-draft Core Values document. Hand it to your coach or advisor for review and comment. Once you and your coach have finalized the values, add them to your team's system of record. The Core Values document is one of the three inputs to the Scorecard Builder, alongside your Functional Accountability Chart and your Competencies library. The next prompts in the sequence are the Competencies prompt, which adapts the role-by-role competency library to your company, and the Scorecard Builder prompt, which compiles per-seat scorecards from the FAC, the FOC, the Values, and the Competencies. When you are ready to compile per-seat scorecards, run the Scorecard Builder at https://www.darlison.com/scorecards-tools/. If you have a co-founder, each of you should complete this exercise independently before reconciling using the synthesis section below.
 
 If you are stopping here and not running the next prompt right now, copy these things before closing this conversation:
 

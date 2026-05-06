@@ -46,7 +46,7 @@ At session end (when you stop decomposing), the prompt emits a resume-state bloc
 3. As you move through each phase, the AI will build the KFFM step by step. You will see your map evolve as functions, owners, colors, widgets, and critical numbers are added.
 4. At session end the AI will produce a self-contained HTML document wrapping the SVG, plus a resume-state block and a brief next-steps paragraph.
 5. Where your output appears depends on the AI. Save the document as `kffm-[company]-[date].html` to keep your output.
-6. Review the output with your coach or advisor. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the KFFM, add it to Metronome Software, then run the FAC prompt next, then the FOC prompt, then come back here to build Level 2 KFFMs for any function you want to decompose.
+6. Review the output with your coach or advisor. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the KFFM, add it to your team's system of record, then run the FAC prompt next, then the FOC prompt, then come back here to build Level 2 KFFMs for any function you want to decompose.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently for the same level. Do not compare notes until both are finished. At the end of the payload there is a synthesis section you can paste into a new AI conversation with all founders' SVG outputs to reconcile into one agreed map. The differences between maps are often the most valuable part of the exercise.
 
@@ -94,9 +94,9 @@ Do not invent names. Every name on the KFFM must be a real person the CEO has na
 
 **Color palette (canonical).**
 
-- Green (healthy): fill `#D5E8D4`, stroke `#82B366`, text `#2F6B25`.
-- Amber (concerns): fill `#FFE6CC`, stroke `#D79B00`, text `#8C5A00`.
-- Red (needs attention OR open seat): fill `#F8CECC`, stroke `#B85450`, text `#B91414`.
+- Green (healthy): fill `#EAF3DE`, stroke `#3B6D11`, text `#27500A`.
+- Amber (concerns): fill `#FAEEDA`, stroke `#854F0B`, text `#633806`.
+- Red (needs attention OR open seat): fill `#FCEBEB`, stroke `#A32D2D`, text `#791F1F`.
 
 **Output is SVG only.** This prompt produces the `<svg>...</svg>` element (with embedded `<defs><style>` block for self-containment) and nothing else for the diagram. The full HTML page that gets shared with the team (the title block with company name + business type + stage + industry + geography, navigation tabs to other artifacts, download buttons, sticky header) is created later by the user's coach when they review and publish the artifact. This prompt's job ends at the SVG; the coach handles everything that wraps it.
 
@@ -105,7 +105,7 @@ Do not invent names. Every name on the KFFM must be a real person the CEO has na
 - **Level 1 boxes:** 240px wide by 86px tall. The 86px height accommodates the function name (top), owner (line 2), critical number (line 3), and a Level 2 link line (line 4, see below).
 - **Level 2 boxes:** 280px wide by 78px tall. Wider than L1 because L2 metric strings tend to be longer (no abbreviation pressure since fewer boxes per row); shorter because L2 boxes do not carry a Level 2 link line.
 
-**Level 2 link inside Level 1 boxes.** Each KEY function box on a Level 1 KFFM is wrapped in an SVG `<a>` tag pointing to the corresponding Level 2 KFFM file (filename convention: `kffm_l2_<function-slug>_<company-slug>.html`). Inside the box, a `(↓ to Level 2)` text line in green (`#2F6B25`) signals that decomposition is available. Supporting functions on Level 1 do NOT get this link (decomposition of supporting functions is rare and clutters the map). On Level 2 boxes there is no inward link (we are already at L2).
+**Level 2 link inside Level 1 boxes.** Each KEY function box on a Level 1 KFFM is wrapped in an SVG `<a>` tag pointing to the corresponding Level 2 KFFM file (filename convention: `kffm_l2_<function-slug>_<company-slug>.html`). Inside the box, a `(↓ to Level 2)` text line in green (`#27500A`) signals that decomposition is available. Supporting functions on Level 1 do NOT get this link (decomposition of supporting functions is rare and clutters the map). On Level 2 boxes there is no inward link (we are already at L2).
 
 ## Rules
 
@@ -471,12 +471,12 @@ Emit a single self-contained `<svg>` element with embedded `<defs><style>` block
       <polygon points="0 0, 10 3, 0 6" fill="#999"/>
     </marker>
     <style>
-      .green-fill  { fill: #D5E8D4; stroke: #82B366; stroke-width: 1.5; }
-      .amber-fill  { fill: #FFE6CC; stroke: #D79B00; stroke-width: 1.5; }
-      .red-fill    { fill: #F8CECC; stroke: #B85450; stroke-width: 1.5; }
-      .green-text  { fill: #2F6B25; }
-      .amber-text  { fill: #8C5A00; }
-      .red-text    { fill: #B91414; }
+      .green-fill  { fill: #EAF3DE; stroke: #3B6D11; stroke-width: 1.5; }
+      .amber-fill  { fill: #FAEEDA; stroke: #854F0B; stroke-width: 1.5; }
+      .red-fill    { fill: #FCEBEB; stroke: #A32D2D; stroke-width: 1.5; }
+      .green-text  { fill: #27500A; }
+      .amber-text  { fill: #633806; }
+      .red-text    { fill: #791F1F; }
       .fn-name { font-size: 14px; font-weight: 700; }
       .owner   { font-size: 11px; font-style: italic; }
       .metric  { font-size: 11px; font-weight: 500; }
@@ -554,12 +554,12 @@ This is the canonical L1 KFFM. Pattern-match against this. Every other L1 KFFM y
       <polygon points="0 0, 10 3, 0 6" fill="#999"/>
     </marker>
     <style>
-      .green-fill  { fill: #D5E8D4; stroke: #82B366; stroke-width: 1.5; }
-      .amber-fill  { fill: #FFE6CC; stroke: #D79B00; stroke-width: 1.5; }
-      .red-fill    { fill: #F8CECC; stroke: #B85450; stroke-width: 1.5; }
-      .green-text  { fill: #2F6B25; }
-      .amber-text  { fill: #8C5A00; }
-      .red-text    { fill: #B91414; }
+      .green-fill  { fill: #EAF3DE; stroke: #3B6D11; stroke-width: 1.5; }
+      .amber-fill  { fill: #FAEEDA; stroke: #854F0B; stroke-width: 1.5; }
+      .red-fill    { fill: #FCEBEB; stroke: #A32D2D; stroke-width: 1.5; }
+      .green-text  { fill: #27500A; }
+      .amber-text  { fill: #633806; }
+      .red-text    { fill: #791F1F; }
       .fn-name { font-size: 14px; font-weight: 700; }
       .owner   { font-size: 11px; font-style: italic; }
       .metric  { font-size: 11px; font-weight: 500; }
@@ -683,12 +683,12 @@ The Pillar HR reference above shows the 4-function 2x2 layout. When your CEO has
       <polygon points="0 0, 10 3, 0 6" fill="#999"/>
     </marker>
     <style>
-      .green-fill  { fill: #D5E8D4; stroke: #82B366; stroke-width: 1.5; }
-      .amber-fill  { fill: #FFE6CC; stroke: #D79B00; stroke-width: 1.5; }
-      .red-fill    { fill: #F8CECC; stroke: #B85450; stroke-width: 1.5; }
-      .green-text  { fill: #2F6B25; }
-      .amber-text  { fill: #8C5A00; }
-      .red-text    { fill: #B91414; }
+      .green-fill  { fill: #EAF3DE; stroke: #3B6D11; stroke-width: 1.5; }
+      .amber-fill  { fill: #FAEEDA; stroke: #854F0B; stroke-width: 1.5; }
+      .red-fill    { fill: #FCEBEB; stroke: #A32D2D; stroke-width: 1.5; }
+      .green-text  { fill: #27500A; }
+      .amber-text  { fill: #633806; }
+      .red-text    { fill: #791F1F; }
       .fn-name { font-size: 14px; font-weight: 700; }
       .owner   { font-size: 11px; font-style: italic; }
       .metric  { font-size: 11px; font-weight: 500; }
@@ -779,12 +779,12 @@ When your CEO has 5 key functions, copy from THIS reference. Acme Manufacturing 
       <polygon points="0 0, 10 3, 0 6" fill="#999"/>
     </marker>
     <style>
-      .green-fill  { fill: #D5E8D4; stroke: #82B366; stroke-width: 1.5; }
-      .amber-fill  { fill: #FFE6CC; stroke: #D79B00; stroke-width: 1.5; }
-      .red-fill    { fill: #F8CECC; stroke: #B85450; stroke-width: 1.5; }
-      .green-text  { fill: #2F6B25; }
-      .amber-text  { fill: #8C5A00; }
-      .red-text    { fill: #B91414; }
+      .green-fill  { fill: #EAF3DE; stroke: #3B6D11; stroke-width: 1.5; }
+      .amber-fill  { fill: #FAEEDA; stroke: #854F0B; stroke-width: 1.5; }
+      .red-fill    { fill: #FCEBEB; stroke: #A32D2D; stroke-width: 1.5; }
+      .green-text  { fill: #27500A; }
+      .amber-text  { fill: #633806; }
+      .red-text    { fill: #791F1F; }
       .fn-name { font-size: 14px; font-weight: 700; }
       .owner   { font-size: 11px; font-style: italic; }
       .metric  { font-size: 11px; font-weight: 500; }
@@ -1414,12 +1414,12 @@ This is the canonical L2 KFFM for Tech Support. Pattern-match against this for s
       <polygon points="0 0, 10 3, 0 6" fill="#999"/>
     </marker>
     <style>
-      .green-fill  { fill: #D5E8D4; stroke: #82B366; stroke-width: 1.5; }
-      .amber-fill  { fill: #FFE6CC; stroke: #D79B00; stroke-width: 1.5; }
-      .red-fill    { fill: #F8CECC; stroke: #B85450; stroke-width: 1.5; }
-      .green-text  { fill: #2F6B25; }
-      .amber-text  { fill: #8C5A00; }
-      .red-text    { fill: #B91414; }
+      .green-fill  { fill: #EAF3DE; stroke: #3B6D11; stroke-width: 1.5; }
+      .amber-fill  { fill: #FAEEDA; stroke: #854F0B; stroke-width: 1.5; }
+      .red-fill    { fill: #FCEBEB; stroke: #A32D2D; stroke-width: 1.5; }
+      .green-text  { fill: #27500A; }
+      .amber-text  { fill: #633806; }
+      .red-text    { fill: #791F1F; }
       .fn-name { font-size: 14px; font-weight: 700; }
       .owner   { font-size: 11px; font-style: italic; }
       .metric  { font-size: 11px; font-weight: 500; }
@@ -1469,12 +1469,12 @@ This is the canonical L2 KFFM for HR. Use for parallel-independent decomposition
       <polygon points="0 0, 10 3, 0 6" fill="#999"/>
     </marker>
     <style>
-      .green-fill  { fill: #D5E8D4; stroke: #82B366; stroke-width: 1.5; }
-      .amber-fill  { fill: #FFE6CC; stroke: #D79B00; stroke-width: 1.5; }
-      .red-fill    { fill: #F8CECC; stroke: #B85450; stroke-width: 1.5; }
-      .green-text  { fill: #2F6B25; }
-      .amber-text  { fill: #8C5A00; }
-      .red-text    { fill: #B91414; }
+      .green-fill  { fill: #EAF3DE; stroke: #3B6D11; stroke-width: 1.5; }
+      .amber-fill  { fill: #FAEEDA; stroke: #854F0B; stroke-width: 1.5; }
+      .red-fill    { fill: #FCEBEB; stroke: #A32D2D; stroke-width: 1.5; }
+      .green-text  { fill: #27500A; }
+      .amber-text  { fill: #633806; }
+      .red-text    { fill: #791F1F; }
       .fn-name { font-size: 14px; font-weight: 700; }
       .owner   { font-size: 11px; font-style: italic; }
       .metric  { font-size: 11px; font-weight: 500; }
@@ -1752,11 +1752,11 @@ The full publication wrapper (sticky title block with company name + business ty
 - Once you and your coach have finalized the Level 1 KFFM, run the FAC prompt next, then the FOC prompt. Come back here to build Level 2 KFFMs for any function you want to decompose, then Level 3 if a sub-function still feels too coarse.
 - Review the KFFM at every quarterly planning session. Owners change, colors shift, critical numbers move; the map should reflect current reality, not the picture from six months ago.
 - When a function turns red, raise it in the meeting cadence the same week. When an owner leaves, mark the seat Open immediately and run the cost-question probe at the next planning session.
-- Review the output with your coach or advisor. Once finalized, add the KFFM to Metronome Software.
+- Review the output with your coach or advisor. Once finalized, add the KFFM to your team's system of record.
 
 After producing the document, close with one short line:
 
-*"Your KFFM is ready. Save the document as `kffm-[company]-[date].html` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
+*"Your KFFM is ready. Save the document as `kffm-[company]-[date].html` to keep your output. Review with your coach or advisor, then add it to your team's system of record."*
 
 ---
 
