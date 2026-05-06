@@ -1,5 +1,5 @@
 # Food Log
 
-| Date | Time | Meal | Description |
-|------|------|------|-------------|
-| 2026-05-06 | — | Breakfast | Omelette with diced mushrooms, tomatoes, and onions (baked beans and ketchup served on the side, not eaten) |
+| Date | Time | Meal | Description | Calories | Protein | Carbs | Fat |
+|------|------|------|-------------|----------|---------|-------|-----|
+| 2026-05-06 | — | Breakfast | 3-egg omelette with cheese, diced mushrooms, tomatoes, and onions (baked beans and ketchup served on the side, not eaten) | ~450 | ~27g | ~7g | ~35g |
