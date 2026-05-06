@@ -1,6 +1,6 @@
 # Core Customer Discovery Prompt
 
-**From Byron Darlison. [www.darlison.com](https://www.darlison.com)**
+From Byron Darlison - www.darlison.com
 
 **This prompt is a work in progress.** I am actively refining it based on feedback from founders and coaches who use it. If you run into problems, find something that could be better, or improve upon any part of this, please email me at byron@darlison.com. Every piece of feedback makes this tool more useful for the next person.
 
@@ -34,12 +34,13 @@ This exercise references several frameworks. You do not need to have read any of
 
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
-3. At the end, the AI will produce your Core Customer profile as a markdown document inline in the conversation.
-4. Review the output with your coach or advisor if you have one. If you do not have a coach, review it against your actual data. Does your CRM, billing, or retention data support the customer type you chose?
-5. Read *Building a StoryBrand* by Donald Miller and create a BrandScript with your Core Customer as the character. The profile tells you who. The BrandScript tells you how to communicate with them.
-6. Bring the output to the next two exercises: the Market Map (tests whether you can reach this customer) and the Attribution Map (tests whether you are differentiated for them). This profile is their input.
-7. Compare this output against any existing customer-related documents you have – BrandScript, strategy documents, prior ICP exercises. Flag any contradictions. The most common drift is in revenue range and customer specificity.
-8. Put it on the wall. Physical or virtual. The persona should be visible wherever decisions get made.
+3. At the end, the AI will produce your Core Customer profile as a markdown document.
+4. Where your output appears depends on the AI. Save the document as `core-customer-[company]-[date].md` to keep your output.
+5. Review the output with your coach or advisor. If you do not have a coach, review it against your actual data. Does your CRM, billing, or retention data support the customer type you chose? Once you and your coach have finalized the Core Customer, add the profile to Metronome Software.
+6. Read *Building a StoryBrand* by Donald Miller and create a BrandScript with your Core Customer as the character. The profile tells you who. The BrandScript tells you how to communicate with them.
+7. Bring the output to the next two exercises: the Market Map (tests whether you can reach this customer) and the Attribution Map (tests whether you are differentiated for them). This profile is their input.
+8. Compare this output against any existing customer-related documents you have, BrandScript, strategy documents, prior ICP exercises. Flag any contradictions. The most common drift is in revenue range and customer specificity.
+9. Put it on the wall. Physical or virtual. The persona should be visible wherever decisions get made.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. At the end of the prompt there is a synthesis section you can paste into a new AI conversation with both outputs to reconcile into one agreed Core Customer. The differences between outputs are often the most valuable part of the exercise.
 
@@ -219,9 +220,15 @@ If any test fails, explain what that means for the profile and suggest where to 
 
 ## Phase 6: Compile the output
 
-Produce the full Core Customer profile as a single markdown document inline in the conversation. Use this structure with exactly 12 numbered sections:
+Move to the Output section to produce the document.
 
-**Title:** Core Customer Discovery. [Company Name]
+## Output
+
+Produce a Markdown document titled `Core Customer Discovery - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `core-customer-[company]-[date].md`.
+
+Use this structure with exactly 12 numbered sections:
+
+**Title:** Core Customer Discovery - [Company Name] - [Date]
 
 **Sections:**
 
@@ -247,11 +254,20 @@ After the 12 sections, include:
    - Compare this output against any existing customer-related documents – BrandScript, strategy documents, prior ICP exercises. Flag any contradictions. If a BrandScript already exists, the character in the BrandScript and the persona built here should be the same person. If they are not, one of the two needs to change.
    - Put the persona on the wall. Physical or virtual. Bring them to every meeting.
 
-**Implementation guidance.** At the end of the document, include:
+### Implementation
+
+At the end of the document, include:
+
+- Save the document as `core-customer-[company]-[date].md` so you can find it again.
 - Review the Core Customer profile at every meeting. Not rebuild. Review. Has anything changed?
 - Once a year, rebuild it from scratch. Do not update the old one. Start blank.
 - The test of whether the profile is alive: when someone proposes a new initiative, does someone ask "does this serve the Core Customer?"
 - For the full explanation of how the Core Customer fits into the operating system, read the article at darlison.com.
+- Review the document with your coach or advisor. Once finalized, add the Core Customer profile to Metronome Software so the team has a single source of truth.
+
+After producing the document, close with:
+
+*"Your Core Customer Discovery document is ready. Save it as `core-customer-[company]-[date].md` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
 
 ---
 

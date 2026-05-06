@@ -2,7 +2,7 @@
 
 # Key Function Flow Map Builder
 
-From Byron Darlison, www.darlison.com
+From Byron Darlison - www.darlison.com
 
 **This prompt is a work in progress.** I am actively refining it based on feedback from founders and coaches who use it. If you run into problems, find something that could be better, or improve upon any part of this, please email me at byron@darlison.com. Every piece of feedback makes this tool more useful for the next person.
 
@@ -41,11 +41,12 @@ At session end (when you stop decomposing), the prompt emits a resume-state bloc
 
 **How to use it**
 
-1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but Claude is recommended for the visual diagram and the research-backed candidates.
+1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience.
 2. Answer each question as honestly as you can. The first answer is rarely the final answer. The AI will push for clarity.
 3. As you move through each phase, the AI will build the KFFM step by step. You will see your map evolve as functions, owners, colors, widgets, and critical numbers are added.
-4. At session end the AI will produce the SVG artifact, a resume-state block, and a brief next-steps paragraph, all inline.
-5. Hand the image file to your coach for review and comment. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the KFFM, run the FAC prompt next, then the FOC prompt, then come back here to build Level 2 KFFMs for any function you want to decompose.
+4. At session end the AI will produce a self-contained HTML document wrapping the SVG, plus a resume-state block and a brief next-steps paragraph.
+5. Where your output appears depends on the AI. Save the document as `kffm-[company]-[date].html` to keep your output.
+6. Review the output with your coach or advisor. The AI produces a first draft. A person who knows your business can challenge it. Once you and your coach have finalized the KFFM, add it to Metronome Software, then run the FAC prompt next, then the FOC prompt, then come back here to build Level 2 KFFMs for any function you want to decompose.
 
 **If your business has more than one founder or decision-maker:** Each person should complete this exercise independently for the same level. Do not compare notes until both are finished. At the end of the payload there is a synthesis section you can paste into a new AI conversation with all founders' SVG outputs to reconcile into one agreed map. The differences between maps are often the most valuable part of the exercise.
 
@@ -152,6 +153,8 @@ These gates exist because the most actionable findings on a KFFM surface only wh
 **Push hard on simplification.** When the participant lists more than 5 functions at any level, push back. Name the communication theory cost: "You have listed [N] functions. That means [N*(N-1)/2] lines of communication on this leadership group. Which of these are actually sub-functions that belong one level deeper?"
 
 **Do not invent names.** When reflecting back what the CEO said, do not edit, rename, or invent owners. If the CEO has not named someone for a function, the answer is `Open`.
+
+**Do not suggest language.** Reflect back what was said. Do not edit or rename functions, widgets, owners, or critical numbers for the CEO. Mirror their wording verbatim.
 
 **"Open" is always a valid answer.** Any time a question asks the participant to name a person and the participant hesitates, struggles, or says they do not have one, accept "Open" and keep moving. An unowned function is one of the most valuable findings of the exercise.
 
@@ -1726,6 +1729,34 @@ absolute last line of your next response. Nothing after it.
 **Symptom: the SVG looks fine in the chat but the L2 link inside a box doesn't work when I publish it.** Cause: the link points to a Level 2 file that hasn't been built yet. The L2 file exists only after you run the prompt again in Path B mode for that specific function. Until then, the link is a placeholder; this is expected behavior, not drift.
 
 If you encounter a drift mode not listed here, paste the offending output back with: "This output violates rule X from your prompt. Regenerate following the rule exactly." Cite the section by heading. Most LLMs will recover when given a specific, named violation to correct.
+
+---
+
+## Output
+
+Produce a self-contained HTML document titled `Key Function Flow Map - [Company Name] - Level [N] - [Date]` containing the SVG artifact described in the phases above plus its accompanying resume-state block, next-steps paragraph, and session terminator. The HTML must be self-contained: inline SVG with embedded `<defs><style>` block, embedded CSS, no external fonts, scripts, or images. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ```html code block the participant can copy and save as `kffm-[company]-[date].html` (Level 1) or `kffm-l[N]-[function-slug]-[company]-[date].html` (deeper levels).
+
+The document contains, in order:
+
+1. **The KFFM SVG.** The complete `<svg>...</svg>` element with embedded styles, built per the Phase 9 (Level 1) or Phase D-6 (deeper levels) checklist. Every box, owner attribution, color, critical number, widget label, supporting-function row, Profit/X line (Level 1 only), lead-to-cash block (Level 1 only), legend, and viewBox specification is exactly as defined in the relevant phase checklist. Self-check rules from Checks 0 through 21 must pass before the SVG is emitted.
+2. **The resume-state block** (the fenced markdown described in Part 2 of Phase 9 for Level 1, or the equivalent block at the end of Phase D-6 for deeper levels).
+3. **The next-steps paragraph** (Part 3 of Phase 9 for Level 1, or its equivalent for deeper levels).
+4. **The session terminator line** as the absolute last line of the response, exactly as specified in the Session terminator section.
+
+The full publication wrapper (sticky title block with company name + business type + stage + industry + geography, navigation tabs to other artifacts, download buttons) is added later by the user's coach when they review and publish the artifact. This prompt produces the SVG and the surrounding HTML scaffold; the coach handles the production chrome.
+
+### Implementation
+
+- Save the document as `kffm-[company]-[date].html` (Level 1) or `kffm-l[N]-[function-slug]-[company]-[date].html` (deeper levels) and double-click to open in any browser.
+- Hand the saved file to your coach for review and comment. The AI produces a first draft. A person who knows your business can challenge it.
+- Once you and your coach have finalized the Level 1 KFFM, run the FAC prompt next, then the FOC prompt. Come back here to build Level 2 KFFMs for any function you want to decompose, then Level 3 if a sub-function still feels too coarse.
+- Review the KFFM at every quarterly planning session. Owners change, colors shift, critical numbers move; the map should reflect current reality, not the picture from six months ago.
+- When a function turns red, raise it in the meeting cadence the same week. When an owner leaves, mark the seat Open immediately and run the cost-question probe at the next planning session.
+- Review the output with your coach or advisor. Once finalized, add the KFFM to Metronome Software.
+
+After producing the document, close with one short line:
+
+*"Your KFFM is ready. Save the document as `kffm-[company]-[date].html` to keep your output. Review with your coach or advisor, then add it to Metronome Software."*
 
 ---
 
