@@ -78,7 +78,7 @@
       "name": "Daily Huddle",
       "cadence": "Daily, 5–7 min",
       "owner": "Function Team Leader",
-      "attendees": "Each functional team",
+      "attendees": "Members of the functional team",
       "type": "Status",
       "oneLine": "Status. A few minutes a day to connect the team to the plan.",
       "purpose": "Keep the team connected to the plan every day. The most important meeting in the system. Everything else builds on it.",
@@ -96,19 +96,21 @@
       "owner": "Head of Company or Designate",
       "attendees": "Leadership team",
       "type": "Status",
-      "oneLine": "Status. A weekly review of the critical numbers and progress on the quarter's goals.",
-      "purpose": "Review the critical numbers and progress on the quarter's goals. Surface what is off-track and route the fix. Status, not problem-solving.",
+      "oneLine": "Status. A weekly review of the critical numbers and progress on the quarter's goals - 13 week sprints.",
+      "purpose": "Review the critical numbers and progress on the quarter's goals - 13 week sprints. Surface what is off-track and route the fix. Status, not problem-solving.",
       "prep": [
-        "Critical numbers are current before the meeting starts.",
-        "Anyone owning an off-track number posts the proposed situation, cause, correction and followup plan at least 1 business day before the meeting.",
-        "Every attendee has reviewed the scoreboard, the written reports, and any followups due this week."
+        "Critical numbers up to date.",
+        "Sprint lanes up to date.",
+        "Anyone owning an off-track number or sprint lane delay posts the proposed situation, cause, correction and followup plan at least 1 business day before the meeting.",
+        "Every attendee has reviewed the scoreboard, sprint lanes, written reports, and any followups due this week."
       ],
       "agenda": [
         "Good news",
         "Values recognition",
+        "Open Actions",
         "Scoreboard review",
-        "Quarterly Highly Achievable Goal [QHAG] status",
         "Priority and Sprint Lane status",
+        "Quarterly Highly Achievable Goal [QHAG] status",
         "Dynamic: stucks, asks, offers",
         "What Do You Recommend [WDYR]. The leadership coaching practice."
       ]
@@ -118,9 +120,9 @@
       "name": "Weekly CEO Email",
       "cadence": "Weekly, written",
       "owner": "Head of Company or Designate",
-      "attendees": "Entire company",
+      "attendees": "All employees",
       "type": "Cascade",
-      "oneLine": "Cascade. A weekly email update from the CEO to the whole company.",
+      "oneLine": "Cascade. A weekly email update from the Head of Company to all employees.",
       "purpose": "Keep the whole company connected to the plan and the leadership team's thinking between meetings.",
       "agenda": [],
       "note": "Not a meeting. A written ritual that pairs with the Weekly Leadership Team Meeting."
@@ -149,7 +151,7 @@
       "name": "Monthly Meeting",
       "cadence": "Monthly, ≤60 min",
       "owner": "Head of Finance or Designate",
-      "attendees": "Leadership team + finance model owner",
+      "attendees": "Leadership Team",
       "type": "Status",
       "oneLine": "Status. How are we tracking against the 36-month rolling forecast, and has anything strategic changed that is affecting performance?",
       "purpose": "Review the 36-month rolling forecast against actual performance. Compare what the team said it would deliver to what it has actually delivered. Then identify anything strategic that has changed and is now affecting the trajectory.",
@@ -164,7 +166,7 @@
       "name": "Monthly Town Hall",
       "cadence": "Monthly, 30–45 min",
       "owner": "Head of Company or Designate",
-      "attendees": "Whole company",
+      "attendees": "All employees",
       "type": "Cascade",
       "oneLine": "Cascade. Connect the whole company to the plan, the numbers, and the culture.",
       "purpose": "Keep the whole company connected to the plan, the numbers, and the culture.",
@@ -183,23 +185,28 @@
       "owner": "Head of Company or Designate",
       "attendees": "Leadership team",
       "type": "Decide",
-      "oneLine": "Decide. Touch every system. Build the next 90-day plan.",
-      "purpose": "Review all six systems. Build the next 90-day plan.",
+      "oneLine": "Review prior quarter performance towards the 3HAG and 1HAG, and define next quarter plan.",
+      "purpose": "Review prior quarter performance towards the 3HAG and 1HAG, and define next quarter plan.",
       "prep": [
-        "Every leader's scoreboard is current.",
-        "Every leader's Sprint Lanes from the past quarter are up to date.",
-        "Every leader is ready to recommend what the next quarter needs to advance the company toward its 3 Year Highly Achievable Goal [3HAG]."
+        "Critical numbers up to date",
+        "Sprint lanes up to date",
+        "Draft next quarter 13 week sprint lanes",
+        "Draft next quarter 13 week scoreboard targets",
+        "Every leader is ready to recommend what the next quarter needs to accomplish to advance the company toward its 3 Year Highly Achievable Goal [3HAG]."
       ],
       "agenda": [
-        "Cohesive: good news, cohesive question",
-        "Cultural: Core Purpose, Core Values, Big Hairy Audacious Goal [BHAG], Profit/X",
-        "Human: Key Function Flow Map [KFFM], Functional Organization Chart, A-Player team assessment, What Do You Recommend [WDYR] check-in",
-        "Strategy: 3 Year Highly Achievable Goal [3HAG] review and validate, Market Map, Core Customer, Attribution Framework, Swimlanes, Brand Promise",
-        "Execution: Scoreboard, 1 Year Highly Achievable Goal [1HAG] status, Quarterly Highly Achievable Goal [QHAG] status, Priority and Sprint Lane status, new QHAG and 13-week Sprint Lanes",
-        "Cash: widget forecast vs actual, 36-month rolling forecast",
-        "Close: meeting effectiveness review, Three Cascading Messages, One-Phrase Close"
-      ],
-      "note": "The full agenda is the destination, not the starting point. Add elements quarter by quarter as the team grows into them."
+        "Good news",
+        "Review and confirm: Core Purpose, Core Business, Big Hairy Audacious Goal [BHAG], Profit/X, Core Values, Key Function Flow Map [KFFM], Functional Organization Chart, Functional Accountability Chart",
+        "Review and confirm: Market Map, Core Customer, Attribution Framework, Swimlanes, Brand Promise",
+        "Review and confirm 36-month rolling forecast",
+        "Review and confirm 3 Year Highly Achievable Goal [3HAG]",
+        "Review and confirm 1 Year Highly Achievable Goal [1HAG]",
+        "Define next Quarterly Highly Achievable Goal [QHAG]",
+        "Define next Quarterly Priority and 13 Week Sprint Lanes",
+        "Define next quarter 13 week scoreboard targets",
+        "Review A-Player team assessment and plans to improve percentage of A-Players",
+        "Cascading Messages"
+      ]
     },
     {
       "id": "annual",
@@ -208,11 +215,34 @@
       "owner": "Head of Company or Designate",
       "attendees": "Leadership team",
       "type": "Decide",
-      "oneLine": "Decide. Validate strategy, set the new three-year goal, and build the annual plan.",
-      "purpose": "Validate strategy. Set the new 3 Year Highly Achievable Goal [3HAG]. Build the annual plan.",
+      "oneLine": "Review prior quarter performance towards the 3HAG and 1HAG, and define next 1HAG and next quarter plan.",
+      "purpose": "Review prior quarter performance towards the 3HAG and 1HAG, and define next 1HAG and next quarter plan.",
+      "prep": [
+        "Critical numbers up to date",
+        "Sprint lanes up to date",
+        "Draft next quarter 13 week sprint lanes",
+        "Draft next quarter 13 week scoreboard targets",
+        "Update Market Map",
+        "Update Core Customer",
+        "Update Attribution Framework",
+        "Update Key Function Flow Maps Level 1 and 2",
+        "Update Functional Organization Chart",
+        "Update Functional Accountability Chart",
+        "Roll 36 Month Forecast ahead 1 year",
+        "Every leader is ready to recommend what the next year and quarter needs to accomplish to advance the company toward its 3 Year Highly Achievable Goal [3HAG]."
+      ],
       "agenda": [
-        "Day 1 (Strategy). Same flow as Quarterly through Cohesive, Cultural, Human, and Strategy systems, with greater depth. Five Dysfunctions assessment. Key Function Flow Map [KFFM] reviewed at Levels 1 and 2. Market Map and Core Customer refreshed. Attribution Map, Activity Fit Map (Differentiators), Swimlanes, and the 3 Year Highly Achievable Goal [3HAG] are rebuilt from scratch to force fresh thinking.",
-        "Day 2 (Execution). Current 1 Year Highly Achievable Goal [1HAG] and Quarterly Highly Achievable Goal [QHAG] status. New 1HAG and QHAG with 13-week Sprint Lanes, rebuilt to align with the new 3HAG. Full Cash review with the 36-month rolling forecast extended one more year. Metronomics Survey review. Three Cascading Messages. One-Phrase Close."
+        "Good news",
+        "Review and confirm: Core Purpose, Core Business, Big Hairy Audacious Goal [BHAG], Profit/X, Core Values, Key Function Flow Map [KFFM], Functional Organization Chart, Functional Accountability Chart",
+        "Review and confirm: Market Map, Core Customer, Attribution Framework, Swimlanes, Brand Promise",
+        "Review and confirm 36-month rolling forecast",
+        "Rebuild Attribution Map, Activity Fit Map, Swimlanes, and the 3 Year Highly Achievable Goal [3HAG]",
+        "Define next 1 Year Highly Achievable Goal [1HAG]",
+        "Define next Quarterly Highly Achievable Goal [QHAG]",
+        "Define next Quarterly Priority and 13 Week Sprint Lanes",
+        "Define next quarter 13 week scoreboard targets",
+        "Review A-Player team assessment and plans to improve percentage of A-Players",
+        "Cascading Messages"
       ]
     },
     {
@@ -223,13 +253,15 @@
       "attendees": "Leader and one direct report",
       "type": "Coaching",
       "oneLine": "Coaching. Every 90 days, a leader and a direct report review the scorecard together and agree on a Continuous Improvement Plan for the next quarter.",
-      "purpose": "A two-way conversation, held every 90 days, between a leader and a direct report. They review the scorecard together (mission, critical number, supporting metrics, competencies, and values) and build the Continuous Improvement Plan for the next quarter. This replaces the annual review entirely.",
+      "purpose": "A two-way conversation, held every 90 days, between a leader and a direct report. They review the scorecard together (mission, critical number, supporting metrics, competencies, and values) and build the Continuous Improvement Plan for the next quarter.",
+      "prep": [
+        "Direct Report and who they Report To individually complete the Scorecard Review"
+      ],
       "agenda": [
         "Scorecard review. Cover mission, critical number, supporting metrics, competencies, and values together.",
         "Skip-level review findings, where applicable. Input from the manager's manager about the team's experience of the manager.",
-        "Continuous Improvement Plan [CIP]. The most important output of the meeting. Agree on one improvement focus for the next 90 days."
-      ],
-      "note": "The CIP is checked weekly in the One-on-One and revisited at the next Quarterly Scorecard Review."
+        "Continuous Improvement Plan, The most important output of the meeting. Agree on one improvement focus for the next 90 days."
+      ]
     }
   ]
 }
