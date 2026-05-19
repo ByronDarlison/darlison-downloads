@@ -59,17 +59,6 @@
         "Use the meeting itself for hashing out conflict, clearing up confusion, or making the final call.",
         "A small working group with a decide-by date often beats convening the full leadership team."
       ]
-    },
-    {
-      "id": "foundation-first",
-      "name": "Master the foundation before extending.",
-      "oneLine": "Add meetings sequentially as the prior habit holds.",
-      "why": "A team that has not internalized the Daily Huddle will not sustain the Quarterly. Layered cadences fail when the base layer is shaky. Master this first, then extend where the business needs it.",
-      "inPractice": [
-        "Implementation order: Daily Huddle, Weekly Leadership, Weekly One-on-One, Monthly + Town Hall, Quarterly + Quarterly Scorecard Review, Annual.",
-        "The full Quarterly agenda is the destination, not the starting point.",
-        "Once the eight are running, layer in the rituals your business needs (retros, hackathons, product councils)."
-      ]
     }
   ],
   "meetings": [
