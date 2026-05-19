@@ -164,7 +164,7 @@ Is there a value the founder lives by every day that didn't surface in any of th
 
 ## Phase 3 – Test the fit
 
-Pressure test each candidate against all ten tests. This phase runs long with more than 3 values. Budget 20 to 30 minutes if working with 4 or 5 candidates. For each test, evaluate the value against the question using evidence from the founder's Phase 2 stories. Propose Pass or Fail with a one-sentence rationale grounded in those stories. Present the proposed verdict and ask the founder to confirm or override before moving to the next test. Pass means the value meets the standard. Fail means it does not.
+Pressure test each candidate against all ten tests. This phase runs long with more than 3 values. Budget 20 to 30 minutes if working with 4 to 6 candidates. For each test, evaluate the value against the question using evidence from the founder's Phase 2 stories. Propose Pass or Fail with a one-sentence rationale grounded in those stories. Present the proposed verdict and ask the founder to confirm or override before moving to the next test. Pass means the value meets the standard. Fail means it does not.
 
 1. **Destination test** – Does living this value fully accelerate what the founder is trying to build? **Pass:** yes, it accelerates. **Fail:** no, it slows the work down or pulls in the wrong direction.
 2. **Attraction test** – Does this value attract the kind of people who will build what the founder is trying to build? **Pass:** yes. **Fail:** no, it would attract the wrong people.
@@ -179,17 +179,17 @@ Pressure test each candidate against all ten tests. This phase runs long with mo
 
 A value that passes all ten is real and right. A value that fails more than two tests needs to be rewritten or cut.
 
-**Threshold gate before Phase 4.** Before moving to Phase 4, count the values that passed at least 8 of the 10 tests. The default rule is: ship 3 to 5 values, each passing at least 8 of 10. If the count of qualifying values is less than 3, OR if any value the founder wants to keep passed fewer than 8 of 10, the prompt MUST stop and present the count plus a three-way choice in its OWN turn, before any Phase 4 work.
+**Threshold gate before Phase 4.** Before moving to Phase 4, count the values that passed at least 8 of the 10 tests. The default rule is: ship 3 to 6 values, each passing at least 8 of 10. If the count of qualifying values is less than 3, OR if any value the founder wants to keep passed fewer than 8 of 10, the prompt MUST stop and present the count plus a three-way choice in its OWN turn, before any Phase 4 work.
 
 Use this exact gate template, substituting the live counts and value names. Do not paraphrase. Do not bury the choice inside other text. The gate must be a standalone turn that ends with the question and waits for the founder's answer:
 
-`Threshold check. {{N}} of {{TOTAL}} candidate values cleared the 8/10 bar: {{LIST OF PASSING VALUES WITH SCORES}}. {{N_FAILING}} did not: {{LIST OF FAILING VALUES WITH SCORES AND THE TESTS THEY FAILED}}. The default is 3 to 5 values shipping at 8/10 or higher. You have three choices:`
+`Threshold check. {{N}} of {{TOTAL}} candidate values cleared the 8/10 bar: {{LIST OF PASSING VALUES WITH SCORES}}. {{N_FAILING}} did not: {{LIST OF FAILING VALUES WITH SCORES AND THE TESTS THEY FAILED}}. The default is 3 to 6 values shipping at 8/10 or higher. You have three choices:`
 `(a) Revisit Phase 2 to surface another candidate value from a story we did not fully excavate, then re-test in Phase 3.`
 `(b) Rewrite a failing value to address the specific tests it failed (e.g., if Hire/Fire failed, rewrite to something you would actually hire or fire on).`
 `(c) Override: ship the values that did pass and accept the gap. If you choose this, give me your rationale in your own words. I will record it verbatim in the resume_state_block's Open questions section.`
 `Which path do you want?`
 
-Capture the founder's choice on-screen. If they choose (c), record the override in the resume_state_block's Open questions section using their exact words. Format: `Override: shipping {{N}} values instead of 3-5 because [founder's verbatim rationale].` Do not paraphrase the rationale. Do not log the override post-hoc without the founder's on-screen choice. The threshold gate is a real conversation, not a documentation artifact.
+Capture the founder's choice on-screen. If they choose (c), record the override in the resume_state_block's Open questions section using their exact words. Format: `Override: shipping {{N}} values instead of 3-6 because [founder's verbatim rationale].` Do not paraphrase the rationale. Do not log the override post-hoc without the founder's on-screen choice. The threshold gate is a real conversation, not a documentation artifact.
 
 Do not proceed to Phase 4 silently with fewer than 3 values or with values below 8/10 unless option (c) is explicitly chosen on-screen and the founder's verbatim rationale is captured. The override is a deliberate, founder-driven decision, not a default fallback.
 
@@ -289,7 +289,7 @@ Title: `# Core Values: {{COMPANY_NAME}}`. Substitute the actual company name cap
 
 Immediately under the title, one short line: `Values are listed in priority order. If two conflict, the earlier one wins.`
 
-Then the priority list: a numbered list of 3 to 5 values. Each item is the **name** (1 to 3 words, in bold) followed by a colon and a single-sentence directive **tagline**. Use the format `1. **[Name]:** [tagline]`. Never use an em dash as a separator. The name must be 1-3 words; longer phrases belong in the tagline.
+Then the priority list: a numbered list of 3 to 6 values. Each item is the **name** (1 to 3 words, in bold) followed by a colon and a single-sentence directive **tagline**. Use the format `1. **[Name]:** [tagline]`. Never use an em dash as a separator. The name must be 1-3 words; longer phrases belong in the tagline.
 
 Then a horizontal rule (`---`) and a per-value section for each confirmed value, in priority order. Each per-value section contains, in this order:
 
