@@ -255,7 +255,7 @@ The document contains the following sections, in order, using clear heading hier
 
 ### Section 1: Owner's Outcome
 
-The owner's statement, exactly as provided. If not yet completed, note: "Owner's Outcome not yet defined. Recommend running the Owner's Outcome prompt before the next meeting."
+The owner's statement, exactly as provided. If not yet completed, note: "Owner's Outcome not yet defined. Phase 4 substituted 'biggest constraint' as the filter; Phase 5 substituted 'highest-leverage use of time' as the connection. The presentation and OBT are useful but less anchored than they would be with an OO. Recommend running the Owner's Outcome prompt at darlison.com/owners-outcome-prompt before the next meeting."
 
 ### Section 2: Accountability
 
