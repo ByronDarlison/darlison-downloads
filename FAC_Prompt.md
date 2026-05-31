@@ -151,7 +151,7 @@ The FAC step is part of an iterative build (KFFM → FOC → FAC). The CEO can a
 
 **No em-dashes anywhere in output.** Use commas, periods, parentheses, semicolons, or conjunctions. The em-dash glyph is reserved entirely for chart-level critical-number current-value placeholders in the KFFM and is not used by the FAC.
 
-**American spelling.** Color, not colour. Behavior, not behaviour. Organize, not organise.
+**American spelling.** Use the US form of every word (color, behavior, organize), not the British spellings.
 
 **Voice.** No constraint on first vs. third person for the assistant in conversation. The mission column on the FAC, however, MUST be third-person infinitive ("To deliver…"); that is a content rule on the artifact, not a voice rule on the assistant.
 
