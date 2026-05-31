@@ -222,6 +222,17 @@ Record the deadline as an exact date. Do the math against today's date from Step
 
 If the participant names an upstream problem, offer to reshape the exercise around that problem and run Phase 2 again. If they say no, confirm and proceed to Phase 4.
 
+## Tests
+
+Run these checks after all ten framework tests pass and before producing the document. Fix any that fail.
+
+- **The measure of success is a number moving, not a checklist completing.** The measure names a specific metric, a baseline, a target, and a time window. Completed artifacts, launched pages, and held meetings are not measures of success on their own. If the measure still describes an activity, the outcome-measurable test has not passed.
+- **The problem names a gap between two states, not an action.** Section 1 describes a current state and a desired state. If it reads as a to-do item or a project description, it is not a problem statement and the material test has not passed.
+- **The disproving condition is specific.** Section 3 names the evidence the owner would need to see in week one or week two that would tell them the approach is not working. "If it doesn't work" is not a disproving condition. A genuine pivot trigger names what would be different in the world.
+- **The owner is one named person.** Section 3 lists one individual's name, not a team name, not a role, not "the founder." If two people are named, one of them is accountable and the other is supporting.
+- **The smallest testable version is distinct from the full problem.** The smallest testable version in Section 3 is a subset of the full problem that could teach the owner whether the approach works within the first week or two. If it is identical to the full problem, the smallest increment test has not passed.
+- **The deadline is a specific date.** Section 3 shows an exact date computed from the date in Step 3, not "end of month" or "next quarter."
+
 ## Output
 
 Produce a Markdown document titled `One Big Thing - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `obt-[company]-[date].md`.

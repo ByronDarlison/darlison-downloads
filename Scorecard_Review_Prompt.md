@@ -341,6 +341,16 @@ Example flag: "Behavior is weekly but follow-up is at the next quarterly review.
 
 Exit Phase 5: either a complete S/C/C/F draft is captured for the user's recommended Development Commitment, or the user has confirmed 'no Development Commitment needed.'
 
+## Tests
+
+Run these checks after Phase 5 and before emitting the perspective draft. Fix any that fail.
+
+- **Every Sometimes or Never rating has a specific observed moment.** Walk every gap row in the Values and Competency sections. Each one must name a date or rough timeframe, what happened, and what the gap was. A rating without a specific moment reverted to Always during Phase 3 sharpening. If a gap row appears in the output without evidence, it must be reverted or the user must confirm they are holding the rating without evidence and accept that it will face pushback at the meeting.
+- **Critical numbers are tagged using the ternary rule.** Every indicator in the function blocks is marked Green, Yellow, or Red based on the actual results from Phase 0e applied against the thresholds on the signed scorecard. No indicator is left untagged. Cumulative metrics and ongoing metrics are distinguished and the correct branch of the rule is applied to each.
+- **The S/C/C/F passes the strict-analytical bar.** If a Development Commitment was nominated, walk each of the four paragraphs. Situation contains no adjectives or consequences. Cause names a mechanism, not an effect. Correction states the new behavior positively without editorializing. Follow-up matches the cadence of the corrected behavior and states explicit Green/Yellow/Red thresholds with both the color word and the emoji.
+- **The perspective is framed as one party's view, not the verdict.** The output uses "I rate..." or "[Reviewer] rates..." language throughout. No rating or Development Commitment is stated as the final agreed classification. The closing disclaimer is present and reads as structural, not optional.
+- **The Development Commitment recommendation is one focus area.** Unless the user explicitly requested two, the output nominates exactly one Development Commitment or explicitly states that none is recommended. Multiple nominations without explicit user instruction must be reduced to one before emitting.
+
 ## Phase 6: Output
 
 Produce a Markdown document titled `Scorecard Review Perspective - [Seat Owner Name] - [Cycle Start Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `scorecard-review-perspective-[name-slug]-[role]-[YYYY-MM-DD].md`.

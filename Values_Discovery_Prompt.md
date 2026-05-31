@@ -283,6 +283,19 @@ After all four tests are resolved (Pass, Pass with healthy tension, Conditional 
 
 ---
 
+## Tests
+
+Run these checks after Phase 5 is complete and before emitting the values document. Fix any that fail.
+
+- **Every value is stated as observable behavior.** Each tagline is a directive sentence that tells someone what to do and what to stop. A tagline that describes a state ("be honest," "stay curious") rather than directing a specific behavior fails this check. Rewrite until it directs action.
+- **Every value passed at least 8 of the 10 Phase 3 tests, or the override is on record.** Walk the per-value test results in the resume state. Any value below 8/10 must have an explicit founder override recorded verbatim in the Open questions section. A value below the bar without a recorded override was not properly gated.
+- **Every hiring question uses the exact base format.** Each hiring question opens with the literal string "Tell me about a time" and contains the literal string "What happened?" as the first follow-up. A paraphrase ("What did you do?" or "What was the situation?") in place of "What happened?" fails. Optional sub-questions extend after "What happened?" and do not replace it.
+- **Priority order resolves every pair conflict.** The conflict scenario from Phase 3 was run for every pair of confirmed values. The founder named which value wins when they pull against each other. The final priority order reflects those answers, not a default alphabetical or arbitrary order.
+- **The value set count is 3 to 6.** The output contains between 3 and 6 confirmed values. Fewer than 3 or more than 6 requires a founder override on record. A single "core" value with sub-values is counted as one if it has one name and one tagline.
+- **No em dashes in any line the prompt produced.** The em dash (U+2014) is forbidden in taglines, scenarios, guiding questions, hiring questions, and all prompt-generated text. Use periods, commas, colons, or conjunctions instead.
+
+---
+
 ## Output
 
 This is the FINAL turn of the session. Emit, in order, all four outputs in the same response: the values_document, the resume_state_block, the next_steps_paragraph, and the session_terminator.

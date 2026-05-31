@@ -383,6 +383,17 @@ If the owner indicated they do not have a coach in the configuration, skip the c
 
 ---
 
+## Tests
+
+Run these checks after Phase 4 is complete and before producing the document. Fix any that fail.
+
+- **The statement is a single sentence with three elements.** The Owner's Outcome statement follows the structure: "I am in business because I want [what], and I will achieve it by [specific date], as measured by [measures]." A statement missing any of the three elements - what, by when, or measured by what - is not complete.
+- **No measure names a date later than the target date.** Walk every measure in the statement against the target date. If any measure cannot be satisfied until after the target date, the date inconsistency check from Question 13b was not resolved. The document cannot contain a statement and measures that disagree on when "done" happens.
+- **The cash floor check was applied to the committed action.** The action in Section 4 was tested against the cash floor named in Phase 2. If the action would push cash below the floor, one of the three resolution options (move the floor, change the action, stretch the timeline) was chosen and recorded.
+- **The one action names a discrepancy, not a project.** Section 4 states which gap in the scorecard the action is closing, not just what the owner will do. An action without a named discrepancy has not been grounded in structural tension.
+- **Pressure-test answers are recorded.** The three pressure-test questions (effort and return, worst case and second-order consequences, guardrail check) were asked and the owner's answers are in the document. A section with blank or placeholder answers means the mandatory checks were skipped.
+- **Deferred discrepancies are named.** Section 4 lists every gap from the scorecard that was not chosen as the one action, with a brief note explaining why each is deferred. A document with only the chosen action and no deferred list suggests the others were silently dropped rather than deliberately set aside.
+
 ## Output
 
 Produce a Markdown document titled `Owner's Outcome - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ```markdown code block the participant can copy and save as `owners-outcome-[company-slug]-[date].md`.

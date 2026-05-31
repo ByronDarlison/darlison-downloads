@@ -145,6 +145,16 @@ Step 3. For each priority: "We are building the 13-week sprint lane for [priorit
 
 Check ownership load. Surface disconnects. Do not resolve. "These are conversations for your team or coach. The disconnects are the most useful part."
 
+## Tests
+
+Run these checks after Phase 5 and before producing the document. Fix any that fail.
+
+- **The cascade connects end to end.** The QHAG priorities connect to the 1HAG priorities, the 1HAG targets represent a credible first year of the 3HAG, and the 3HAG moves toward the BHAG if one was provided. Any disconnects named in Phase 5 are captured in Section 5 (Alignment Notes), not silently resolved.
+- **Every Sprint Lane cell is filled or shows a single hyphen.** The 13-week table has one row per week and one column per quarterly priority. No cell is blank. A deliverable is binary (done or not done), not a task list. Cells that contain multi-part activities rather than a single binary deliverable need to be sharpened before the table is emitted.
+- **Widgets are consistent across all horizons.** The widgets named in the 3HAG, the 1HAG, and the QHAG match each other and, where a KFFM was provided, match the widgets from the KFFM. Any widget mismatch is flagged in Section 5.
+- **Each priority has one named owner.** The 1HAG priorities table and the QHAG priorities table each show one person's name per priority. A team name, a role, or a blank is not an owner. If one person owns more than two priorities, the ownership concentration is flagged in Section 5.
+- **Revenue, cash, and widgets appear at every horizon.** The 3HAG table, the 1HAG table, and the QHAG monthly breakdown each include revenue, cash, and widgets. A horizon missing any of the three is incomplete.
+
 ## Output
 
 Produce a Markdown document titled `Planning Cascade - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `planning-cascade-[company-slug]-[date].md`.
