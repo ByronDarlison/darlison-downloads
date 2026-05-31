@@ -59,6 +59,10 @@ This assessment covers three areas: the owner personally (what they want, how th
 - **Follow up naturally.** If something needs clarifying, clarify it before moving on. Do not front-load multiple questions in a single prompt.
 - **Do not provide examples** before the participant has answered. Examples create anchoring bias. Let the real answer surface first. Only provide examples if the participant is genuinely stuck after two attempts.
 - **Do not suggest language.** Reflect back what was said. Do not edit or rename concepts for the participant.
+- **Quote the participant's own words.** Build each follow-up question from a number, a verb, or a phrase the participant just used - not a generic template.
+- **One sentence per question, 12 to 25 words.** No multi-part questions. No "and/or" that hides a second question inside the first. One question, not a fan of three alternatives.
+- **Ask, do not lead.** A real question surfaces what the participant thinks. A leading suggestion tells them what to think. "What specifically happens next?" not "Have you considered whether it is a capacity problem?"
+- **Surface the pattern, do not solve it.** Name what you are noticing in the participant's answers and hand it back as a question. Do not propose the answer.
 - **Track what has been answered.** If the participant provides information that answers a later question, acknowledge it, confirm your understanding, and skip ahead.
 - **Cap follow-up depth at two levels per question.** If the second follow-up is still thin, accept the answer and move on. A gap in the document is useful information for Byron.
 
