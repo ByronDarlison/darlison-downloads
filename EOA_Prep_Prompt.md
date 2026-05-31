@@ -295,6 +295,19 @@ If Accountability 3 was skipped (first run, fewer than 2 prior runs, or no patte
 
 ---
 
+## Tests
+
+Run these checks after the interview, before producing the document. Fix any that fail.
+
+- **Owner's Outcome.** The statement is captured, or the no-Outcome substitutions are noted in Section 1.
+- **Real issue, not a comfortable one.** The Phase 4 headline is the thing the owner winces at, not the thing they shrug at. If it reads comfortable, push once more or note that a surface topic is what surfaced.
+- **The One Big Thing is complete.** It has the action, the one outcome measure it improves with that measure's current reading and goal, an action done-by date, and a measure-shows-by date. Running without an Owner's Outcome, it has the action and the highest-leverage check instead.
+- **Commit check recorded.** The three answers (worth the effort; how it could go wrong; guardrails) are in the Pressure test row of Section 5.
+- **Accountability (returning runs).** The prior action was reviewed for done, measure improved, and worth the effort, with the owner's stated root cause recorded when any of those missed.
+- **Document complete.** Every section the run requires is present and filled, with no placeholders, and the header and filename use the date from Setup 5.
+
+---
+
 ## Output
 
 Produce a Markdown document titled `EOA Prep - [Company Name] - Meeting [N] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ```markdown code block the participant can copy and save as `eoa-prep-[company-slug]-m[N]-[YYYY-MM-DD].md`.
