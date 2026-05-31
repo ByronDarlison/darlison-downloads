@@ -365,11 +365,11 @@ Before accepting the commitment, run three pressure-test questions. The owner an
 
 If the owner cannot say why this gap and not another, push once: "If you cannot say why this gap beats the alternatives, you have not actually chosen it. You have defaulted to it. What would you lose by attacking a different gap instead?"
 
-**Worst case and second-order consequences.** "How badly could this go wrong? Name the worst-case outcome. And if it goes that way, what are the second-order consequences -- on the cash position, the team, the customer relationships, and the gaps you just deferred?"
+**Worst case and second-order consequences.** "How badly could this go wrong? Name the worst-case outcome. And if it goes that way, what are the second-order consequences for the cash position, the team, the customer relationships, and the gaps you just deferred?"
 
 If the owner says there is no real downside, push: "No downside usually means no stretch. Is this safe enough that it would happen anyway, with or without committing to it today?"
 
-**Guardrail check.** "Does this action cross any of the lines you defined in Phase 2? Think about your non-negotiables, your stated anti-outcome, your time constraints, and your risk tolerance -- not just the cash floor. Does anything about this commitment bump into a line you said you would not cross?"
+**Guardrail check.** "Does this action cross any of the lines you defined in Phase 2? Think about your non-negotiables, your stated anti-outcome, your time constraints, and your risk tolerance, not just the cash floor. Does anything about this commitment bump into a line you said you would not cross?"
 
 If yes, the owner must either revise the action or explicitly revise the guardrail. The same document cannot contain a guardrail and a commitment to violate it.
 
