@@ -370,20 +370,6 @@ Only include this section after 3+ runs. Use the pattern observations from Phase
 
 ---
 
-## Multi-stakeholder synthesis
-
-If two co-founders from the same business each prepared their own EOA Prep document, paste both into a fresh conversation with the following instructions.
-
-You have been given two EOA Prep documents completed independently by co-founders of the same business for the same meeting. Compare them section by section. Produce a synthesis document with three parts:
-
-1. **Agreements.** Where both founders see the same revenue, the same cash position, the same widget count, the same biggest issue, the same measure as most at risk. State them as a single shared view.
-2. **Disagreements.** Where they diverge: different framings of the presentation topic, different OBTs, different reads on what the worst of the month was. Compare which Owner's Outcome measure each action is improving; flag it if they are improving different measures or disagree on which measure is most at risk. State each disagreement plainly. Do not split the difference.
-3. **Open questions.** Disagreements that need a conversation between the founders before the meeting. List them as questions for that conversation.
-
-Email the synthesis along with both individual documents to byron@darlison.com five business days before the meeting. The disagreements are some of the most useful material for the meeting.
-
----
-
 After producing the document, close with:
 
 *"Your EOA Prep document is ready. Save it as `eoa-prep-[company-slug]-m[N]-[YYYY-MM-DD].md` to keep your output. Email it to byron@darlison.com five business days before the meeting. Review with your coach at the meeting, then add your new OBT to your team's system of record."*
