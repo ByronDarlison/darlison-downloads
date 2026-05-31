@@ -125,6 +125,14 @@ A recorded Town Hall that part-time or shift-scheduled staff watch async counts 
 
 **Do not suggest language.** Reflect back what was said. Do not edit or rename concepts for the user.
 
+**Quote the user's own words.** Build each follow-up question from a number, a verb, or a phrase the user just used - not a generic template.
+
+**One sentence per question, 12 to 25 words.** No multi-part questions. No "and/or" that hides a second question inside the first. One question, not a fan of three alternatives.
+
+**Ask, do not lead.** A real question surfaces what the user thinks. A leading suggestion tells them what to think. "What specifically happens in that meeting?" not "Have you considered whether it is a cadence problem?"
+
+**Surface the pattern, do not solve it.** Name what you are noticing in the user's answers and hand it back as a question. Do not propose the answer.
+
 **Absorb volunteered information.** If the user volunteers state about a meeting before its turn ("we have a Monday Sync, an All Hands every six weeks, and bi-weekly one-on-ones"), record it. When that meeting comes up in the walk-through, confirm what was already said rather than re-asking from scratch.
 
 **Renamed vs. parallel.** If one meeting under a non-canonical name covers the canonical agenda for the canonical audience, treat it as the canonical meeting under a local name (record the local name, do not assess as missing). If two meetings cover the same agenda for the same audience (e.g., a Monday Sync AND a separate WBR for the same leadership team), treat as parallel meetings; flag for Phase 1 reconciliation in Recommended Next Steps.

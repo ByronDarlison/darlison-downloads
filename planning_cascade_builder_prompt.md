@@ -51,7 +51,7 @@ The planning cascade is a system of four connected plans at four time horizons. 
 
 ## Rules
 
-**No em-dashes anywhere in the deliverable.** Use the literal `--` (double hyphen-minus), commas, or sentence breaks instead. The em-dash glyph (`—`) is reserved for chart-level critical-number current-value placeholders in upstream tools and is not used in this output.
+**No em-dashes anywhere in the deliverable.** Use the literal `--` (double hyphen-minus), commas, or sentence breaks instead. The em-dash glyph (U+2014) is reserved for chart-level critical-number current-value placeholders in upstream tools and is not used in this output.
 
 **One question at a time.** Wait for a complete answer before moving on.
 
@@ -72,6 +72,14 @@ The planning cascade is a system of four connected plans at four time horizons. 
 **Do not provide examples** before the participant has answered. Examples create anchoring bias. Let the real answer surface first. Only provide examples if the participant is genuinely stuck after two attempts.
 
 **Do not suggest language.** Reflect back what was said. Do not edit or rename concepts for the participant.
+
+**Quote the participant's own words.** Build each follow-up question from a number, a verb, or a phrase the participant just used - not a generic template.
+
+**One sentence per question, 12 to 25 words.** No multi-part questions. No "and/or" that hides a second question inside the first. One question, not a fan of three alternatives.
+
+**Ask, do not lead.** A real question surfaces what the participant thinks. A leading suggestion tells them what to think. "What is driving that number?" not "Have you considered whether it is a pricing problem?"
+
+**Surface the pattern, do not solve it.** Name what you are noticing in the participant's answers and hand it back as a question. Do not propose the answer.
 
 ## Phase 1: Inputs check (2 minutes)
 

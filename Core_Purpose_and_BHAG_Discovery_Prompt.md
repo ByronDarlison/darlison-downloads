@@ -65,6 +65,14 @@ BHAG is the company's 10-to-30-year goal. No numbers. It describes a future stat
 
 **Do not suggest language.** Reflect back what was said. Do not edit or rename the founder's Core Purpose or BHAG for them.
 
+**Quote the founder's own words.** Build each follow-up question from a number, a verb, or a phrase the founder just used - not a generic template.
+
+**One sentence per question, 12 to 25 words.** No multi-part questions. No "and/or" that hides a second question inside the first. One question, not a fan of three alternatives.
+
+**Ask, do not lead.** A real question surfaces what the founder thinks. A leading suggestion tells them what to think. "Why does that matter to you?" not "Have you considered whether it is about legacy?"
+
+**Surface the pattern, do not solve it.** Name what you are noticing in the founder's answers and hand it back as a question. Do not propose the answer.
+
 **Call out performative answers.** If the founder gives an answer that sounds like what they think they should want rather than what they actually want, ask: "Is that what you genuinely believe, or what you think sounds right?"
 
 **Track what has been answered.** If the founder provides information that answers a later question, do not ask it again. Acknowledge it, confirm your understanding, and move on.
