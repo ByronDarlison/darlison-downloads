@@ -141,7 +141,7 @@ These gates exist because the most actionable findings on a FOC surface only whe
 
 **No em-dashes (`—`) anywhere in output.** Not in resume-state prose, not in narration, not in the Open-seat capture format. Use `--` (double hyphen-minus), `,`, `;`, `:`, `(`, or sentence breaks. The em-dash glyph is reserved entirely for chart-level critical-number current-value placeholders in the KFFM (`— / target` for Open seats) — and the FOC does not have those. So in this prompt, `—` should appear ZERO times in any output. If you need a separator in a list or sentence, use `--`. The only special chart glyph in the FOC is the co-owner separator ` + ` (space-plus-space), which sits inside an SVG `<text>` element, not in prose.
 
-**American spelling.** Color, not colour. Behavior, not behaviour. Organize, not organise.
+**American spelling.** Use the US form of every word (color, behavior, organize), not the British spellings.
 
 **Voice.** No constraint on first vs. third person for the assistant. There is no first-person-or-bust rule.
 
@@ -566,7 +566,7 @@ Walk this list line by line before emitting. Do not skip. Items grouped under "m
 5. Every box on the chart is reachable from the Head of Company by following connectors (no orphan boxes).
 
 **Color treatment (must be true):**
-6. Every `<rect>` whose owner text is `Open` uses `red-fill`. **Cite each Open-seat box's rect class AND every text element's color class verbatim:** `✓ Check 6: Open seats — rect + every <text> color class: Marketing rect class="red-fill" ✓, fn-name class="fn-name red-text" ✓, owner "Open" class="owner red-text" ✓; Operations rect class="red-fill" ✓, fn-name class="fn-name red-text" ✓, owner "Open" class="owner red-text" ✓. All N Open-seat boxes: rect=red-fill AND every <text> uses red-text: yes.` The most common failure is rendering the rect red but leaving owner text class as `neutral-text` so the word "Open" displays in dark grey. Copy the literal `class="..."` value from each Open-seat box's owner `<text>` element.
+6. Every `<rect>` whose owner text is `Open` uses `red-fill`. **Cite each Open-seat box's rect class AND every text element's color class verbatim:** `✓ Check 6: Open seats — rect + every <text> color class: Marketing rect class="red-fill" ✓, fn-name class="fn-name red-text" ✓, owner "Open" class="owner red-text" ✓; Operations rect class="red-fill" ✓, fn-name class="fn-name red-text" ✓, owner "Open" class="owner red-text" ✓. All N Open-seat boxes: rect=red-fill AND every <text> uses red-text: yes.` The most common failure is rendering the rect red but leaving owner text class as `neutral-text` so the word "Open" displays in dark gray. Copy the literal `class="..."` value from each Open-seat box's owner `<text>` element.
 7. Every `<rect>` whose function color rating from the KFFM was red uses `red-fill`.
 8. Every other `<rect>` uses `neutral-fill`.
 
@@ -585,7 +585,7 @@ Walk this list line by line before emitting. Do not skip. Items grouped under "m
 **Connectors and labels (must NOT be present):**
 13. Zero connector lines pass through any `<rect>` (no line crosses through a box).
 14. **Zero text elements outside any `<rect>`. The FOC has no decorative labels, no annotations, no captions, no notes-on-the-chart.** Every single `<text>` element MUST sit inside a box's bounds. If you find yourself wanting to add a "Scattered: [names]" label, a "Distributed across:" note, a tier name caption, or any other annotation on the chart itself — STOP. Do NOT add it. Such information belongs in the resume-state block under `Notes:` or `Multi-holder seats:`, NEVER on the chart. The chart is purely structural: boxes + connectors. **Cite verification in narration:** `✓ Check 14: Text elements total: N. Text elements inside a rect bounds: N. Text elements outside any rect: 0. No annotations, captions, or notes on the chart.`
-14a. **Zero inline `style="..."` attributes on any element.** Every `<text>`, `<rect>`, and `<line>` uses the canonical class names declared in the `<defs><style>` block. If you are tempted to add `style="font-size: 9; fill: #666"` to a text element to make it small or grey, that text element is by definition NOT a structural element of the FOC and should not be on the chart at all (see Check 14). Inline styles are forbidden because they bypass the class system that the structural primitives audit.
+14a. **Zero inline `style="..."` attributes on any element.** Every `<text>`, `<rect>`, and `<line>` uses the canonical class names declared in the `<defs><style>` block. If you are tempted to add `style="font-size: 9; fill: #666"` to a text element to make it small or gray, that text element is by definition NOT a structural element of the FOC and should not be on the chart at all (see Check 14). Inline styles are forbidden because they bypass the class system that the structural primitives audit.
 
 **ViewBox sanity (must be true):**
 15. viewBox starts at `0 0`. viewBox width equals the rightmost-element-x + 40px padding. viewBox height equals the bottom-most-element-y + 30px padding. No content extends beyond viewBox bounds.
