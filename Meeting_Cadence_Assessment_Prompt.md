@@ -283,6 +283,17 @@ The Weekly Cascade (optional ninth, written or non-written) routes into bucket 4
 
 **Audience defines the meeting.** A planning ritual run solo by the founder is not the canonical Annual Meeting, regardless of how strategic the content is; record the canonical as Missing and note the solo ritual in Key gap. The same logic applies to any meeting whose canonical audience is the leadership team: if the audience is wrong, the meeting is Missing or Partial, not In place. The leadership team is what makes the meeting structural. Examples: a monthly P&L review run solo by the CEO with the bookkeeper is not the canonical Monthly (record as Missing, note the precursor); a Weekly Leadership Team Meeting run by the CEO and CFO only without the rest of the leadership team is Partial, not In place.
 
+## Tests
+
+Run these checks after the interview and the calendar sweep, before producing the document. Fix any that fail.
+
+- **All eight canonical meetings are assessed.** The output contains one section for each of the eight meetings, even if the meeting is Missing. A meeting that does not exist still gets a row with Status: Missing. Skipping a missing meeting is not acceptable.
+- **Every meeting with Owner = Group or Not yet assigned is capped at Partial.** No meeting can be rated In place if its owner field reads Group or Not yet assigned. The owner gap is itself a missing piece of the meeting, regardless of agenda coverage.
+- **The calendar sweep happened.** After Meeting 8 and before producing the assessment, every recurring meeting on the calendar was routed to one of the four buckets (Renamed canonical, Parallel duplicate, Cascaded canonical at sub-team level, Functional artifact). Any parallel duplicates are flagged for Phase 1 reconciliation in Recommended Next Steps.
+- **Recommended next steps are capped at three for the next 90 days.** If more than three high-leverage moves were identified, exactly three are named for the next 90 days and the rest appear in a Phase 2 punch list. The Quarterly Scorecard Review is not recommended unless scorecards exist; if they do not, the Function Scorecards build appears as the precursor.
+- **CEO-bottleneck flags fire when warranted.** If the named owner appears on more than three meeting types, Flag 1 fires. If no leadership-team forum runs at any cadence, Flag 2 fires. Both flags are independent and both appear in Recommended Next Steps when their conditions are met.
+- **Systems coverage is present and complete.** The assessment includes a Systems Coverage section rating all six systems (Cohesive, Cultural, Human, Strategy, Execution, Cash) as Strong, Moderate, Weak, or Not covered. A system that is receiving no attention through any meeting is Not covered, not omitted.
+
 ## Output
 
 Produce a Markdown document titled `Meeting Cadence Assessment - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `meeting-cadence-[company]-[date].md`.

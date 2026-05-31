@@ -241,6 +241,17 @@ When all tests pass, confirm it explicitly.
 
 ---
 
+## Tests
+
+Run these checks after both Core Purpose and BHAG are locked, before producing the document. Fix any that fail.
+
+- **Core Purpose passed all six tests.** All six tests (Durability, Authenticity, Utility, Specificity, Simplicity, Integrity) are recorded in the output as Pass or Fail. Any test that was not fully passed must be noted, with the reason the founder chose to proceed anyway.
+- **Core Purpose is not a strategy.** The statement remains valid if the company's products, markets, or revenue model change entirely. If it describes a current service, product line, or market, it failed the Durability test and must be flagged.
+- **BHAG passed all three tests.** All three tests (Belief, Alignment, Duration) are recorded. A BHAG that could be reached in under ten years, or one that does not require living the Core Purpose to achieve, fails and must be reworked or explicitly flagged.
+- **BHAG contains no numbers.** The BHAG describes a future state of the world, not a revenue target or a headcount milestone. Any numbers in the BHAG statement must be removed before locking.
+- **Core Purpose and BHAG are explicitly locked.** The output includes confirmation that both were locked in the session - Core Purpose from Step 10 and BHAG from Step 16. A strong draft that was never confirmed as locked is not a finished output.
+- **Core Business and Economic Engine are both defined.** The document's Summary section includes all four elements: Core Purpose, BHAG, Core Business, and Economic Engine. A missing Economic Engine or Core Business statement means the BHAG cannot be confirmed to sit at their intersection.
+
 ## Output
 
 Produce a Markdown document titled `Core Purpose and BHAG - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `core-purpose-bhag-[company]-[date].md`.

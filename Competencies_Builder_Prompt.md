@@ -366,6 +366,17 @@ The CEO accepts, keeps, or edits. Capture the accepted version.
 
 This phase is optional. Only run sharpening for competencies where the cross-reference is useful. Do NOT manufacture sharpenings for every competency; that produces an over-engineered library.
 
+## Tests
+
+Run these checks after the walk-through and before emitting the library. Fix any that fail.
+
+- **Observable behavior in every anchor.** Walk every Always, Sometimes, and Never anchor. Each one must contain a verb describing visible action from outside the person - not an internal state, a personality trait, or a feeling. "Delegates outcomes, not tasks" passes. "Is empathetic" fails.
+- **Three anchors per competency, no blanks.** Every competency in every applicable tier has a non-empty Always, a non-empty Sometimes, and a non-empty Never. A blank cell means the library is incomplete and the Scorecard Builder cannot compile from it.
+- **Tiers match the FOC.** The number of tier tables in the output equals the number of tiers the FOC or tier-scoping questions identified. No extra tiers, no missing tiers. If the FOC has no department head seats, the department head table is absent.
+- **Source trace on every competency name.** Every competency name in the output matches a name from the starter library or the CEO's pasted existing library, character for character. A competency renamed during adaptation without explicit CEO approval is a source-trace failure.
+- **No em dashes.** Zero em dashes (U+2014) in the emitted library. Use periods, commas, colons, or conjunctions instead.
+- **Technical-skill check cleared.** If any anchor names specific software, certifications, or tools, the CEO explicitly approved including it, and the technical-skill tradeoff was surfaced once before approval.
+
 ## Phase 5: Output
 
 Produce a Markdown document titled `Competency Library - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `[company-slug]-competency-library.md`.
