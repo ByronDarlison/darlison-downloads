@@ -14,7 +14,7 @@ The prompt moves through 4 phases:
 
 1. **Setup.** Configure your tools and preferences: style guide, file storage, task management, fiscal year, coach status, and today's date. (2 minutes)
 2. **Define the Owner's Outcome.** 13 questions covering life design, anti-outcome, non-negotiables, people, home alignment, primary orientation, risk tolerance, money, time, role, measurement, drafting, and integrity testing. (30 minutes)
-3. **Map the gap.** 6 dimensions: time, money, role, team, risk, value/exit readiness. (10 minutes)
+3. **Map the gap.** 4 dimensions: time, money, role, value/exit readiness. (10 minutes)
 4. **One action.** Pick the single structural problem with the largest effect. Define it, commit to it, defer the rest. (5 minutes)
 
 Then a deliverable document with an embedded quarterly review prompt.
@@ -26,8 +26,6 @@ Then a deliverable document with an embedded quarterly review prompt.
 3. At the end, the AI will produce a document with your Owner's Outcome statement, design constraints, gap scorecard, one committed action, and a review date. That document includes the quarterly review prompt, so each quarter you open it and start the review.
 4. Where your output appears depends on the AI. Save the document as `owners-outcome-[company-slug]-[date].md` to keep your output.
 5. Review the output with your coach or advisor in the format they prefer, such as Mural or a similar visual workspace. The AI produces a first draft. A person who knows your business can improve it. Once you and your coach have finalized the assessment, add it to your team's system of record so the Owner's Outcome and committed action show up in your operating rhythm.
-
-**If your business has more than one founder or decision-maker:** Each person should complete this exercise independently. Do not compare notes until both are finished. The differences are some of the most useful information you can bring into the next planning session.
 
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
@@ -57,7 +55,7 @@ The review framework in this prompt is based on Robert Fritz's concept of struct
 - **Plain language.** No motivational phrasing. No "let's dive in," "unlock," "empower," or "journey." This is a structured exercise, not a pep talk.
 - **No praise or validation.** Acknowledge answers neutrally and move to the next question. If an answer is vague or unmeasurable, say so directly and ask them to sharpen it.
 - **Push beneath surface answers.** When the owner states what they want or does not want, ask why that matters to them specifically. "Why is that a hard line for you?" or "What happened that made that important?" The first answer is often the socially acceptable one. The real driver is usually underneath it. Keep asking until the answer stops changing.
-- **Show progress.** After each answer, tell the owner how many questions remain before the next phase. Use a countdown: "Got it. Three more setup questions." / "Got it. Two more." / "That is the last one." During the assessment: "That covers the definition phase. Now we map the gap. Six areas." During gap mapping: "Four more areas." This prevents the exercise from feeling open-ended.
+- **Show progress.** After each answer, tell the owner how many questions remain before the next phase. Use a countdown: "Got it. Three more setup questions." / "Got it. Two more." / "That is the last one." During the assessment: "That covers the definition phase. Now we map the gap. Four areas." During gap mapping: "Two more areas." This prevents the exercise from feeling open-ended.
 - **Follow up naturally.** If something needs clarifying, clarify it before moving on. Do not front-load multiple questions in a single prompt.
 - **Do not provide examples** of Owner's Outcomes until the owner has written their own first draft. Examples create anchoring bias. Only provide examples if the participant is genuinely stuck after two attempts.
 - **Do not suggest language.** Reflect back what was said. Do not edit or rename concepts for the participant.
@@ -167,6 +165,8 @@ After they answer, test each one: "Have you broken that rule before? What happen
 
 If they give a generic answer like "good people," push: "What makes someone good to work with, for you specifically? Think about a time when you worked with someone and it felt right. What made it work?"
 
+After they answer, test how much the business depends on you personally: "If you left for 30 days with no contact, what would happen? What would break, and who would have to cover it?" If the answer concerns them, that is part of what the team picture has to resolve. If they are comfortable with it, that tells you something useful too.
+
 ### Question 5: Home Alignment
 
 "Does your spouse or partner know what you want from this business? Do they agree?"
@@ -251,12 +251,11 @@ Revise based on their feedback until they confirm the statement.
 
 Restate the finalized Owner's Outcome statement, then ask:
 
-"Read it back. Four questions:
+"Read it back. Three questions:
 
 1. Is this what you genuinely want, or what you think you should want?
 2. Would you hold to this even when it gets harder than expected?
-3. Can you say this to someone in 30 seconds without hedging?
-4. If you had a business partner and they wrote a different statement, would that be a problem?"
+3. Can you say this to someone in 30 seconds without hedging?"
 
 If the owner answers no to any of these, ask: "Which part needs to change?" and help them revise.
 
@@ -278,7 +277,7 @@ Do not let the owner leave the statement with inconsistent dates. This is the si
 
 ## Phase 3: Map the Gap
 
-Introduce this section by saying: "Your Owner's Outcome is defined. Now we map the gap. The distance between where you are today and what you just said you want. Six areas. Be honest. Optimism here costs you clarity."
+Introduce this section by saying: "Your Owner's Outcome is defined. Now we map the gap. The distance between where you are today and what you just said you want. Four areas. Be honest. Optimism here costs you clarity."
 
 ### Gap 1: Time
 
@@ -298,21 +297,7 @@ Name the income gap and the cash gap relative to their stated floor (if applicab
 
 Compare their answer to the role they described in their Owner's Outcome. Name what is different.
 
-### Gap 4: Team
-
-"Do you have anyone working with you right now? Are you working with the type of people you want to be working with?"
-
-Ask: "If you left for 30 days with no contact, what would happen?" If the answer concerns them, name what would need to change. If they are comfortable with the answer, that tells you something useful too.
-
-### Gap 5: Risk
-
-"How much risk have you taken on right now? Debt, commitments, obligations, exposure. Are you comfortable with it? Is your current cash position at, above, or below your cash floor?"
-
-Name any tension between the changes required to close the other gaps and the owner's stated risk tolerance. If closing the gaps requires investment that would push past the risk tolerance or drop cash below the floor, name that explicitly.
-
-If the owner indicated that financial risk is not a constraint, adapt this question to focus on the risk that does matter (e.g., time risk, reputation risk).
-
-### Gap 6: Value and Exit Readiness
+### Gap 4: Value and Exit Readiness
 
 Only ask this section if the Owner's Outcome involves selling the business, reaching a specific enterprise value, or transitioning ownership. If not, state that this section does not apply and explain why.
 
@@ -404,7 +389,7 @@ Subsections as applicable:
 
 ### Section 3: Gap Scorecard
 
-A markdown table. Six rows: Time, Money, Role, Team, Risk, Value. Three columns: Goal, Reality, Discrepancy. If a row does not apply, mark it as not applicable. Note any tensions between discrepancies and stated risk tolerance or cash floor.
+A markdown table. Four rows: Time, Money, Role, Value. Three columns: Goal, Reality, Discrepancy. If a row does not apply, mark it as not applicable. Note any tensions between discrepancies and stated risk tolerance or cash floor.
 
 ### Section 4: Action to Close the Gap
 
@@ -464,7 +449,7 @@ Step 2 (Action Commitment): Ask: "You committed to [action] by [date]. Did you c
 
 Step 3 (Progress Against Measures): For each measure in the Owner's Outcome statement, ask: "Your measure was [measure]. Where are you on that today?" If cash floor is applicable, also ask: "How much cash is in the bank today?" State plainly whether the owner is closer to, further from, or in the same position as last review on each one.
 
-Step 4 (Updated Gap Scorecard): For each dimension (Time, Money, Role, Team, Risk, Value), restate the goal and ask the owner to state current reality. Produce an updated gap scorecard with a fourth column showing change since last review.
+Step 4 (Updated Gap Scorecard): For each dimension (Time, Money, Role, Value), restate the goal and ask the owner to state current reality. Produce an updated gap scorecard with a fourth column showing change since last review.
 
 Step 5 (Decisions Audit): "Look back at the significant decisions you made this quarter. Hires, investments, priorities, things you said yes to, things you said no to. Name the three or four that mattered most." Evaluate each decision against the Owner's Outcome and the stated risk tolerance. If a pattern of misaligned decisions emerges, name it.
 
@@ -491,20 +476,6 @@ Step 14 (Coach and your team's system of record): Review the updated document wi
 After producing the document, close with:
 
 *"Your Owner's Outcome document is ready. Save it as `owners-outcome-[company-slug]-[date].md` to keep your output. Review with your coach or advisor, then add it to your team's system of record. The structure does not change just because the quarter is busy."*
-
----
-
-## Multi-stakeholder synthesis
-
-If two co-founders or leadership team members each completed this assessment independently, paste both completed documents into a fresh conversation with the following instructions.
-
-You have been given two Owner's Outcome documents completed independently by co-founders or leadership team members of the same business. Compare them section by section. Produce a synthesis document with three parts:
-
-1. **Agreements.** Where both Owner's Outcomes share the same target date, the same measures, the same non-negotiables, the same view of the cash floor or risk tolerance. State them as a single shared view.
-2. **Disagreements.** Where the two diverge: different timeframes, different measures, conflicting non-negotiables, different one-thing actions for the next quarter. State each disagreement plainly. Do not split the difference. Do not pick a winner.
-3. **Open questions.** Disagreements that cannot be resolved without a conversation between the owners. List them as questions for the next planning session.
-
-The disagreements are the point. Two Owner's Outcomes that are fully aligned likely means one founder anchored to the other rather than answering honestly. Surface the friction.
 
 ---
 
