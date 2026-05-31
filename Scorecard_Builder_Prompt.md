@@ -441,6 +441,16 @@ Output the verification block verbatim:
 
 If any check fails, regenerate the failing section in-turn before exiting Phase 3.
 
+## Tests
+
+Run these checks after Phase 3 passes and before emitting the final scorecard. Fix any that fail.
+
+- **Every critical number on every Function block has a measurable pass bar.** The green threshold for each critical, leading, and lagging indicator is a specific number or condition - not "good," not "improving," not a placeholder. A scorecard where the seat owner cannot tell whether they passed without asking their manager is not a complete contract.
+- **The A Player condition is achievable.** Walk the Expectation block. A Player requires every critical number Green, all values Always, all competencies Always. If any threshold in the Function block is structurally impossible to reach (e.g., a green threshold set above the company's all-time best), flag it for the user to resolve before signing.
+- **The Development Commitment block is present if and only if it should be.** If the cycle is follow-on and the prior Review Record contains a Development Commitment, the block is in the scorecard and the fourth A Player condition (closing the Development Commitment) is present. If the cycle is first-cycle or the prior Development Commitment was explicitly set to none, neither the block nor the fourth condition appears.
+- **Each seat covers the correct FAC rows.** The number of Function blocks equals the count of FAC rows confirmed for this seat in Phase 1. A seat owner who covers two FAC rows has two Function blocks. A seat owner with one row has one.
+- **The signoff block names the right counterparties.** For a CEO seat with no board, the coach or trusted advisor is named. For a non-CEO seat, the direct manager is named. Blank signature lines with no names are not acceptable on a contract.
+
 ## Phase 4: Output
 
 Produce a Markdown document titled `Scorecard - [Seat Owner Name] - [Cycle Start Date]` for each seat, containing the structure assembled in Phase 2. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `scorecard-[seat-owner-slug]-[YYYY-MM-DD].md`. Save next to the Functional Accountability Chart, Values doc, and Competencies library. The Scorecard Review prompt will read this file at the end of the 90-day cycle.

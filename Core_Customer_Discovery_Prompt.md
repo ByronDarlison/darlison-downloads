@@ -230,6 +230,17 @@ If any test fails, explain what that means for the profile and suggest where to 
 
 Move to the Output section to produce the document.
 
+## Tests
+
+Run these checks after the interview, before producing the document. Fix any that fail.
+
+- **The Core Customer is a person, not a segment.** The persona section names a first name and a job title, and the daily reality paragraph contains at least one concrete, specific detail (a time, a place, a screen, a task). A revenue bracket or industry category alone is not a persona.
+- **All three problem layers are distinct.** The "What drives them" section captures the external problem (visible, broken), the internal problem (how it makes them feel), and the philosophical problem (why it should not be this way) as separate entries. A single answer that collapses all three has not been separated.
+- **The advantage is specific to this customer.** The "My advantage" section names something the company does for this customer that competitors cannot easily replicate. A claim that any competitor could make verbatim ("great service," "we care more") fails this check.
+- **The Core Customer statement passes all six tests.** The Phase 5 test results are recorded as Pass or Fail for each of the six tests. Any Fail is explained in the document. A statement that fails the differentiation test or the addressable-market test needs a note even if the founder chose to proceed.
+- **The market math is present.** Section 11 includes an estimated population count, the number of customers needed to hit the three-year revenue target, and the percentage of the addressable market that represents. If the founder could not estimate, the section notes that as an open question rather than omitting the math.
+- **Behavioral criteria are flagged as evidence or hypothesis.** Section 12 marks each of the four criteria (pays premium, pays on time, buys again, refers) as confirmed from data or noted as a hypothesis to validate.
+
 ## Output
 
 Produce a Markdown document titled `Core Customer Discovery - [Company Name] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `core-customer-[company]-[date].md`.

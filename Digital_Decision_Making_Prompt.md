@@ -227,6 +227,17 @@ If neither applies and the participant simply does not want to accept the struct
 
 ---
 
+## Tests
+
+Run these checks after the interview, before producing the document. Fix any that fail.
+
+- **The decision is a clean binary.** The Decision section states a single yes/no question with a specific timeframe. A choice between two options, a vague "should I consider," or a decision without a date fails this check.
+- **The dominant factor is named.** The Dominant factor section identifies one specific factor that, when inadequate, consistently produced a No across the Phase 4 combinations. A dominant factor stated as "several things mattered" is not a dominant factor.
+- **The structural answer matches the reality check.** The real-world configuration of factors from Phase 5 matches the closest combination from Phase 4, and the answer stated in the Answer section reflects that match. If the participant's stated answer differed from the structural answer, the Friction notes section captures that gap.
+- **Every factor has a binary reality assessment.** The Factors section marks each factor as adequate or inadequate - not "kind of adequate" or "it depends." If any factor was not forced to a binary assessment, the reality check is incomplete.
+- **Friction is documented when present.** If a factor was added mid-process, if a reality assessment changed after the combinations, or if the participant's stated decision contradicted the structural answer, the Friction notes section is present and names what changed. If there was no friction, the section is omitted.
+- **The decision is stated unconditionally.** The Answer section reads "Yes" or "No" with no conditions, no qualifiers, and no "it depends." A conditional answer means the decision was not actually stated in Phase 6.
+
 ## Output
 
 Produce a Markdown document titled `Digital Decision - [Decision Topic] - [Date]` containing the structure described below. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ` ```markdown ` code block the participant can copy and save as `digital-decision-[topic]-[date].md`.

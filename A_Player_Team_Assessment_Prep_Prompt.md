@@ -240,6 +240,17 @@ Then ask, one at a time:
 
 Record the answers as a simple action plan for each person.
 
+## Tests
+
+Run these checks after the interview, before producing the document. Fix any that fail.
+
+- **Every person on the confirmed team list has a dot.** The dot count in the scatter chart equals the team count from Phase 2. If anyone is missing, add them before emitting.
+- **No one lands in a clean zone without evidence.** A-Players recorded as All Of The Time on Values and Ahead on Performance need no evidence. Everyone else - any Some Of The Time, None Of The Time, Behind, or Carried rating - has at least one observed behavior or critical-number reference recorded from the Phase 3 conversation. A placement without evidence reverts to the nearest A-Player-adjacent zone until evidence is supplied.
+- **Toxic-A flagged separately.** If anyone is placed in the Toxic-A zone, their action plan names a 30-day decision date, not a development plan. A strong critical number does not neutralize a None Of The Time values placement.
+- **Every non-A-Player has a complete action plan.** Each action plan states the gap type (Performance, Values, or both), the specific change, a named owner from the manager roster, and a check date. "Manager TBD" and "check in later" are not acceptable entries.
+- **Manager roster is carried through.** The manager for each non-A-Player in the action plan matches the Phase 2 manager roster answer. If the leader said they manage all of them, each action plan shows the leader's name, not a blank.
+- **A-Player percentage is calculated and shown.** The summary line below the chart states the count of A-Players, the total team size, and the percentage. A percentage of 90% or higher is the target; anything below should be visible in the document so the leader can see the gap clearly.
+
 ## Output
 
 Produce a self-contained HTML document titled `A-Player Team Assessment - [Company or Team Name] - [Date]` containing the three outputs described in Phase 4. The HTML must be self-contained: inline SVG for the scatter chart, embedded CSS, no external fonts, scripts, or images. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ```html code block the participant can copy and save as `a-player-assessment-[company]-[date].html`.
