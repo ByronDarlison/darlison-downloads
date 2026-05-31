@@ -369,6 +369,8 @@ For each supporting function, establish input (what triggers it) and output (wha
 
 "Profit/X is the company-level economic engine: Profit divided by the single best denominator that reflects how this business creates value. Software-as-a-service: Profit per customer or per seat. Services: Profit per delivery or per billable hour. Manufacturer: Profit per unit shipped or per machine hour. The denominator is the unit that, if you improved Profit per that unit by 10%, would make the whole company materially healthier. Not just one function. The whole company."
 
+The X is normally the same unit as the company's primary output widget: the thing the last key function hands over to get paid, which you captured in Phase 4. Offer that widget back to the CEO as the starting point for the denominator. Say: "On your map, the primary output is [primary output widget]. That is the usual denominator. Profit per [primary output widget]. Does that fit, or is the unit different?" Reflect their own widget back. Do not invent a denominator for them.
+
 #### Step A15: Identify the denominator
 
 "What is the single denominator that, if Profit per that unit improved 10%, the whole company would benefit?"
@@ -381,6 +383,14 @@ Push on weak answers:
 If two candidates compete: "Which would reveal a structural problem if it trended red, rather than a symptom?"
 
 If stuck, use the KFFM: "Which widget on your map is the persistent unit the whole system exists to create and sustain?"
+
+**Divergence surface (not a gate).** If the denominator the CEO lands on is not the primary output widget you offered in Step A14, name the gap and have them defend it, then accept their answer. In order:
+
+1. Output verbatim: `Note: chosen denominator [X] differs from the primary output widget [primary output widget]. Asking why.`
+2. Ask verbatim: `Your map's primary output is [primary output widget], but you chose [X]. What makes [X] the better unit for the whole company than [primary output widget]?`
+3. Wait for the answer. Then accept it. The denominator is the CEO's call. Do not overrule it, do not re-ask, and do not require the answer to match the widget. Capture the reasoning alongside the recorded Profit/X.
+
+This surfaces a real divergence without forcing the widget. A denominator that differs from the primary output widget is often correct.
 
 Record Profit/X as `Profit / [denominator]`. NO dollar value.
 
