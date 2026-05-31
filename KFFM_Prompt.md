@@ -345,6 +345,8 @@ Run the three tests on each candidate widget:
 
 Exit condition per function: A widget is named and passes all three tests.
 
+The primary output widget (what the last key function hands over to get paid) is reused in Phase 5 as the default Profit/X denominator. Note which output is the company's primary one as you go.
+
 #### Step A11: First input
 
 After all output widgets are set, return to the first key function: "It outputs [widget]. For that output to exist, what had to happen first? What was the input?"
@@ -382,7 +384,7 @@ Push on weak answers:
 
 If two candidates compete: "Which would reveal a structural problem if it trended red, rather than a symptom?"
 
-If stuck, use the KFFM: "Which widget on your map is the persistent unit the whole system exists to create and sustain?"
+If stuck, default to the primary output widget you offered in Step A14: Profit per [primary output widget].
 
 **Divergence surface (not a gate).** If the denominator the CEO lands on is not the primary output widget you offered in Step A14, name the gap and have them defend it, then accept their answer. In order:
 
