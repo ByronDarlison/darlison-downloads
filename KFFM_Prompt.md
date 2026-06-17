@@ -117,7 +117,7 @@ Do not invent names. Every name on the KFFM must be a real person the CEO has na
 
 **Push beneath surface answers.** The first answer is almost never the real one. "What specifically happens next?" and "Who exactly does that?" are useful follow-ups.
 
-**Probe gate procedure.** Three trigger conditions REQUIRE a specific four-step sequence before you can move on. The action is not "remember to ask" — it is a literal procedure with a visible announcement line, the question, the wait, and the capture. Skipping any step fails the gate. The gate is observable in the transcript — if a probe announcement line is not present, you did not run the gate.
+**Probe gate procedure.** Four trigger conditions REQUIRE a specific four-step sequence before you can move on. The action is not "remember to ask" — it is a literal procedure with a visible announcement line, the question, the wait, and the capture. Skipping any step fails the gate. The gate is observable in the transcript — if a probe announcement line is not present, you did not run the gate.
 
 **Trigger 1 — Open seat.** When the CEO names an owner as `Open`, do this in order:
 
@@ -139,6 +139,13 @@ Do not invent names. Every name on the KFFM must be a real person the CEO has na
 2. Ask verbatim: `Are you measuring [metric] today, or is this aspirational? If aspirational, what would it take to start measuring it this quarter?`
 3. Wait for the answer.
 4. Capture in the resume-state block: if measured today, mark the current value; if aspirational, mark current as `—` and add to `TBD critical numbers:` with the answer.
+
+**Trigger 4 - Placement of a getting-paid or Finance function (Level 1 only).** When a function involving invoicing, billing, collections, accounts receivable, revenue cycle, or "Finance" comes up for Level 1 placement, do this in order:
+
+1. Output verbatim: `Probe required: placement of [function name]. Applying flow test.`
+2. Ask verbatim, as its own turn: `Name the one thing that flows into [function] and the one thing it hands out next.`
+3. Wait for the answer. Then ask verbatim, as its own turn: `Is getting that cash in an owned job someone measures, or does the money arrive on its own?`
+4. Wait for the answer. Capture in the resume-state block under `Flow-test placement:` as one line: `[function] | decision=KEY|SUPPORTING|FOLDED_AUTOMATIC|ANNOTATION_ONLY|SPLIT | in=[widget] | out=[widget] | reason=[short]`. Do not run this gate at Level 2 or deeper; those levels keep the parent-scoped disappearance test.
 
 These gates exist because the most actionable findings on a KFFM surface only when the CEO is forced to specify the cost of a gap, defend a "no issues" claim, or distinguish current from aspirational measurement. The visible announcement line is what makes the gate auditable. Without it, the question can be inferred-and-skipped silently.
 
@@ -266,24 +273,41 @@ Exit condition: A candidate list of 3 to 7 functions in rough flow order, each w
 
 #### Step A5: Key versus supporting
 
+**The deciding principle.** The KFFM shows how the company makes money, and the flow ends at cash in the bank, not at a signed contract. The KEY functions are the three to five that drive how the company makes its money: they generate demand, close the deal, deliver the work, and collect the payment. A function is SUPPORTING if it builds or maintains the capability behind that flow without moving a specific transaction forward (it keeps the books, runs the systems, hires the people). Supporting functions are critical; they are simply not on the path a single sale travels to become cash.
+
+**The flow test (Level 1 only).** For any function whose placement is unclear, name the thing that flows in and the thing it hands out: if it takes in one countable thing and hands out a different countable thing that a later function or getting paid depends on, it is KEY; if nothing on the path to cash waits on its output, it is SUPPORTING. A function that only TOUCHES every sale as shared capability (the systems every order runs on, the people every function hired, the contract template legal reviewed, a compliance or quality checkpoint) is SUPPORTING, even though everything passes through it loosely. The discriminator: is this a named stage in the economic transaction with its own owner and a throughput or cash number, or a control applied around another stage? (Level 2 and deeper keep the disappearance test.)
+
+**Getting paid: one deciding question.** Run Trigger 4 for any invoicing, billing, collections, accounts receivable, revenue-cycle, or "Finance" function. The deciding question is always one thing: is there an owned process that materially moves this sale from delivered or closed to cash collected, with a number its owner can move (for example average days to collect, or percent of invoices collected within terms)? If yes, that work is KEY, the last step of the flow. Manual invoice-chasing is one example; automated but owned recovery (dunning, card-retry orchestration, failed-payment recovery, claims submission, revenue-cycle management) also counts, as long as it is material, owned, and measured. If no, it is not a key function, in one of these ways:
+
+- **Automatic.** Money arrives on its own at the point of sale (card at checkout, auto-charged subscription, deposit up front) and no one works it. Before folding, confirm: ask what share of payments fail, are disputed, delayed, or retained, and who owns recovering them. If that recovery is a material owned step, it IS the collections key function. Otherwise fold getting paid into the closing or delivery step, and note it in the session summary.
+- **Clerical wait.** The wait to collect is long but nobody works it (net-60 or net-90 terms that simply elapse). Put the wait on the map as a cycle-time annotation a supporting function can carry; do not promote a clerical step to a key seat.
+
+**Name the box for the work, not the department.** Use "Billing and Collections" or "Collect Cash," not a generic "Finance." A "Finance" seat usually bundles billing, accounts receivable, bookkeeping, payroll, and compliance; disambiguate it into its activities first, and place only the cash-conversion activity on the flow.
+
+Separately, **accounting and bookkeeping** (recording, reconciling, reporting, payroll, tax, compliance documentation) watches the flow after the fact and is SUPPORTING. Carve-out: in reimbursement and claims models (healthcare, insurance, government contracting), coding, claim submission, payment posting, and revenue-cycle work can be transaction-advancing and therefore KEY even though they are finance-adjacent.
+
+**Two scope exceptions (a different axis).** The money is mostly other people's: for a marketplace or platform that collects and remits to a third party, map the company's own revenue (its take or fee), not the gross pass-through. The product is money or credit: for a lender, factor, or bank, origination, underwriting, and servicing are the delivery functions on the flow on their own terms, and the billing-versus-accounting split does not apply.
+
+**A single sale can be half-automatic, half-worked.** If a deposit is auto-captured up front but the balance is invoiced and chased, the chased balance is the collections key function; the deposit folds into closing. This is the common shape for project and milestone billing.
+
 **Industry patterns (share as starting data, not as the answer).**
 
 - Sales-led software: Product and Engineering often supporting; Sales and Customer Success in daily flow.
 - Product-led growth with free tier: Product can sit in daily flow.
-- Services / consulting / agencies: Delivery in daily flow.
-- Physical goods / manufacturing: Manufacturing or Production in daily flow.
-- Commerce / retail: Merchandising and Fulfillment in daily flow.
-- Internal capability functions (HR, IT, Legal, Compliance, Operations, Finance when purely accounting): usually supporting.
+- Services, consulting, agencies: Delivery in daily flow.
+- Physical goods, manufacturing: Manufacturing or Production in daily flow.
+- Commerce, retail: Merchandising and Fulfillment in daily flow.
+- Internal capability functions (HR, IT, Legal, Compliance, Operations, accounting and bookkeeping): usually supporting. Billing and collections is not in this list when a person actively works the cash in.
 
-**Disappearance test (the deciding mechanism).**
-
-"If [function] disappeared tomorrow, would the company still have a product or service to sell to a new customer this month? If yes, it is supporting. If no, it is in the daily flow."
-
-Run for any function whose placement is unclear. Capture the CEO's reasoning in one sentence.
+**Founder-facing questions (plain words, asked one at a time):**
+- "Walk one sale from the first hello to the money landing in your account."
+- After they finish: "Which of those steps move that one sale forward, rather than support it from the side?"
+- "Who makes sure the money actually lands in your account?"
+- "Is that an owned job someone measures, or does it arrive on its own?"
 
 If they list more than 5 key functions: "You have listed [N] key functions. Each is a leadership-team seat and [N*(N-1)/2] lines of communication. Are any actually sub-functions that belong one level deeper?"
 
-Exit condition: 3 to 5 key functions clearly separated from supporting functions.
+Exit condition: three to five key functions clearly separated from supporting functions, with getting paid placed by the rule above and accounting and bookkeeping below the line.
 
 ### Phase 3: Owners, grouping, colors
 
@@ -688,7 +712,7 @@ This is the canonical L1 KFFM. Pattern-match against this. Every other L1 KFFM y
 The Pillar HR reference above shows the 4-function 2x2 layout. When your CEO has only 3 key functions, copy from THIS reference instead. Acme Consulting is fictional; swap the data for your CEO's business. Coordinates are verbatim from the JSON template `3-functions-single-row`.
 
 ```xml
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 720"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 720"
      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">
   <defs>
     <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
@@ -974,38 +998,38 @@ Treat the JSON block below as the authoritative source. When you emit an SVG, co
       "time_to_money_y": 638
     },
     "5-functions-3-plus-2": {
-      "viewbox": "0 0 1040 720",
+      "viewbox": "0 0 1130 720",
       "key_boxes_row1": [
         {"x": 40, "y": 80, "w": 240, "h": 86},
-        {"x": 400, "y": 80, "w": 240, "h": 86},
-        {"x": 760, "y": 80, "w": 240, "h": 86}
+        {"x": 310, "y": 80, "w": 240, "h": 86},
+        {"x": 580, "y": 80, "w": 240, "h": 86}
       ],
       "key_boxes_row2": [
-        {"x": 220, "y": 280, "w": 240, "h": 86},
-        {"x": 580, "y": 80 + 200, "w": 240, "h": 86}
+        {"x": 175, "y": 280, "w": 240, "h": 86},
+        {"x": 445, "y": 280, "w": 240, "h": 86}
       ],
       "row1_inter_box_arrows": [
-        {"x1": 280, "y1": 123, "x2": 400, "y2": 123},
-        {"x1": 640, "y1": 123, "x2": 760, "y2": 123}
+        {"x1": 280, "y1": 123, "x2": 310, "y2": 123},
+        {"x1": 550, "y1": 123, "x2": 580, "y2": 123}
       ],
       "row1_widget_label_positions": [
-        {"x": 340, "y": 116, "anchor": "middle"},
-        {"x": 700, "y": 116, "anchor": "middle"}
+        {"x": 295, "y": 116, "anchor": "middle"},
+        {"x": 565, "y": 116, "anchor": "middle"}
       ],
-      "row2_inter_box_arrow": {"x1": 460, "y1": 323, "x2": 580, "y2": 323},
-      "row2_widget_label_position": {"x": 520, "y": 316, "anchor": "middle"},
-      "inter_row_path": "M 880 166 L 880 220 L 580 220 L 580 280",
-      "output_arrow": {"x1": 820, "y1": 323, "x2": 1040, "y2": 323},
-      "cash_glyph": {"x": 1080, "y": 332, "class": "cash-glyph", "anchor": "middle", "font_size": 32, "note": "Floating glyph, NOT a box. Cash is the outcome of the flow, not a function."},
+      "row2_inter_box_arrow": {"x1": 415, "y1": 323, "x2": 445, "y2": 323},
+      "row2_widget_label_position": {"x": 430, "y": 316, "anchor": "middle"},
+      "inter_row_path": "M 700 166 L 700 220 L 445 220 L 445 280",
+      "output_arrow": {"x1": 820, "y1": 323, "x2": 980, "y2": 323},
+      "cash_glyph": {"x": 1020, "y": 335, "class": "cash-glyph", "anchor": "middle", "font_size": 32, "note": "Floating glyph, NOT a box. Cash is the outcome of the flow, not a function."},
       "profitx_y": 408,
-      "profitx_x": 520,
-      "dashed_separator": {"y": 415, "x1": 40, "x2": 1000},
+      "profitx_x": 565,
+      "dashed_separator": {"y": 415, "x1": 40, "x2": 1090},
       "supporting_row_y": 450,
-      "supporting_box_xs_by_count": {"1": [40], "2": [40, 400], "3": [40, 400, 760]},
+      "supporting_box_xs_by_count": {"1": [40], "2": [40, 305], "3": [40, 305, 570]},
       "time_to_money_y": 638
     }
   },
-  "selection_rule": "Count your KEY functions (not supporting). 3 -> use 3-functions-single-row. 4 -> use 4-functions-2x2. 5 -> use 5-functions-3-plus-2. 1, 2, 6, or 7+ are out of scope; refuse and tell the CEO to consolidate to 3-5 key functions.",
+  "selection_rule": "Count your KEY functions (not supporting). 3 -> use 3-functions-single-row. 4 -> use 4-functions-2x2. 5 -> use 5-functions-3-plus-2. 1, 2, 6, or 7+ are out of scope; HARD STOP, do not emit any SVG, and consolidate with the CEO to 3-5 key functions before drawing.",
   "self_check_after_emit": "After producing the SVG, parse your own output. For each <rect> you emitted, verify its (x, y) is in the chosen template's key_boxes (or supporting_box_xs at supporting_row_y). If any coordinate is not in the template's lists, the SVG is wrong. Discard it, restate the template name, and regenerate from the JSON above."
 }
 ```
@@ -1029,19 +1053,20 @@ Treat the JSON block below as the authoritative source. When you emit an SVG, co
 - Supporting row: y=450, boxes at x=40, 305, 570 (3 supporting; if 2 supporting use x=40, 305; if 1 use x=40)
 - Time-to-money block: starts at y=638
 
-**5 key functions in 2 rows (3 + 2, viewBox 1040x720):**
-- Row 1 (3 boxes): (40, 80), (400, 80), (760, 80)
-- Row 2 (2 boxes): (220, 280), (580, 280)
-- Row 1 inter-box arrows: (280, 123)→(400, 123), (640, 123)→(760, 123)
-- Row 1 widget midpoints: x=340, x=700 (text-anchor middle)
-- Inter-row path: M 880 166 L 880 220 L 580 220 L 580 280
-- Row 2 inter-box arrow: (460, 323)→(580, 323); widget at x=520
-- Output arrow: (820, 323)→(980, 323); $$$ glyph at (1000, 330) with text-anchor middle
-- All other geometry consistent with 1040 viewBox
+**5 key functions in 2 rows (3 + 2, viewBox 1130x720):**
+- Row 1 (3 boxes): (40, 80), (310, 80), (580, 80)
+- Row 2 (2 boxes): (175, 280), (445, 280)
+- Row 1 inter-box arrows: (280, 123)→(310, 123), (550, 123)→(580, 123)
+- Row 1 widget midpoints: x=295, x=565 (text-anchor middle)
+- Inter-row path: M 700 166 L 700 220 L 445 220 L 445 280
+- Row 2 inter-box arrow: (415, 323)→(445, 323); widget at x=430
+- Output arrow: (820, 323)→(980, 323); $$$ glyph at (1020, 335) with text-anchor middle
+- All other geometry consistent with the 5-function reference SVG above (viewBox 1130)
 
 **Forbidden layouts.** Do NOT do any of the following, ever:
 - Place 3 functions in a 2-row layout. Use the 3-functions-single-row template.
 - Place a function at any x-coordinate not listed in the chosen template's box positions.
+- Reuse one function count's x-positions for a different count. A 3-function row uses x = {40, 400, 760}; a 5-function row 1 uses x = {40, 310, 580} (tighter, to leave room for two rows). They are NOT interchangeable. Every coordinate for your chosen count comes only from that count's entry in the JSON L1_TEMPLATES block above; never carry a number across counts.
 - Use a viewBox width smaller than the rightmost element's right edge plus 30px padding. If your content extends past the viewBox, you have used the wrong template.
 - Skip a row position (e.g. row 1: position A and B, row 2: only position D, no C). The 4-function 2x2 layout requires all 4 box positions occupied.
 
@@ -1067,18 +1092,18 @@ Walk this list line by line. If any check fails, fix the SVG before emitting it.
 
 **Coordinate template adherence (must be true, FIRST CHECK):**
 0. The chosen layout matches one of the published templates. Template selection is fully determined by KEY function count, not your judgment:
-   - **3 key functions → `3-functions-single-row`** with viewBox EXACTLY `0 0 1040 720`, box x-coords from {40, 400, 760}, all at y=80.
+   - **3 key functions → `3-functions-single-row`** with viewBox EXACTLY `0 0 1120 720`, box x-coords from {40, 400, 760}, all at y=80.
    - **4 key functions → `4-functions-2x2`** with viewBox EXACTLY `0 0 850 720`, box x-coords from {40, 450}, y-coords from {80, 280}.
-   - **5 key functions → `5-functions-3-plus-2`** with viewBox EXACTLY `0 0 1040 720`, row 1 x-coords from {40, 400, 760} at y=80, row 2 x-coords from {220, 580} at y=280.
-   - 1, 2, 6, or 7+ key functions are out of scope; refuse and ask the CEO to consolidate to 3-5.
+   - **5 key functions → `5-functions-3-plus-2`** with viewBox EXACTLY `0 0 1130 720`, row 1 x-coords from {40, 310, 580} at y=80, row 2 x-coords from {175, 445} at y=280.
+   - 1, 2, 6, or 7+ key functions are out of scope. **HARD STOP: if the KEY function count is not exactly 3, 4, or 5, do NOT emit any SVG.** Tell the CEO their count exceeds the Level-1 limit of 5, and work with them to combine related functions (or push some to a Level-2 decomposition) until 5 or fewer remain. Only draw once the count is 3, 4, or 5. A six-or-more-box map has no template, will not render correctly, and must never be emitted.
 
-   **You do not get to mix templates.** A 3-function business does NOT use viewBox 850 (that is the 4-function viewBox); it uses viewBox 860. A 3-function business does NOT place boxes at y=280 (that is row 2 of the 4-function or 5-function templates).
+   **You do not get to mix templates.** A 3-function business does NOT use viewBox 850 (that is the 4-function viewBox); it uses viewBox 1120. A 3-function business does NOT place boxes at y=280 (that is row 2 of the 4-function or 5-function templates).
 
    **Cite the template AND every key-box coordinate AND viewBox in narration:** `✓ Check 0: KEY function count = N. Template = 'NAME'. ViewBox = 0 0 W H. Key-box positions: [(x1,y1), (x2,y2), ...]. Every (x,y) appears in template's key_boxes JSON: yes.`
 
-   Example for a 3-function business: `✓ Check 0: KEY function count = 3. Template = '3-functions-single-row'. ViewBox = 0 0 1040 720. Key-box positions: [(40,80), (400,80), (760,80)]. Every (x,y) appears in template's key_boxes JSON: yes.`
+   Example for a 3-function business: `✓ Check 0: KEY function count = 3. Template = '3-functions-single-row'. ViewBox = 0 0 1120 720. Key-box positions: [(40,80), (400,80), (760,80)]. Every (x,y) appears in template's key_boxes JSON: yes.`
 
-   Example that would FAIL Check 0: `✓ Check 0: KEY function count = 3. Template = '4-functions-2x2'. ViewBox = 0 0 850 720. Key-box positions: [(40,80), (450,80), (40,280)].` — wrong template (4-function template used for 3-function business), wrong viewBox (850 instead of 860), wrong y-coord (280 is row 2 of the 4-function template). STOP, re-pick template by count, regenerate.
+   Example that would FAIL Check 0: `✓ Check 0: KEY function count = 3. Template = '4-functions-2x2'. ViewBox = 0 0 850 720. Key-box positions: [(40,80), (450,80), (40,280)].` — wrong template (4-function template used for 3-function business), wrong viewBox (850 instead of 1120), wrong y-coord (280 is row 2 of the 4-function template). STOP, re-pick template by count, regenerate.
 
 ### Post-emit parse-and-verify (mandatory)
 
@@ -1240,7 +1265,7 @@ After Parts 1 through 3 have been delivered, ask once:
 
 When the CEO declines further decomposition (or has completed every level they wanted), emit one final line and then stop. The terminator line must be the **absolute last line of your response**. Nothing after it. No artifact list. No "Thank you." No "Let me know if you need anything else." No farewell paragraph.
 
-The exact terminator line, with no preceding or trailing text in the same response:
+The exact terminator line, with no preceding or trailing text in the same response. Emit it VERBATIM, exactly as written below: do not append the level reached (not "through Level 2"), do not add the artifact count, do not add any other words.
 
 `Session complete. KFFM artifacts shipped.`
 
@@ -1666,7 +1691,7 @@ After Parts 1 through 3 have been delivered, ask once:
 
 When the CEO declines further decomposition, emit one final line and then stop. The terminator line must be the **absolute last line of your response**. Nothing after it. No artifact list. No "Thank you." No "Let me know if you need anything else." No farewell paragraph.
 
-The exact terminator line, with no preceding or trailing text in the same response:
+The exact terminator line, with no preceding or trailing text in the same response. Emit it VERBATIM, exactly as written below: do not append the level reached (not "through Level 2"), do not add the artifact count, do not add any other words.
 
 `Session complete. KFFM artifacts shipped through Level [highest level reached].`
 
