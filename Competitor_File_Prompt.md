@@ -160,7 +160,7 @@ Apply the feature test to every candidate: a feature names your product; a crite
 
 The founder confirms the final list. Keep it to the handful the customer actually weighs; if the list grows past that, ask which ones have ever decided a deal.
 
-Exit condition: a confirmed criteria list in the customer's language, each criterion carrying a source tag, recorded in the session summary under `Buying criteria (draft):` with a note that the list is a draft to be confirmed in the scoring exercise later in the sequence.
+Exit condition: a confirmed criteria list in the customer's language, recorded in the session summary under `Buying criteria (draft):` with a note that the list is a draft to be confirmed in the scoring exercise later in the sequence. Every criterion line carries its own inline source tag in the literal format `- [criterion] (source: from your data | from your Core Customer document | researched | you named)`. Example that passes: `- Works with the tools we already own (source: from your data)`. Example that FAILS: a bare criterion with the sources listed once for the whole list.
 
 ## Phase 4: The files
 
@@ -212,11 +212,11 @@ Do not paraphrase. Do not bundle the question into other text. Wait for the answ
 
 The artifact turns carry the artifacts alone. This split exists because a long single response gets cut off by response-length limits; each document gets a turn to itself. If your platform supports a persistence surface (a document window), build each document there; length limits do not apply.
 
-**Turn 1 through N: one Competitor File per turn.** Before emitting each file, cite the target row count (grid rows plus four corners plus watchlist entries) and the competitor name. Emit the file as a single fenced markdown block titled `Competitor File - [Competitor] - [Company] - [Date]`, containing: the attribute grid in the literal row format from Phase 4, the four corners with tags, the threat rating (and response, owner, date if high), the watchlist, and, in update mode, the `Changes this quarter:` log. After emitting, cite the emitted row count and confirm the match; fix any mismatch in the same turn.
+**Turn 1 through N: one Competitor File per turn.** Immediately before each fenced block, output verbatim: `Emitting Competitor File: [Competitor Name]. Target row count: [N].` (N = grid rows plus four corners plus watchlist entries). Emit the file as a single fenced markdown block titled `Competitor File - [Competitor] - [Company] - [Date]`, containing: the attribute grid in the literal row format from Phase 4, the four corners with tags, the threat rating (and response, owner, date if high), the watchlist, and, in update mode, the `Changes this quarter:` log. Immediately after the block closes, output verbatim: `Emitted: [N] rows. Match: [yes|no].` Fix any mismatch in the same turn before moving on.
 
 **Next turn: the cover brief.** One page, fenced markdown block titled `Competitor Cover Brief - [Company] - [Date]`: the focus set with threat ratings on one line each, the named decision from Phase 7, the high-threat responses with owners and dates, the open research assignments (every [RED] cell and "find this" watch), each with an owner and a timeframe the founder assigns when the brief is drafted, and the buying criteria draft with source tags.
 
-**Then: post-emit parse-and-verify.** Before saying anything else, parse the actual documents you emitted and present a table with columns Check, Evidence, and PASS or FAIL:
+**Then: post-emit parse-and-verify.** Before saying anything else, parse the actual documents you emitted and report every check as its own numbered line in the literal format `N. [Check name]: PASS. Evidence: [the actual parsed values].` or `N. [Check name]: FAIL. Evidence: [what was found].` One line per check, all eleven lines, never a table and never a bundled verdict:
 
 0. Every fenced block is complete (opens and closes; no truncation marker unresolved).
 1. File count equals focus-set count. Evidence: both numbers and the competitor names.
@@ -228,10 +228,11 @@ The artifact turns carry the artifacts alone. This split exists because a long s
 7. The cover brief contains the named decision verbatim from the founder's reply, and every research assignment in it carries an owner and a timeframe. Evidence: the quoted decision and the assignment count with owners.
 8. The session summary contains every required section named in its spec. Evidence: the section list with present or missing per section.
 9. No em dash appears in any emitted document. Evidence: the count of em dash characters found (must be zero); if any are found, list the lines.
+10. Every file contains a Watchlist section with at least one confirmed URL or "find this" entry. Evidence: per-file watchlist entry counts.
 
 If every check passes, output `Post-emit verification: PASS` and proceed. If any check fails, output `Post-emit verification: FAIL - [which check, which document]. Regenerating.` and re-emit the affected document in a fresh turn. You have up to two regeneration attempts.
 
-**Then: the session summary.** A fenced markdown block starting with the heading `## Resume State -- Competitor Files -- [Company Name] -- [Date]`, containing: the five company basics; the mode; what was pasted (Market Map summary, Core Customer document, closed-lost data, prior files: yes or no each); the focus set with threat ratings; the light-touch tier; the buying criteria draft with source tags; the high-threat responses; the named decision; every open research assignment; and any upstream additions under `Upstream additions captured during Competitor Files:` (anything that belongs on the founder's Market Map or Core Customer document, flagged for write-back).
+**Then: the session summary.** A fenced markdown block whose FIRST line is the literal string `## Resume State -- Competitor Files -- [Company Name] -- [Date]` with only the bracketed values substituted. `Override State`, `Session State`, `Build Summary`, or any other variant FAILS; downstream prompts and next quarter's update mode find the block by this exact heading. The block contains: the five company basics; the mode; what was pasted (Market Map summary, Core Customer document, closed-lost data, prior files: yes or no each); the focus set with threat ratings; the light-touch tier; the buying criteria draft with source tags; the high-threat responses; the named decision; every open research assignment; and any upstream additions under `Upstream additions captured during Competitor Files:` (anything that belongs on the founder's Market Map or Core Customer document, flagged for write-back).
 
 **Part 4: Next steps.** One short paragraph: "Hand the Competitor Files and the cover brief to your coach for review and comment, together with every artifact from upstream prompts you have run (your Core Customer document, your Market Map image file and inventory). Bring the files to every quarterly planning session: walk what changed, move the ratings, and name the decision. Next quarter, run this prompt in update mode with these files and this session summary." Then add verbatim:
 
