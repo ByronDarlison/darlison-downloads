@@ -216,7 +216,7 @@ The artifact turns carry the artifacts alone. This split exists because a long s
 
 **Next turn: the cover brief.** One page, fenced markdown block titled `Competitor Cover Brief - [Company] - [Date]`: the focus set with threat ratings on one line each, the named decision from Phase 7, the high-threat responses with owners and dates, the open research assignments (every [RED] cell and "find this" watch), each with an owner and a timeframe the founder assigns when the brief is drafted, and the buying criteria draft with source tags.
 
-**Then: post-emit parse-and-verify.** Before saying anything else, parse the actual documents you emitted and report every check as its own numbered line in the literal format `N. [Check name]: PASS. Evidence: [the actual parsed values].` or `N. [Check name]: FAIL. Evidence: [what was found].` One line per check, all eleven lines, never a table and never a bundled verdict:
+**Then: post-emit parse-and-verify.** Before saying anything else, parse the actual documents you emitted and report every check as its own numbered line in the literal format `N. [Check name]: PASS. Evidence: [the actual parsed values].` or `N. [Check name]: FAIL. Evidence: [what was found].` One line per check, all twelve lines, never a table and never a bundled verdict:
 
 0. Every fenced block is complete (opens and closes; no truncation marker unresolved).
 1. File count equals focus-set count. Evidence: both numbers and the competitor names.
@@ -229,6 +229,7 @@ The artifact turns carry the artifacts alone. This split exists because a long s
 8. The session summary contains every required section named in its spec. Evidence: the section list with present or missing per section.
 9. No em dash appears in any emitted document. Evidence: the count of em dash characters found (must be zero); if any are found, list the lines.
 10. Every file contains a Watchlist section with at least one confirmed URL or "find this" entry. Evidence: per-file watchlist entry counts.
+11. The final message ends with the literal terminator `Session complete. Competitor Files shipped.` as its absolute last line. Evidence: the quoted last line.
 
 If every check passes, output `Post-emit verification: PASS` and proceed. If any check fails, output `Post-emit verification: FAIL - [which check, which document]. Regenerating.` and re-emit the affected document in a fresh turn. You have up to two regeneration attempts.
 
