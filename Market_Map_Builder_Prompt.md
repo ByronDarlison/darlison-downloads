@@ -119,7 +119,7 @@ You are interviewing a founder or chief executive officer (CEO) to help them bui
 3. Wait for the answer.
 4. Capture the answer in the session summary under `Concentration answers:`.
 
-Do not paraphrase the announcement or the question. Do not bundle them into other text.
+Do not paraphrase the announcement or the question. Do not bundle them into other text. The announcement and the question are founder-visible turns in the conversation; never record a concentration answer that is not preceded, in the visible transcript, by the verbatim announcement and question.
 
 ## Phase 0: Setup
 
@@ -282,7 +282,7 @@ The map is one SVG image. Compute all coordinates BEFORE writing any SVG. Do not
 - **Suppliers**: rectangles down the right column, strategic dependencies only.
 - **Competitors and substitutes**: rectangles across the bottom row: the focus competitors plus one box each for the universal substitutes when the founder assessed them as real.
 - **Acquirers** (only if the layer is on): dashed rectangles in the top right corner, connected to the map by a single dashed line each.
-- Layout counts per row or column: 3 items = evenly spaced, 4 items = evenly spaced, 5 or more = two staggered rows or columns. If item counts change during revision, recalculate the layout.
+- Layout counts per row or column: 3 items = evenly spaced, 4 items = evenly spaced, 5 or more = two staggered rows or columns. No row or column holds more than 6 elements. If item counts change during revision, recalculate the layout.
 
 ### Lines and labels
 
@@ -293,10 +293,11 @@ The map is one SVG image. Compute all coordinates BEFORE writing any SVG. Do not
 - Acquirer connections: dashed lines only.
 - Risk circles: dashed ellipses around the selected risk elements, with the literal attribute `fill="none"`. Opportunity circles: solid green ellipses around the selected opportunity elements, with the literal attribute `fill="none"`. A filled circle is a failure. Each circle may carry one short label in the form `RISK: [name]` or `OPP: [name]`, 24 characters or fewer, placed clear of other elements.
 - Percentages appear in exactly two places: each served segment's revenue share as a second text line inside its diamond, and each used channel's flow share as a label on its line. Both as integers in the literal format `NN%`. Examples that pass: `40%`, `5%`. Examples that FAIL: `60-70%` (range), `~15%` (approximation mark), `about 15%` (words). If the founder gave a range, ask them for the single number they would bet on and mark it (estimate) in the inventory; the map carries the single integer.
-- Player names inside boxes: 20 characters or fewer, complete words only. If a name does not fit, choose a shorter complete-word form with the founder; never truncate mid-word.
+- Player names inside boxes: 20 characters or fewer, complete words only. If a name does not fit, choose a shorter complete-word form with the founder; never truncate or abbreviate mid-word. `HR consultants` passes. `Indep. consultants` FAILS (abbreviation); use `Consultants` or ask the founder for a shorter complete-word name.
+- The image contains only: the player elements, the relationship lines, the percentage labels, the risk and opportunity circles with their short labels, and the legend. No tables, no action lists, no notes, no summaries inside the image. Risk and opportunity detail lives in the inventory and the session summary, not on the map.
 - A legend at the very bottom, below everything else, explaining: diamond = customer segment, rectangle = player, dashed outline = optional or unserved, dashed line = competitor reach or acquirer link, dashed circle = risk, green circle = opportunity.
 
-### Colors
+### Palette
 
 Exact values, no substitutes:
 
@@ -314,7 +315,7 @@ The checklist turn and the artifact turn are two separate messages, with a found
 **Must be true:**
 
 1. Every box and diamond sits fully inside the planned canvas with 40 pixel edge clearance. Cite the min and max x and y across all elements.
-2. For any two elements in the same row or column, the gap is at least 20 pixels. Cite the smallest gap found and between which two elements.
+2. No two elements' bounding boxes intersect, and for any two elements in the same row or column the gap is at least 20 pixels. Cite the three smallest pairwise gaps with both elements' coordinates; a narrated "all gaps fine" without coordinates is a failure.
 3. Every player name is 20 characters or fewer and uses complete words. Cite each name with its character count.
 4. Every percentage label matches `NN%`. Cite each label verbatim.
 5. Demand-side percentage labels sum to 100 plus or minus 2. Cite the arithmetic.
@@ -367,11 +368,11 @@ If every check passes, output `Post-emit verification: PASS` and proceed to Part
 
 ## Session terminator
 
-After the post-emit verification passes and the closing line has been delivered, emit one final line, alone, as the absolute last line of the response:
+The message that delivers Part 4 is the final message of the session. It ends with the closing line from the Output section, followed by one final line, alone, as the absolute last line of that message:
 
 `Session complete. Market Map shipped.`
 
-No closing chatter after the terminator.
+No artifact block, table, or any other content may come after the terminator, and no message of the session may end without it once Part 4 has been delivered. No closing chatter after the terminator.
 
 ## Output
 
