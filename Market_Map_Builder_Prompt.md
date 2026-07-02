@@ -245,7 +245,11 @@ Goal: the circles, and the shortlist that feeds planning.
 
 Walk the map and propose candidate risks, each traced to something already on the map: concentration flagged in Phase 7, single-source suppliers from Phase 3, gatekeeper channels, focus-competitor overlap from Phase 4. Then propose candidate opportunities the same way: unclaimed channels from Phase 2, unserved segments from Phase 1, no-relationship influencers from Phase 5, acquirer gaps from Phase 6, open space from Phase 4. Every candidate carries its source. The founder confirms, rejects, or adds.
 
-Then ask: "Of the confirmed risks, which are the up to three worth acting on this quarter? Of the opportunities, the same: up to three." These six or fewer items are what the map hands to the next planning session. The map carries a dashed circle for each selected risk and a green circle for each selected opportunity; unselected items stay in the inventory only, so the map stays readable.
+Then run the selection as a standalone turn. Ask verbatim, with the confirmed candidates listed by number:
+
+`Here are the confirmed risks: [numbered list]. And the confirmed opportunities: [numbered list]. Pick up to three of each worth acting on this quarter, by number. You can also edit or reject any of them.`
+
+Do not paraphrase. Do not bundle the selection into other text. Wait for the founder's answer and record their choices verbatim in the session summary. These six or fewer items are what the map hands to the next planning session. The map carries a dashed circle for each selected risk and a green circle for each selected opportunity; unselected items stay in the inventory only, so the map stays readable.
 
 Exit condition: up to three selected risks and up to three selected opportunities, each traced to a map element.
 
@@ -285,8 +289,9 @@ The map is one SVG image. Compute all coordinates BEFORE writing any SVG. Do not
 - Influencer relationships: thin solid lines to the company only where a working relationship exists.
 - Focus-competitor reach: dashed lines from each focus competitor to the segments and channels it reaches.
 - Acquirer connections: dashed lines only.
-- Risk circles: dashed ellipses around the selected risk elements. Opportunity circles: solid green ellipses around the selected opportunity elements.
-- Player names inside boxes: 20 characters or fewer, complete words only. If a name does not fit, choose a shorter complete-word form with the founder; never truncate mid-word. Percentage labels use the literal format `NN%` (no decimals, no words).
+- Risk circles: dashed ellipses around the selected risk elements, with the literal attribute `fill="none"`. Opportunity circles: solid green ellipses around the selected opportunity elements, with the literal attribute `fill="none"`. A filled circle is a failure. Each circle may carry one short label in the form `RISK: [name]` or `OPP: [name]`, 24 characters or fewer, placed clear of other elements.
+- Percentages appear once per map: on the channel flows only, as integers in the literal format `NN%`. Examples that pass: `40%`, `5%`. Examples that FAIL: `60-70%` (range), `~15%` (approximation mark), `about 15%` (words). If the founder gave a range, ask them for the single number they would bet on and mark it (estimate) in the inventory; the map carries the single integer.
+- Player names inside boxes: 20 characters or fewer, complete words only. If a name does not fit, choose a shorter complete-word form with the founder; never truncate mid-word.
 - A legend at the very bottom, below everything else, explaining: diamond = customer segment, rectangle = player, dashed outline = optional or unserved, dashed line = competitor reach or acquirer link, dashed circle = risk, green circle = opportunity.
 
 ### Colors
@@ -302,7 +307,7 @@ Exact values, no substitutes:
 
 ### Pre-emit checklist (its own turn, before the artifact turn)
 
-Emit the checklist as its own message: `✓ Check N: [verbatim citation]` lines and nothing else, ending with `Checklist complete. Emitting the map next.` Wait for any reply, then emit the artifact in the following turn. Cite actual values per element, not summaries.
+The checklist turn and the artifact turn are two separate messages, with a founder reply between them. The checklist turn contains the `✓ Check N: [verbatim citation]` lines and NOTHING else: no SVG, no fragments of the map, no preamble. The literal string `Checklist complete. Emitting the map next.` must be the last line of the checklist turn. Any reply from the founder (even one word) unblocks the artifact turn. Cite actual values per element, not summaries; a check line without cited values is a failure.
 
 **Must be true:**
 
@@ -324,13 +329,15 @@ Emit the checklist as its own message: `✓ Check N: [verbatim citation]` lines 
 
 ### The artifact turn
 
-Emit, in order, with nothing else before item 1:
+The artifact turn contains ONLY Part 1. Parts 2 through 4 come in a later turn, after the post-emit verification. This split exists because a long single response gets cut off mid-map by response-length limits; the map must have a turn to itself.
 
-**Part 1: The map.** The complete `<svg>...</svg>` element with an embedded `<style>` block.
+**Part 1: The map.** If your platform supports a persistence surface (a document or artifact window), build the map document there; length limits do not apply. Otherwise emit the complete `<svg>...</svg>` element with an embedded `<style>` block as a single fenced code block, and nothing else in the turn. The last line of the block must be `</svg>`. If you approach the response-length limit before closing the element, stop at a box boundary, write `<!-- continued -->` as the final line, and continue the element in your next message; then instruct the founder to join the parts when saving.
+
+Then run the post-emit parse-and-verify (below). After verification passes, emit the remaining parts:
 
 **Part 2: The player inventory.** A markdown table with columns: Player, Category (segment / channel / supplier / competitor / substitute / influencer / acquirer), Source ((you named) / (from your data) / (researched, confirmed)), Share or Spend (percentage or blank), Tags (used / unclaimed / single-source / relationship / no relationship / focus / risk / opportunity). Before emitting, cite the target row count and the ordered list of player names verbatim; after emitting, cite the emitted row count and confirm the match. If they do not match, fix it in the same turn.
 
-**Part 3: The session summary.** A fenced markdown block starting with the heading `## Resume State -- Market Map -- [Company Name] -- [Date]`, containing: the five company basics; which data was provided (revenue / vendor / closed-lost, yes or no each); the acquirer gate answer; the full player inventory with source tags; demand-side percentages with real-versus-estimate marks; the concentration answers; the selected risks and opportunities; and any upstream additions under `Upstream additions captured during Market Map:` (anything the founder surfaced that belongs on their Core Customer document or KFFM, flagged for write-back).
+**Part 3: The session summary.** A fenced markdown block starting with the heading `## Resume State -- Market Map -- [Company Name] -- [Date]`, containing: the five company basics; which data was provided (revenue / vendor / closed-lost, yes or no each); the acquirer gate answer; the full player inventory with source tags; demand-side percentages with real-versus-estimate marks; the concentration answers; the selected risks and opportunities verbatim as the founder chose them; and any upstream additions under `Upstream additions captured during Market Map:` (anything the founder surfaced that belongs on their Core Customer document or KFFM, flagged for write-back).
 
 **Part 4: Next steps.** One short paragraph: "Hand the Market Map image file to your coach for review and comment, together with every artifact from upstream prompts you have run (your Core Customer document, your KFFM image files). The map feeds your next planning session: the selected risks and opportunities are candidate priorities. Review and update the map at every quarterly planning session; markets move." Then add verbatim:
 
@@ -344,16 +351,17 @@ When you come back to run the next prompt, paste all of these into the new conve
 
 ### Post-emit parse-and-verify
 
-In your NEXT message after the artifact turn, before saying anything else, run these deterministic checks by parsing the actual elements you emitted. Do not narrate from intent; extract the numbers from what you wrote and compute each check.
+In your NEXT message after the artifact turn, before saying anything else, run these deterministic checks by parsing the actual elements you emitted. Do not narrate from intent; extract the numbers from what you wrote and compute each check. Present the results as a table with columns Check, Evidence (the actual parsed values or coordinates), and PASS or FAIL. A row without evidence is a failure.
 
-1. Every `<rect>`, `<polygon>`, and `<ellipse>` lies fully inside the viewBox.
-2. Every `<line>` endpoint touches the edge of an element or another line (no dangling connectors).
-3. Demand-side percentage labels parse as integers and sum to 100 plus or minus 2.
-4. Acquirer element count is zero when the gate was no; every acquirer element uses dashed stroke when the gate was yes.
-5. Dashed risk-circle count equals selected risk count; green opportunity-circle count equals selected opportunity count.
-6. Inventory row count equals the count cited pre-emit, and every map element name appears in the inventory verbatim.
+0. The emitted block is complete: it ends with `</svg>` and contains no `<!-- continued -->` marker left unresolved.
+1. Every `<rect>`, `<polygon>`, and `<ellipse>` lies fully inside the viewBox. Evidence: min and max extents.
+2. Every `<line>` endpoint touches the edge of an element or another line (no dangling connectors). Evidence: count checked, worst offender if any.
+3. Channel percentage labels parse as plain integers with `%` (no ranges, no words) and sum to 100 plus or minus 2. Evidence: each label verbatim and the sum.
+4. Acquirer element count is zero when the gate was no; every acquirer element uses dashed stroke when the gate was yes. Evidence: the gate answer and the element count.
+5. Every risk and opportunity circle has `fill="none"`; dashed risk-circle count equals the founder's selected risk count; green opportunity-circle count equals the selected opportunity count. Evidence: each circle's fill and stroke verbatim, both counts, both selection lists.
+6. Every map element name appears verbatim in the confirmed inventory. Evidence: map element count and matching inventory count.
 
-If every check passes, output `Post-emit verification: PASS` and proceed to the closing line. If any check fails, output `Post-emit verification: FAIL - [which check, which element]. Regenerating.` and emit a corrected artifact in a fresh turn after re-walking the full pre-emit checklist. You have up to two regeneration attempts.
+If every check passes, output `Post-emit verification: PASS` and proceed to Parts 2 through 4. If any check fails, output `Post-emit verification: FAIL - [which check, which element]. Regenerating.` and emit a corrected artifact in a fresh turn after re-walking the full pre-emit checklist. You have up to two regeneration attempts.
 
 ## Session terminator
 
@@ -365,7 +373,7 @@ No closing chatter after the terminator.
 
 ## Output
 
-Produce a self-contained HTML document titled `Market Map - [Company Name] - [Date]` containing the map image, the player inventory, the session summary, the next-steps paragraph, and the session terminator, in that order, as described in Phase 10. The HTML must be self-contained: inline SVG with an embedded `<style>` block, embedded CSS, no external fonts, scripts, or images. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the same document inside a fenced ```html code block the participant can copy and save as `market-map-[company]-[date].html`.
+Produce a self-contained HTML document titled `Market Map - [Company Name] - [Date]` containing the map image only. The HTML must be self-contained: inline SVG with an embedded `<style>` block, embedded CSS, no external fonts, scripts, or images. The player inventory, session summary, and next steps are chat content, not part of the saved file; keeping the file to the map alone is what keeps it deliverable in one piece. Use whichever persistence surface your platform best supports for saveable rendered documents; if no such surface is available, produce the map inside a fenced ```html code block the participant can copy and save as `market-map-[company]-[date].html` (a file whose content is the `<svg>` element renders in any browser).
 
 If the AI system cannot generate visuals: produce the player inventory and session summary as markdown, and tell the participant: "Use the inventory to build the map in Mural or on a wall with sticky notes. Once you have reviewed with your coach, add the finalized map to your team's system of record."
 
