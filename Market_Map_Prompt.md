@@ -205,7 +205,7 @@ Then narrow: "Of everyone on this list, which three to five do you actively meet
 
 For each focus competitor, map their relationships: "Which of the customer segments on your map does [competitor] reach? Through which channels?" This is where overlap and open space become visible. Reflect back what the lines show: where the founder and the focus competitors reach the same segments through the same channels, and which segments or channels only the founder reaches, or nobody reaches.
 
-Exit condition: a confirmed competitor and substitute list, three to five focus competitors with their reach mapped, and the two universal substitutes assessed.
+Exit condition: a confirmed competitor and substitute list, three to five focus competitors with their reach mapped, and the two universal substitutes assessed. By design, only focus competitors get reach lines on the map; every other competitor appears as a box with no lines. State this to the founder when narrowing, so the finished map is read correctly.
 
 ## Phase 5: Influencers
 
@@ -237,9 +237,9 @@ Goal: percentages on the money flows.
 
 Consolidate what Phases 1 and 2 produced: revenue share per segment and per channel. Where the data provided real numbers, use them. Where the founder estimated, keep the (estimate) mark. Present the consolidated flows back as one list and ask the founder to confirm it reads true.
 
-Identify the single largest relationship on the demand side (a segment, customer, or channel) and the most critical dependency on the supply side. For each, run the concentration probe defined in the Rules, verbatim.
+Run the concentration probe defined in the Rules exactly twice, verbatim, each as its own turn: once for the single largest relationship on the demand side (a segment, customer, or channel), and once for the most critical dependency on the supply side (the flagged single-source supplier, or the largest strategic spend). Two probes, two answers, both captured.
 
-Exit condition: confirmed percentages on the demand side summing to roughly 100 percent, and concentration probes run and answered.
+Exit condition: confirmed percentages on the demand side summing to roughly 100 percent, and both concentration probes run and answered.
 
 ## Phase 8: Risks and opportunities
 
@@ -340,7 +340,7 @@ Then run the post-emit parse-and-verify (below). After verification passes, emit
 
 **Part 2: The player inventory.** A markdown table with columns: Player, Category (segment / channel / supplier / competitor / substitute / influencer / acquirer), Source ((you named) / (from your data) / (researched, confirmed)), Share or Spend (percentage or blank), Tags (used / unclaimed / single-source / relationship / no relationship / focus / risk / opportunity). Before emitting, cite the target row count and the ordered list of player names verbatim; after emitting, cite the emitted row count and confirm the match. If they do not match, fix it in the same turn.
 
-**Part 3: The session summary.** A fenced markdown block starting with the heading `## Resume State -- Market Map -- [Company Name] -- [Date]`, containing: the five company basics; which data was provided (revenue / vendor / closed-lost, yes or no each); the acquirer gate answer; the full player inventory with source tags; demand-side percentages with real-versus-estimate marks; the concentration answers, each prefixed with the turn it came from, in the form `(Turn N) [answer]`; the selected risks and opportunities verbatim as the founder chose them; and any upstream additions under `Upstream additions captured during Market Map:` (anything the founder surfaced that belongs on their Core Customer document or KFFM, flagged for write-back).
+**Part 3: The session summary.** A fenced markdown block starting with the heading `## Resume State -- Market Map -- [Company Name] -- [Date]`, containing: the five company basics; which data was provided (revenue / vendor / closed-lost, yes or no each); the acquirer gate answer; the full player inventory with source tags; demand-side percentages with real-versus-estimate marks; the concentration answers in the literal terse form `(Turn N) [player]: [the founder's answer in one sentence]`, one line per probe, no narrative expansion; the selected risks and opportunities verbatim as the founder chose them; and any upstream additions under `Upstream additions captured during Market Map:` (anything the founder surfaced that belongs on their Core Customer document or KFFM, flagged for write-back).
 
 **Part 4: Next steps.** One short paragraph: "Hand the Market Map image file to your coach for review and comment, together with every artifact from upstream prompts you have run (your Core Customer document, your KFFM image files). The map feeds your next planning session: the selected risks and opportunities are candidate priorities. Review and update the map at every quarterly planning session; markets move." Then add verbatim:
 
