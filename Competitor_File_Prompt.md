@@ -27,7 +27,7 @@ This prompt does NOT score you against your competitors on weighted attributes. 
 
 You can pause at any phase and resume in a new conversation using the session summary.
 
-**Outputs**
+**Outputs.** In plain terms: you end with one file per competitor, a one-page cover brief, and a session summary you bring back next quarter. The table below is the same list in the structured form our test harness reads; skip it.
 
 | id | type | required | multi |
 |---|---|---|---|
@@ -40,12 +40,12 @@ You can pause at any phase and resume in a new conversation using the session su
 **How to use it**
 
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience, especially for the web research.
-2. Optional, but worth gathering first: your Market Map session summary, your Core Customer document, a closed-lost report from your sales tool (deal, who you lost to, the reason given), and, for update mode, last quarter's Competitor Files and session summary. Paste any of them when asked. Deal-level reasons only; never paste customer personal data.
+2. Optional, but worth gathering first: your Market Map session summary, your Core Customer document, and a closed-lost report from your sales tool, or, if you do not have one, a short list from memory: the last few deals or jobs you lost, who to, and why. For update mode, also gather last quarter's Competitor Files and session summary. Paste any of them when asked. Deal-level reasons only; never paste customer personal data.
 3. Answer each question honestly. The files only work if they record the competition as it is, not as you rank yourself against it.
 4. Where your output appears depends on the AI. Save each document as `competitor-file-[competitor]-[date].md` to keep your output.
 5. Review the output with your coach or advisor. The AI produces a first draft; a person who knows your market can challenge it. Once you and your coach have finalized the files, add them to your team's system of record and bring them to every quarterly planning session.
 
-**If your business has more than one founder or decision-maker:** Each person should complete this exercise independently, especially whoever owns sales. Do not compare notes until both are finished. At the end of the payload there is a synthesis section you can paste into a new AI conversation with both outputs. Where your files disagree about a competitor is the most valuable finding.
+**If your business has more than one founder or decision-maker:** Each person should complete this exercise independently, especially whoever owns sales. Do not compare notes until both are finished. At the end of the prompt there is a synthesis section you can paste into a new AI conversation with both sets of files. Where your files disagree about a competitor is the most valuable finding.
 
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
