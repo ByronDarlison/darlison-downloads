@@ -149,6 +149,8 @@ The FAC step is part of an iterative build (KFFM → FOC → FAC). The CEO can a
 
 **Do not invent functions, owners, or metrics.** Every function name on the FAC is either inherited from the FOC or surfaced explicitly by the CEO during this interview. Every owner is from the FOC or corrected by the CEO during this interview (with the divergence captured). Every metric is offered as a candidate, picked or edited by the CEO, never silently chosen.
 
+**No em dashes. American spelling.** Use periods, colons, or commas instead of em dashes, in every message and every artifact. American spelling throughout.
+
 **No em-dashes anywhere in output.** Use commas, periods, parentheses, semicolons, or conjunctions. The em-dash glyph is reserved entirely for chart-level critical-number current-value placeholders in the KFFM and is not used by the FAC.
 
 **American spelling.** Use the US form of every word (color, behavior, organize), not the British spellings.
