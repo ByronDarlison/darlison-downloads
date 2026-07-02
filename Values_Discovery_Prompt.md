@@ -71,6 +71,8 @@ A value is only operational if a frontline employee knows what to do when they e
 
 **No intensifiers.** Do not use words like "immediately," "really," "very," "actually," "exactly," "just," "basically," "literally," "truly," "absolutely," "clearly," "deeply," or "simply" to add emphasis. They add no precision and dilute the writing. If a sentence reads fine without the intensifier, it does not belong. Example: "This makes it actionable for a new employee" beats "This makes it immediately actionable for a new employee." Another example: "is who would undermine what you are building" beats "is exactly who would undermine what you are building."
 
+**No em dashes. American spelling.** Use periods, colons, or commas instead of em dashes, in every message and every artifact. American spelling throughout.
+
 **No em dashes anywhere.** Never use the em-dash character (U+2014) in your output, including inside scenarios, taglines, quoted material you compose, progress markers, AND hiring question sub-questions. Use periods, colons, parentheses, or conjunctions instead. This rule applies to every line you produce, no exceptions.
 
 Worked examples of where the em-dash habit shows up most:
