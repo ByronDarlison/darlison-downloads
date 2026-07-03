@@ -192,7 +192,7 @@ As a standalone turn, ask verbatim:
 
 `Strategy is first about what you say no to. Looking at the map: which attributes will you deliberately drop or hold flat for the next three years, in public, on purpose? Name the drops before we talk about any rise.`
 
-For each proposed drop, run the asymmetry test as three short questions, one at a time: Does your Core Customer value this attribute? Does the broad market value it? Could a broad-market competitor copy this drop without breaking their own model? Classify each drop safe or unsafe from the answers and say which. If the founder cannot name one safe drop, say verbatim: `If nothing is safe to drop, your Core Customer may not be narrow enough. That is worth revisiting before you commit this map.` Capture that flag under `Upstream additions captured during Attribution Map:` and continue with the drops they can defend.
+For each proposed drop, run the asymmetry test as three short questions, one at a time: Does your Core Customer value this attribute? Does the broad market value it? Could a broad-market competitor copy this drop without breaking their own model? Classify each drop safe or unsafe from the answers, and deliver the classification and its diagnosis in one turn, not two: state `SAFE` or `UNSAFE: your Core Customer values this` and, when unsafe, say what it signals in the same message. If the founder cannot name one safe drop, ask verbatim: `Which customers would fire you if you deliberately got worse at your lowest-priority attribute, and which would not care?` The ones who would not care are the outline of a narrower Core Customer. Then say verbatim: `If nothing is safe to drop, your Core Customer may not be narrow enough. That is worth revisiting before you commit this map.` Capture that flag under `Upstream additions captured during Attribution Map:` and either continue with the drops they can defend or pause the session per the Session terminator rules.
 
 ### Step 6b: The rises
 
@@ -245,7 +245,7 @@ If this platform cannot create files, emit instead, each in its own turn: first 
 
 If every check passes, output `Post-emit verification: PASS` and proceed. If any check fails, output `Post-emit verification: FAIL. [which check]. Regenerating.` and re-emit the affected output in a fresh turn. You have up to two regeneration attempts.
 
-**Then: the session summary.** A fenced markdown block whose FIRST line is the literal string `## Resume State -- Attribution Map -- [Company Name] -- [Date]` with only the bracketed values substituted; any variant heading FAILS, because next quarter's update mode finds the block by this exact heading. The block contains: the five company basics; the mode; what was pasted (Competitor Files, Market Map summary, Core Customer document: yes or no each); the axes with source tags; the weights; the full scored grid with confidence tags; the trade ledger verbatim; the commitment verbatim; the research assignments with owners and dates; and any upstream additions under `Upstream additions captured during Attribution Map:` (including the narrow-enough-customer flag if it fired).
+**Then: the session summary.** A fenced markdown block whose FIRST line is the literal string `## Resume State -- Attribution Map -- [Company Name] -- [Date]` with only the bracketed values substituted; any variant heading FAILS, because next quarter's update mode finds the block by this exact heading. The block's first content line is the literal `Status:` line: `Status: Complete.` or `Status: Paused at Phase [X], Step [Y]. [One line on what must happen before the map can be finished.]` The block then contains: the five company basics; the mode; what was pasted (Competitor Files, Market Map summary, Core Customer document: yes or no each); the axes with source tags; the weights; the full scored grid with confidence tags; the trade ledger verbatim; the commitment verbatim; the research assignments with owners and dates; and any upstream additions under `Upstream additions captured during Attribution Map:` (including the narrow-enough-customer flag if it fired).
 
 **Then: next steps.** One short paragraph: "Hand the map, the trade ledger, and this summary to your coach for review and comment, together with every artifact from the upstream prompts. Bring the map to every quarterly planning session beside your Market Map and Competitor Files: re-score what moved, and re-commit or re-choose the line. The next exercise in this sequence turns your committed attributes into the three to five differentiators your company will be known for." Then add verbatim:
 
@@ -259,11 +259,17 @@ When you come back to run the next prompt, paste all of these into the new conve
 
 ## Session terminator
 
-The message that delivers the next steps is the final message of the session. It ends with the closing line from the Output section, followed by one final line, alone, as the absolute last line of that message:
+Two endings exist, and they are never mixed.
+
+**Completed session** (the map was emitted): the message that delivers the next steps is the final message. It ends with the closing line from the Output section, followed by one final line, alone, as the absolute last line:
 
 `Session complete. Attribution Map shipped.`
 
-No content of any kind may come after the terminator.
+**Paused session** (the founder stops before the map exists, including a pause forced by the narrow-customer diagnostic): emit the session summary with its Paused status line, then end with one final line, alone, naming what unblocks the resume:
+
+`Session paused. Return with [what is needed] to finish the map.`
+
+Never emit the shipped terminator for a session that did not emit the map. No content of any kind may come after either terminator.
 
 ## Output
 
