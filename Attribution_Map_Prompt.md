@@ -226,13 +226,15 @@ Run every test. Report each test as its own numbered line, in the literal format
 
 ## Phase 8: The map
 
+The outputs of this phase are emitted across SEPARATE turns, in this exact order, and never bundled: (1) the artifact turn or turns, containing only the map and nothing else, no prose before or after the fenced blocks or file; (2) the trade ledger turn; (3) the post-emit parse-and-verify turn; (4) the session summary and next steps turn, which ends with the terminator. Any founder reply (even one word) unblocks the next turn. Emitting the ledger, the verification, or the summary in the same turn as the map is a failure.
+
 The artifact turn carries the artifact alone. If this platform can create downloadable files, build the spreadsheet file in that turn: one sheet with the scored grid (attributes as rows with weights and source tags, one column per company, confidence colors on competitor cells: green, yellow, red fills), the Future Us column, and a native line chart plotting every company's line plus Future Us across the attributes. Name the file `attribution-map-[company]-[date]`.
 
 If this platform cannot create files, emit instead, each in its own turn: first the grid as a single fenced CSV block with the literal header `attribute,weight_rank,source,you_today,[one column per competitor],[confidence per competitor],you_future,funding_drop`, and then the chart as a single fenced HTML block (a self-contained document with one inline SVG line chart, gray competitor lines, blue Today line, green Future Us line) the participant can save as `attribution-map-[company]-[date].html`. The last line of each block must close it; if you approach the response-length limit, stop at a row boundary, write `<!-- continued -->` as the final line, and continue in your next message.
 
-**Then: the trade ledger.** A short markdown block: each RISE-funded-by-DROP line verbatim, each drop's safe or unsafe classification, and the research assignments.
+**The trade ledger turn.** A short markdown block, in its own turn: each RISE-funded-by-DROP line verbatim, each drop's safe or unsafe classification, and the research assignments.
 
-**Then: post-emit parse-and-verify.** Before saying anything else, parse the actual output you emitted and report every check as its own numbered line in the literal format `N. [Check name]: PASS. Evidence: [the actual parsed values].` or `N. [Check name]: FAIL. Evidence: [what was found].` One line per check, all eight lines, never a table:
+**The post-emit parse-and-verify turn.** In its own turn, before any other content, parse the actual output you emitted and report every check as its own numbered line in the literal format `N. [Check name]: PASS. Evidence: [the actual parsed values].` or `N. [Check name]: FAIL. Evidence: [what was found].` One line per check, all eight lines, never a table:
 
 1. Grid completeness: every confirmed attribute appears as a row; row count equals the Phase 2 count. Evidence: both counts.
 2. Column completeness: Today, every focus competitor, and Future Us all present. Evidence: the column list.
