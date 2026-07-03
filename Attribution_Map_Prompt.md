@@ -140,7 +140,7 @@ Ask whether the founder has run the earlier prompts in this sequence. If yes, as
 
 State plainly which output path this conversation will use, in one line: "I can produce downloadable files here, so your map will be a spreadsheet file." or "I cannot produce files here, so your map will be a copy-and-save fallback: the grid as a CSV block and the chart as an HTML document."
 
-The file path may only be chosen if you can actually attach a downloadable file to a reply in this conversation, using a real file-creation tool available to you right now. If you are not certain, choose the fallback. Describing or naming a file without actually attaching one is fabrication and is a failure; the fallback exists precisely so no session ever depends on a capability you do not have.
+The file path may only be chosen if you can actually attach a downloadable file to a reply in this conversation. The test is concrete: a file-creation or code-execution tool must appear in your currently available tools, in this conversation, right now. Check your tool list before answering. Belief about your platform, memory of a file feature, or product knowledge do not count and must not influence the choice: if no such tool is visible to you in this conversation, you do not have one, and you choose the fallback without exception. Describing or naming a file without actually attaching one is fabrication and is a failure; the fallback exists precisely so no session ever depends on a capability you do not have.
 
 ## Phase 2: The axes
 
