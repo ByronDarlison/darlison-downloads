@@ -8,9 +8,11 @@ From Byron Darlison - www.darlison.com
 
 ---
 
-This prompt builds your Attribution Map: one page that scores you and your three or four focus competitors on the attributes your market competes on, then walks you through the decision that creates a position. What will you say no to, and where does that free you to win? You choose your drops before your rises, every rise names the drop that funds it, and the finished map shows your Today line, your competitors' lines, and the Future Us line that separates from the cluster.
+This prompt builds your Attribution Map: one page that scores you and your three or four focus competitors on the attributes your market competes on, then walks you through the decision that creates a position. What will you say no to, and where does that free you to win? A drop is not neglect. It stops spending on what your chosen customer does not value, so you can be clearly better at what they do value, and it is the part a competitor serving everyone cannot copy.
 
-If you have run the earlier prompts in this sequence, this one mostly assembles rather than asks: the attribute rows come from your Market Map and your buying criteria, the competitor scores inherit the evidence and confidence ratings from your Competitor Files, and your job is to review, correct, and decide. Without them it still works from your answers, with every unevidenced score marked so you know what you are standing on.
+The finished map is a picture. In most markets, every company's line looks the same: a cluster nobody can tell apart. This exercise ends with a committed line for your company that breaks from that cluster. It rises in a few chosen places and deliberately drops in others. You choose the drops first, and every rise names the drop that pays for it. The scores are evidence work; the final trade is a judgment call no extra data resolves.
+
+You do not need any other tool to run this. It works from what you know about your market today, and it marks every score that rests on memory instead of evidence, so you know what you are standing on. If you have run the Market Map or Competitor File prompts, paste their summaries: the attribute rows and competitor scores arrive pre-built with their evidence, and your job shrinks to review, correct, and decide.
 
 This prompt does NOT name your differentiators or plan the activities that move the scores. That is the next exercise in the sequence. This prompt ends at the committed line and the trades that pay for it.
 
@@ -27,20 +29,12 @@ This prompt does NOT name your differentiators or plan the activities that move 
 
 You can pause at any phase and resume in a new conversation using the session summary.
 
-**Outputs.** In plain terms: you end with your Attribution Map as a spreadsheet file (or a copy-and-save fallback if your AI cannot make files), a trade ledger of your rises and the drops that fund them, and a session summary you bring back next quarter. The table below is the same list in the structured form our test harness reads; skip it.
-
-| id | type | required | multi |
-|---|---|---|---|
-| `attribution_map_file_or_fallback` | fenced_code | yes | no |
-| `trade_ledger_md` | markdown_block | yes | no |
-| `resume_state_block` | fenced_code | yes | no |
-| `next_steps_paragraph` | inline_text | yes | no |
-| `session_terminator` | inline_text | yes | no |
+**Outputs.** In plain terms: you end with your Attribution Map as a spreadsheet file (or a copy-and-save fallback if your AI cannot make files), a trade ledger of your rises and the drops that fund them, and a session summary you bring back next quarter.
 
 **How to use it**
 
 1. Copy everything below the line that says COPY FROM HERE and paste it into Claude at claude.ai. The prompt also works with other AI assistants, but we recommend Claude for the best experience, especially for producing the spreadsheet file.
-2. Worth gathering first: your Competitor Files and their session summary, your Market Map session summary, and your Core Customer document. The more of these you paste, the less this prompt asks and the more honest your map is. Without them it runs from your answers, clearly marked as such.
+2. If you have them, gather your Competitor Files and their session summary, your Market Map session summary, and your Core Customer document. The more you paste, the less this prompt asks. If you have none of them, start anyway. Do not stop to run the other prompts first; the map will tell you which scores need evidence and those become your homework.
 3. Answer each question honestly. The map only works if the scores describe the market as it is, not as the room wishes it were.
 4. Where your output appears depends on the AI. Save the spreadsheet file, or save the fallback as `attribution-map-[company]-[date].html`, to keep your output.
 5. Review the output with your coach or advisor. The AI produces a first draft; a person who knows your market can challenge it. Once you and your coach have finalized the map, add it to your team's system of record and revisit it at every quarterly planning session.
@@ -50,6 +44,16 @@ You can pause at any phase and resume in a new conversation using the session su
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
 **Intellectual attribution.** The Attribution Framework is Shannon Susko's tool, from *3HAG WAY* and *Metronomics*; the six-to-eight market attributes, the 1-to-5 scoring, and its place between the Market Map and the Activity Fit Map are hers. The theory of positioning and trade-offs is Michael Porter's, from *Competitive Strategy* and his Harvard Business Review work. The plotted-lines form echoes the strategy canvas of W. Chan Kim and Renee Mauborgne's *Blue Ocean Strategy*. The drops-before-rises discipline, the trade ledger, the evidence and confidence gates, and the narrow-customer asymmetry test are my synthesis. All credit for the underlying ideas goes to the original authors. Any mistakes or distortions are mine.
+
+The table below is for our test harness, not for you.
+
+| id | type | required | multi |
+|---|---|---|---|
+| `attribution_map_file_or_fallback` | fenced_code | yes | no |
+| `trade_ledger_md` | markdown_block | yes | no |
+| `resume_state_block` | fenced_code | yes | no |
+| `next_steps_paragraph` | inline_text | yes | no |
+| `session_terminator` | inline_text | yes | no |
 
 ---
 
