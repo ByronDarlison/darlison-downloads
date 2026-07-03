@@ -27,15 +27,7 @@ This prompt does NOT score you against your competitors on weighted attributes. 
 
 You can pause at any phase and resume in a new conversation using the session summary.
 
-**Outputs.** In plain terms: you end with one file per competitor, a one-page cover brief, and a session summary you bring back next quarter. The table below is the same list in the structured form our test harness reads; skip it.
-
-| id | type | required | multi |
-|---|---|---|---|
-| `competitor_file_md` | markdown_block | yes | yes (one per focus competitor) |
-| `cover_brief_md` | markdown_block | yes | no |
-| `resume_state_block` | fenced_code | yes | no |
-| `next_steps_paragraph` | inline_text | yes | no |
-| `session_terminator` | inline_text | yes | no |
+**Outputs.** In plain terms: you end with one file per competitor, a one-page cover brief, and a session summary you bring back next quarter.
 
 **How to use it**
 
@@ -50,6 +42,16 @@ You can pause at any phase and resume in a new conversation using the session su
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
 **Intellectual attribution.** The four-corners framework (goals, assumptions, strategy, capabilities) and the principle that competitor intelligence must be a standing mechanism because the data "comes in trickles" are Michael Porter's, from *Competitive Strategy* (1980). The competitor categories used in the focus-set phase, including perceived competitors, draw on Porter and on the published frameworks of the competitive-intelligence teams at Crayon and Kompyte. The Market Map this tool chains from is Shannon Susko's, from *3HAG WAY* and *Metronomics*. The Competitor File format, the confidence-rating discipline, and the quarterly decision loop are my synthesis. All credit for the underlying ideas goes to the original authors. Any mistakes or distortions are mine.
+
+The table below is for our test harness, not for you.
+
+| id | type | required | multi |
+|---|---|---|---|
+| `competitor_file_md` | markdown_block | yes | yes (one per focus competitor) |
+| `cover_brief_md` | markdown_block | yes | no |
+| `resume_state_block` | fenced_code | yes | no |
+| `next_steps_paragraph` | inline_text | yes | no |
+| `session_terminator` | inline_text | yes | no |
 
 ---
 
