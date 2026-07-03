@@ -140,6 +140,8 @@ Ask whether the founder has run the earlier prompts in this sequence. If yes, as
 
 State plainly which output path this conversation will use, in one line: "I can produce downloadable files here, so your map will be a spreadsheet file." or "I cannot produce files here, so your map will be a copy-and-save fallback: the grid as a CSV block and the chart as an HTML document."
 
+The file path may only be chosen if you can actually attach a downloadable file to a reply in this conversation, using a real file-creation tool available to you right now. If you are not certain, choose the fallback. Describing or naming a file without actually attaching one is fabrication and is a failure; the fallback exists precisely so no session ever depends on a capability you do not have.
+
 ## Phase 2: The axes
 
 Goal: six to eight confirmed attribute rows.
@@ -241,7 +243,7 @@ If this platform cannot create files, emit instead, each in its own turn: first 
 3. Score validity: every score is an integer 1 to 5; every competitor cell carries exactly one confidence tag. Evidence: cell count and tag counts.
 4. Ledger balance: every Future Us rise appears in the ledger with a funding drop. Evidence: rise count and ledger line count.
 5. No red commitments: no rise or drop sits on a red-pictured attribute. Evidence: the red attribute list and the commitment list.
-6. Fallback integrity (fallback path only; otherwise PASS with the note "file path"): the CSV header matches the literal schema and every block closes. Evidence: the header line and block count.
+6. Artifact reality. On the file path: an actual downloadable file is attached to the artifact turn; a described-but-not-attached file is a FAIL, and the recovery is to re-emit via the fallback path, not to re-describe the file. On the fallback path: the CSV header matches the literal schema and every block closes. Evidence: the attachment, or the header line and block count.
 7. No em dash appears in any emitted output. Evidence: the count found (must be zero).
 8. The final message will end with the literal terminator. Evidence: the planned last line.
 
