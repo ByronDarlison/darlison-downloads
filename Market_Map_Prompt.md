@@ -29,15 +29,7 @@ This prompt does NOT score you against competitors on the attributes your custom
 
 You can pause at any phase and resume in a new conversation using the session summary.
 
-**Outputs**
-
-| id | type | required | multi |
-|---|---|---|---|
-| `market_map_svg` | svg | yes | no |
-| `player_inventory_md` | markdown_block | yes | no |
-| `resume_state_block` | fenced_code | yes | no |
-| `next_steps_paragraph` | inline_text | yes | no |
-| `session_terminator` | inline_text | yes | no |
+**Outputs.** In plain terms: you end with your Market Map as an image file, a player inventory of everyone on the map, and a session summary you bring back next quarter.
 
 **How to use it**
 
@@ -53,6 +45,16 @@ You can pause at any phase and resume in a new conversation using the session su
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
 **Intellectual attribution.** The Market Map was created by Shannon Susko and is described in *3HAG WAY* and *Metronomics* as one of the Strategic Pictures that keep a company's strategy visible and evolving. The strategic acquirer layer is my own addition, described in my article "How I Would Sell A Business" at darlison.com. What follows is my interpretation and application of Shannon's framework. All credit for the underlying ideas goes to the original author. Any mistakes or distortions are mine.
+
+The table below is for our test harness, not for you.
+
+| id | type | required | multi |
+|---|---|---|---|
+| `market_map_svg` | svg | yes | no |
+| `player_inventory_md` | markdown_block | yes | no |
+| `resume_state_block` | fenced_code | yes | no |
+| `next_steps_paragraph` | inline_text | yes | no |
+| `session_terminator` | inline_text | yes | no |
 
 ---
 
