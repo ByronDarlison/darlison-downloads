@@ -196,7 +196,7 @@ Disconnects from Phase 5. Capabilities and annual priorities staged for later pe
 
 - Save the document as `planning-cascade-[company-slug]-[date].md` so you can find it again.
 - **Weekly:** review sprint lanes in your leadership meeting. Each cell is done or not done.
-- **Quarterly:** rebuild the QHAG and sprint lanes, review the 1HAG, confirm the 3HAG still holds.
+- **Quarterly:** close each ending priority on two questions, did the work get done and did its measure of success move, then rebuild the QHAG and sprint lanes, review the 1HAG, confirm the 3HAG still holds.
 - **Annually:** rebuild the cascade from scratch. The 3HAG resets one year forward.
 - **When something goes red:** the owner posts a corrective action before the next leadership meeting.
 - **How to introduce to the team:** start with sprint lanes (current quarter), then walk up to QHAG, 1HAG, and 3HAG over the next planning sessions.
