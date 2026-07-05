@@ -141,7 +141,7 @@ Step 3. For each priority: "We are building the 13-week sprint lane for [priorit
 
 "Do the QHAG priorities connect to the 1HAG priorities?"
 
-"Do the 1HAG targets represent a credible first year toward the 3HAG?" Then apply the Highly Achievable bar, one probe at a time: "What is the math behind the 3HAG cash number: what has to change to hit it?" Then: "What growth rate does the revenue imply, and what sales and marketing investment funds it?" Then: "Where does year two need to land for year three to be credible?" Record the year-2 mile-marker in Section 1. If the founder cannot answer a probe, record it as a gap in Section 5; do not resolve it in the session.
+"Do the 1HAG targets represent a credible first year toward the 3HAG?" Then test the numbers, one probe at a time: "What is the math behind the 3HAG cash number: what has to change to hit it?" Then: "What growth rate does the revenue imply, and what sales and marketing investment funds it?" Then: "What does the year-two position have to look like for year three to be credible?" If the founder cannot answer a probe, record it as a gap in Section 5; do not resolve it in the session.
 
 "Does the 3HAG move toward the BHAG?" (Skip if none.)
 
@@ -169,7 +169,7 @@ The document contains the following sections, in order:
 
 ### Section 1: 3HAG
 
-A table with: fiscal year-end, cash (with the math behind it noted), revenue (with the year-2 mile-marker), widgets (including the X, each with its target number), statement, key capabilities (1-5, marked placeholder), known for (the customer's sentence, marked placeholder).
+A table with: fiscal year-end, cash (with the math behind it noted), revenue (with the growth math noted), widgets (including the X, each with its target number), statement, key capabilities (1-5, marked placeholder), known for (the customer's sentence, marked placeholder).
 
 ### Section 2: 1HAG
 
