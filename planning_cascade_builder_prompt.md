@@ -183,7 +183,7 @@ Quarter dates. Month-over-month table: Month | Revenue | Cash | Widgets, with on
 
 ### Section 4: 13-Week Sprint Lanes
 
-One table with weeks as rows and priorities as columns. Row headers show the week number and dates. Column headers show each priority. Every cell contains the deliverable for that week and priority. Empty cells show a single hyphen. This format keeps the table readable at 13 rows regardless of screen width.
+One table with weeks as rows and priorities as columns. Row headers show the week number and dates. Column headers show each priority. Every cell contains the deliverable for that week and priority. Empty cells show a single hyphen. Note in the document, above the table: the canonical Sprint Lane orientation is one row per priority and one column per week (a lane runs horizontally); this draft transposes the table only so it stays readable here at any width. When the team moves the lanes to their system of record, orient priorities as rows.
 
 ### Section 5: Alignment Notes
 
