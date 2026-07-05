@@ -133,7 +133,7 @@ After Step 7, ask: "What is the single biggest issue facing the business this ye
 
 Step 1. "First quarter: revenue, cash, and widgets month over month?" Then: "Who owns each of those lines? One name per line."
 
-Step 2. "Quarterly corporate priorities? Three to five." Then, one priority at a time: "Who owns it? One name." and "Which 1HAG annual priority does it advance?" Any 1HAG priority not advanced this quarter is flagged: staged deliberately, or a gap.
+Step 2. "Quarterly corporate priorities? Three to five." Then, one priority at a time: "Who owns it? One name." and "Which 1HAG annual priority does it advance?" and "What is its measure of success for the quarter?" The Sprint Lanes are not the measure; they are the weekly work to achieve it. Any 1HAG priority not advanced this quarter is flagged: staged deliberately, or a gap.
 
 Step 3. For each priority: "We are building the 13-week sprint lane for [priority]. Every week needs a deliverable. Done or not done. No gaps. What needs to be true by end of week 1?" Continue week by week through 13. If operational work: "Would this happen without a sprint lane? If yes, it does not belong." If not binary: "That is a task, not a deliverable. What is the output?" If cannot fill 13 weeks: "The priority is either too vague or too small. Sharpen it or acknowledge it completes early." Repeat for each priority.
 
@@ -179,7 +179,7 @@ A table with: fiscal year-end, revenue, cash, widgets, one named owner per line.
 
 ### Section 3: QHAG
 
-Quarter dates. Month-over-month table: Month | Revenue | Cash | Widgets, with one named owner per line. Priorities table: Priority | Owner | 1HAG priority it advances.
+Quarter dates. Month-over-month table: Month | Revenue | Cash | Widgets, with one named owner per line. Priorities table: Priority | Owner | Measure of success | 1HAG priority it advances.
 
 ### Section 4: 13-Week Sprint Lanes
 
