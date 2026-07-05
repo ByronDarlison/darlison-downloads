@@ -99,7 +99,7 @@ After Step 5, summarize what was provided and what is missing.
 
 ## Phase 2: 3HAG gut-out (10 minutes)
 
-Step 1. "Your 3HAG year-end date is [fiscal year-end, 3 years out]. How much cash do you want on that date? And what do you want your topline revenue to be?" If hesitation: "Write down your best guess. The point is not precision."
+Step 1. "Your 3HAG year-end date is [fiscal year-end, 3 years out]. How much cash do you want on that date? And what do you want your topline revenue to be?" If hesitation: "Write down your best guess. The point is not precision." Then: "What profit margin will that revenue carry?" The margin is the third fiscal line at every horizon (a Darlison addition to Susko's two): it tells whether the company makes enough money to fund the growth it is committing to.
 
 Step 2. "What are the widgets needed to achieve that cash and revenue?" If KFFM was provided, compare widgets. If a Profit/X was provided and the X is not among the widgets, flag it: "Your X is not a tracked widget. Add it, with its three-year target." Each widget carries the number it must hit.
 
@@ -113,7 +113,7 @@ After Step 5, present the full draft 3HAG and ask: "Does this feel directionally
 
 ## Phase 3: 1HAG build (8 minutes)
 
-Step 1. "Gross revenue for the upcoming fiscal year?"
+Step 1. "Gross revenue for the upcoming fiscal year, and the profit margin it will carry?"
 
 Step 2. "Cash on the last day of the year?"
 
@@ -123,7 +123,7 @@ Step 4. "Who owns revenue, cash, and widgets? One name beside each." If a metric
 
 Step 5. "Number one corporate priority to hit those numbers and move closer to the 3HAG?" Test: "Does this move you toward the 3HAG, or solve an internal problem?"
 
-Step 6. "What are the remaining priorities? Three to five total, including the number one." If more than five: "Which five matter most? The ones you cut are shelved, not gone." Then, for every priority including the number one, one at a time: "Which named 3HAG capability does this build?" The capabilities are what deliver the numbers; the priorities are how the capabilities get built. A priority that maps to no capability is flagged. Any capability no priority builds this year is noted in Section 5 as staged for later.
+Step 6. "What are the remaining priorities? Three to five total, including the number one." If more than five: "Which five matter most? The ones you cut are shelved, not gone." Then, for every priority including the number one, one at a time: "Which named 3HAG capability does this build?" and "What is its measure of success?" The capabilities are what deliver the numbers; the priorities are how the capabilities get built. The measure verifies the priority produced a result, not just finished work; ideally it is a critical number from a function on the KFFM, so the proof comes from numbers the company already tracks. If no function number fits, note it in Section 5. A priority that maps to no capability is flagged. Any capability no priority builds this year is noted in Section 5 as staged for later.
 
 Step 7. "Who owns each priority? One name per priority." If one person owns multiple: flag it.
 
@@ -131,7 +131,7 @@ After Step 7, ask: "What is the single biggest issue facing the business this ye
 
 ## Phase 4: QHAG and Sprint Lanes (10 minutes)
 
-Step 1. "First quarter: revenue, cash, and widgets month over month?" Then: "Who owns each of those lines? One name per line."
+Step 1. "First quarter: revenue, profit, cash, and widgets month over month?" Then: "Who owns each of those lines? One name per line."
 
 Step 2. "Quarterly corporate priorities? Three to five." Then, one priority at a time: "Who owns it? One name." and "Which 1HAG annual priority does it advance?" and "What is its measure of success for the quarter?" The Sprint Lanes are not the measure; they are the weekly work to achieve it. Any 1HAG priority not advanced this quarter is flagged: staged deliberately, or a gap.
 
@@ -149,6 +149,8 @@ Step 3. For each priority: "We are building the 13-week sprint lane for [priorit
 
 "Do the widget quantities reconcile to the fiscal targets? If you move that many widgets, at the revenue and cost each one carries, do you land on the cash and revenue named at that horizon?"
 
+"Does the margin fund the growth you named? And is the profit reaching the bank fast enough, time to money on your KFFM, to pay for it?"
+
 Check ownership load. Surface disconnects. Do not resolve. "These are conversations for your team or coach. The disconnects are the most useful part."
 
 ## Tests
@@ -159,7 +161,8 @@ Run these checks after Phase 5 and before producing the document. Fix any that f
 - **Every Sprint Lane cell is filled or shows a single hyphen.** The 13-week table has one row per week and one column per quarterly priority. No cell is blank. A deliverable is binary (done or not done), not a task list. Cells that contain multi-part activities rather than a single binary deliverable need to be sharpened before the table is emitted.
 - **Widgets are consistent across all horizons and reconcile to the fiscal targets.** The widgets named in the 3HAG, the 1HAG, and the QHAG match each other, and their numbers reconcile: a 1HAG monthly or quarterly rate must be consistent with the 3HAG trajectory and the QHAG targets. At each horizon, the widget quantities times the revenue and cost each widget carries must land on that horizon's fiscal targets (cash and topline revenue); if they do not, the widget numbers or the fiscal numbers are wrong, and the mismatch is flagged in Section 5. Where a KFFM was provided, the widgets match the KFFM; where a Profit/X was provided, the X is a tracked widget. Any mismatch is flagged in Section 5.
 - **Every line has an owner.** Each priority and every fiscal and widget line at every horizon (the 3HAG table, the 1HAG table, and the QHAG monthly table) shows one person's name. A team name, a role, a pair of names, or a blank is not an owner. If one person owns more than two priorities, the ownership concentration is flagged in Section 5.
-- **Revenue, cash, and widgets appear at every horizon.** The 3HAG table, the 1HAG table, and the QHAG monthly breakdown each include revenue, cash, and widgets. A horizon missing any of the three is incomplete.
+- **Revenue, margin, cash, and widgets appear at every horizon.** The 3HAG table, the 1HAG table, and the QHAG monthly breakdown each include revenue, margin (profit on the monthly table), cash, and widgets. A horizon missing any of the four is incomplete.
+- **Every priority carries a measure of success.** The 1HAG and QHAG priorities tables each show one measure per priority; where it is not a critical number from a KFFM function, the gap is noted in Section 5.
 - **Every parent is covered or staged.** Each 1HAG priority names the 3HAG capability it builds; each QHAG priority names the 1HAG priority it advances. Any capability or annual priority not advanced this period is explicitly marked as staged in Section 5, not silently dropped.
 - **The stated top concern is covered.** If the founder named a number one issue and no priority addresses it, the gap is flagged in Section 5.
 
@@ -171,15 +174,15 @@ The document contains the following sections, in order:
 
 ### Section 1: 3HAG
 
-A table with: fiscal year-end, cash (with the math behind it noted), revenue (with the growth math noted), widgets (including the X, each with its target number), statement, key capabilities (1-5, marked placeholder), known for (the customer's sentence, marked placeholder). Every fiscal and widget line carries one named owner.
+A table with: fiscal year-end, cash (with the math behind it noted), revenue (with the growth math noted), margin, widgets (including the X, each with its target number), statement, key capabilities (1-5, marked placeholder), known for (the customer's sentence, marked placeholder). Every fiscal and widget line carries one named owner.
 
 ### Section 2: 1HAG
 
-A table with: fiscal year-end, revenue, cash, widgets, one named owner per line. A priorities table with columns: # | Priority | Owner | 3HAG capability it builds.
+A table with: fiscal year-end, revenue, margin, cash, widgets, one named owner per line. A priorities table with columns: # | Priority | Owner | Measure of success | 3HAG capability it builds.
 
 ### Section 3: QHAG
 
-Quarter dates. Month-over-month table: Month | Revenue | Cash | Widgets, with one named owner per line. Priorities table: Priority | Owner | Measure of success | 1HAG priority it advances.
+Quarter dates. Month-over-month table: Month | Revenue | Profit | Cash | Widgets, with one named owner per line. Priorities table: Priority | Owner | Measure of success | 1HAG priority it advances.
 
 ### Section 4: 13-Week Sprint Lanes
 
