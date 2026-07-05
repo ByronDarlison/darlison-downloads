@@ -123,7 +123,7 @@ Step 4. "Who owns revenue, cash, and widgets? One name beside each." If a metric
 
 Step 5. "Number one corporate priority to hit those numbers and move closer to the 3HAG?" Test: "Does this move you toward the 3HAG, or solve an internal problem?"
 
-Step 6. "What are the remaining priorities? Three to five total, including the number one." If more than five: "Which five matter most? The ones you cut are shelved, not gone." Then, one priority at a time: "Which named 3HAG capability does this build?" A priority that maps to no capability is flagged. Any capability no priority builds this year is noted in Section 5 as staged for later.
+Step 6. "What are the remaining priorities? Three to five total, including the number one." If more than five: "Which five matter most? The ones you cut are shelved, not gone." Then, for every priority including the number one, one at a time: "Which named 3HAG capability does this build?" The capabilities are what deliver the revenue and profit; the priorities are how the capabilities get built. A priority that maps to no capability is flagged. Any capability no priority builds this year is noted in Section 5 as staged for later.
 
 Step 7. "Who owns each priority? One name per priority." If one person owns multiple: flag it.
 
