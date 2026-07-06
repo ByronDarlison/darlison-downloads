@@ -29,7 +29,7 @@ The prompt moves through 5 phases:
 
 **If you find problems or improve on this:** Please email me at byron@darlison.com. I read every message.
 
-**Intellectual attribution.** The 3HAG was created by Shannon Susko and is described in *3HAG WAY* and *Metronomics*. The Sprint Lane concept was adapted from Verne Harnish's 13-week race in *Mastering the Rockefeller Habits*. The BHAG concept comes from Jim Collins. The structural tension concept comes from Robert Fritz's *The Path of Least Resistance*. What follows is my interpretation and application of these frameworks. All credit for the underlying ideas goes to the original authors. Any mistakes or distortions are mine.
+**Intellectual attribution.** The 3HAG was created by Shannon Susko and is described in *3HAG WAY* and *Metronomics*. The Sprint Lane concept was adapted from Verne Harnish's 13-week race in *Mastering the Rockefeller Habits*. The BHAG concept comes from Jim Collins. The structural tension concept comes from Robert Fritz's *The Path of Least Resistance*. What follows is my interpretation and application of these frameworks. Where I deviate from the canon, it is deliberate and marked in the interview: the profit margin line beside revenue and cash at every horizon, one named owner on every line, and a measure of success on each priority are my additions. All credit for the underlying ideas goes to the original authors. Any mistakes or distortions are mine.
 
 ---
 
@@ -47,7 +47,7 @@ Your job is to guide the founder through building a complete planning cascade: 3
 
 ## Context
 
-The planning cascade is a system of four connected plans at four time horizons. The BHAG (Big Hairy Audacious Goal, Jim Collins) is the 10-to-30-year destination. The 3HAG (3-Year Highly Achievable Goal, Shannon Susko) maps the three-year path toward the BHAG with fiscal targets, widget commitments, 1 to 5 key capabilities, and a positioning statement. The 1HAG (1-Year Highly Achievable Goal) translates the first year of the 3HAG into revenue, margin, cash, widget targets, corporate priorities (3 to 5; three executed well beat five executed halfway) each with a measure of success, and owners (one per priority and one per headline metric). The QHAG (Quarterly Highly Achievable Goal) breaks one quarter into month-over-month targets for revenue, profit, cash, and widgets, plus priorities and owners. 13-Week Sprint Lanes break each quarterly priority into one specific deliverable per week for 13 weeks. No gaps. Every lane, every week. Shannon Susko describes each sprint lane as a corporate priority "broken into 13 weekly tasks." Widgets are the nonfiscal things that flow through the business: leads, contracts, deliveries, subscribers. They should match the widgets on the company's Key Function Flow Map (KFFM). If they do not, flag it. The principle throughout is "good enough, not perfect." A documented guess the team can react to is more useful than an undocumented intuition in the founder's head.
+The planning cascade is a system of four connected plans at four time horizons. The BHAG (Big Hairy Audacious Goal, Jim Collins) is the 10-to-30-year destination. The 3HAG (3-Year Highly Achievable Goal, Shannon Susko) maps the three-year path toward the BHAG with fiscal targets, widget commitments, 1 to 5 key capabilities, and a positioning statement. The 1HAG (1-Year Highly Achievable Goal) translates the first year of the 3HAG into revenue, margin, cash, widget targets, corporate priorities (3 to 5; three executed well beat five executed halfway) each with a measure of success, and owners (one per priority and one per headline metric). The QHAG (Quarterly Highly Achievable Goal) breaks one quarter into month-over-month targets for revenue, profit, cash, and widgets, plus priorities and owners. 13-Week Sprint Lanes break each quarterly priority into one specific deliverable per week for 13 weeks. No gaps. Every lane, every week. Shannon Susko describes each sprint lane as a corporate priority "broken into 13 weekly tasks." Widgets are the nonfiscal things that flow through the business: leads, contracts, deliveries, subscribers. They should match the widgets on the company's Key Function Flow Map (KFFM). If they do not, flag it: sometimes the fix is the cascade, and sometimes the KFFM is missing a flow; the resolution is the team's call, noted in Section 5. The principle throughout is "good enough, not perfect." A documented guess the team can react to is more useful than an undocumented intuition in the founder's head.
 
 ## Rules
 
@@ -190,12 +190,12 @@ One table with weeks as rows and priorities as columns. Row headers show the wee
 
 ### Section 5: Alignment Notes
 
-Disconnects from Phase 5. Capabilities and annual priorities staged for later periods. Open items from Phase 1 with article links. Placeholders flagged for validation. A note to reconcile the widgets to the KFFM and FAC with your coach, confirming one accountable owner and a throughput target for each widget.
+Disconnects from Phase 5. Capabilities and annual priorities staged for later periods. Measures of success that are not critical numbers from a KFFM function. Open items from Phase 1 with article links. Placeholders flagged for validation. A note to reconcile the widgets to the KFFM and FAC with your coach, confirming one accountable owner and a throughput target for each widget.
 
 ### Implementation
 
 - Save the document as `planning-cascade-[company-slug]-[date].md` so you can find it again.
-- **Weekly:** review sprint lanes in your leadership meeting. Each cell is done or not done.
+- **Weekly:** review sprint lanes in your leadership meeting. Each cell is done or not done. Watch the measures of success on the same rhythm; when they are function critical numbers, they are already on the scoreboard.
 - **Quarterly:** close each ending priority on two questions, did the work get done and did its measure of success move, apply the lessons from any gap between the two to the next quarter's priorities, then rebuild the QHAG and sprint lanes, review the 1HAG, confirm the 3HAG still holds.
 - **Annually:** rebuild the cascade from scratch. The 3HAG resets one year forward.
 - **When something goes red:** the owner posts a corrective action before the next leadership meeting.
