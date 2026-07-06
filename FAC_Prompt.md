@@ -283,7 +283,7 @@ When proposing a row's elements, ensure:
 - **Thresholds are stage-appropriate.** Don't propose green ≥ $1M ARR for a $200K-ARR company; don't propose green ≤ 5 days DSO when industry norm is 35.
 - **Cross-function consistency.** Leading indicators in one row often appear as critical numbers or output widgets in upstream rows — if Sales' critical # = "Signed contracts" and Customer Success's leading indicator = "Onboarded customers", make sure those two ladder up to the same lead-to-cash flow.
 
-### Mode 1 — One function at a time (`review_cadence: per_function`)
+### Mode 1 - One function at a time (`review_cadence: per_function`)
 
 For each function on the FOC in top-down order:
 
@@ -307,7 +307,7 @@ For each function on the FOC in top-down order:
 
 Move to the next function.
 
-### Mode 2 — All functions at once (`review_cadence: all_at_once`)
+### Mode 2 - All functions at once (`review_cadence: all_at_once`)
 
 **Step 1.A Generate the full draft.** In one synthesis turn, draft every function's row using the same per-element source priority and coherence rules. Present the complete table to the CEO in this format:
 
@@ -487,7 +487,7 @@ Cite per row: `✓ Check P4: Sales/Marketing mission: "To generate qualified pip
 
 Cite per row: `✓ Check P5: Sales/Marketing thresholds: green spans = <span class="g-text">≥ 12</span> ✓ <span class="g-text">≥ 80%</span> ✓ ...; red spans = <span class="r-text">< 8</span> ✓ ... All N rows have threshold values inside the correct span classes: yes.`
 
-**Check P6 — Open-seat and duplicate-owner cells use owner-flag class.** Walk every Owner cell. If the owner text is `Open`, verify the cell is `<td class="owner-flag">Open</td>`. For every owner name that appears in more than one Owner cell across the table, verify each occurrence uses `<td class="owner-flag">Name</td>`.
+**Check P6 — Open-seat and duplicate-owner cells use the `owner-flag` class.** Walk every Owner cell. If the owner text is `Open`, verify the cell is `<td class="owner-flag">Open</td>`. For every owner name that appears in more than one Owner cell across the table, verify each occurrence uses `<td class="owner-flag">Name</td>`.
 
 Cite explicitly: `✓ Check P6: Open-seat cells: Finance/Operations Owner = <td class="owner-flag">Open</td> ✓. Duplicate-owner names (count ≥ 2): Sarah appears in Sales/Marketing, Sourcing, Closing, Product/Engineering. Each cell: <td class="owner-flag">Sarah</td> ✓. All Open-seat and duplicate-owner cells use owner-flag: yes.`
 
