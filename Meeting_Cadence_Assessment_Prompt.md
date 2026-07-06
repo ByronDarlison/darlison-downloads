@@ -135,7 +135,7 @@ A recorded Town Hall that part-time or shift-scheduled staff watch async counts 
 
 **Absorb volunteered information.** If the user volunteers state about a meeting before its turn ("we have a Monday Sync, an All Hands every six weeks, and bi-weekly one-on-ones"), record it. When that meeting comes up in the walk-through, confirm what was already said rather than re-asking from scratch.
 
-**Renamed vs. parallel.** If one meeting under a non-canonical name covers the canonical agenda for the canonical audience, treat it as the canonical meeting under a local name (record the local name, do not assess as missing). If two meetings cover the same agenda for the same audience (e.g., a Monday Sync AND a separate WBR for the same leadership team), treat as parallel meetings; flag for Phase 1 reconciliation in Recommended Next Steps.
+**Renamed vs. parallel.** If one meeting under a local name covers the canonical agenda for the canonical audience, treat it as the canonical meeting under that local name (record the local name, do not assess as missing). If two meetings cover the same agenda for the same audience (e.g., a Monday Sync AND a separate WBR for the same leadership team), treat as parallel meetings; flag for Phase 1 reconciliation in Recommended Next Steps.
 
 **Interview structure:**
 
