@@ -274,7 +274,7 @@ Two endings exist, and they are never mixed.
 
 `Session complete. Attribution Map shipped.`
 
-**Paused session** (the founder stops before the map exists, including a pause forced by the narrow-customer diagnostic): emit the session summary with its Paused status line, then end with one final line, alone, naming what unblocks the resume:
+**Paused session** (the founder stops before the map exists, including a pause forced by the narrow-customer diagnostic): emit the session summary with its Paused status line, then the same verbatim copy-list from the next-steps section ("If you are stopping here and not running the next prompt right now, copy these things before closing this conversation:" with its three numbered items, adapted to what this session actually produced), then end with one final line, alone, naming what unblocks the resume:
 
 `Session paused. Return with [what is needed] to finish the map.`
 
