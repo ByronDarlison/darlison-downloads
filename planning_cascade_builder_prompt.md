@@ -7,13 +7,13 @@ From Byron Darlison - www.darlison.com
 
 ---
 
-This prompt guides you through a structured interview that builds your Planning Cascade: the four-horizon planning framework that connects your 3-year targets to this week's deliverables. It runs in one session and produces two things: a readable version of your four planning tables with glossaries (so you understand what you built), and four structured data blocks your coach uses to load your tables into the planning platform.
+This prompt guides you through a structured interview that builds your Planning Cascade: the four-horizon planning framework that connects your 3-year targets to this week's deliverables. It runs in one session and produces two things: a readable version of your four planning tables with glossaries (so you understand what you built), and four structured data blocks you save with your plan.
 
 The four horizons are the 3-Year Highly Achievable Goal (3HAG), the 1-Year Highly Achievable Goal (1HAG), the Quarterly Highly Achievable Goal (QHAG), and the 13-Week Sprint. Each horizon inherits from the one above it. You finish with one coherent stack from a 3-year target down to this week's deliverables.
 
 The interview takes 60 to 90 minutes.
 
-**Outputs.** At the end of the session you receive: (1) your four planning tables drawn directly in this conversation, including glossaries so you can read what every line means, and (2) four structured JSON blocks your coach or operator uses to load your data into the planning platform.
+**Outputs.** At the end of the session you receive: (1) your four planning tables drawn directly in this conversation, including glossaries so you can read what every line means, and (2) four structured JSON blocks you save with your plan.
 
 **What to expect**
 
@@ -30,7 +30,7 @@ The interview takes 60 to 90 minutes.
 2. Answer the questions one at a time. The AI waits for a complete answer before moving on.
 3. At the end of the session the AI draws your four planning tables in the conversation so you can read and review them, then emits the four data blocks for your coach.
 4. Copy or save the full conversation output before closing. Your tables and data blocks are both in there.
-5. Send the four data blocks (the fenced JSON sections at the end) to your coach or operator. They load them into your planning platform.
+5. Keep the four data blocks (the fenced JSON sections at the end) with your plan.
 6. Review the output with your coach or advisor. Once you and your coach have finalized the tables, add them to your team's system of record.
 
 Where your output appears depends on the AI. Save the conversation or download the artifact to keep your output.
@@ -149,7 +149,7 @@ Show progress: "Phase 1 of 5: your 3-year plan. [N] steps."
 
 ### Step 1a: Period
 
-Ask: "What date does your 3-year horizon end? Give me the exact calendar date."
+Ask: "What is your fiscal year-end date three years out, the end of your third fiscal year from now? Give me the exact calendar date."
 
 Capture as period_end in ISO format YYYY-MM-DD. Confirm back: "Three years ending [formatted date]."
 
@@ -347,7 +347,7 @@ Use whichever persistence surface your platform best supports for saveable rende
 
 ### Part 1: Keepable planning tables (drawn in this conversation)
 
-Draw all four planning tables directly in this conversation. The tables below are yours to keep and review. They show exactly what will be loaded into your planning platform. Each table includes a glossary so you can understand what every line means.
+Draw all four planning tables directly in this conversation. The tables below are yours to keep and review. They show exactly what your saved data blocks capture. Each table includes a glossary so you can understand what every line means.
 
 ---
 
@@ -464,9 +464,9 @@ For each widget:
 
 ---
 
-### Part 2: Data blocks (for your coach to load into the planning platform)
+### Part 2: Data blocks (save these with your plan)
 
-These four JSON blocks are for your coach or operator. They will be loaded unchanged into your planning platform. Do not edit them.
+These four JSON blocks are yours to keep and save unchanged with your plan. Do not edit them.
 
 Each block is labelled with its target filename.
 
@@ -560,10 +560,10 @@ Replace every placeholder with real values from the interview. The block emits n
 
 `Session complete. Planning Cascade shipped.`
 
-<!-- BEGIN GENERATED cascade:payload-contract sha256=79e091c1ce2aae0f93a677754b1a0157dbd740f08171c01d46c8b0924f050a61 (gen_cascade_prompt_blocks.py; do not edit) -->
+<!-- BEGIN GENERATED cascade:payload-contract sha256=28108fd4786d1163277c508669150d61ea5c18458cb115736f5673a468a21cc6 (gen_cascade_prompt_blocks.py; do not edit) -->
 ## Payload contract: what to emit after the interview
 
-After completing the interview, emit one fenced JSON block per horizon in this order: 3hag, 1hag, qhag, sprint. Each block is a shape sidecar that the DBOS operator writes to `clients/<slug>/artifacts/<horizon>-shape.json`. These four JSON blocks are the only governed output from this run. They must pass `validate_filled_shape` with an empty finding list.
+After completing the interview, emit one fenced JSON block per horizon in this order: 3hag, 1hag, qhag, sprint. Each block is a shape sidecar you save with your plan. These four JSON blocks are the only governed output from this run. They must pass `validate_filled_shape` with an empty finding list.
 
 A fresh prompt run produces a FULL (non-partial) shape. Do NOT emit `"partial": true`; that flag is reserved for six specific migration cells and is a fail-closed error on any other client or horizon.
 
@@ -861,7 +861,7 @@ No other keys are allowed (off-shape key = named build failure).
 
 ### SPRINT shape
 
-13-week sprint lanes: one lane per inherited QHAG priority plus a weekly widget-metric column. Weeks-as-rows, priorities-as-columns is the canonical DBOS orientation (R11).
+13-week sprint lanes: one lane per inherited QHAG priority plus a weekly widget-metric column. Weeks-as-rows, priorities-as-columns is the canonical orientation (R11).
 
 Top-level keys (required): ['horizon', 'period_end', 'widget_metric', 'lanes']
 No other keys are allowed (off-shape key = named build failure).
